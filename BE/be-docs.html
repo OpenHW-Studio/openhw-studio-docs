@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenHW Studio BE Docs</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --panel-soft: #f8fbff;
+      --line: #dbe6f2;
+      --text: #12233d;
+      --muted: #5f738f;
+      --blue: #1d4ed8;
+      --blue-deep: #172554;
+      --green: #15803d;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 32%),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+
+    .shell {
+      width: min(1200px, calc(100% - 32px));
+      margin: 28px auto 48px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .hero {
+      border-radius: 28px;
+      padding: 30px 32px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at top right, rgba(147, 197, 253, 0.2), transparent 34%),
+        linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 44%, #312e81 100%);
+      box-shadow: 0 30px 60px rgba(29, 78, 216, 0.2);
+    }
+
+    .hero small {
+      display: inline-block;
+      margin-bottom: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(219, 234, 254, 0.88);
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 860px;
+      color: rgba(239, 246, 255, 0.94);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .hero-grid,
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 22px;
+    }
+
+    .grid {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      padding: 22px 24px 14px;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    .panel-head h2,
+    .panel-head h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .panel-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .panel-body {
+      padding: 22px 24px 24px;
+    }
+
+    .metric {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 16px 18px;
+      backdrop-filter: blur(3px);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      color: rgba(239, 246, 255, 0.9);
+      font-size: 13px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .note {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--blue-deep);
+      font-size: 14px;
+    }
+
+    .note p,
+    .note ul {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .note ul {
+      padding-left: 18px;
+    }
+
+    .route-group {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .route-group + .route-group {
+      margin-top: 14px;
+    }
+
+    .route-title {
+      padding: 14px 16px;
+      background: linear-gradient(180deg, #fbfdff, #f4f8ff);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .route-title strong {
+      display: block;
+      font-size: 15px;
+      color: var(--blue-deep);
+    }
+
+    .route-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #edf2f7;
+    }
+
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #fcfdff;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      color: var(--blue-deep);
+      background: #eef4ff;
+      border-radius: 8px;
+      padding: 2px 7px;
+    }
+
+    .method {
+      display: inline-flex;
+      min-width: 58px;
+      justify-content: center;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .get { background: #dbeafe; color: #1d4ed8; }
+    .post { background: #dcfce7; color: var(--green); }
+    .put { background: #fef3c7; color: #b45309; }
+    .delete { background: #ffe4e6; color: #be123c; }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .model-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel-soft);
+      padding: 16px;
+    }
+
+    .model-card h4 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .model-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .model-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+      padding: 8px 0 0;
+    }
+
+    @media (max-width: 980px) {
+      .grid,
+      .hero-grid,
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <small>BE Docs</small>
+      <h1>OpenHW Studio Backend Documentation</h1>
+      <p>
+        This page documents the current Express + MongoDB backend found in
+        <code>openhw-studio-backend/src</code>. It covers runtime setup, route groups,
+        major controllers, data models, authentication flow, classroom APIs, uploads,
+        gamification progress, compilation endpoints, and component-management utilities.
+      </p>
+
+      <div class="hero-grid">
+        <div class="metric">
+          <strong>Express 4</strong>
+          <span>API server with modular route mounts</span>
+        </div>
+        <div class="metric">
+          <strong>MongoDB</strong>
+          <span>Mongoose models for users, classes, submissions, and progress</span>
+        </div>
+        <div class="metric">
+          <strong>Passport</strong>
+          <span>Google OAuth plus JWT-protected application routes</span>
+        </div>
+        <div class="metric">
+          <strong>Multer</strong>
+          <span>Classroom asset upload pipeline into frontend public assets</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Runtime Overview</h2>
+          <p>How the backend boots, what middleware it loads, and what it exposes.</p>
+        </div>
+        <div class="panel-body stack">
+          <div class="note">
+            <strong>Entry Point</strong>
+            <p><code>src/server.js</code> loads env values, ensures temp/component directories exist, connects to MongoDB, starts Express, and mounts <code>/api</code> and <code>/auth</code>.</p>
+          </div>
+          <div class="note">
+            <strong>Core Middleware</strong>
+            <ul>
+              <li><code>cors()</code></li>
+              <li><code>express.json({ limit: '25mb' })</code></li>
+              <li><code>express.urlencoded({ extended: true, limit: '25mb' })</code></li>
+              <li><code>express-session</code></li>
+              <li><code>passport.initialize()</code> and <code>passport.session()</code></li>
+            </ul>
+          </div>
+          <div class="note">
+            <strong>Static Assets</strong>
+            <p><code>/examples</code> serves files from <code>openhw-studio-examples/examples</code>.</p>
+          </div>
+          <div class="note">
+            <strong>Start Scripts</strong>
+            <ul>
+              <li><code>npm run start</code>: production-style node start with <code>.env</code></li>
+              <li><code>npm run dev</code>: nodemon watcher</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Architecture Notes</h2>
+          <p>Useful high-level behavior inferred from the backend modules.</p>
+        </div>
+        <div class="panel-body stack">
+          <div class="note">
+            <strong>Auth Strategy</strong>
+            <p>Protected app APIs use JWT via <code>Authorization: Bearer ...</code> or the <code>jwt</code> cookie. Google OAuth is exposed separately under <code>/auth</code>.</p>
+          </div>
+          <div class="note">
+            <strong>Classroom Ownership Rules</strong>
+            <p>Teacher-only mutations are enforced inside the classroom controller. Student access is verified against class membership.</p>
+          </div>
+          <div class="note">
+            <strong>Upload Storage</strong>
+            <p>Classroom uploads do not store file bodies in MongoDB. The backend returns URL paths for uploaded files and the DB stores those string paths.</p>
+          </div>
+          <div class="note">
+            <strong>Coverage</strong>
+            <p>Main domains are auth/users, classroom management, submissions, comments, compile/flash, library operations, component moderation, and progress/gamification.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Route Map</h2>
+        <p>Mounted route groups and their responsibilities.</p>
+      </div>
+      <div class="panel-body stack">
+        <div class="route-group">
+          <div class="route-title">
+            <strong><code>/auth</code></strong>
+            <span>OAuth entry/callback plus authenticated profile fetch</span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="method get">GET</span></td><td><code>/auth/google</code></td><td>Starts Google OAuth flow via Passport.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/auth/google/callback</code></td><td>Receives Google callback, signs JWT, redirects to frontend with token.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/auth/me</code></td><td>Returns the currently authenticated user profile.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="route-group">
+          <div class="route-title">
+            <strong><code>/api/user</code></strong>
+            <span>Native auth, Google token login, logout, and profile update</span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/user/signup</code></td><td>Registers a local user and returns JWT plus profile payload.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/user/signin</code></td><td>Logs in with email/password.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/user/google</code></td><td>Accepts Google access token and logs in/creates a user.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/user/logout</code></td><td>Clears JWT cookie and ends authenticated session state.</td></tr>
+              <tr><td><span class="method put">PUT</span></td><td><code>/api/user/profile</code></td><td>Updates profile fields such as name, college, branch, semester, bio, and image.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="route-group">
+          <div class="route-title">
+            <strong><code>/api/classroom</code></strong>
+            <span>Largest backend module: classes, invitations, assignments, notices, comments, submissions, uploads</span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/</code></td><td>Create classroom.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/join</code></td><td>Student joins by code.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/:classId/invite</code></td><td>Invite/add students by id or email.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/uploads</code></td><td>Upload classroom files/assets.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/</code></td><td>Get classes for current teacher or student.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/:classId</code></td><td>Get one class with populated relations.</td></tr>
+              <tr><td><span class="method put">PUT</span></td><td><code>/api/classroom/:classId</code></td><td>Update class metadata.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/classroom/:classId</code></td><td>Delete class and related content.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/:classId/students</code></td><td>List enrolled students.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/classroom/:classId/students/:studentId</code></td><td>Remove a student from class.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/:classId/assignments</code></td><td>Create assignment.</td></tr>
+              <tr><td><span class="method put">PUT</span></td><td><code>/api/classroom/:classId/assignments/:assignmentId</code></td><td>Update assignment.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/assignments</code></td><td>Query assignments across scope.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/classroom/:classId/assignments/:assignmentId</code></td><td>Delete assignment.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/:classId/assignments/:assignmentId/submissions</code></td><td>Teacher view of assignment submissions.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/:classId/assignments/:assignmentId/submission</code></td><td>Current student’s submission.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/:classId/assignments/:assignmentId/submission</code></td><td>Create or update student submission.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/:classId/notices</code></td><td>Create notice.</td></tr>
+              <tr><td><span class="method put">PUT</span></td><td><code>/api/classroom/:classId/notices/:noticeId</code></td><td>Update notice.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/:classId/notices</code></td><td>List notices.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/classroom/:classId/notices/:noticeId</code></td><td>Delete notice.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/classroom/:classId/comments</code></td><td>Add comment to assignment/notice.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/classroom/:classId/comments</code></td><td>Fetch comments for a target post.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/classroom/:classId/comments/:commentId</code></td><td>Delete teacher-owned or self-owned comment.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="route-group">
+          <div class="route-title">
+            <strong><code>/api/compile</code></strong>
+            <span>Hardware compile and flash surface</span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/compile/</code></td><td>Compile Arduino code.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/compile/flash</code></td><td>Flash firmware to selected serial device.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/compile/ports</code></td><td>List available serial ports.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/compile/lib-search</code></td><td>Search Arduino libraries.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/compile/lib-install</code></td><td>Install Arduino library.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/compile/lib-list</code></td><td>List installed libraries.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="route-group">
+          <div class="route-title">
+            <strong><code>/api/progress</code></strong>
+            <span>Gamification and learning progress tracking</span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/progress/</code></td><td>Get current user progress record.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/progress/quiz</code></td><td>Store quiz attempt/result.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/progress/unlock</code></td><td>Unlock component for user.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/progress/complete</code></td><td>Mark project complete and grant progress rewards.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/progress/badge</code></td><td>Award badge.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/progress/leaderboard</code></td><td>Leaderboard view.</td></tr>
+              <tr><td><span class="method put">PUT</span></td><td><code>/api/progress/reset</code></td><td>Reset user progress.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="route-group">
+          <div class="route-title">
+            <strong>Admin / Utility Endpoints</strong>
+            <span>Component moderation and Arduino library helpers mounted under <code>/api</code></span>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Method</th><th>Path</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/lib-search</code></td><td>Search Arduino library index.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/lib-install</code></td><td>Install Arduino library.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/lib-uninstall</code></td><td>Uninstall Arduino library.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/lib-list</code></td><td>List installed libraries.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/components/submit</code></td><td>Submit custom component metadata for moderation.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/admin/components/pending</code></td><td>Read pending component submissions.</td></tr>
+              <tr><td><span class="method post">POST</span></td><td><code>/api/admin/components/approve</code></td><td>Approve and install a component.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/admin/components/reject/:submissionId</code></td><td>Reject pending component.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/admin/components/installed</code></td><td>List installed components.</td></tr>
+              <tr><td><span class="method delete">DELETE</span></td><td><code>/api/admin/components/installed/:id</code></td><td>Delete installed component.</td></tr>
+              <tr><td><span class="method get">GET</span></td><td><code>/api/admin/components/backup</code></td><td>Download/export installed component backup data.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Primary Data Models</h2>
+          <p>High-value collections and the fields they are built around.</p>
+        </div>
+        <div class="panel-body">
+          <div class="model-grid">
+            <article class="model-card">
+              <h4>User</h4>
+              <p>Identity model for student, teacher, and admin accounts.</p>
+              <ul>
+                <li><code>name</code>, <code>email</code>, <code>password</code>, <code>googleId</code></li>
+                <li><code>role</code>: student | teacher | admin</li>
+                <li><code>college</code>, <code>branch</code>, <code>semester</code>, <code>bio</code>, <code>image</code></li>
+                <li><code>classes</code>, <code>points</code>, <code>coins</code>, <code>level</code>, <code>badges</code></li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Class</h4>
+              <p>Root classroom aggregate for teacher ownership and enrollment.</p>
+              <ul>
+                <li><code>name</code>, <code>bio</code>, <code>image</code>, <code>joinCode</code></li>
+                <li><code>teacher</code> reference</li>
+                <li><code>students</code>, <code>assignments</code>, <code>notices</code> references</li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Assignment</h4>
+              <p>Teacher-authored classwork items with due dates and resource files.</p>
+              <ul>
+                <li><code>classId</code>, <code>title</code>, <code>description</code></li>
+                <li><code>templateProjectId</code>, <code>dueDate</code></li>
+                <li><code>attachments</code> / <code>files</code></li>
+                <li><code>createdBy</code></li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Notice</h4>
+              <p>Teacher stream posts for a class.</p>
+              <ul>
+                <li><code>classId</code>, <code>title</code>, <code>message</code></li>
+                <li><code>attachments</code> / <code>files</code></li>
+                <li><code>createdBy</code></li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Submission</h4>
+              <p>Student assignment hand-ins, notes, and uploaded files.</p>
+              <ul>
+                <li><code>assignmentId</code>, <code>studentId</code>, <code>classId</code></li>
+                <li><code>projectId</code>, <code>notes</code>, <code>attachments</code>, <code>files</code></li>
+                <li><code>score</code>, <code>feedback</code></li>
+                <li>Unique index on <code>(assignmentId, studentId)</code></li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Comment</h4>
+              <p>Discussion records attached to assignment or notice stream items.</p>
+              <ul>
+                <li><code>classId</code>, <code>postId</code>, <code>postType</code></li>
+                <li><code>message</code>, <code>createdBy</code></li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Project</h4>
+              <p>Simulation/project storage for boards, components, and source code.</p>
+              <ul>
+                <li><code>userId</code>, <code>board</code></li>
+                <li><code>components</code>, <code>connections</code>, <code>code</code></li>
+                <li><code>isAssignment</code>, <code>assignmentId</code></li>
+              </ul>
+            </article>
+            <article class="model-card">
+              <h4>Progress / UserProgress</h4>
+              <p>Gamification state for XP, levels, unlocked components, quiz attempts, completed projects, badges, and streaks.</p>
+              <ul>
+                <li><code>level</code>, <code>xp</code>, <code>coins</code>, <code>badges</code></li>
+                <li><code>quizAttempts</code>, <code>completedProjects</code>, <code>unlockedComponents</code></li>
+                <li><code>currentStreak</code>, <code>longestStreak</code>, <code>lastActiveDate</code></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Implementation Notes</h2>
+          <p>Important behavior inside controllers and middleware.</p>
+        </div>
+        <div class="panel-body stack">
+          <div class="note">
+            <strong><code>authMiddleware.js</code></strong>
+            <p>Extracts JWT from either bearer header or <code>jwt</code> cookie, verifies it, fetches the user, and attaches <code>req.user</code>.</p>
+          </div>
+          <div class="note">
+            <strong><code>passport.js</code></strong>
+            <p>Google OAuth strategy support for browser-based auth callback flow.</p>
+          </div>
+          <div class="note">
+            <strong><code>classroomUpload.js</code></strong>
+            <p>Builds upload destinations and public paths for classroom/profile assets. Used with Multer for file ingestion.</p>
+          </div>
+          <div class="note">
+            <strong><code>classroomController.js</code></strong>
+            <p>Central classroom domain controller. Contains teacher authorization checks, join-code enrollment, assignment lifecycle, notice lifecycle, comment lifecycle, submission reads/writes, and upload response shaping.</p>
+          </div>
+          <div class="note">
+            <strong><code>compileController.js</code></strong>
+            <p>Handles Arduino compile, flash, and serial-port discovery flows. This is the hardware-facing part of the backend.</p>
+          </div>
+          <div class="note">
+            <strong><code>componentController.js</code></strong>
+            <p>Implements component submission, approval, rejection, install listing, deletion, and backup/export for custom component workflows.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Suggested Reading Order</h2>
+        <p>If someone is new to this backend, this order gets them productive fastest.</p>
+      </div>
+      <div class="panel-body stack">
+        <div class="note">
+          <strong>1. Boot Flow</strong>
+          <p>Read <code>src/server.js</code>, then <code>src/routes/api.js</code> and <code>src/routes/auth.js</code>.</p>
+        </div>
+        <div class="note">
+          <strong>2. Auth + User Model</strong>
+          <p>Read <code>src/middleware/authMiddleware.js</code>, <code>src/controllers/userController.js</code>, and <code>src/models/User.js</code>.</p>
+        </div>
+        <div class="note">
+          <strong>3. Classroom Domain</strong>
+          <p>Read <code>src/routes/classroom.js</code>, then <code>src/controllers/classroomController.js</code>, then the classroom-related models.</p>
+        </div>
+        <div class="note">
+          <strong>4. Specialized Domains</strong>
+          <p>Move on to compile, progress, libraries, and component moderation.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
