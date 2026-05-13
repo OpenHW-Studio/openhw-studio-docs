@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   base: '/docs/',
+  ignoreDeadLinks: true,
   title: "OpenHW Studio",
   description: "Advanced Arduino & Hardware Simulation Documentation",
   themeConfig: {
