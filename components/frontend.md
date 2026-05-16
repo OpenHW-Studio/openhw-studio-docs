@@ -61,39 +61,59 @@ The simulation itself runs entirely **in the browser** via a Web Worker powered 
 
 ```
 OpenHW-studio-frontend/
-├── index.html                  # App entry HTML
-├── vite.config.js              # Vite configuration
+├── index.html                      # App entry HTML
+├── vite.config.js                  # Vite configuration
 ├── package.json
 └── src/
-    ├── main.jsx                # React app bootstrap + Service Worker registration
-    ├── App.jsx                 # Route definitions
-    ├── index.css               # Global styles
+    ├── main.jsx                    # React app bootstrap + Service Worker registration
+    ├── App.jsx                     # Route definitions
+    ├── index.css                   # Global styles
     ├── pages/
-    │   ├── LandingPage.jsx     # Public home/landing page
-    │   ├── LoginPage.jsx       # Google OAuth login
-    │   ├── RoleSelectPage.jsx  # Student / Teacher role selection
-    │   ├── SimulatorPage.jsx   # Main circuit editor + simulation runner
-    │   ├── admin/              # Admin Portal (Login, Landing, & Dashboard)
+    │   ├── mobileui/               # Mobile-specific UI components/pages
+    │   ├── simulationpage/         # Simulation page sub-components
+    │   ├── student/                # Student-specific sub-pages
+    │   ├── teacher/                # Teacher-specific sub-pages
+    │   ├── user/                   # User profile/settings sub-pages
+    │   ├── AboutUsPage.jsx         # About the platform
+    │   ├── AdventureMapPage.jsx    # Gamified adventure map / learning path
+    │   ├── ComponentEditorPage.jsx # Custom component creation & editing (194 KB)
+    │   ├── ComponentsPage.jsx      # Browse & manage available components
+    │   ├── GamificationSimulatorPage.jsx  # Gamified simulation entry point
+    │   ├── GamifiedProjectGuidePage.jsx   # Step-by-step guided project (gamified)
+    │   ├── GradingPage.css         # Styles for grading UI
+    │   ├── GradingPage.jsx         # Teacher grading & submission review (63 KB)
+    │   ├── GuidedSimulatorPage.jsx # Constrained simulator for guided tasks
+    │   ├── LandingPage.jsx         # Public home/landing page
+    │   ├── LoginPage.jsx           # Google OAuth login
+    │   ├── MaintenancePage.jsx     # Maintenance / downtime screen
+    │   ├── ProjectAssessmentPage.jsx  # Project assessment & rubric view
+    │   ├── ProjectGuidePage.jsx    # Project guide / instructions viewer
+    │   ├── ProjectsGallery.jsx     # Browse community/example projects
+    │   ├── QuizPage.jsx            # In-platform quiz / knowledge check
+    │   ├── RoleSelectPage.jsx      # Student / Teacher role selection
+    │   ├── TheoryPage.jsx          # Theory & learning content viewer
+    │   ├── SimulatorPage.jsx       # Main circuit editor + simulation runner
+    │   ├── admin/                  # Admin Portal (Login, Landing, & Dashboard)
     │   ├── StudentDashboard.jsx
     │   └── TeacherDashboard.jsx
     ├── context/
-    │   └── AuthContext.jsx     # Global authentication state
+    │   └── AuthContext.jsx         # Global authentication state
     ├── services/
-    │   ├── authService.js      # Login, logout, token management (localStorage)
-    │   ├── simulatorService.js # POST /api/compile and component API calls
-    │   ├── offlineCache.js     # IndexedDB: compiled hex cache + ZIP upload queue
-    │   └── projectStore.js     # IndexedDB: full project CRUD (save/load/list/delete)
+    │   ├── authService.js          # Login, logout, token management (localStorage)
+    │   ├── simulatorService.js     # POST /api/compile and component API calls
+    │   ├── offlineCache.js         # IndexedDB: compiled hex cache + ZIP upload queue
+    │   └── projectStore.js         # IndexedDB: full project CRUD (save/load/list/delete)
     ├── worker/
-    │   ├── simulation.worker.ts   # Web Worker entry point
-    │   └── execute.ts             # AVR CPU execution loop inside worker
-    └── components/             # Shared UI components
+    │   ├── simulation.worker.ts    # Web Worker entry point
+    │   └── execute.ts              # AVR CPU execution loop inside worker
+    └── components/                 # Shared UI components
 ```
 
 **Static files:**
 ```
 public/
-├── sw.js                       # Service Worker (app shell caching, offline routing)
-└── _redirects                  # Deployment redirect rules
+├── sw.js                           # Service Worker (app shell caching, offline routing)
+└── _redirects                      # Deployment redirect rules
 ```
 
 ---
@@ -113,6 +133,48 @@ The core of the application. Responsibilities include:
 - **Project Save/Load** — auto-saves to IndexedDB every 2.5 s; "My Projects" modal for named saves; auto-loads last project on mount
 - **Offline resilience** — hex cache survives page refresh; ZIP uploads queue while offline
 
+### `GamificationSimulatorPage.jsx`
+Entry point for the gamified simulation experience. Wraps the simulator in a gamified context with progress tracking, achievements, and challenge constraints.
+
+### `GuidedSimulatorPage.jsx`
+A constrained version of the simulator used during guided project tasks. Limits available components and actions to match the current step's learning objectives.
+
+### `AdventureMapPage.jsx`
+Visual adventure map / learning path. Displays the student's progress across projects and theory modules as an interactive map with unlockable nodes.
+
+### `GamifiedProjectGuidePage.jsx`
+Step-by-step guided project page with gamification elements (XP, badges, progress bars). Renders project instructions alongside an embedded simulator or component viewer.
+
+### `ProjectGuidePage.jsx`
+Standard (non-gamified) project instructions and guide viewer. Renders markdown or structured content for a given project.
+
+### `TheoryPage.jsx`
+Theory and learning content viewer. Renders lesson content (text, images, diagrams) for a given topic module before students attempt the hands-on simulator task.
+
+### `QuizPage.jsx`
+In-platform quiz and knowledge-check page. Presents multiple-choice or short-answer questions tied to a theory module or project, and records scores.
+
+### `ProjectAssessmentPage.jsx`
+Assessment and rubric view for a completed project. Shows the student their submission status and (if graded) their score and teacher feedback.
+
+### `GradingPage.jsx`
+Teacher-facing grading and submission review interface. Lists student submissions for a given assignment, allows rubric-based scoring, and submits grades back to the backend.
+
+### `ComponentEditorPage.jsx`
+Full custom component creation and editing environment. Allows users to write TypeScript/JSX component definitions, preview them in an isolated canvas, and submit them to the community library.
+
+### `ComponentsPage.jsx`
+Browse and manage available simulation components. Shows the installed library, community submissions, and allows searching, filtering, and installing components.
+
+### `ProjectsGallery.jsx`
+Community and example project gallery. Displays shareable projects with thumbnails, descriptions, and a one-click "Open in Simulator" action.
+
+### `AboutUsPage.jsx`
+Public-facing About page describing the OpenHW Studio platform, team, and mission.
+
+### `MaintenancePage.jsx`
+Maintenance / downtime screen. Shown when the platform or backend is undergoing scheduled maintenance.
+
 ### `LoginPage.jsx`
 Google OAuth 2.0 login page. Decodes JWT and stores user info in `AuthContext`.
 
@@ -128,6 +190,16 @@ Public-facing landing page describing the platform.
 
 ### `StudentDashboard.jsx` / `TeacherDashboard.jsx`
 Role-specific dashboards shown after login.
+
+### Sub-directories
+
+| Folder | Purpose |
+|---|---|
+| `mobileui/` | Mobile-specific UI layouts and page variants |
+| `simulationpage/` | Sub-components and utilities extracted from `SimulatorPage` |
+| `student/` | Student-specific sub-pages (progress, submissions, etc.) |
+| `teacher/` | Teacher-specific sub-pages (class management, assignment creation, etc.) |
+| `user/` | User profile and account settings sub-pages |
 
 ---
 
@@ -340,5 +412,3 @@ POST /api/compile  ──►  Compiler Backend (port 5001)
 ---
 
 *Part of the OpenHW Studio platform. See also: [openhw-studio-backend](../openhw-studio-backend) and [openhw-studio-emulator](../openhw-studio-emulator).*
-
-
