@@ -85,7 +85,7 @@ How does the backend know whether a library in `library.txt` is for C++ or Pytho
 
 ---
 
-## 📦 4. 1 GB Partitioned Library Storage Manager & Docker Persistence
+## 📦 4. 1 GB Partitioned Library Storage Manager
 
 To prevent disk bloat while ensuring high-speed compilation, the backend allocates exactly **1 GB of disk space** to library storage. This quota is divided into two 512 MB pools, each internally partitioned by runtime (`cpp`, `micropython`, `circuitpython`).
 
@@ -111,68 +111,6 @@ To prevent disk bloat while ensuring high-speed compilation, the backend allocat
 
 ### Daily Index Caching
 To enable instant ZIP URL resolution without querying external APIs during compilation, the backend downloads and caches the official Arduino `library_index.json` and Python bundle indexes once every 24 hours in the background.
-
----
-
-## 🐳 5. Docker Volume Persistence Strategy
-
-A critical operational requirement is ensuring that **neither the pre-installed official libraries (Pool A) nor the dynamically cached libraries (Pool B) are lost when deploying a new Docker image** (e.g., executing `docker compose pull && docker compose up -d`).
-
-### How Docker Volumes Work
-When Docker recreates a container with a new image, it replaces the internal container filesystem. However, any directory mapped to an external volume or host bind mount is **fully preserved** across container recreations.
-
-### Bind Mounts vs. Named Volumes
-In `docker-compose.prod.yml`, the backend maps the `/app/data` directory where libraries are stored. There are two ways to mount this:
-
-```yaml
-# Option 1: Named Volume (Current Setup)
-volumes:
-  - backend-data:/app/data
-
-# Option 2: Host Bind Mount (Recommended Setup)
-volumes:
-  - ./persistent-data:/app/data
-```
-
-#### Why Host Bind Mounts are Recommended for Library Storage:
-* **Named Volumes (`backend-data`):** These are managed internally by Docker in `/var/lib/docker/volumes/`. If an administrator accidentally executes `docker compose down -v` (with the `-v` flag), Docker will **permanently delete** the named volume, wiping out your entire library cache!
-* **Host Bind Mounts (`./persistent-data`):** This maps a direct folder on your Ubuntu server's host filesystem directly into the container. Even if someone executes `docker compose down -v` or prunes the Docker engine entirely, the library files remain safely untouched on the Ubuntu host disk. When the new container starts, it immediately mounts the existing host folder, preserving 100% of your cached and official libraries.
-
----
-
-## 🏗️ 6. Dockerfile Staging & Runtime Boot Synchronization
-
-A subtle but critical issue exists in the current `Dockerfile`. Lines 42–57 execute `arduino-cli lib install "Adafruit NeoPixel" "Servo" ...`, which places libraries into `/root/Arduino/libraries/` inside the container's root filesystem. 
-
-```
-[ Docker Image Build: RUN arduino-cli lib install ] ──> /opt/default-libraries/official/ (Staged)
-                                                                 │
-[ Runtime Container Boot: server.js init ] ──────────────────────┘
-  └── Checks Host Volume: /app/data/libraries/official/
-       ├── If Empty (Fresh Mount) ──> Copies staged libraries from /opt/default-libraries/
-       └── If Populated ────────────> Bypasses copy, preserves existing host libraries
-```
-
-### The Two Problems with the Current Dockerfile Setup
-1. **Global Conflict Risk:** Placing libraries in `/root/Arduino/libraries/` treats them as global dependencies. When `arduino-cli compile` runs, it inspects this global folder by default, risking version conflicts with the symlinked libraries in `isolated_libs/`.
-2. **Volume Masking:** If we attempt to install them directly into `/app/data/libraries/official` during the `Dockerfile` build, Docker will **hide** those files at runtime the moment the external host volume is mounted over `/app/data`.
-
-### The Elegant & Bulletproof Solution
-To ensure pre-installed libraries are correctly populated on the host volume without causing global conflicts, the backend implements a **Staging & Boot Synchronization** pattern:
-
-1. **Dockerfile Staging:** Modify the `Dockerfile` to install pre-bundled libraries into an isolated staging directory inside the image:
-   ```dockerfile
-   RUN mkdir -p /opt/default-libraries/official && \
-       arduino-cli lib install --dest-dir /opt/default-libraries/official \
-       "Adafruit NeoPixel" "Stepper" "Servo" "LiquidCrystal I2C" ...
-   ```
-2. **Runtime Boot Synchronization:** When `src/server.js` boots up, it verifies whether `/app/data/libraries/official/` on the persistent host volume contains files. If the volume is fresh/empty, `server.js` executes a recursive copy:
-   ```javascript
-   if (!fs.existsSync('/app/data/libraries/official/Servo')) {
-       fs.cpSync('/opt/default-libraries/official', '/app/data/libraries/official', { recursive: true });
-   }
-   ```
-3. **Clean Global State:** Because libraries are staged in `/opt/` and copied to `/app/data/`, the global `/root/Arduino/libraries/` directory remains 100% empty. `arduino-cli compile` will strictly and exclusively use the symlinked versions in `isolated_libs/`.
 
 ---
 *Architectural blueprint established for OpenHW Studio High-Performance Compiler Backend.*
