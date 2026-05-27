@@ -93,12 +93,12 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/danish9661/Arduino-simulator' }
+      { icon: 'github', link: 'https://github.com/OpenHW-Studio' }
     ],
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present Danish'
+      copyright: 'Copyright © 2024-present OpenHW'
     },
 
     search: {
