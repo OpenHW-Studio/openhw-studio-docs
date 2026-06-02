@@ -22,6 +22,8 @@ export default defineConfig({
           { text: 'Quick Reference', link: '/guides/quick-reference' },
           { text: 'Keyboard Shortcuts', link: '/guides/shortcuts' },
           { text: 'Hardware Flashing', link: '/guides/hardware-flashing' },
+          { text: 'Migration Guide', link: '/guides/migration' },
+          { text: 'Page Validation', link: '/guides/page-validation' },
         ]
       },
       {
@@ -29,11 +31,23 @@ export default defineConfig({
         items: [
           { text: 'System Overview', link: '/architecture/overview' },
           { text: 'Autofix Engine', link: '/architecture/autofix' },
+          { text: 'Autofix Improvements', link: '/architecture/autofix-improvements' },
+          { text: 'Autofix Plan', link: '/architecture/autofix-plan' },
           { text: 'Autowiring System', link: '/architecture/autowiring' },
+          { text: 'Autowiring v2', link: '/architecture/autowiring-v2' },
+          { text: 'Board Compatibility', link: '/architecture/board-compatibility' },
           { text: 'Compiler Backend', link: '/architecture/compiler-backend' },
+          { text: 'Compilation Caching', link: '/architecture/compilation-caching' },
+          { text: 'Compiled Backend', link: '/architecture/compiled-backend' },
           { text: 'Library Management', link: '/architecture/libaray_management.md' },
           { text: 'Frontend Engine', link: '/architecture/frontend-engine' },
           { text: 'Block Coding', link: '/architecture/block-coding' },
+          { text: 'ESP32 Architecture', link: '/architecture/esp32' },
+          { text: 'STM32 Architecture', link: '/architecture/stm32' },
+          { text: 'Universal Grid Migration', link: '/architecture/universal_1x_grid_migration' },
+          { text: 'Implementation Plan', link: '/architecture/implementation_plan' },
+          { text: 'ESP and STM32 Overview', link: '/esp and stm32' },
+          { text: 'Display Worker', link: '/display worker' },
         ]
       },
       {
@@ -43,6 +57,7 @@ export default defineConfig({
           { text: 'Engine Status', link: '/grading/engine-status' },
           { text: 'Scoring Guide', link: '/grading/scoring-guide' },
           { text: 'Compatibility Audit', link: '/grading/audit' },
+          { text: 'Grading Analysis', link: '/grading/analysis' },
         ]
       },
       {
@@ -64,6 +79,8 @@ export default defineConfig({
           { text: 'Pin Telemetry', link: '/telemetry/pin-telemetry' },
           { text: 'Telemetry Architecture', link: '/telemetry/telemetry-architecture' },
           { text: 'Component Telemetry', link: '/telemetry/component-telemetry-reference' },
+          { text: 'Component Fixes', link: '/telemetry/component-fixes' },
+          { text: 'Telemetry Summary', link: '/telemetry/summary' },
         ]
       },
       {
@@ -88,6 +105,8 @@ export default defineConfig({
         items: [
           { text: 'Changelog', link: '/releases/changelog' },
           { text: 'Latest Changes', link: '/releases/latest-changes' },
+          { text: 'Code Patches', link: '/releases/code-patches' },
+          { text: 'Critical Issues', link: '/releases/critical-issues' },
         ]
       }
     ],
