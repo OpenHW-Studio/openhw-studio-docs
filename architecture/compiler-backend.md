@@ -4,175 +4,67 @@
 
 ---
 
-## 🖥️ 1. Server Hardware Sizing & Memory Budget
+## 🖥️ 1. Hardware Sizing & Capacity Budget (8GB / 4 Cores)
 
-The Compiler Backend is specifically engineered to operate flawlessly on a **4 vCPU / 8 GB RAM** Ubuntu Virtual Machine. To prevent Out-Of-Memory (OOM) kernel crashes (Exit Code 137) and CPU thrashing during peak classroom usage, the system enforces a strict memory budget:
+The backend is specifically engineered for an **8GB RAM / 4 CPU Core** server. The architecture isolates the heavy compile tasks from the long-running simulations, splitting the system resources mathematically to ensure the server never crashes under peak classroom load.
 
-```
-[ Total Server RAM: 8 GB ]
-  ├── System Reservation (3 GB): Ubuntu OS, Express API, MongoDB, Frontend, Docs Server
-  └── Compiler Worker Pool (5 GB): Dedicated entirely to active compilation jobs
-```
+### 🧠 RAM Budget (Total: 8.0 GB)
+Memory exhaustion (OOM) is fatal. The system guarantees RAM safety via a strict **Unified Resource Manager**:
+1. **OS & System Reserve (2.0 GB):** Required for Ubuntu, Node.js, and background services.
+2. **Unified points pool (Remaining RAM):** Calculated dynamically as `Total Physical Memory - 2.0 GB`. On an 8GB machine, this creates a pool of approximately **6.2 GB (6200 points)**, where **1 point = 1 MB RAM**. Both compilation requests and running simulations draw from this same pool.
 
-By reserving 3 GB for core system services, the remaining **5 GB RAM** is safely allocated to the in-memory compilation queue, guaranteeing zero server crashes even when hundreds of students submit code simultaneously.
-
----
-
-## ⚙️ 2. Weighted Concurrency Queue
-
-Because compiling 32-bit ARM C++ for the Raspberry Pi Pico consumes significantly more RAM and CPU threads than compiling 8-bit AVR C++ for the Arduino Uno, a simple FIFO queue is inadequate. The backend implements an in-memory **Weighted Concurrency Queue** (`fastq` / `async.queue`).
-
-### Queue Capacity & Point System
-The 5 GB compiler memory pool is translated into a maximum queue capacity of **7 Concurrency Slots (700 Points)**.
-
-| Target / Builder | Slot Weight | Max Concurrent Jobs | Resource Footprint & Throttling |
-|---|---|---|---|
-| **Arduino Uno (`arduino:avr:uno`)** | **1 Slot (100 pts)** | 7 simultaneous jobs | ~100 MB RAM. Single-threaded AVR GCC execution. |
-| **Pico (`rp2040:rp2040` / `pico-sdk`)** | **2 Slots (200 pts)** | 3 simultaneous jobs | ~300–500 MB RAM. Throttled to `ninja -j 2` (2 CPU threads each). |
-| **MicroPython / CircuitPython** | **1 Slot (100 pts)** | 7 simultaneous jobs | ~50 MB RAM. Fast virtual filesystem packing (no C++ compilation). |
-
-### The 5 Core Queue Rules
-1. **Weighted Admission:** When a job arrives, the queue evaluates the sum of currently active job weights. If `Active Points + New Job Points <= 700`, the job executes instantly. If a Pico job (200 pts) arrives while 600 pts are active, it waits asynchronously until a slot frees up.
-2. **Request Deduplication (Locking):** If multiple students submit the exact same sketch code and library configuration while an identical compilation is already running or queued, the queue attaches the new requests to the existing job. Only **1 compilation** executes on the CPU, and the resulting binary is broadcast to all attached clients simultaneously.
-3. **Strict 30-Second Timeout:** Any C++ compilation job that exceeds 30 seconds is forcefully terminated (`SIGKILL`). This prevents malformed C++ templates or infinite loops from permanently locking up worker threads and CPU cores.
-4. **CPU Core Throttling:** All Pico-SDK `cmake` builds are explicitly forced to execute with `ninja -j 2`. This guarantees that a single Pico build cannot consume more than 2 vCPUs, leaving the remaining cores responsive for Express API routing and other worker jobs.
-5. **Priority Scheduling:** Live interactive "Run" clicks from classroom users are assigned High Priority. Automated background grading tasks or library pre-warming jobs are assigned Low Priority.
+### ⚡ CPU Budget (Total: 4 Cores)
+Unlike RAM, hitting the CPU ceiling is not fatal—the Linux OS scheduler simply time-slices the tasks, meaning things just run a little slower.
+1. **OS & System (~0.5 Cores):** General server overhead.
+2. **Simulations (~1.5 Cores):** QEMU and Renode use very little CPU when idle/waiting for `delay()`. 15 active simulations spread their load and generally consume the equivalent of 1 to 2 cores.
+3. **Compilers (~2.0 Cores):** Compiling code is highly CPU-intensive. When compiles run, they will max out the remaining processing power to finish as fast as possible (usually 5–10 seconds), then immediately release the CPU back to the simulations.
 
 ---
 
-## 🏛️ 3. Isolated Compilation Engine (`library.txt`)
+## ⚙️ 2. Unified Resource Manager & Credit System
 
-To allow different users (or a single user simulating multiple boards) to compile with different versions of the same library simultaneously without conflict, the backend enforces **100% Isolated Compilation**.
+To prevent Out-Of-Memory (OOM) kernel crashes (Exit Code 137) and CPU thrashing during peak classroom usage, the backend implements a **Unified Resource Manager** (`resourceManager.js`) that enforces point-based concurrency.
 
-```
-/app/data/libraries/cache/
- ├── cpp/
- │    ├── ArduinoJson/6.21.3/
- │    └── ArduinoJson/7.0.0/
- └── micropython/
-      └── micropython-adafruit-neopixel/1.0.0/
+### Point Cost & Configuration
+The memory consumption (in points) is not hardcoded but dynamically loaded from `data/calibrated_budget.json`:
+- **AVR/Uno Compile:** ~150 points
+- **AVR/Uno Simulation:** ~50 points
+- **Pico Compile:** ~300 points
+- **Pico Simulation:** ~100 points
+- **ESP32 Compile:** ~800 points
+- **ESP32 Simulation:** ~250 points
+- **STM32 Compile:** ~400 points
+- **STM32 Simulation:** ~150 points
 
-/app/temp/compile-workspaces/
- ├── job_uno_user1/
- │    ├── sketch.ino
- │    └── isolated_libs/ ──(Symlink)──> ../../../data/libraries/cache/cpp/ArduinoJson/6.21.3
- └── job_pico_user2/
-      ├── CMakeLists.txt
-      └── isolated_libs/ ──(Symlink)──> ../../../data/libraries/cache/cpp/ArduinoJson/7.0.0
-```
-
-### `library.txt` Syntax & Fallback
-Inside each board's project directory, users (or the UI Library Manager) maintain a `library.txt` file listing required dependencies.
-* **Syntax:** `name@version` (e.g., `ArduinoJson@6.21.3`).
-* **Fallback:** If the user specifies a library without `@version` (e.g., `LiquidCrystal I2C`), the backend inspects the cached library index and automatically resolves and fetches the latest stable release.
-
-### Runtime Differentiation: C++ vs. Python
-How does the backend know whether a library in `library.txt` is for C++ or Python?
-* Every compilation request sent to `POST /api/compile` explicitly includes the `builder` parameter (`arduino-cli`, `pico-sdk`, `micropython`, `circuitpython`).
-* **If C++ (`arduino-cli` / `pico-sdk`):** The worker knows all entries in `library.txt` are C++ libraries. It queries the cached Arduino Library Index (`library_index.json`) and pulls from `/app/data/libraries/cache/cpp/`.
-* **If Python (`micropython` / `circuitpython`):** The worker knows all entries in `library.txt` are Python libraries. It queries the cached Python bundle index and pulls from `/app/data/libraries/cache/micropython/` or `circuitpython/`.
-
-### Isolation Mechanics per Target
-* **Arduino Uno & Arduino-Pico (`arduino-cli`):** The worker creates a unique, temporary compile workspace in `temp/compile-workspaces/<job_id>/`. Inside it, it creates an `isolated_libs/` directory containing symbolic links (symlinks) to the exact library version folders requested from the storage pools. It invokes `arduino-cli compile --libraries ./isolated_libs`. `arduino-cli` is strictly isolated to those linked versions.
-* **Pico-SDK (`cmake` / `ninja`):** `arduino-cli` flags do not apply to CMake. To support any C/C++ library without requiring custom CMake configs, the worker symlinks the library folders into `isolated_libs/`. It then dynamically injects the following into `CMakeLists.txt`:
-  ```cmake
-  file(GLOB_RECURSE LIB_SOURCES "isolated_libs/*.cpp" "isolated_libs/*.c")
-  add_executable(firmware ${SOURCES} ${LIB_SOURCES})
-  target_include_directories(firmware PRIVATE isolated_libs/LibraryA isolated_libs/LibraryB)
-  ```
-  This ensures seamless, isolated compilation for any standard C/C++ library.
-* **MicroPython & CircuitPython:** Python simulations do not require C++ compilation. The backend serves the pre-compiled base MicroPython/CircuitPython UF2 firmware. For user scripts (`main.py`) and external `.py` libraries listed in `library.txt`, the worker fetches the `.py` files from the cache pool and bundles them into a board-specific LittleFS or FAT virtual filesystem image. This image is sent to the frontend emulator, guaranteeing isolated execution with zero global environment conflicts.
+### Queue Behavior
+- **FIFO Queuing:** If a new compile or simulation request exceeds the maximum available points, it is placed in a pending queue.
+- **Auto-Dequeue:** As compilations finish or simulation VMs are terminated/garbage-collected, their points are returned to the pool, automatically starting the next queued job.
+- **Strict Compile Timeout:** Any compilation job that exceeds 3 minutes (`COMPILE_TIMEOUT_MS` = 180000ms) is forcefully terminated to prevent malformed code from permanently consuming points.
 
 ---
 
-## 📦 4. 1 GB Partitioned Library Storage Manager & Docker Persistence
-
-To prevent disk bloat while ensuring high-speed compilation, the backend allocates exactly **1 GB of disk space** to library storage. This quota is divided into two 512 MB pools, each internally partitioned by runtime (`cpp`, `micropython`, `circuitpython`).
-
-```
-[ Total 1 GB Disk Quota ]
-  ├── Pool A: 512 MB Pre-installed Official Pool (Persistent, Read-Only for Workers)
-  └── Pool B: 512 MB Dynamic LRU Cache (Ephemeral, Auto-Pruning)
-```
-
-### Pool A: 512 MB Pre-installed Official Pool
-* **Location:** `/app/data/libraries/official/`
-* **Contents:** Heavily utilized, standard classroom libraries (`Servo`, `Wire`, `LiquidCrystal I2C`, `Adafruit GFX`, `DHT`, etc.) pre-downloaded in their most stable versions.
-* **Management:** Read-only for compiler workers. It is never deleted or pruned by the queue. It is populated at boot via a static `libraries.json` manifest and can be expanded dynamically by administrators via `POST /api/admin/lib-install`.
-
-### Pool B: 512 MB Dynamic LRU Cache
-* **Location:** `/app/data/libraries/cache/`
-* **Contents:** Ephemeral storage for libraries requested dynamically by users in `library.txt` that are not present in Pool A. 
-* **Direct ZIP Unzipping (Bypassing CLI Overhead):** Instead of executing `arduino-cli lib install` (which incurs heavy CLI startup and dependency checking overhead), the storage manager performs a direct Node.js `fetch()` of the library ZIP from the Arduino CDN or GitHub Releases. It unzips the file directly into `cache/cpp/<name>/<version>/` using `adm-zip`. This completes in under 1 second.
-* **LRU (Least Recently Used) Auto-Pruning Rules:**
-  1. Every time a compilation job uses a library from Pool B, the storage manager updates that library folder's `lastAccessed` timestamp (`fs.utimesSync`).
-  2. After any new library ZIP is downloaded and extracted, the manager verifies the total disk size of Pool B.
-  3. If `Total Size > 512 MB`, the manager deletes the oldest, least-recently-accessed library version folders until the pool size is reduced to **400 MB**. This guarantees a clean 112 MB buffer for incoming classroom requests.
-
-### Daily Index Caching
-To enable instant ZIP URL resolution without querying external APIs during compilation, the backend downloads and caches the official Arduino `library_index.json` and Python bundle indexes once every 24 hours in the background.
+## ⚙️ 3. Automated Calibration Suite
+The backend features a **Calibration Suite** (`calibrationSuite.js`) to establish worst-case resource costs:
+- **First Boot Calibration:** If `data/calibrated_budget.json` is missing on startup, the server automatically executes a worst-case compilation stress test.
+- **Measurement:** Polling checks system memory delta during compilation, applies a 20% safety margin, and saves the calibrated values.
+- **Admin Interface Controls:** Admins can trigger recalibration on-demand from the Resource Budget tab or download the live `calibrated_budget.json` configuration file.
 
 ---
 
-## 🐳 5. Docker Volume Persistence Strategy
+## 🛑 4. Simulation Resource Limits & Timeouts
 
-A critical operational requirement is ensuring that **neither the pre-installed official libraries (Pool A) nor the dynamically cached libraries (Pool B) are lost when deploying a new Docker image** (e.g., executing `docker compose pull && docker compose up -d`).
+The backend simulates ESP32 and STM32 using heavy processes (QEMU and Renode) which consume significant RAM. To ensure scalability and prevent zombie processes, strict runtime limits are enforced:
 
-### How Docker Volumes Work
-When Docker recreates a container with a new image, it replaces the internal container filesystem. However, any directory mapped to an external volume or host bind mount is **fully preserved** across container recreations.
+### Hard Execution Timeout
+- **Limit:** 10 minutes (600,000 ms).
+- **Behavior:** No single simulation session is allowed to run for more than 10 minutes. Once the limit is reached, the VM is forcefully killed and the user must request a fresh compilation/simulation.
 
-### Bind Mounts vs. Named Volumes
-In `docker-compose.prod.yml`, the backend maps the `/app/data` directory where libraries are stored. There are two ways to mount this:
+### Inactivity Monitor
+- **Limit:** 1 minute (60,000 ms).
+- **Behavior:** The backend tracks the user's last interaction via the `WebSocketManager`. If no activity is detected for 1 minute, the simulation is stopped to free up resources.
+- **Activity Triggers:** Activity is refreshed by explicit user actions (e.g., clicking a button, sending a `SET_GPIO` command) OR by an automated `PING` message sent by the frontend client (e.g., every 30 seconds) while the browser tab remains active and focused.
 
-```yaml
-# Option 1: Named Volume (Current Setup)
-volumes:
-  - backend-data:/app/data
-
-# Option 2: Host Bind Mount (Recommended Setup)
-volumes:
-  - ./persistent-data:/app/data
-```
-
-#### Why Host Bind Mounts are Recommended for Library Storage:
-* **Named Volumes (`backend-data`):** These are managed internally by Docker in `/var/lib/docker/volumes/`. If an administrator accidentally executes `docker compose down -v` (with the `-v` flag), Docker will **permanently delete** the named volume, wiping out your entire library cache!
-* **Host Bind Mounts (`./persistent-data`):** This maps a direct folder on your Ubuntu server's host filesystem directly into the container. Even if someone executes `docker compose down -v` or prunes the Docker engine entirely, the library files remain safely untouched on the Ubuntu host disk. When the new container starts, it immediately mounts the existing host folder, preserving 100% of your cached and official libraries.
 
 ---
 
-## 🏗️ 6. Dockerfile Staging & Runtime Boot Synchronization
 
-A subtle but critical issue exists in the current `Dockerfile`. Lines 42–57 execute `arduino-cli lib install "Adafruit NeoPixel" "Servo" ...`, which places libraries into `/root/Arduino/libraries/` inside the container's root filesystem. 
-
-```
-[ Docker Image Build: RUN arduino-cli lib install ] ──> /opt/default-libraries/official/ (Staged)
-                                                                 │
-[ Runtime Container Boot: server.js init ] ──────────────────────┘
-  └── Checks Host Volume: /app/data/libraries/official/
-       ├── If Empty (Fresh Mount) ──> Copies staged libraries from /opt/default-libraries/
-       └── If Populated ────────────> Bypasses copy, preserves existing host libraries
-```
-
-### The Two Problems with the Current Dockerfile Setup
-1. **Global Conflict Risk:** Placing libraries in `/root/Arduino/libraries/` treats them as global dependencies. When `arduino-cli compile` runs, it inspects this global folder by default, risking version conflicts with the symlinked libraries in `isolated_libs/`.
-2. **Volume Masking:** If we attempt to install them directly into `/app/data/libraries/official` during the `Dockerfile` build, Docker will **hide** those files at runtime the moment the external host volume is mounted over `/app/data`.
-
-### The Elegant & Bulletproof Solution
-To ensure pre-installed libraries are correctly populated on the host volume without causing global conflicts, the backend implements a **Staging & Boot Synchronization** pattern:
-
-1. **Dockerfile Staging:** Modify the `Dockerfile` to install pre-bundled libraries into an isolated staging directory inside the image:
-   ```dockerfile
-   RUN mkdir -p /opt/default-libraries/official && \
-       arduino-cli lib install --dest-dir /opt/default-libraries/official \
-       "Adafruit NeoPixel" "Stepper" "Servo" "LiquidCrystal I2C" ...
-   ```
-2. **Runtime Boot Synchronization:** When `src/server.js` boots up, it verifies whether `/app/data/libraries/official/` on the persistent host volume contains files. If the volume is fresh/empty, `server.js` executes a recursive copy:
-   ```javascript
-   if (!fs.existsSync('/app/data/libraries/official/Servo')) {
-       fs.cpSync('/opt/default-libraries/official', '/app/data/libraries/official', { recursive: true });
-   }
-   ```
-3. **Clean Global State:** Because libraries are staged in `/opt/` and copied to `/app/data/`, the global `/root/Arduino/libraries/` directory remains 100% empty. `arduino-cli compile` will strictly and exclusively use the symlinked versions in `isolated_libs/`.
-
----
-*Architectural blueprint established for OpenHW Studio High-Performance Compiler Backend.*
