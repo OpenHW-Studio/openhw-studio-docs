@@ -137,6 +137,7 @@ export default withMermaid(defineConfig({
           { text: 'Arduino Ecosystem', link: '/references/arduino-ecosystem' },
           { text: 'UI & Frontend Libraries', link: '/references/ui-frontend' },
           { text: 'Backend Technologies', link: '/references/backend-technologies' },
+          { text: 'CLI & Integration', link: '/references/cli-and-ai' },
           { text: 'Documentation References', link: '/references/documentation' },
           { text: 'Open Source Licenses', link: '/references/licenses' },
           { text: 'External Resources', link: '/references/external-resources' }

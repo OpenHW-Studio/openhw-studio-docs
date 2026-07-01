@@ -65,3 +65,22 @@ OpenHW Studio utilizes a robust, real-time backend architecture for classroom ma
     </a>
   </div>
 </div>
+
+<div class="ref-card">
+  <div class="ref-header">
+    <div class="ref-icon">🔐</div>
+    <h2 class="ref-title">Passport.js & Auth Suite</h2>
+    <span class="ref-license">MIT License</span>
+  </div>
+  <div class="ref-desc">
+    A comprehensive authentication middleware for Node.js, combined with JSON Web Tokens (JWT), bcryptjs, and argon2.
+  </div>
+  <div class="ref-usage">
+    <strong>Usage in OpenHW Studio:</strong> Used to securely manage user authentication, session tokens, password hashing, and Google OAuth2.0 integration for OpenHW Studio accounts.
+  </div>
+  <div class="ref-actions">
+    <a href="https://www.passportjs.org/" target="_blank" class="ref-btn">
+      🌐 Official Website
+    </a>
+  </div>
+</div>
