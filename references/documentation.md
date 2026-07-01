@@ -34,3 +34,8 @@ Building a cycle-accurate hardware simulator requires deep technical knowledge o
 
 ### SPI (Serial Peripheral Interface)
 * **Usage:** Referenced for simulating full-duplex synchronous serial communication for components like the ILI9341 display.
+
+### VitePress
+* **Publisher:** Evan You & Vue.js Community
+* **Usage:** Used as the static site generator and documentation engine powering this entire documentation site, ensuring fast loads and excellent Markdown support.
+* [VitePress Official Documentation](https://vitepress.dev/)
