@@ -19,14 +19,14 @@ slug: /components/openhw-pir-motion-sensor
 <div class="component-preview">
   <div class="component-svg-wrap">
     <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="15" width="50" height="50" fill="#1e293b" />
-      <circle cx="40" cy="40" r="22" fill="#f8fafc" />
-      <path d="M 18 40 L 62 40 M 40 18 L 40 62 M 25 25 L 55 55 M 25 55 L 55 25" stroke="#e2e8f0" stroke-width="1" />
-      <rect x="25" y="70" width="6" height="10" fill="#cbd5e1" />
-      <rect x="37" y="70" width="6" height="10" fill="#cbd5e1" />
-      <rect x="49" y="70" width="6" height="10" fill="#cbd5e1" />
+      <rect x="15" y="15" width="50" height="50" fill="var(--vp-c-bg-soft)" />
+      <circle cx="40" cy="40" r="22" fill="var(--vp-c-text-1)" />
+      <path d="M 18 40 L 62 40 M 40 18 L 40 62 M 25 25 L 55 55 M 25 55 L 55 25" stroke="var(--vp-c-text-2)" stroke-width="1" />
+      <rect x="25" y="70" width="6" height="10" fill="var(--vp-c-text-2)" />
+      <rect x="37" y="70" width="6" height="10" fill="var(--vp-c-text-2)" />
+      <rect x="49" y="70" width="6" height="10" fill="var(--vp-c-text-2)" />
     </svg>
-    <span style="font-size:11px;color:#4a5568;">HC-SR501</span>
+    <span style="font-size:11px;color:var(--vp-c-text-2);">HC-SR501</span>
   </div>
   <div class="component-info">
     <p>A PIR (Passive Infrared) sensor consists of a pyroelectric crystal and a faceted Fresnel lens (the white dome). When a warm body like a human or animal moves across its field of view, it detects a sudden change in infrared radiation and pulls its output pin HIGH.</p>
@@ -119,32 +119,3 @@ void loop() {
     <a href="/docs/components/openhw-potentiometer" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Potentiometer &rarr;</a>
   </div>
 </div>
-
-<style>
-/* Base overrides for VitePress layout */
-.custom-breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; color: var(--vp-c-text-2); }
-.custom-breadcrumb a { color: var(--vp-c-brand); text-decoration: none; }
-.custom-breadcrumb a:hover { text-decoration: underline; }
-.custom-breadcrumb span { color: var(--vp-c-text-1); font-weight: 600; }
-h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--vp-c-text-1) !important; margin-bottom: 8px !important; }
-.subtitle { font-size: 16px; color: #718096; margin-bottom: 36px; border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 24px; }
-.component-preview { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 32px; }
-.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.component-info p { color: #a0aec0; font-size: 15px; margin-bottom: 16px; line-height: 1.7; }
-.tag { display: inline-block; background: #1a2035; border: 1px solid #2d4a8a; color: #63b3ed; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin-right: 6px; margin-bottom: 6px; }
-.pin-table, .attrs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
-.pin-table th, .attrs-table th { background: #1a1f2e; color: #63b3ed; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
-.pin-table td, .attrs-table td { padding: 10px 14px; border: 1px solid #2d3748; color: #a0aec0; }
-.pin-table tr:nth-child(even) td, .attrs-table tr:nth-child(even) td { background: #141824; }
-.pin-name { font-family: monospace; color: #68d391; font-weight: 600; }
-.pin-type { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: none; }
-.pin-type.power { background: #3d0000; color: #f56565; }
-.pin-type.digital { background: #1a365d; color: #63b3ed; }
-.pin-type.passive { background: #4a4a4a; color: #a0aec0; }
-.pin-type.input { background: #1c3d27; color: #68d391; }
-.pin-type.analog { background: #4a3a1a; color: #f6ad55; }
-.pin-type.default { background: #2d3748; color: #a0aec0; }
-.circuit-preview { background: #0d1117; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
-:root { --vp-c-bg: #0f1117; }
-@media (max-width: 640px) { .component-preview { flex-direction: column; align-items: center; } }
-</style>

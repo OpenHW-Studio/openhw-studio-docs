@@ -20,12 +20,12 @@ slug: /components/openhw-diode
   <div class="component-svg-wrap">
     <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
       <line x1="20" y1="60" x2="100" y2="60" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
-      <rect x="35" y="45" width="50" height="30" rx="4" fill="#1e293b" />
-      <rect x="75" y="45" width="5" height="30" fill="#94a3b8" />
+      <rect x="35" y="45" width="50" height="30" rx="4" fill="var(--vp-c-bg-soft)" />
+      <rect x="75" y="45" width="5" height="30" fill="var(--vp-c-text-2)" />
       <text x="30" y="85" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">A</text>
       <text x="90" y="85" fill="#3b82f6" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">K</text>
     </svg>
-    <span style="font-size:11px;color:#4a5568;">Standard Diode</span>
+    <span style="font-size:11px;color:var(--vp-c-text-2);">Standard Diode</span>
   </div>
   <div class="component-info">
     <p>A diode allows current to flow easily in one direction (from Anode to Cathode) but severely restricts it in the opposite direction. It is commonly used for reverse-polarity protection, flyback protection on motors, and logic routing.</p>
@@ -63,5 +63,3 @@ To protect a circuit from being wired backward, place the diode in series with t
 When switching a motor or relay with a transistor, place a diode in parallel with the inductive load to safely dissipate the high-voltage spike created when the power is turned off:
 - Connect the **Cathode** to the **positive** side of the motor.
 - Connect the **Anode** to the **negative** side of the motor (the side connected to the transistor).
-
-

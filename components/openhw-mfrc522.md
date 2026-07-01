@@ -24,24 +24,24 @@ slug: /components/openhw-mfrc522
       <rect x="20" y="20" width="40" height="60" fill="none" stroke="#fcd34d" stroke-width="2" />
       <rect x="25" y="25" width="30" height="50" fill="none" stroke="#fcd34d" stroke-width="2" />
       <rect x="35" y="45" width="10" height="10" fill="#0f172a" />
-      <rect x="10" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="18" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="26" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="34" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="42" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="50" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="58" y="105" width="5" height="5" fill="#cbd5e1" />
-      <rect x="66" y="105" width="5" height="5" fill="#cbd5e1" />
-      <text x="12.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 12.5, 100)">SDA</text>
-      <text x="20.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 20.5, 100)">SCK</text>
-      <text x="28.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 28.5, 100)">MOSI</text>
-      <text x="36.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 36.5, 100)">MISO</text>
-      <text x="44.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 44.5, 100)">IRQ</text>
-      <text x="52.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 52.5, 100)">GND</text>
-      <text x="60.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 60.5, 100)">RST</text>
-      <text x="68.5" y="100" fill="#f8fafc" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 68.5, 100)">3.3V</text>
+      <rect x="10" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="18" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="26" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="34" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="42" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="50" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="58" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <rect x="66" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
+      <text x="12.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 12.5, 100)">SDA</text>
+      <text x="20.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 20.5, 100)">SCK</text>
+      <text x="28.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 28.5, 100)">MOSI</text>
+      <text x="36.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 36.5, 100)">MISO</text>
+      <text x="44.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 44.5, 100)">IRQ</text>
+      <text x="52.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 52.5, 100)">GND</text>
+      <text x="60.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 60.5, 100)">RST</text>
+      <text x="68.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 68.5, 100)">3.3V</text>
     </svg>
-    <span style="font-size:11px;color:#4a5568;">RC522</span>
+    <span style="font-size:11px;color:var(--vp-c-text-2);">RC522</span>
   </div>
   <div class="component-info">
     <p>The MFRC522 communicates over SPI and reads the unique UID from Mifare Classic RFID cards and key fobs. Each card has a different UID that your sketch can use to grant or deny access. In OpenHW Studio, right-click the component during simulation to configure card presence and edit the UID.</p>
@@ -147,32 +147,3 @@ void loop() {
     <a href="/docs/components/openhw-motor-driver" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Motor Driver (L298N) &rarr;</a>
   </div>
 </div>
-
-<style>
-/* Base overrides for VitePress layout */
-.custom-breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; color: var(--vp-c-text-2); }
-.custom-breadcrumb a { color: var(--vp-c-brand); text-decoration: none; }
-.custom-breadcrumb a:hover { text-decoration: underline; }
-.custom-breadcrumb span { color: var(--vp-c-text-1); font-weight: 600; }
-h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--vp-c-text-1) !important; margin-bottom: 8px !important; }
-.subtitle { font-size: 16px; color: #718096; margin-bottom: 36px; border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 24px; }
-.component-preview { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 32px; }
-.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.component-info p { color: #a0aec0; font-size: 15px; margin-bottom: 16px; line-height: 1.7; }
-.tag { display: inline-block; background: #1a2035; border: 1px solid #2d4a8a; color: #63b3ed; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin-right: 6px; margin-bottom: 6px; }
-.pin-table, .attrs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
-.pin-table th, .attrs-table th { background: #1a1f2e; color: #63b3ed; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
-.pin-table td, .attrs-table td { padding: 10px 14px; border: 1px solid #2d3748; color: #a0aec0; }
-.pin-table tr:nth-child(even) td, .attrs-table tr:nth-child(even) td { background: #141824; }
-.pin-name { font-family: monospace; color: #68d391; font-weight: 600; }
-.pin-type { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: none; }
-.pin-type.power { background: #3d0000; color: #f56565; }
-.pin-type.digital { background: #1a365d; color: #63b3ed; }
-.pin-type.passive { background: #4a4a4a; color: #a0aec0; }
-.pin-type.input { background: #1c3d27; color: #68d391; }
-.pin-type.analog { background: #4a3a1a; color: #f6ad55; }
-.pin-type.default { background: #2d3748; color: #a0aec0; }
-.circuit-preview { background: #0d1117; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
-:root { --vp-c-bg: #0f1117; }
-@media (max-width: 640px) { .component-preview { flex-direction: column; align-items: center; } }
-</style>

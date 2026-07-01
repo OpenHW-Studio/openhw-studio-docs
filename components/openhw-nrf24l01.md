@@ -24,18 +24,18 @@ slug: /components/openhw-nrf24l01
       <path d="M 15 15 L 20 15 L 20 25 L 25 25 L 25 15 L 30 15" stroke="#fcd34d" stroke-width="1.5" fill="none" />
       <path d="M 35 15 L 40 15 L 40 25 L 45 25" stroke="#fcd34d" stroke-width="1.5" fill="none" />
       <rect x="20" y="40" width="20" height="20" fill="#0f172a" />
-      <circle cx="12" cy="78" r="2" fill="#cbd5e1" />
-      <circle cx="21" cy="78" r="2" fill="#cbd5e1" />
-      <circle cx="30" cy="78" r="2" fill="#cbd5e1" />
-      <circle cx="39" cy="78" r="2" fill="#cbd5e1" />
-      <circle cx="12" cy="70" r="2" fill="#cbd5e1" />
-      <circle cx="21" cy="70" r="2" fill="#cbd5e1" />
-      <circle cx="30" cy="70" r="2" fill="#cbd5e1" />
-      <circle cx="39" cy="70" r="2" fill="#cbd5e1" />
+      <circle cx="12" cy="78" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="21" cy="78" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="30" cy="78" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="39" cy="78" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="12" cy="70" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="21" cy="70" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="30" cy="70" r="2" fill="var(--vp-c-text-2)" />
+      <circle cx="39" cy="70" r="2" fill="var(--vp-c-text-2)" />
       <rect x="10" y="68" width="4" height="4" fill="none" stroke="#fcd34d" stroke-width="1" />
-      <text x="30" y="55" fill="#f8fafc" font-family="monospace" font-size="6" text-anchor="middle">nRF24</text>
+      <text x="30" y="55" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle">nRF24</text>
     </svg>
-    <span style="font-size:11px;color:#4a5568;">nRF24L01+</span>
+    <span style="font-size:11px;color:var(--vp-c-text-2);">nRF24L01+</span>
   </div>
   <div class="component-info">
     <p>The nRF24L01+ operates in the 2.4GHz worldwide ISM frequency band. It supports up to 6 channels of data reception ("pipes"), allowing for star networks. It communicates with the Arduino over SPI.</p>
@@ -141,32 +141,3 @@ void loop() {
     <a href="/docs/components/openhw-photoresistor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Photoresistor (LDR) &rarr;</a>
   </div>
 </div>
-
-<style>
-/* Base overrides for VitePress layout */
-.custom-breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; color: var(--vp-c-text-2); }
-.custom-breadcrumb a { color: var(--vp-c-brand); text-decoration: none; }
-.custom-breadcrumb a:hover { text-decoration: underline; }
-.custom-breadcrumb span { color: var(--vp-c-text-1); font-weight: 600; }
-h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--vp-c-text-1) !important; margin-bottom: 8px !important; }
-.subtitle { font-size: 16px; color: #718096; margin-bottom: 36px; border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 24px; }
-.component-preview { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 32px; }
-.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.component-info p { color: #a0aec0; font-size: 15px; margin-bottom: 16px; line-height: 1.7; }
-.tag { display: inline-block; background: #1a2035; border: 1px solid #2d4a8a; color: #63b3ed; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin-right: 6px; margin-bottom: 6px; }
-.pin-table, .attrs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
-.pin-table th, .attrs-table th { background: #1a1f2e; color: #63b3ed; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
-.pin-table td, .attrs-table td { padding: 10px 14px; border: 1px solid #2d3748; color: #a0aec0; }
-.pin-table tr:nth-child(even) td, .attrs-table tr:nth-child(even) td { background: #141824; }
-.pin-name { font-family: monospace; color: #68d391; font-weight: 600; }
-.pin-type { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: none; }
-.pin-type.power { background: #3d0000; color: #f56565; }
-.pin-type.digital { background: #1a365d; color: #63b3ed; }
-.pin-type.passive { background: #4a4a4a; color: #a0aec0; }
-.pin-type.input { background: #1c3d27; color: #68d391; }
-.pin-type.analog { background: #4a3a1a; color: #f6ad55; }
-.pin-type.default { background: #2d3748; color: #a0aec0; }
-.circuit-preview { background: #0d1117; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
-:root { --vp-c-bg: #0f1117; }
-@media (max-width: 640px) { .component-preview { flex-direction: column; align-items: center; } }
-</style>

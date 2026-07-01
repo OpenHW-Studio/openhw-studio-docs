@@ -463,19 +463,12 @@ title: "Components"
 
 
 <style scoped>
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+.card { background: var(--vp-c-bg-soft); border: 1px solid var(--vp-c-border); padding: 24px; border-radius: 8px; text-decoration: none; display: block; transition: border-color 0.2s; }
+.card:hover { border-color: var(--vp-c-brand-1); }
+.card h3 { color: var(--vp-c-brand-1); margin: 0 0 8px 0; font-size: 18px; }
+.card p { color: var(--vp-c-text-2); font-size: 14px; margin: 0; }
 
-  body { font-family: "Segoe UI", sans-serif; background: #0f1117; color: #e2e8f0; line-height: 1.7; padding: 48px; }
-  h1 { font-size: 36px; color: #fff; margin-bottom: 32px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
-  .card { background: #1a1f2e; border: 1px solid #2d3748; padding: 24px; border-radius: 8px; text-decoration: none; display: block; transition: border-color 0.2s; }
-  .card:hover { border-color: #63b3ed; }
-  .card h3 { color: #63b3ed; margin: 0 0 8px 0; font-size: 18px; }
-  .card p { color: #a0aec0; font-size: 14px; margin: 0; }
-
-</style>
-
-
-<style scoped>
 .custom-breadcrumb {
   margin-bottom: 24px;
   font-size: 14px;

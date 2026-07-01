@@ -20,7 +20,7 @@ slug: /components/openhw-battery
   <div class="component-svg-wrap">
     <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
       <rect x="35" y="25" width="50" height="70" rx="4" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2" />
-      <rect x="50" y="15" width="20" height="10" rx="2" fill="#94a3b8" />
+      <rect x="50" y="15" width="20" height="10" rx="2" fill="var(--vp-c-text-2)" />
       <rect x="35" y="40" width="50" height="40" fill="#e2e8f0" />
       <text x="60" y="55" fill="#000000" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">3.7V</text>
       <text x="60" y="70" fill="#000000" font-family="monospace" font-size="10" text-anchor="middle">Li-ion</text>
@@ -29,7 +29,7 @@ slug: /components/openhw-battery
       <path d="M 57 32 L 63 32 M 60 29 L 60 35" stroke="#1d4ed8" stroke-width="1.5" />
       <path d="M 57 88 L 63 88" stroke="#1e3a8a" stroke-width="1.5" />
     </svg>
-    <span style="font-size:11px;color:#4a5568;">18650 Cell</span>
+    <span style="font-size:11px;color:var(--vp-c-text-2);">18650 Cell</span>
   </div>
   <div class="component-info">
     <p>Lithium-ion batteries offer incredible energy density, making them the standard choice for portable robotics, drones, and IoT devices. A single cell operates nominally at 3.7V, peaking at 4.2V when fully charged and dropping to around 3.0V when empty.</p>
@@ -108,32 +108,3 @@ void loop() {
     <a href="/docs/components/openhw-biaxial-stepper" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Biaxial Stepper &rarr;</a>
   </div>
 </div>
-
-<style>
-/* Base overrides for VitePress layout */
-.custom-breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; color: var(--vp-c-text-2); }
-.custom-breadcrumb a { color: var(--vp-c-brand); text-decoration: none; }
-.custom-breadcrumb a:hover { text-decoration: underline; }
-.custom-breadcrumb span { color: var(--vp-c-text-1); font-weight: 600; }
-h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--vp-c-text-1) !important; margin-bottom: 8px !important; }
-.subtitle { font-size: 16px; color: #718096; margin-bottom: 36px; border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 24px; }
-.component-preview { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 32px; }
-.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.component-info p { color: #a0aec0; font-size: 15px; margin-bottom: 16px; line-height: 1.7; }
-.tag { display: inline-block; background: #1a2035; border: 1px solid #2d4a8a; color: #63b3ed; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin-right: 6px; margin-bottom: 6px; }
-.pin-table, .attrs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
-.pin-table th, .attrs-table th { background: #1a1f2e; color: #63b3ed; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
-.pin-table td, .attrs-table td { padding: 10px 14px; border: 1px solid #2d3748; color: #a0aec0; }
-.pin-table tr:nth-child(even) td, .attrs-table tr:nth-child(even) td { background: #141824; }
-.pin-name { font-family: monospace; color: #68d391; font-weight: 600; }
-.pin-type { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: none; }
-.pin-type.power { background: #3d0000; color: #f56565; }
-.pin-type.digital { background: #1a365d; color: #63b3ed; }
-.pin-type.passive { background: #4a4a4a; color: #a0aec0; }
-.pin-type.input { background: #1c3d27; color: #68d391; }
-.pin-type.analog { background: #4a3a1a; color: #f6ad55; }
-.pin-type.default { background: #2d3748; color: #a0aec0; }
-.circuit-preview { background: #0d1117; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
-:root { --vp-c-bg: #0f1117; }
-@media (max-width: 640px) { .component-preview { flex-direction: column; align-items: center; } }
-</style>

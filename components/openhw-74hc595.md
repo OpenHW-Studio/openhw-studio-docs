@@ -19,7 +19,7 @@ slug: /components/openhw-74hc595
 <div class="component-preview">
   <div class="component-svg-wrap">
     <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="20" width="70" height="80" rx="4" fill="#1e293b" stroke="#334155" stroke-width="3" />
+      <rect x="25" y="20" width="70" height="80" rx="4" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
       <circle cx="35" cy="30" r="3" fill="#64748b" />
       <line x1="10" y1="30" x2="25" y2="30" stroke="#94a3b8" stroke-width="3" />
       <line x1="10" y1="40" x2="25" y2="40" stroke="#94a3b8" stroke-width="3" />
@@ -38,7 +38,7 @@ slug: /components/openhw-74hc595
       <line x1="95" y1="90" x2="110" y2="90" stroke="#94a3b8" stroke-width="3" />
       <line x1="95" y1="100" x2="110" y2="100" stroke="#94a3b8" stroke-width="3" />
     </svg>
-    <span style="font-size:11px;color:#4a5568;">74HC595</span>
+    <span style="font-size:11px;color:var(--vp-c-text-2);">74HC595</span>
   </div>
   <div class="component-info">
     <p>The 74HC595 is one of the most famous ICs in the maker community. It allows you to control 8 separate outputs (like LEDs, relays, or 7-segment displays) using just 3 pins on your microcontroller. Like the 165, multiple 595 chips can be daisy-chained together to control 16, 24, or even 100+ outputs from those same 3 pins.</p>
@@ -126,32 +126,3 @@ void loop() {
     <a href="/docs/components/openhw-7segment" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: 7-Segment Display (Displays) &rarr;</a>
   </div>
 </div>
-
-<style>
-/* Base overrides for VitePress layout */
-.custom-breadcrumb { margin-bottom: 2rem; font-size: 0.9rem; color: var(--vp-c-text-2); }
-.custom-breadcrumb a { color: var(--vp-c-brand); text-decoration: none; }
-.custom-breadcrumb a:hover { text-decoration: underline; }
-.custom-breadcrumb span { color: var(--vp-c-text-1); font-weight: 600; }
-h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--vp-c-text-1) !important; margin-bottom: 8px !important; }
-.subtitle { font-size: 16px; color: #718096; margin-bottom: 36px; border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 24px; }
-.component-preview { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 32px; }
-.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.component-info p { color: #a0aec0; font-size: 15px; margin-bottom: 16px; line-height: 1.7; }
-.tag { display: inline-block; background: #1a2035; border: 1px solid #2d4a8a; color: #63b3ed; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin-right: 6px; margin-bottom: 6px; }
-.pin-table, .attrs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
-.pin-table th, .attrs-table th { background: #1a1f2e; color: #63b3ed; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
-.pin-table td, .attrs-table td { padding: 10px 14px; border: 1px solid #2d3748; color: #a0aec0; }
-.pin-table tr:nth-child(even) td, .attrs-table tr:nth-child(even) td { background: #141824; }
-.pin-name { font-family: monospace; color: #68d391; font-weight: 600; }
-.pin-type { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; text-transform: none; }
-.pin-type.power { background: #3d0000; color: #f56565; }
-.pin-type.digital { background: #1a365d; color: #63b3ed; }
-.pin-type.passive { background: #4a4a4a; color: #a0aec0; }
-.pin-type.input { background: #1c3d27; color: #68d391; }
-.pin-type.analog { background: #4a3a1a; color: #f6ad55; }
-.pin-type.default { background: #2d3748; color: #a0aec0; }
-.circuit-preview { background: #0d1117; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
-:root { --vp-c-bg: #0f1117; }
-@media (max-width: 640px) { .component-preview { flex-direction: column; align-items: center; } }
-</style>
