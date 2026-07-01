@@ -1,0 +1,1106 @@
+[
+  {
+    "id": "openhw-dht22",
+    "name": "DHT22",
+    "category": "Sensors",
+    "description": "DHT22 Temperature and Humidity Sensor",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-esp32",
+    "name": "ESP32",
+    "category": "Boards",
+    "description": "ESP32 Development Board",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-and-gate",
+    "name": "AND Gate",
+    "category": "Logic Components",
+    "description": "Logical AND gate. Outputs high only when both inputs are high.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-buffer-gate",
+    "name": "Buffer Gate",
+    "category": "Logic Components",
+    "description": "Logical Buffer gate. Passes the input signal unchanged.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-clock-generator",
+    "name": "Clock",
+    "category": "Logic Components",
+    "description": "Adjustable Clock Generator. Outputs a continuous square wave.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-d-flipflop",
+    "name": "D Flip-Flop",
+    "category": "Logic Components",
+    "description": "Edge-triggered D Flip-Flop. On the rising edge of CLK, Q captures the value of D. Qbar is the complement of Q.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-d-flipflop-dsr",
+    "name": "D Flip-Flop (Set/Reset)",
+    "category": "Logic Components",
+    "description": "Edge-triggered D Flip-Flop with active-HIGH asynchronous Set and Reset.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-d-flipflop-r",
+    "name": "D Flip-Flop (Reset)",
+    "category": "Logic Components",
+    "description": "Edge-triggered D Flip-Flop with active-HIGH asynchronous reset. On the rising edge of CLK, Q captures D. If R is HIGH, Q is forced LOW.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-ic-74xx",
+    "name": "Logic IC",
+    "category": "Logic Components",
+    "description": "Universal 74xx series logic IC. Supports 7400, 7402, 7404, 7407, 7408, 7432, 7486, 74266.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-mux-2to1",
+    "name": "MUX 2:1",
+    "category": "Logic Components",
+    "description": "2-to-1 Multiplexer. Selects one of two data inputs based on the select line.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-nand-gate",
+    "name": "NAND Gate",
+    "category": "Logic Components",
+    "description": "Logical NAND gate. Outputs low only when both inputs are high.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-nor-gate",
+    "name": "NOR Gate",
+    "category": "Logic Components",
+    "description": "Logical NOR gate. Outputs high only when both inputs are low.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-not-gate",
+    "name": "NOT Gate",
+    "category": "Logic Components",
+    "description": "Logical NOT gate. Inverts the input signal.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-or-gate",
+    "name": "OR Gate",
+    "category": "Logic Components",
+    "description": "Logical OR gate. Outputs high when at least one input is high.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-xnor-gate",
+    "name": "XNOR Gate",
+    "category": "Logic Components",
+    "description": "Logical XNOR gate. Outputs high when both inputs are equal.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "logic-xor-gate",
+    "name": "XOR Gate",
+    "category": "Logic Components",
+    "description": "Logical XOR gate. Outputs high when exactly one input is high.",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "max30102",
+    "name": "MAX30102 Heart Rate",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-mq2-gas-sensor",
+    "name": "MQ-2 Gas Sensor",
+    "category": "Sensors",
+    "description": "Analog/Digital Gas Sensor Module — detects LPG, smoke, alcohol, propane, hydrogen, methane and carbon monoxide.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-5w-speaker",
+    "name": "5W Audio Speaker",
+    "category": "Audio",
+    "description": "5 Watt Analog Speaker with Web Audio playback",
+    "tags": [
+      "Audio",
+      "audio",
+      "speaker",
+      "sound",
+      "analog",
+      "5w"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pushbutton-6mm",
+    "name": "6mm Push Button",
+    "category": "Basic",
+    "description": "4-pin momentary tactile push button.",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-74hc165",
+    "name": "74HC165 Input Shift Register (PISO)",
+    "category": "Inputs",
+    "description": "8-bit Parallel-In Serial-Out (PISO) Shift Register. Exact UI simulation of Wokwi 74HC165.",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-74hc595",
+    "name": "74HC595 Shift Register",
+    "category": "Inputs",
+    "description": "8-bit serial-in, parallel-out shift register. Exact UI simulation of Wokwi 74HC595.",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-7segment",
+    "name": "7-Segment Display",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-a4988",
+    "name": "A4988 Stepper Driver",
+    "category": "Actuators",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-adxl345",
+    "name": "ADXL345 Accelerometer",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-analog-joystick",
+    "name": "Analog Joystick",
+    "category": "Sensors",
+    "description": "2-axis analog joystick with push button",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-arduino-mega",
+    "name": "Arduino Mega 2560",
+    "category": "Boards",
+    "description": "ATmega2560 board",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-arduino-nano",
+    "name": "Arduino Nano Type-C",
+    "category": "Boards",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-arduino-sensor-shield",
+    "name": "Arduino Sensor Shield v5.0",
+    "category": "Modules",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Modules"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-arduino-uno",
+    "name": "Arduino Uno",
+    "category": "Boards",
+    "description": "ATmega328P microcontroller board at 16 MHz. 14 digital I/O pins (6 PWM), 6 analog inputs, UART/SPI/I2C support, 32 KB flash, USB connectivity.",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-attiny85",
+    "name": "ATtiny85 Board",
+    "category": "Boards",
+    "description": "A minimal breakout board for the ATtiny85 microcontroller.",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-battery",
+    "name": "Li-ion Battery",
+    "category": "Power Components",
+    "description": "3.7V rechargeable Lithium-ion battery. Simulates real-time discharge and voltage curves.",
+    "tags": [
+      "Power Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-biaxial-stepper",
+    "name": "Biaxial Stepper Motor",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-bmp180-breakout",
+    "name": "BMP180 Pressure Sensor Breakout",
+    "category": "Sensors",
+    "description": "A breakout board for the Bosch BMP180 digital pressure and temperature sensor.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-breadboard",
+    "name": "Breadboard (Full)",
+    "category": "Basic",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-breadboard-half",
+    "name": "Breadboard (Half)",
+    "category": "Basic",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-breadboard-mini",
+    "name": "Breadboard (Mini)",
+    "category": "Basic",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-buzzer",
+    "name": "Buzzer",
+    "category": "Outputs",
+    "description": "Piezoelectric buzzer that generates audio tones when driven by PWM or toggled digital signals. Frequency determines pitch; use tone() in Arduino.",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-cc1101",
+    "name": "CC1101",
+    "category": "Network",
+    "description": "Sub-GHz RF Transceiver module.",
+    "tags": [
+      "Network"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-charger",
+    "name": "Li-ion Charger",
+    "category": "Power Components",
+    "description": "TP4056 based Lithium-ion charging module. Detects USB power and manages battery charging.",
+    "tags": [
+      "Power Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-diode",
+    "name": "Diode",
+    "category": "Basic",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ds1307-rtc",
+    "name": "DS1307 RTC Module",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ds18b20",
+    "name": "DS18B20 Temperature Sensor",
+    "category": "Sensors",
+    "description": "1-Wire digital temperature sensor (DS18B20) breakout board. Measures temperature from -55°C to +125°C.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ePaperDisplay",
+    "name": "2.9\" e-Paper Display (beta)",
+    "category": "Displays",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-esp32-cam",
+    "name": "ESP32-CAM",
+    "category": "Boards",
+    "description": "ESP32 Board with OV2640 Camera Module",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-hc-sr04",
+    "name": "Ultrasonic Sensor",
+    "category": "Sensors",
+    "description": "HC-SR04 ultrasonic distance sensor.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-hp4067",
+    "name": "16-Channel Mux (HP4067)",
+    "category": "Logic Components",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Logic Components"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-hx711_5",
+    "name": "HX711 Load Cell (5kg)",
+    "category": "Inputs",
+    "description": "HX711 Load Cell Amplifier with 5kg Load Cell",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-hx711_50",
+    "name": "HX711 Load Cell (50kg)",
+    "category": "Inputs",
+    "description": "HX711 Load Cell Amplifier with 50kg Load Cell",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ili9341",
+    "name": "ILI9341 2.8\" TFT LCD",
+    "category": "Displays",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ili9341-touch",
+    "name": "ILI9341 2.8\" Touch Screen LCD",
+    "category": "Displays",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-inmp441",
+    "name": "I2S MEMS Microphone (INMP441)",
+    "category": "Audio",
+    "description": "I2S Omnidirectional Microphone",
+    "tags": [
+      "Audio",
+      "audio",
+      "i2s",
+      "mic",
+      "microphone",
+      "inmp441"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ir-receiver",
+    "name": "IR Receiver",
+    "category": "Sensors",
+    "description": "38 kHz infrared demodulator. Receives NEC protocol IR signals from a virtual remote control and outputs a clean digital signal.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ir-remote",
+    "name": "IR Remote",
+    "category": "Inputs",
+    "description": "38KHz infrared remote with 21 function keys.",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ks2e-m-dc5",
+    "name": "DPDT Relay",
+    "category": "Outputs",
+    "description": "Double Pole Double Throw (DPDT) electromechanical relay, 5V DC coil",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-l293d",
+    "name": "Motor Driver (L293D)",
+    "category": "Actuators",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-lcd1602",
+    "name": "LCD 16x2 (Parallel)",
+    "category": "Displays",
+    "description": "16x2 Character LCD Display (Parallel)",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-lcd1602-i2c",
+    "name": "LCD 16x2 (I2C)",
+    "category": "Displays",
+    "description": "16x2 Character LCD Display with I2C Backpack",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-lcd2004",
+    "name": "openhw-lcd2004",
+    "category": "Displays",
+    "description": "20x4 Character LCD Display without I2C Backpack",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-lcd2004-i2c",
+    "name": "openhw-lcd2004-i2c",
+    "category": "Displays",
+    "description": "20x4 Character LCD Display with I2C Backpack",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ldr-module",
+    "name": "LDR Sensor Module (4-pin)",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-led",
+    "name": "LED",
+    "category": "Outputs",
+    "description": "Light-emitting diode. Emits light when current flows through it. Supports multiple colors via the color attribute.",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-logic-analyzer",
+    "name": "8-Ch Logic Analyzer",
+    "category": "Debug",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Debug"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-max7219",
+    "name": "MAX7219 Dot Matrix",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-max98357",
+    "name": "MAX98357 I2S Amp",
+    "category": "Audio",
+    "description": "I2S 3W Class D Amplifier",
+    "tags": [
+      "Audio",
+      "audio",
+      "i2s",
+      "amplifier",
+      "amp",
+      "max98357"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-membrane-keypad",
+    "name": "Membrane Keypad (4x4)",
+    "category": "Inputs",
+    "description": "Standard 4x4 membrane keypad matrix. Connect rows to output pins and columns to input pullup pins to scan for key presses.",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-mfrc522",
+    "name": "MFRC522 RFID Reader",
+    "category": "Sensors",
+    "description": "SPI-based RFID reader operating at 13.56 MHz. Reads Mifare Classic 1K cards and key fobs.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-motor",
+    "name": "DC Motor",
+    "category": "Outputs",
+    "description": "DC motor that converts electrical energy to rotational motion. Automatically wires to an L298N driver for bidirectional control.",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-motor-driver",
+    "name": "L298N Motor Driver",
+    "category": "Actuators",
+    "description": "Dual H-bridge motor driver IC (L298N). Controls the speed and direction of two independent DC motors. Supports up to 2 A per channel and up to 46 V supply.",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-mpu6050",
+    "name": "MPU6050 IMU Sensor",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-neopixel-matrix",
+    "name": "WS2812B RGB LED",
+    "category": "Outputs",
+    "description": "WS2812B addressable RGB LED (NeoPixel). Each pixel is individually controllable via a single-wire data protocol. Chain multiple pixels from one digital pin.",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-neopixel-ring",
+    "name": "NeoPixel Ring",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-nlsf595",
+    "name": "SPI LED Driver (NLSF595)",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-nokia-5110",
+    "name": "Nokia 5110 Screen",
+    "category": "Displays",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-npn-transistor",
+    "name": "NPN Transistor",
+    "category": "Basic",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-nrf24l01",
+    "name": "nRF24L01+",
+    "category": "Network",
+    "description": "2.4GHz RF Transceiver module.",
+    "tags": [
+      "Network"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ntc-temperature-sensor",
+    "name": "Temperature Sensor (NTC)",
+    "category": "Sensors",
+    "description": "Negative Temperature Coefficient (NTC) thermistor. Resistance decreases as temperature increases. Used for precision temperature monitoring.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ntc-thermistor",
+    "name": "NTC Thermistor Module",
+    "category": "Sensors",
+    "description": "An analog and digital temperature sensor module using an NTC thermistor and an LM393 comparator.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pca9685",
+    "name": "Servo Pi HAT",
+    "category": "Actuators",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pca9865",
+    "name": "16-Channel PWM Module (PCA9865)",
+    "category": "Actuators",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pcm5102",
+    "name": "PCM5102 I2S DAC",
+    "category": "Audio",
+    "description": "32-bit I2S Stereo DAC",
+    "tags": [
+      "Audio",
+      "audio",
+      "i2s",
+      "dac",
+      "pcm5102"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-photodiode",
+    "name": "Photodiode",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-photoresistor",
+    "name": "Photoresistor (LDR)",
+    "category": "Sensors",
+    "description": "Light-dependent resistor. Resistance decreases with increasing light intensity.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pico",
+    "name": "Raspberry Pi Pico",
+    "category": "Boards",
+    "description": "RP2040 dual-core microcontroller board. GPIO, UART, I2C, SPI, PWM and ADC support in simulation runtime.",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pico-w",
+    "name": "Raspberry Pi Pico W",
+    "category": "Boards",
+    "description": "RP2040 Pico W board with full WiFi simulation. Uses a complete L2–L7 userspace network stack (ARP/DHCP/DNS/ICMP/TCP/UDP) providing real internet access. PCAP capture available.",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-potentiometer",
+    "name": "Rotary Potentiometer",
+    "category": "Sensors",
+    "description": "Rotary potentiometer (variable resistor). Outputs an analog voltage proportional to the knob's rotation angle. Use with analogRead() on an Arduino analog pin.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-power-supply",
+    "name": "Power Supply",
+    "category": "Basic",
+    "description": "Provides a stable regulated DC voltage to the circuit. Configurable output (3.3 V / 5 V / custom). Use as a standalone power source without the Arduino.",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-pushbutton",
+    "name": "Push Button",
+    "category": "Basic",
+    "description": "Momentary tactile push button.",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-relay-module",
+    "name": "Relay Module",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-resistor",
+    "name": "Resistor",
+    "category": "Basic",
+    "description": "Passive two-terminal component that limits current flow. Configurable resistance (Ω). Essential for current-limiting LEDs and voltage dividers.",
+    "tags": [
+      "Basic"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-rgb-led",
+    "name": "RGB LED (4-pin)",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-rotary-encoder",
+    "name": "Rotary Encoder",
+    "category": "Inputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-sd-card",
+    "name": "MicroSD Card",
+    "category": "Memory",
+    "description": "SPI microSD card module with virtual storage backed by an in-memory filesystem and optional littlefs-wasm runtime.",
+    "tags": [
+      "Memory"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-servo",
+    "name": "Servo Motor",
+    "category": "Actuators",
+    "description": "Hobby servo motor with precise angular position control (0–180°) via PWM signal. Operates at 5 V; signal pulse width of 1–2 ms controls the shaft angle.",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-simulation-monitor",
+    "name": "Simulation Monitor",
+    "category": "Sensor",
+    "description": "Advanced real-time performance diagnostic instrument. Tracks worker CPU load, simulation speed, time drift, execution jitter, frame skips, and UI canvas FPS reflection.",
+    "tags": [
+      "Sensor"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-slide-potentiometer",
+    "name": "Linear Potentiometer",
+    "category": "Sensors",
+    "description": "Linear slide potentiometer. Outputs a variable analog voltage as the slider moves along a linear track. Use with analogRead() for position sensing.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-slide-switch",
+    "name": "Slide Switch",
+    "category": "Inputs",
+    "description": "Standard Single Pole Double Throw (SPDT) slide switch.",
+    "tags": [
+      "Inputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-soil-moisture-sensor",
+    "name": "Soil Moisture",
+    "category": "Sensors",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-sph0645",
+    "name": "I2S MEMS Microphone (SPH0645)",
+    "category": "Audio",
+    "description": "I2S Digital Bottom Port Microphone",
+    "tags": [
+      "Audio",
+      "audio",
+      "i2s",
+      "mic",
+      "microphone",
+      "sph0645"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-ssd1306-oled",
+    "name": "SSD1306 OLED 128x64",
+    "category": "Outputs",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Outputs"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-stepper-motor",
+    "name": "Stepper Motor (Bipolar)",
+    "category": "Actuators",
+    "description": "OpenHW Studio Simulator Component",
+    "tags": [
+      "Actuators"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-stm32-blue-pill (frontend)",
+    "name": "STM32 Blue Pill (frontend)",
+    "category": "Boards",
+    "description": "STM32F103C8T6 Blue Pill development board running on frontend engine.",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-stm32-bluepill",
+    "name": "STM32 Blue Pill",
+    "category": "Boards",
+    "description": "STM32F103C8T6 ARM Cortex-M3 Development Board",
+    "tags": [
+      "Boards"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-tm1637-7segment",
+    "name": "Seven Segment Display (TM1637)",
+    "category": "Displays",
+    "description": "4-Digit 7-Segment Display module with TM1637 driver",
+    "tags": [
+      "Displays"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-wifi-ap",
+    "name": "WiFi Access Point",
+    "category": "Connectivity",
+    "description": "Simulated WiFi access point. All ESP32 and Pico W boards in the simulation connect through this AP. Equivalent to wokwi-wifi-ap.",
+    "tags": [
+      "Connectivity"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "wokwi-pir-motion-sensor",
+    "name": "PIR Motion Sensor",
+    "category": "Sensors",
+    "description": "Passive Infrared (PIR) motion detection sensor. Outputs HIGH on the OUT pin when motion is detected.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-raindrop-module",
+    "name": "Raindrop Module",
+    "category": "Sensors",
+    "description": "LM393-based raindrop comparator module. Reads from sensing pad and outputs AO (analog) and DO (digital, active LOW) for Arduino/ESP32.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  },
+  {
+    "id": "openhw-raindrop-pad",
+    "name": "Rain Sensor Pad",
+    "category": "Sensors",
+    "description": "Raindrop sensing pad — resistive PCB that detects water. Wire AOUT to the Raindrop Module's PAD+ pin.",
+    "tags": [
+      "Sensors"
+    ],
+    "svgIcon": "<svg width='100' height='100'><circle cx='50' cy='50' r='40' fill='#333'/></svg>"
+  }
+]

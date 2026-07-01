@@ -4,6 +4,40 @@ description: Documentation for the custom component authoring interface.
 outline: deep
 ---
 
+
+  Home &gt; 
+  Components &gt; 
+  General &gt; 
+  component-lab
+
+
+# component-lab
+component-lab
+
+## Component Preview
+
+
+  
+    
+  
+  
+  
+  
+  
+  
+  componen..
+
+    component-lab
+  
+  
+    component-lab
+    
+      General
+      Component
+    
+  
+
+
 # Component Lab (`ComponentLab.jsx`)
 
 The Component Lab is a dedicated developer tool within OpenHW Studio that allows advanced users to design and manifest custom electronic components.
