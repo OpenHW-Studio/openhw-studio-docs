@@ -18,19 +18,7 @@ slug: /components/openhw-logic-analyzer
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="110" height="70" rx="4" fill="var(--vp-c-bg-soft)" stroke="#0f172a" stroke-width="2" />
-      <rect x="15" y="15" width="90" height="40" fill="#020617" />
-      <path d="M 15 25 L 30 25 L 30 15 L 45 15 L 45 25 L 60 25 L 60 15 L 75 15 L 75 25 L 90 25" fill="none" stroke="#10b981" stroke-width="2" />
-      <path d="M 15 45 L 35 45 L 35 35 L 55 35 L 55 45 L 75 45 L 75 35 L 95 35" fill="none" stroke="#3b82f6" stroke-width="2" />
-      <circle cx="15" cy="65" r="2" fill="#ef4444" />
-      <circle cx="30" cy="65" r="2" fill="#eab308" />
-      <circle cx="45" cy="65" r="2" fill="#eab308" />
-      <circle cx="60" cy="65" r="2" fill="#eab308" />
-      <circle cx="75" cy="65" r="2" fill="#eab308" />
-      <circle cx="90" cy="65" r="2" fill="#eab308" />
-      <circle cx="105" cy="65" r="2" fill="#eab308" />
-    </svg>
+    <img src="/images/components/openhw-logic-analyzer.svg" alt="8-Ch Logic Analyzer" style="width:150px; height:90px; max-width: 150px; max-height: 90px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Logic Analyzer</span>
   </div>
   <div class="component-info">
@@ -70,6 +58,12 @@ The analyzer continuously samples the voltage on pins D0-D7. If the voltage is a
 1. Connect **GND** to your circuit's ground.
 2. Connect **D0** to the data line you want to monitor (e.g., Arduino D9 for a PWM signal).
 3. Connect **D1-D7** to any other signals of interest.
+
+<p align="center">
+  <img src="/images/components/openhw-logic-analyzer_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 You do not write code *for* the logic analyzer. Instead, you write code for your microcontroller and use the analyzer to verify the output. For example, to verify a PWM signal:

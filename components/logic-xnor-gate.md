@@ -18,14 +18,19 @@ slug: /components/logic-xnor-gate
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 35,30 Q 55,60 35,90 Q 75,90 90,60 Q 75,30 35,30 Z" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <path d="M 28,30 Q 48,60 28,90" fill="none" stroke="var(--vp-c-border)" stroke-width="3" />
-      <circle cx="97" cy="60" r="7" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <line x1="10" y1="45" x2="35" y2="45" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="75" x2="35" y2="75" stroke="#94a3b8" stroke-width="3" />
-      <line x1="104" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <text x="50" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="16" font-weight="bold">=1</text>
+    <svg width="75" height="60" viewBox="0 0 75 60" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="15" x2="17" y2="15" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+      <line x1="0" y1="45" x2="17" y2="45" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+      <path d="M 16 10 Q 21 30 16 50" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" />
+      <defs>
+          <linearGradient id="xnorGateFill" x1="22" y1="10" x2="57" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.05" />
+          </linearGradient>
+      </defs>
+      <path d="M 22 10 Q 27 30 22 50 Q 47 50 62 30 Q 47 10 22 10 Z" fill="url(#xnorGateFill)" stroke="#a855f7" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <circle cx="65" cy="30" r="3" fill="transparent" stroke="#a855f7" stroke-width="2" />
+      <line x1="68" y1="30" x2="75" y2="30" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
     </svg>
     <span style="font-size:11px;color:var(--vp-c-text-2);">XNOR Gate</span>
   </div>
@@ -65,9 +70,14 @@ The XNOR (Exclusive-NOR) gate is commonly used in parity generation, digital com
 The XNOR function evaluates if two logic inputs are equal.
 
 ## Wiring Diagram
-1. Connect a digital signal source to **IN1**.
-2. Connect a second digital signal source to **IN2**.
-3. Connect **OUT** to the next logic stage or an indicator LED.
+
+Example of a logic XNOR gate wired to an Arduino Uno and an LED (with a resistor).
+
+<p align="center">
+  <img src="/images/components/logic-xnor-gate_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

@@ -1,0 +1,33 @@
+<svg width="150" height="70" viewBox="0 0 150 70" style="font-family: sans-serif; user-select: none;" xmlns="http://www.w3.org/2000/svg">
+  <!-- Silver base plate -->
+  <rect x="25" y="20" width="100" height="30" fill="#a3a3a3" stroke="#737373" stroke-width="1" />
+  
+  <!-- Screws -->
+  <circle cx="30" cy="35" r="2.5" fill="#737373" />
+  <path d="M 28 33 L 32 37" stroke="#404040" stroke-width="1" />
+  
+  <circle cx="120" cy="35" r="2.5" fill="#737373" />
+  <path d="M 118 33 L 122 37" stroke="#404040" stroke-width="1" />
+
+  <!-- Track slot -->
+  <rect x="35" y="31" width="80" height="8" fill="#3f1d1d" />
+
+  <!-- Pins -->
+  <rect x="15" y="25" width="10" height="2" fill="#d4d4d4" />
+  <rect x="15" y="43" width="10" height="2" fill="#d4d4d4" />
+  <rect x="125" y="34" width="10" height="2" fill="#d4d4d4" />
+
+  <rect x="13" y="24" width="3" height="4" fill="#111" />
+  <rect x="13" y="42" width="3" height="4" fill="#111" />
+  <rect x="134" y="33" width="3" height="4" fill="#111" />
+
+  <!-- Slider / Fader Knob (Set to center) -->
+  <g transform="translate(75, 35)">
+    <rect x="-15" y="-25" width="30" height="50" fill="#262626" />
+    <!-- Knob grip lines -->
+    <rect x="-1" y="-25" width="2" height="50" fill="#e5e5e5" />
+    
+    <path d="M -15 -25 L -5 -25 L -5 25 L -15 25 Z" fill="#404040" />
+    <path d="M 15 -25 L 5 -25 L 5 25 L 15 25 Z" fill="#171717" />
+  </g>
+</svg>

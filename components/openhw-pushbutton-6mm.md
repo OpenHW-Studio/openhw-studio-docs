@@ -18,14 +18,7 @@ slug: /components/openhw-pushbutton-6mm
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="40" height="40" rx="4" fill="var(--vp-c-bg-soft)" />
-      <circle cx="30" cy="30" r="12" fill="#0f172a" stroke="var(--vp-c-border)" stroke-width="2" />
-      <rect x="5" y="15" width="5" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="41" width="5" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="50" y="15" width="5" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="50" y="41" width="5" height="4" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-pushbutton-6mm.svg" alt="Pushbutton (6mm)" style="width:45px; height:60px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Tact Switch</span>
   </div>
   <div class="component-info">
@@ -51,12 +44,20 @@ This button has 4 pins, but internally they are connected in pairs. Pins 1A and 
 </table>
 
 ## Configurable Attributes
-*This component has no configurable attributes.*
+<table class="attrs-table">
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr><td><strong>color</strong></td><td><code>string</code></td><td><code>blue</code></td><td>Visual button cap color (e.g., `blue`, `red`, `green`, `yellow`, `white`, `black`, `orange`).</td></tr>
+</table>
 
-## Wiring Diagram (Internal Pull-Up)
-1. Connect **Pin 1A** to Arduino **GND**.
-2. Connect **Pin 2A** to Arduino **D2**.
-*(You can use either the 'A' or 'B' side).*
+## Wiring Diagram
+
+Example of connecting the Pushbutton (6mm) to an Arduino Uno using the internal pull-up resistor.
+
+<p align="center">
+  <img src="/images/components/openhw-pushbutton-6mm_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code uses the `INPUT_PULLUP` mode, meaning the button will read `HIGH` normally, and `LOW` when pressed.

@@ -18,20 +18,7 @@ slug: /components/openhw-ds1307-rtc
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="25" width="70" height="70" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
-      <circle cx="60" cy="60" r="22" fill="var(--vp-c-text-2)" />
-      <circle cx="60" cy="60" r="18" fill="#e2e8f0" />
-      <text x="60" y="64" fill="#475569" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">CR2032</text>
-      <rect x="35" y="30" width="10" height="15" fill="var(--vp-c-bg-soft)" />
-      <rect x="75" y="30" width="10" height="15" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="85" r="2" fill="#eab308" />
-      <circle cx="45" cy="85" r="2" fill="#eab308" />
-      <circle cx="55" cy="85" r="2" fill="#eab308" />
-      <circle cx="65" cy="85" r="2" fill="#eab308" />
-      <circle cx="75" cy="85" r="2" fill="#eab308" />
-      <circle cx="85" cy="85" r="2" fill="#eab308" />
-    </svg>
+    <img src="/images/components/openhw-ds1307-rtc.svg" alt="DS1307 RTC Module" style="width:120px; height:120px; max-width: 120px; max-height: 120px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">DS1307 RTC</span>
   </div>
   <div class="component-info">
@@ -73,6 +60,12 @@ The DS1307 contains 64 bytes of NVRAM, the first 8 of which are reserved for tim
 2. Connect **GND** to GND.
 3. Connect **SDA** to Arduino analog pin A4.
 4. Connect **SCL** to Arduino analog pin A5.
+
+<p align="center">
+  <img src="/images/components/openhw-ds1307-rtc_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *Install the **RTClib** library by Adafruit before running this code.*

@@ -18,19 +18,7 @@ slug: /components/openhw-inmp441
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="40" fill="var(--vp-c-bg-soft)" stroke="#0f172a" stroke-width="2" />
-      <circle cx="60" cy="60" r="30" fill="#0f172a" />
-      <circle cx="60" cy="60" r="5" fill="#facc15" />
-      <circle cx="60" cy="60" r="2" fill="#000000" />
-      <rect x="35" y="25" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="55" y="20" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="75" y="25" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="35" y="91" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="55" y="96" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="75" y="91" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <text x="60" y="80" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">INMP441</text>
-    </svg>
+    <img src="/images/components/openhw-inmp441.svg" alt="INMP441 Microphone" style="width:60px; height:60px; max-width: 120px; max-height: 120px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">I2S Microphone</span>
   </div>
   <div class="component-info">
@@ -69,6 +57,12 @@ The INMP441 converts sound waves into a continuous stream of digital audio sampl
 3. Connect **WS** to GPIO 15.
 4. Connect **SCK** to GPIO 14.
 5. Connect **SD** to GPIO 32.
+
+<p align="center">
+  <img src="/images/components/openhw-inmp441_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code (ESP32)
 This code uses the ESP32's built-in I2S peripheral to read data from the microphone.

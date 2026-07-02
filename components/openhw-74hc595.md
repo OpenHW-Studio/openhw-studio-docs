@@ -18,25 +18,30 @@ slug: /components/openhw-74hc595
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="20" width="70" height="80" rx="4" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <circle cx="35" cy="30" r="3" fill="#64748b" />
-      <line x1="10" y1="30" x2="25" y2="30" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="40" x2="25" y2="40" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="50" x2="25" y2="50" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="60" x2="25" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="70" x2="25" y2="70" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="80" x2="25" y2="80" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="90" x2="25" y2="90" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="100" x2="25" y2="100" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="30" x2="110" y2="30" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="40" x2="110" y2="40" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="50" x2="110" y2="50" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="70" x2="110" y2="70" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="80" x2="110" y2="80" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="90" x2="110" y2="90" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="100" x2="110" y2="100" stroke="#94a3b8" stroke-width="3" />
+    <svg width="135" height="45" viewBox="0 0 135 45" xmlns="http://www.w3.org/2000/svg">
+      <g>
+          <rect x="11" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="26" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="41" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="56" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="71" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="86" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="101" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="116" y="0" width="8" height="6" fill="#cccccc" />
+          <rect x="11" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="26" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="41" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="56" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="71" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="86" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="101" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="116" y="39" width="8" height="6" fill="#cccccc" />
+          <rect x="0" y="4" width="135" height="37" fill="#222222" />
+          <path d="M 0 16 A 6 6 0 0 0 0 28" fill="#111111" />
+          <circle cx="9" cy="35" r="3.5" fill="#444444" />
+          <text x="67.5" y="20.5" fill="#999900" font-size="14" font-family="sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="middle">74HC</text>
+          <text x="67.5" y="34.5" fill="#999900" font-size="14" font-family="sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="middle">595</text>
+      </g>
     </svg>
     <span style="font-size:11px;color:var(--vp-c-text-2);">74HC595</span>
   </div>
@@ -76,10 +81,14 @@ Where the 74HC165 takes multiple inputs and collapses them into one serial line,
 3. **Daisy Chaining**: As you shift more than 8 bits into a single chip, the oldest bits "spill out" of the `Q7S` pin. By connecting `Q7S` to the `SER` pin of a second 595, the bits automatically flow into the second chip!
 
 ## Wiring Diagram
-1. Connect **VCC** to 5V and **GND** to Ground.
-2. Tie **SRCLR** to 5V (to prevent clearing) and **OE** to Ground (to enable outputs).
-3. Connect **SER**, **SRCLK**, and **RCLK** to three digital pins on your Arduino.
-4. Wire your LEDs or external devices to **Q0-Q7** (remembering current-limiting resistors if using LEDs).
+
+Example of connecting a 74HC595 Shift Register to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-74hc595_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 The Arduino `shiftOut` function is designed specifically for this chip.

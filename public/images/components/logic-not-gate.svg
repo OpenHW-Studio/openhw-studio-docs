@@ -1,0 +1,26 @@
+<svg width="60" height="30" viewBox="0 0 60 30" style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg">
+    <!-- Input wire -->
+    <line x1="0" y1="15" x2="20" y2="15" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Triangle body -->
+    <defs>
+        <linearGradient id="notGateFill" x1="20" y1="0" x2="50" y2="15" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15" />
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0.05" />
+        </linearGradient>
+    </defs>
+    <polygon
+        points="20,0 50,15 20,30"
+        fill="url(#notGateFill)"
+        stroke="#a855f7"
+        stroke-width="2"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+    />
+    
+    <!-- Inversion Circle -->
+    <circle cx="53" cy="15" r="3" fill="transparent" stroke="#a855f7" stroke-width="2" />
+    
+    <!-- Output wire -->
+    <line x1="56" y1="15" x2="60" y2="15" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+</svg>

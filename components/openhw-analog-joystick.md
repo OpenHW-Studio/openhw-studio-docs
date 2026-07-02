@@ -18,22 +18,7 @@ slug: /components/openhw-analog-joystick
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="25" width="70" height="70" rx="4" fill="#0f172a" stroke="var(--vp-c-border)" stroke-width="2" />
-      <circle cx="60" cy="60" r="28" fill="var(--vp-c-bg-soft)" stroke="#000000" stroke-width="4" />
-      <circle cx="60" cy="60" r="22" fill="#334155" />
-      <circle cx="60" cy="60" r="14" fill="#475569" />
-      <circle cx="60" cy="60" r="5" fill="var(--vp-c-bg-soft)" />
-      <circle cx="33" cy="33" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="33" r="3" fill="#fbbf24" />
-      <circle cx="33" cy="87" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="87" r="3" fill="#fbbf24" />
-      <rect x="25" y="15" width="10" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="37" y="15" width="10" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="49" y="15" width="10" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="61" y="15" width="10" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="73" y="15" width="10" height="10" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-analog-joystick.svg" alt="Analog Joystick" style="width:237.4px; height:277.5px; max-width: 120px; max-height: 120px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Analog Joystick</span>
   </div>
   <div class="component-info">
@@ -71,6 +56,12 @@ By measuring the resistance of the two potentiometers, a microcontroller can det
 2. Connect **VRx** (HORZ) to an Analog Input pin (e.g., A0).
 3. Connect **VRy** (VERT) to another Analog Input pin (e.g., A1).
 4. Connect **SW** (SEL) to a Digital Input pin (e.g., 2).
+
+<p align="center">
+  <img src="/images/components/openhw-analog-joystick_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

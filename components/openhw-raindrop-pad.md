@@ -1,6 +1,6 @@
 ---
 title: "Rain Sensor Pad"
-description: "Rain Sensor Pad Component."
+description: "A passive conductive pad used to detect water drops."
 slug: /components/openhw-raindrop-pad
 ---
 
@@ -12,45 +12,64 @@ slug: /components/openhw-raindrop-pad
 </div>
 
 # Rain Sensor Pad
-<p class="subtitle">A standard rain sensor pad used for electronic prototyping.</p>
+<p class="subtitle">A passive interlaced trace board designed to bridge a circuit when exposed to moisture.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="40" height="40" fill="var(--vp-c-bg-soft)" /><text x="30" y="35" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">COMP</text></svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">Module</span>
+    <img src="/images/components/openhw-raindrop-pad.svg" alt="Rain Sensor Pad" style="width:150px; height:100px; max-width: 150px; max-height: 100px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">MH-RD</span>
   </div>
   <div class="component-info">
-    <p>This is the Rain Sensor Pad component available in the OpenHW Studio Simulator.</p>
+    <p>The Rain Sensor Pad is essentially a large, un-coated printed circuit board. It features two interlaced conductive tracks that do not touch. When water droplets (which are slightly conductive) fall on the board, they bridge the gap between the traces, lowering the overall resistance. This pad is designed to be connected to the Raindrop Module (LM393) to read the moisture levels.</p>
     <div>
       <span class="tag">Sensors</span>
-      <span class="tag">Component</span>
+      <span class="tag">Passive</span>
+      <span class="tag">Liquid</span>
     </div>
   </div>
 </div>
 
+## Overview
+Because this is a passive component acting as a variable resistor, it has no defined polarity (no Anode or Cathode). You simply connect its two pins to the corresponding two input header pins on the LM393 Raindrop Module.
+
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply.</td></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
+<tr><td><span class="pin-name">Pin 1</span></td><td><span class="pin-type passive">passive</span></td><td>Leg 1. Connects to the Raindrop Module.</td></tr>
+<tr><td><span class="pin-name">Pin 2</span></td><td><span class="pin-type passive">passive</span></td><td>Leg 2. Connects to the Raindrop Module.</td></tr>
 </table>
 
 ## Configurable Attributes
-<table class="attrs-table">
-<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
-<tr><td><strong>color</strong></td><td><code>string</code></td><td><code>"red"</code></td><td>Color configuration.</td></tr>
-</table>
+*(Note: In the simulator, the Rain Sensor Pad is typically just a visual representation. The actual moisture simulation is configured on the **Raindrop Module** itself via the `rainLevel` or `threshold`.)*
 
-## Example Code
+## Wiring Diagram (Arduino Uno)
+To use the pad, it must be paired with the LM393 Raindrop Module.
+1. Connect **Pin 1** of the Pad to the top-left pin of the Raindrop Module.
+2. Connect **Pin 2** of the Pad to the top-right pin of the Raindrop Module.
+3. Wire the Raindrop Module to the Arduino as shown.
 
-```cpp
-void setup() {
-  // Put your setup code here
-}
+<p align="center">
+  <img src="/images/components/openhw-raindrop-pad_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
 
-void loop() {
-  // Put your main code here
-}
-```
+<TryInSimulator />
+
+## Example Arduino Code
+*(See the [Raindrop Module](/docs/components/openhw-raindrop-module) page for the full code example, as the Arduino interfaces directly with the module, not the pad).*
+
+## Simulation Notes
+- In OpenHW Studio, place this pad alongside the Raindrop Module to represent the complete hardware setup visually.
+- To simulate rain, interact directly with the Raindrop Module UI element.
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
+  <div>
+    <a href="/docs/components/openhw-raindrop-module" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Raindrop Module</a>
+  </div>
+  <div>
+    <a href="/docs/components/openhw-relay-module" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Relay Module &rarr;</a>
+  </div>
+</div>

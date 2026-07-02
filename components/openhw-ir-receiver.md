@@ -18,19 +18,7 @@ slug: /components/openhw-ir-receiver
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="35" y="40" width="50" height="40" fill="var(--vp-c-bg-soft)" />
-      <circle cx="60" cy="55" r="15" fill="#334155" />
-      <rect x="45" y="80" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <rect x="58" y="80" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <rect x="71" y="80" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <text x="47" y="112" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">G</text>
-      <text x="60" y="112" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">V</text>
-      <text x="73" y="112" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">R</text>
-      <rect x="55" y="25" width="10" height="10" rx="5" fill="#ef4444" opacity="0.8" />
-      <path d="M 60 15 Q 70 5 80 15" stroke="#ef4444" stroke-width="2" fill="none" opacity="0.6" />
-      <path d="M 60 5 Q 75 -5 90 5" stroke="#ef4444" stroke-width="2" fill="none" opacity="0.3" />
-    </svg>
+    <img src="/images/components/openhw-ir-receiver.svg" alt="IR Receiver" style="width:100px; height:150px; max-width: 100px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">IR Sensor</span>
   </div>
   <div class="component-info">
@@ -70,6 +58,12 @@ When an IR remote button is pressed, it flashes an infrared LED at 38,000 times 
 1. Connect **G (GND)** to Ground.
 2. Connect **V (VCC)** to 5V.
 3. Connect **R (OUT)** to a digital pin (e.g., D11).
+
+<p align="center">
+  <img src="/images/components/openhw-ir-receiver_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the **IRremote** library via the Library Manager before running this sketch.

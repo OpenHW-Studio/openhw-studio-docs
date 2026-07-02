@@ -18,14 +18,7 @@ slug: /components/openhw-pushbutton
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="15" width="50" height="50" rx="2" fill="var(--vp-c-bg-soft)" />
-      <circle cx="40" cy="40" r="16" fill="#3b82f6" stroke="#2563eb" stroke-width="2" />
-      <rect x="5" y="20" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="56" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="20" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="56" width="10" height="4" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-pushbutton.svg" alt="Push Button" style="width:75px; height:60px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Tactile Button</span>
   </div>
   <div class="component-info">
@@ -63,9 +56,15 @@ To use a button reliably with a microcontroller, the input pin must not "float".
 <tr><td><strong>color</strong></td><td><code>string</code></td><td><code>green</code></td><td>Visual button cap color (e.g., `red`, `blue`, `green`, `yellow`, `black`).</td></tr>
 </table>
 
-## Wiring Diagram (Active-LOW with Internal Pull-Up)
-1. Connect **Pin 1L** to Arduino **GND**.
-2. Connect **Pin 2L** to Arduino **D2**.
+## Wiring Diagram
+
+Example of connecting the Push Button (Active-LOW) to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-pushbutton_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This example demonstrates the recommended Active-LOW wiring using the internal pull-up resistor. No external resistors are required.

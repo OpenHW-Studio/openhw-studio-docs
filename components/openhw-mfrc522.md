@@ -18,29 +18,7 @@ slug: /components/openhw-mfrc522
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="120" viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="70" height="110" rx="4" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2" />
-      <rect x="15" y="15" width="50" height="70" fill="none" stroke="#fcd34d" stroke-width="2" />
-      <rect x="20" y="20" width="40" height="60" fill="none" stroke="#fcd34d" stroke-width="2" />
-      <rect x="25" y="25" width="30" height="50" fill="none" stroke="#fcd34d" stroke-width="2" />
-      <rect x="35" y="45" width="10" height="10" fill="#0f172a" />
-      <rect x="10" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="18" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="26" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="34" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="42" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="50" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="58" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="66" y="105" width="5" height="5" fill="var(--vp-c-text-2)" />
-      <text x="12.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 12.5, 100)">SDA</text>
-      <text x="20.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 20.5, 100)">SCK</text>
-      <text x="28.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 28.5, 100)">MOSI</text>
-      <text x="36.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 36.5, 100)">MISO</text>
-      <text x="44.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 44.5, 100)">IRQ</text>
-      <text x="52.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 52.5, 100)">GND</text>
-      <text x="60.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 60.5, 100)">RST</text>
-      <text x="68.5" y="100" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" font-weight="bold" text-anchor="middle" transform="rotate(-90, 68.5, 100)">3.3V</text>
-    </svg>
+    <img src="/images/components/openhw-mfrc522.svg" alt="MFRC522 RFID Reader" style="width:165px; height:135px; max-width: 165px; max-height: 135px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">RC522</span>
   </div>
   <div class="component-info">
@@ -87,6 +65,12 @@ Radio Frequency Identification (RFID) uses electromagnetic fields to automatical
 5. Connect **MOSI** to Arduino **D11**.
 6. Connect **MISO** to Arduino **D12**.
 7. Connect **SCK** to Arduino **D13**.
+
+<p align="center">
+  <img src="/images/components/openhw-mfrc522_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `MFRC522` library by GithubCommunity before running this code.

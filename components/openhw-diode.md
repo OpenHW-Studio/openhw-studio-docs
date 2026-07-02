@@ -18,13 +18,7 @@ slug: /components/openhw-diode
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <line x1="20" y1="60" x2="100" y2="60" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
-      <rect x="35" y="45" width="50" height="30" rx="4" fill="var(--vp-c-bg-soft)" />
-      <rect x="75" y="45" width="5" height="30" fill="var(--vp-c-text-2)" />
-      <text x="30" y="85" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">A</text>
-      <text x="90" y="85" fill="#3b82f6" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">K</text>
-    </svg>
+    <img src="/images/components/openhw-diode.svg" alt="Diode" style="width:120px; height:40px; margin: 40px 0;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Standard Diode</span>
   </div>
   <div class="component-info">
@@ -54,6 +48,15 @@ The silver band on a physical diode marks the **Cathode** (negative side). Curre
 When the voltage at the Anode is higher than the Cathode (by at least the *forward voltage drop*, usually ~0.7V for silicon diodes), the diode is "forward-biased" and conducts electricity. If the voltage is reversed, the diode is "reverse-biased" and blocks the flow of electricity (acting like an open switch).
 
 ## Wiring Diagram
+
+Example of connecting the Diode to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-diode_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
+
 ### 1. Reverse Polarity Protection
 To protect a circuit from being wired backward, place the diode in series with the positive power line:
 - Connect the **Power Supply (+)** to the diode **Anode**.

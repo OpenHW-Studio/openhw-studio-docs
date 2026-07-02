@@ -1,0 +1,51 @@
+<svg width="60" height="20" viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Brushed metal for the external leads -->
+        <linearGradient id="legMetal" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#9CA3AF" />
+            <stop offset="50%" stop-color="#F3F4F6" />
+            <stop offset="100%" stop-color="#6B7280" />
+        </linearGradient>
+        
+        <!-- Darker copper/silver metal for internal die slugs -->
+        <linearGradient id="slugMetal" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#b45309" /> 
+            <stop offset="40%" stop-color="#fcd34d" />
+            <stop offset="100%" stop-color="#78350f" />
+        </linearGradient>
+        
+        <!-- Semi-transparent orange/red tint for the glass capsule -->
+        <linearGradient id="glassBody" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(239, 68, 68, 0.5)" />
+            <stop offset="30%" stop-color="rgba(239, 68, 68, 0.15)" />
+            <stop offset="70%" stop-color="rgba(239, 68, 68, 0.25)" />
+            <stop offset="100%" stop-color="rgba(153, 27, 27, 0.7)" />
+        </linearGradient>
+        
+        <!-- Sharp glossy reflection on top of the glass -->
+        <linearGradient id="glassHighlight" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(255, 255, 255, 0.9)" />
+            <stop offset="40%" stop-color="rgba(255, 255, 255, 0.1)" />
+            <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+        </linearGradient>
+    </defs>
+
+    <!-- External Leads extending to exact breadboard anchor points -->
+    <rect x="0" y="4.3" width="7" height="1.4" fill="url(#legMetal)" />
+    <rect x="23" y="4.3" width="7" height="1.4" fill="url(#legMetal)" />
+
+    <!-- Internal Metal Slugs inside the glass -->
+    <!-- Anode Slug (left) -->
+    <path d="M 5 3 L 14.5 3 L 14.5 7 L 5 7 Z" fill="url(#slugMetal)" />
+    <!-- Cathode Slug (right) -->
+    <path d="M 15.5 3 L 25 3 L 25 7 L 15.5 7 Z" fill="url(#slugMetal)" />
+
+    <!-- Orange/Red Glass Capsule Base -->
+    <rect x="5" y="1.5" width="20" height="7" rx="2" fill="url(#glassBody)" stroke="#991b1b" stroke-width="0.5" />
+
+    <!-- Cathode Stripe Indicator -->
+    <rect x="20" y="1.5" width="2.5" height="7" fill="#111827" opacity="0.9" />
+
+    <!-- Glossy White Highlight layered over glass and stripe for 3D realism -->
+    <rect x="5.5" y="2" width="19" height="2" rx="1" fill="url(#glassHighlight)" />
+</svg>

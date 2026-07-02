@@ -18,11 +18,17 @@ slug: /components/logic-not-gate
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 30,30 L 75,60 L 30,90 Z" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <circle cx="82" cy="60" r="7" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <line x1="10" y1="60" x2="30" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <line x1="89" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
+    <svg width="60" height="30" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="15" x2="20" y2="15" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+      <defs>
+          <linearGradient id="notGateFill" x1="20" y1="0" x2="50" y2="15" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.05" />
+          </linearGradient>
+      </defs>
+      <polygon points="20,0 50,15 20,30" fill="url(#notGateFill)" stroke="#a855f7" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <circle cx="53" cy="15" r="3" fill="transparent" stroke="#a855f7" stroke-width="2" />
+      <line x1="56" y1="15" x2="60" y2="15" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
     </svg>
     <span style="font-size:11px;color:var(--vp-c-text-2);">NOT Gate</span>
   </div>
@@ -59,8 +65,14 @@ The NOT Gate is a fundamental logic component that reverses the logic state of i
 The Boolean expression for a NOT gate is Y = A' (or NOT A). It physically models logical negation.
 
 ## Wiring Diagram
-1. Connect the output of a switch or digital pin to **IN**.
-2. Connect **OUT** to an LED (with a resistor) or an Arduino input pin to read the inverted logic state.
+
+Example of a logic NOT gate wired to an Arduino Uno and an LED (with a resistor).
+
+<p align="center">
+  <img src="/images/components/logic-not-gate_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 To test the NOT gate using an Arduino, you can generate logic states on an output pin and read the inverted result on an input pin.

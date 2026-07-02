@@ -18,20 +18,7 @@ slug: /components/openhw-hc-sr04
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="30" width="100" height="40" rx="4" fill="#1e40af" />
-      <circle cx="35" cy="50" r="15" fill="var(--vp-c-text-2)" />
-      <circle cx="35" cy="50" r="10" fill="var(--vp-c-text-2)" />
-      <circle cx="85" cy="50" r="15" fill="var(--vp-c-text-2)" />
-      <circle cx="85" cy="50" r="10" fill="var(--vp-c-text-2)" />
-      <text x="35" y="40" fill="var(--vp-c-bg-soft)" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">T</text>
-      <text x="85" y="40" fill="var(--vp-c-bg-soft)" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">R</text>
-      <rect x="42" y="70" width="6" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="54" y="70" width="6" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="66" y="70" width="6" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="78" y="70" width="6" height="15" fill="var(--vp-c-text-2)" />
-      <text x="60" y="25" fill="#1e40af" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">HC-SR04</text>
-    </svg>
+    <img src="/images/components/openhw-hc-sr04.svg" alt="HC-SR04 Sensor" style="width:172.5px; height:114px; max-width: 172.5px; max-height: 114px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Ultrasonic Sensor</span>
   </div>
   <div class="component-info">
@@ -73,6 +60,12 @@ The HC-SR04 operates by sending a 40kHz ultrasound signal and measuring the time
 2. Connect **GND** to Ground.
 3. Connect **Trig** to a digital output pin (e.g., D3).
 4. Connect **Echo** to a digital input pin (e.g., D4).
+
+<p align="center">
+  <img src="/images/components/openhw-hc-sr04_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This standard code block initializes the HC-SR04, triggers a pulse, measures the echo, and calculates the distance.

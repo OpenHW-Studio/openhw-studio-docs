@@ -18,23 +18,7 @@ slug: /components/openhw-nrf24l01
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="50" height="80" rx="2" fill="#1e3a8a" stroke="#172554" stroke-width="2" />
-      <rect x="10" y="10" width="40" height="20" fill="#0f172a" />
-      <path d="M 15 15 L 20 15 L 20 25 L 25 25 L 25 15 L 30 15" stroke="#fcd34d" stroke-width="1.5" fill="none" />
-      <path d="M 35 15 L 40 15 L 40 25 L 45 25" stroke="#fcd34d" stroke-width="1.5" fill="none" />
-      <rect x="20" y="40" width="20" height="20" fill="#0f172a" />
-      <circle cx="12" cy="78" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="21" cy="78" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="30" cy="78" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="39" cy="78" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="12" cy="70" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="21" cy="70" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="30" cy="70" r="2" fill="var(--vp-c-text-2)" />
-      <circle cx="39" cy="70" r="2" fill="var(--vp-c-text-2)" />
-      <rect x="10" y="68" width="4" height="4" fill="none" stroke="#fcd34d" stroke-width="1" />
-      <text x="30" y="55" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle">nRF24</text>
-    </svg>
+    <img src="/images/components/openhw-nrf24l01.svg" alt="nRF24L01+" style="width:150px; height:75px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">nRF24L01+</span>
   </div>
   <div class="component-info">
@@ -72,14 +56,15 @@ Because it uses the 2.4GHz band (like Wi-Fi and Bluetooth), the nRF24L01+ can tr
 <tr><td><strong>magicInterop</strong></td><td><code>boolean</code></td><td><code>false</code></td><td>When enabled in the simulator, allows automatic bridging of data streams without configuring exact pipe addresses.</td></tr>
 </table>
 
-## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **3.3V**.
-2. Connect **GND** to **GND**.
-3. Connect **CE** to **D7**.
-4. Connect **CSN** to **D8**.
-5. Connect **SCK** to **D13**.
-6. Connect **MOSI** to **D11**.
-7. Connect **MISO** to **D12**.
+## Wiring Diagram (Raspberry Pi Pico)
+
+Example of wiring the nRF24L01+ module to a microcontroller using hardware SPI.
+
+<p align="center">
+  <img src="/images/components/openhw-nrf24l01_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `RF24` library by TMRh20 before running. This example sets up a simple transmitter.

@@ -18,33 +18,7 @@ slug: /components/openhw-max98357
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="120" viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="60" height="100" rx="3" fill="#831843" stroke="#4c0519" stroke-width="2" />
-      <rect x="25" y="40" width="30" height="30" rx="2" fill="#0f172a" />
-      <circle cx="30" cy="45" r="2" fill="#334155" />
-      <circle cx="20" cy="20" r="4" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <circle cx="60" cy="20" r="4" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <circle cx="20" cy="100" r="4" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <circle cx="60" cy="100" r="4" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <rect x="25" y="10" width="10" height="5" fill="#f59e0b" />
-      <rect x="45" y="10" width="10" height="5" fill="#f59e0b" />
-      <text x="30" y="30" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" text-anchor="middle">OUT+</text>
-      <text x="50" y="30" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" text-anchor="middle">OUT-</text>
-      <rect x="15" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="23" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="31" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="39" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="47" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="55" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="63" y="105" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <text x="17" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 17, 95)">LRC</text>
-      <text x="25" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 25, 95)">BCLK</text>
-      <text x="33" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 33, 95)">DIN</text>
-      <text x="41" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 41, 95)">GAIN</text>
-      <text x="49" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 49, 95)">SD</text>
-      <text x="57" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 57, 95)">GND</text>
-      <text x="65" y="95" fill="var(--vp-c-text-1)" font-family="monospace" font-size="7" font-weight="bold" text-anchor="middle" transform="rotate(-90, 65, 95)">VIN</text>
-    </svg>
+    <img src="/images/components/openhw-max98357.svg" alt="MAX98357 I2S Amp" style="width:75px; height:105px; max-width: 75px; max-height: 105px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">MAX98357A</span>
   </div>
   <div class="component-info">
@@ -84,6 +58,12 @@ I2S (Inter-IC Sound) is a standardized serial bus used for connecting digital au
 4. Connect **BCLK** to ESP32 GPIO 26.
 5. Connect **DIN** to ESP32 GPIO 22.
 6. Connect **OUT+** and **OUT-** to a speaker.
+
+<p align="center">
+  <img src="/images/components/openhw-max98357_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code (ESP32)
 This example uses the ESP32's built-in I2S driver to stream a basic sine wave or read from an SD card.

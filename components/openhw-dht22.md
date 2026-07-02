@@ -18,19 +18,7 @@ slug: /components/openhw-dht22
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="35" y="15" width="50" height="60" rx="2" fill="var(--vp-c-text-1)" stroke="#cbd5e1" stroke-width="2" />
-      <line x1="45" y1="25" x2="75" y2="25" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
-      <line x1="45" y1="35" x2="75" y2="35" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
-      <line x1="45" y1="45" x2="75" y2="45" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
-      <line x1="45" y1="55" x2="75" y2="55" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
-      <line x1="45" y1="65" x2="75" y2="65" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
-      <rect x="42" y="75" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <rect x="52" y="75" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <rect x="62" y="75" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <rect x="72" y="75" width="4" height="20" fill="var(--vp-c-text-2)" />
-      <text x="60" y="110" fill="#ffffff" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">AM2302</text>
-    </svg>
+    <img src="/images/components/openhw-dht22.svg" alt="DHT22 Sensor" style="width:60px; height:90px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">DHT22 Sensor</span>
   </div>
   <div class="component-info">
@@ -72,6 +60,12 @@ The DHT22 is a slow sensor. You must wait at least 2 seconds between sequential 
 2. Connect **GND** to Ground.
 3. Connect **SDA** to a digital pin (e.g., D2).
 4. Ignore the **NC** pin entirely.
+
+<p align="center">
+  <img src="/images/components/openhw-dht22_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *Install the **DHT sensor library by Adafruit** via the OpenHW Library Manager.*

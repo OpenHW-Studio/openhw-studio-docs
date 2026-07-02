@@ -18,14 +18,7 @@ slug: /components/openhw-pir-motion-sensor
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="15" width="50" height="50" fill="var(--vp-c-bg-soft)" />
-      <circle cx="40" cy="40" r="22" fill="var(--vp-c-text-1)" />
-      <path d="M 18 40 L 62 40 M 40 18 L 40 62 M 25 25 L 55 55 M 25 55 L 55 25" stroke="var(--vp-c-text-2)" stroke-width="1" />
-      <rect x="25" y="70" width="6" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="37" y="70" width="6" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="49" y="70" width="6" height="10" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-pir-motion-sensor.svg" alt="PIR Motion Sensor" style="width:100px; height:100px; max-width: 100px; max-height: 100px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">HC-SR501</span>
   </div>
   <div class="component-info">
@@ -44,9 +37,9 @@ Reading a PIR sensor is exactly the same as reading a simple pushbutton. Because
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power input. Connect to Arduino 5V.</td></tr>
-<tr><td><span class="pin-name">OUT</span></td><td><span class="pin-type digital">digital</span></td><td>Digital signal output. HIGH = Motion Detected, LOW = No Motion.</td></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground. Connect to Arduino GND.</td></tr>
+<tr><td><span class="pin-name">+ (VCC)</span></td><td><span class="pin-type power">power</span></td><td>Power input. Connect to Arduino 5V.</td></tr>
+<tr><td><span class="pin-name">D (OUT)</span></td><td><span class="pin-type digital">digital</span></td><td>Digital signal output. HIGH = Motion Detected, LOW = No Motion.</td></tr>
+<tr><td><span class="pin-name">- (GND)</span></td><td><span class="pin-type power">power</span></td><td>Ground. Connect to Arduino GND.</td></tr>
 </table>
 
 ## Configurable Attributes
@@ -56,9 +49,15 @@ Reading a PIR sensor is exactly the same as reading a simple pushbutton. Because
 </table>
 
 ## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **OUT** to **D2**.
+1. Connect **+** to Arduino **5V**.
+2. Connect **-** to Arduino **GND**.
+3. Connect **D** to Arduino **D2**.
+
+<p align="center">
+  <img src="/images/components/openhw-pir-motion-sensor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code monitors the PIR sensor and turns on the built-in LED (Pin 13) when motion is detected.
@@ -106,8 +105,8 @@ void loop() {
 ```
 
 ## Simulation Notes
-- To simulate human motion in your OpenHW Studio circuit, click directly on the white dome of the PIR sensor in the grid during simulation.
-- The sensor's internal red LED will light up, and the OUT pin will immediately go HIGH to trigger your Arduino code.
+- To simulate human motion in your OpenHW Studio circuit, click directly on the white dome of the PIR sensor and drag around the simulation area. A green/red cone will visualize the motion range and detection status.
+- The sensor's OUT pin will go HIGH to trigger your Arduino code as long as motion is detected within its field of view.
 
 ---
 
