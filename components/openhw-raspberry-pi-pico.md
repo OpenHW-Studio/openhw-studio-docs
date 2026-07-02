@@ -62,6 +62,10 @@ A typical configuration for testing digital output.
 2. Connect the other end of the resistor to the **Anode** of an LED.
 3. Connect the **Cathode** of the LED to **GND**.
 
+<p align="center">
+  <img src="/images/boards/openhw-raspberry-pi-pico_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
 <TryInSimulator />
 
 ## Example Code
