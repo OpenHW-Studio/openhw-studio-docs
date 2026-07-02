@@ -18,24 +18,8 @@ slug: /components/openhw-stm32-bluepill
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="120" viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="60" height="100" rx="3" fill="#1e3a8a" />
-      <rect x="30" y="45" width="20" height="20" rx="1" fill="#0f172a" />
-      <circle cx="20" cy="20" r="3" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="100" width="10" height="15" fill="var(--vp-c-text-2)" />
-      <text x="40" y="80" fill="#bfdbfe" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">STM32</text>
-      <!-- Header Pins Left -->
-      <circle cx="15" cy="40" r="1.5" fill="#fcd34d" />
-      <circle cx="15" cy="45" r="1.5" fill="#fcd34d" />
-      <circle cx="15" cy="50" r="1.5" fill="#fcd34d" />
-      <circle cx="15" cy="55" r="1.5" fill="#fcd34d" />
-      <!-- Header Pins Right -->
-      <circle cx="65" cy="40" r="1.5" fill="#fcd34d" />
-      <circle cx="65" cy="45" r="1.5" fill="#fcd34d" />
-      <circle cx="65" cy="50" r="1.5" fill="#fcd34d" />
-      <circle cx="65" cy="55" r="1.5" fill="#fcd34d" />
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">STM32 Board</span>
+    <img src="/images/boards/openhw-stm32-bluepill.svg" alt="STM32 Blue Pill" style="width:130px; max-width: 130px;" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">STM32 Blue Pill</span>
   </div>
   <div class="component-info">
     <p>The STM32 "Blue Pill" is a development board for the STM32F103C8T6 microcontroller. It offers significantly more processing power (72 MHz), memory (20KB SRAM, 64KB Flash), and peripherals than standard 8-bit Arduino boards while remaining highly affordable.</p>

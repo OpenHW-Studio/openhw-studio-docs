@@ -1,0 +1,94 @@
+<svg width="130" height="380" viewBox="0 0 130 380" style="font-family: sans-serif; user-select: none;" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Main Dark Blue PCB -->
+  <rect x="25" y="20" width="80" height="340" rx="4" fill="#1a2f5a" />
+
+  <!-- Micro-USB Port at the top -->
+  <rect x="48" y="8" width="34" height="20" rx="2" fill="#d4d4d4" stroke="#a3a3a3" stroke-width="1" />
+  <rect x="52" y="10" width="26" height="14" rx="1" fill="#555" />
+
+  <!-- SWD / Boot jumpers block (small yellow pads near top) -->
+  <rect x="52" y="36" width="8" height="8" rx="1" fill="#eab308" />
+  <rect x="64" y="36" width="8" height="8" rx="1" fill="#eab308" />
+
+  <!-- Yellow Power LED -->
+  <circle cx="50" cy="58" r="4" fill="#eab308" />
+
+  <!-- Green Status LED (PC13) -->
+  <circle cx="68" cy="58" r="4" fill="#22c55e" />
+
+  <!-- STM32 main chip (diamond / rotated square) -->
+  <g transform="translate(65, 180)">
+    <rect x="-25" y="-25" width="50" height="50" rx="2" fill="#111" transform="rotate(45)" />
+    <text x="0" y="-4" fill="#555" font-size="7" font-weight="bold" text-anchor="middle">STM32</text>
+    <text x="0" y="5" fill="#555" font-size="6" text-anchor="middle">F103C8T6</text>
+  </g>
+
+  <!-- Crystal oscillator -->
+  <rect x="53" y="245" width="24" height="10" rx="2" fill="#d4d4d4" stroke="#999" stroke-width="0.5" />
+  <text x="65" y="253" fill="#666" font-size="5" text-anchor="middle">8MHz</text>
+
+  <!-- Reset button -->
+  <rect x="50" y="265" width="16" height="10" rx="2" fill="#e5e7eb" stroke="#9ca3af" stroke-width="0.5" />
+  <circle cx="58" cy="270" r="4" fill="#d1d5db" />
+  <text x="58" y="285" fill="#a3a3a3" font-size="6" text-anchor="middle">RESET</text>
+
+  <!-- Defs for pin pads -->
+  <defs>
+    <g id="stm-pin">
+      <rect width="7" height="7" rx="1" fill="#e2e8f0" />
+      <circle cx="3.5" cy="3.5" r="2" fill="#f8fafc" />
+    </g>
+  </defs>
+
+  <!-- Left Header Pins (20 pins) -->
+  <g transform="translate(18, 45)">
+    <use href="#stm-pin" x="0" y="0" />
+    <use href="#stm-pin" x="0" y="14" />
+    <use href="#stm-pin" x="0" y="28" />
+    <use href="#stm-pin" x="0" y="42" />
+    <use href="#stm-pin" x="0" y="56" />
+    <use href="#stm-pin" x="0" y="70" />
+    <use href="#stm-pin" x="0" y="84" />
+    <use href="#stm-pin" x="0" y="98" />
+    <use href="#stm-pin" x="0" y="112" />
+    <use href="#stm-pin" x="0" y="126" />
+    <use href="#stm-pin" x="0" y="140" />
+    <use href="#stm-pin" x="0" y="154" />
+    <use href="#stm-pin" x="0" y="168" />
+    <use href="#stm-pin" x="0" y="182" />
+    <use href="#stm-pin" x="0" y="196" />
+    <use href="#stm-pin" x="0" y="210" />
+    <use href="#stm-pin" x="0" y="224" />
+    <use href="#stm-pin" x="0" y="238" />
+    <use href="#stm-pin" x="0" y="252" />
+    <use href="#stm-pin" x="0" y="266" />
+  </g>
+
+  <!-- Right Header Pins (20 pins) -->
+  <g transform="translate(105, 45)">
+    <use href="#stm-pin" x="0" y="0" />
+    <use href="#stm-pin" x="0" y="14" />
+    <use href="#stm-pin" x="0" y="28" />
+    <use href="#stm-pin" x="0" y="42" />
+    <use href="#stm-pin" x="0" y="56" />
+    <use href="#stm-pin" x="0" y="70" />
+    <use href="#stm-pin" x="0" y="84" />
+    <use href="#stm-pin" x="0" y="98" />
+    <use href="#stm-pin" x="0" y="112" />
+    <use href="#stm-pin" x="0" y="126" />
+    <use href="#stm-pin" x="0" y="140" />
+    <use href="#stm-pin" x="0" y="154" />
+    <use href="#stm-pin" x="0" y="168" />
+    <use href="#stm-pin" x="0" y="182" />
+    <use href="#stm-pin" x="0" y="196" />
+    <use href="#stm-pin" x="0" y="210" />
+    <use href="#stm-pin" x="0" y="224" />
+    <use href="#stm-pin" x="0" y="238" />
+    <use href="#stm-pin" x="0" y="252" />
+    <use href="#stm-pin" x="0" y="266" />
+  </g>
+
+  <!-- Bottom label -->
+  <text x="65" y="372" fill="#93c5fd" font-size="9" font-weight="bold" text-anchor="middle">STM32 Blue Pill</text>
+</svg>
