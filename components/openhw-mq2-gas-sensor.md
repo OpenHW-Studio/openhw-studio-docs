@@ -18,20 +18,7 @@ slug: /components/openhw-mq2-gas-sensor
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="100" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="40" width="50" height="40" rx="4" fill="var(--vp-c-bg-soft)" />
-      <circle cx="40" cy="30" r="20" fill="var(--vp-c-text-2)" />
-      <circle cx="40" cy="30" r="16" fill="#0f172a" />
-      <path d="M 28 22 L 52 38 M 28 38 L 52 22 M 28 30 L 52 30 M 40 18 L 40 42" stroke="#475569" stroke-width="1" />
-      <rect x="25" y="80" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="35" y="80" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="45" y="80" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="55" y="80" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <text x="27" y="75" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle" transform="rotate(-90, 27, 75)">VCC</text>
-      <text x="37" y="75" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle" transform="rotate(-90, 37, 75)">GND</text>
-      <text x="47" y="75" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle" transform="rotate(-90, 47, 75)">D0</text>
-      <text x="57" y="75" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle" transform="rotate(-90, 57, 75)">A0</text>
-    </svg>
+    <img src="/images/components/openhw-mq2-gas-sensor.svg" alt="MQ-2 Gas Sensor" style="width:137px; height:60px; max-width: 137px; max-height: 60px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">MQ-2 Module</span>
   </div>
   <div class="component-info">
@@ -67,6 +54,12 @@ Inside the MQ-2 is a small heater that must warm up before the sensor can take a
 2. Connect **GND** to Arduino **GND**.
 3. Connect **A0** to Arduino **A0** (to read concentration).
 4. Connect **D0** to Arduino **D2** (to read the trigger state).
+
+<p align="center">
+  <img src="/images/components/openhw-mq2-gas-sensor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This sketch reads both the analog and digital outputs simultaneously. The analog output provides a raw concentration value, while the digital output acts as a simple boolean trigger.

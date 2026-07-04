@@ -18,22 +18,7 @@ slug: /components/openhw-lcd2004-i2c
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="150" height="90" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="140" height="80" fill="#15803d" />
-      <rect x="15" y="15" width="120" height="60" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2" />
-      <text x="75" y="30" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">OpenHW Studio 20x4</text>
-      <text x="75" y="45" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">Line 2 text...</text>
-      <text x="75" y="60" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">Line 3 text...</text>
-      <text x="75" y="75" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">Line 4 text...</text>
-      <circle cx="10" cy="10" r="2" fill="#0f172a" />
-      <circle cx="140" cy="10" r="2" fill="#0f172a" />
-      <circle cx="10" cy="80" r="2" fill="#0f172a" />
-      <circle cx="140" cy="80" r="2" fill="#0f172a" />
-      <rect x="5" y="25" width="5" height="4" fill="#0f172a" />
-      <rect x="5" y="35" width="5" height="4" fill="#0f172a" />
-      <rect x="5" y="45" width="5" height="4" fill="#0f172a" />
-      <rect x="5" y="55" width="5" height="4" fill="#0f172a" />
-    </svg>
+    <img src="/images/components/openhw-lcd2004-i2c.svg" alt="LCD 20x4 I2C" style="width:375px; height:195px; max-width: 100%; max-height: 200px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">I2C 20x4 LCD</span>
   </div>
   <div class="component-info">
@@ -69,10 +54,12 @@ By converting parallel data to serial I2C data, the backpack module dramatically
 The PCF8574 chip on the backpack receives I2C commands from the microcontroller and expands them into parallel outputs that drive the LCD pins. The LiquidCrystal_I2C library handles this translation seamlessly. Because it has 4 rows, the memory mapping in the HD44780 controller is slightly different from the 16x2, but the library abstractions hide this complexity.
 
 ## Wiring Diagram
-1. Connect **GND** to Ground.
-2. Connect **VCC** to 5V.
-3. Connect **SDA** to Arduino A4 (or SDA).
-4. Connect **SCL** to Arduino A5 (or SCL).
+
+<p align="center">
+  <img src="/images/components/openhw-lcd2004-i2c_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `LiquidCrystal I2C` library via the Library Manager before running this sketch. Note that the initialization specifies `20, 4`.

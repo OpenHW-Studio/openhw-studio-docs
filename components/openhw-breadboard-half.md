@@ -18,27 +18,7 @@ slug: /components/openhw-breadboard-half
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="25" width="100" height="70" rx="4" fill="var(--vp-c-text-1)" stroke="#cbd5e1" stroke-width="2" />
-      <rect x="15" y="32" width="90" height="5" fill="#e2e8f0" />
-      <rect x="15" y="42" width="90" height="5" fill="#e2e8f0" />
-      <rect x="15" y="55" width="90" height="10" fill="#e2e8f0" />
-      <rect x="15" y="72" width="90" height="5" fill="#e2e8f0" />
-      <rect x="15" y="82" width="90" height="5" fill="#e2e8f0" />
-      <line x1="20" y1="34" x2="100" y2="34" stroke="#ef4444" stroke-width="1" />
-      <line x1="20" y1="44" x2="100" y2="44" stroke="#3b82f6" stroke-width="1" />
-      <line x1="20" y1="74" x2="100" y2="74" stroke="#3b82f6" stroke-width="1" />
-      <line x1="20" y1="84" x2="100" y2="84" stroke="#ef4444" stroke-width="1" />
-      <circle cx="20" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="30" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="40" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="50" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="60" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="70" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="80" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="90" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="100" cy="60" r="1.5" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-breadboard-half.svg" alt="Breadboard (Half Size)" style="width:495px; height:147px; max-width: 100%; max-height: 250px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">400 Tie-Points</span>
   </div>
   <div class="component-info">
@@ -59,11 +39,21 @@ A breadboard does not have "pins" in the traditional sense, but rather "tie-poin
 
 <table class="pin-table">
 <tr><th>Area</th><th>Type</th><th>Description</th></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply.</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
 <tr><td><span class="pin-name">Top Power Rails (+ / -)</span></td><td><span class="pin-type power">power</span></td><td>The top two rows run horizontally. All holes in the red (+) row are connected together. All holes in the blue (-) row are connected together.</td></tr>
 <tr><td><span class="pin-name">Bottom Power Rails (+ / -)</span></td><td><span class="pin-type power">power</span></td><td>The bottom two rows also run horizontally. They are identical to the top rails, but are NOT automatically connected to them.</td></tr>
 <tr><td><span class="pin-name">Terminal Strips A-E</span></td><td><span class="pin-type passive">passive</span></td><td>The top half of the central grid. Columns 1 through 30 run vertically. For example, holes 1A, 1B, 1C, 1D, and 1E are all electrically connected to each other.</td></tr>
 <tr><td><span class="pin-name">Terminal Strips F-J</span></td><td><span class="pin-type passive">passive</span></td><td>The bottom half of the central grid. Note that hole 1F is NOT connected to hole 1E. The ravine in the center isolates the top half from the bottom half.</td></tr>
 </table>
+
+## Wiring Diagram
+
+<p align="center">
+  <img src="/images/components/openhw-breadboard-half_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Configurable Attributes
 <table class="attrs-table">

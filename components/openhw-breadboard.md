@@ -18,7 +18,7 @@ slug: /components/openhw-breadboard
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="40" height="40" fill="var(--vp-c-bg-soft)" /><text x="30" y="35" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">COMP</text></svg>
+    <img src="/images/components/openhw-breadboard.svg" alt="Breadboard (Full)" style="width:495px; height:147px; max-width: 100%; max-height: 250px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Module</span>
   </div>
   <div class="component-info">
@@ -36,6 +36,14 @@ slug: /components/openhw-breadboard
 <tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply.</td></tr>
 <tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
 </table>
+
+## Wiring Diagram
+
+<p align="center">
+  <img src="/images/components/openhw-breadboard_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Configurable Attributes
 <table class="attrs-table">

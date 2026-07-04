@@ -18,17 +18,7 @@ slug: /components/openhw-rotary-encoder
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="10" width="30" height="35" rx="4" fill="var(--vp-c-bg-soft)" />
-      <circle cx="30" cy="27" r="10" fill="#0f172a" stroke="#475569" stroke-width="2" />
-      <path d="M 30 17 L 30 27" stroke="#cbd5e1" stroke-width="2" />
-      <rect x="18" y="45" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="24" y="45" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="30" y="45" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="36" y="45" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="42" y="45" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <text x="30" y="70" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" text-anchor="middle">KY-040</text>
-    </svg>
+    <img src="/images/components/openhw-rotary-encoder.svg" alt="Rotary Encoder" style="width:132px; height:100px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Encoder Module</span>
   </div>
   <div class="component-info">
@@ -60,12 +50,15 @@ The most common rotary encoder module for Arduino is the KY-040. It provides thr
 ## Configurable Attributes
 *This component has no configurable attributes.*
 
-## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **CLK** to **D2**.
-4. Connect **DT** to **D3**.
-5. Connect **SW** to **D4**.
+## Wiring Diagram
+
+Example of connecting the Rotary Encoder to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-rotary-encoder_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This basic polling example checks the state of the CLK and DT pins to determine rotation, and reads the pushbutton.

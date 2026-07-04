@@ -18,21 +18,7 @@ slug: /components/logic-d-flipflop-dsr
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="25" width="70" height="70" rx="8" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <path d="M 25,75 L 35,80 L 25,85" fill="none" stroke="#94a3b8" stroke-width="2" />
-      <text x="35" y="50" fill="var(--vp-c-text-2)" font-family="monospace" font-size="14" font-weight="bold">D</text>
-      <text x="75" y="50" fill="var(--vp-c-text-2)" font-family="monospace" font-size="14" font-weight="bold">Q</text>
-      <text x="70" y="85" fill="var(--vp-c-text-2)" font-family="monospace" font-size="14" font-weight="bold">Q'</text>
-      <text x="55" y="40" fill="#f56565" font-family="monospace" font-size="12" font-weight="bold">S</text>
-      <text x="55" y="85" fill="#f56565" font-family="monospace" font-size="12" font-weight="bold">R</text>
-      <line x1="10" y1="45" x2="25" y2="45" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="80" x2="25" y2="80" stroke="#94a3b8" stroke-width="3" />
-      <line x1="60" y1="10" x2="60" y2="25" stroke="#f56565" stroke-width="3" />
-      <line x1="60" y1="95" x2="60" y2="110" stroke="#f56565" stroke-width="3" />
-      <line x1="95" y1="45" x2="110" y2="45" stroke="#94a3b8" stroke-width="3" />
-      <line x1="95" y1="80" x2="110" y2="80" stroke="#94a3b8" stroke-width="3" />
-    </svg>
+    <img src="/images/components/logic-d-flipflop-dsr.svg" alt="D Flip-Flop (Set/Reset)" style="width:120px; height:90px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">D Flip-Flop (SR)</span>
   </div>
   <div class="component-info">
@@ -78,10 +64,12 @@ The Set/Reset variant is commonly found in shift registers and state machines wh
 - **Invalid State:** Activating both Set and Reset simultaneously leads to an undefined or invalid state in physical hardware. The simulator will typically output LOW for both Q and Q' in this state, but it should be avoided.
 
 ## Wiring Diagram
-1. Connect a digital data source to **D**.
-2. Connect a clock source to **CLK**.
-3. Connect logic inputs to **S** and **R** (tie to Ground if unused!).
-4. Connect **Q** to an LED or the next logic stage.
+
+<p align="center">
+  <img src="/images/components/logic-d-flipflop-dsr_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

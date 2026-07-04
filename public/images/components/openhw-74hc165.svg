@@ -1,0 +1,35 @@
+<svg width="135" height="45" viewBox="0 0 135 45" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <!-- Top Pins -->
+        <rect x="11" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="26" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="41" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="56" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="71" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="86" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="101" y="0" width="8" height="6" fill="#cccccc" />
+        <rect x="116" y="0" width="8" height="6" fill="#cccccc" />
+        <!-- Bottom Pins -->
+        <rect x="11" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="26" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="41" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="56" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="71" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="86" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="101" y="39" width="8" height="6" fill="#cccccc" />
+        <rect x="116" y="39" width="8" height="6" fill="#cccccc" />
+
+        <!-- IC Body -->
+        <rect x="0" y="4" width="135" height="37" fill="#222222" />
+
+        <!-- Notch -->
+        <path d="M 0 16 A 6 6 0 0 0 0 28" fill="#111111" />
+
+        <!-- Pin 1 Dot -->
+        <circle cx="9" cy="35" r="3.5" fill="#444444" />
+
+        <!-- Text -->
+        <text x="67.5" y="20.5" fill="#999900" font-size="14" font-family="sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="middle">74HC</text>
+        <text x="67.5" y="34.5" fill="#999900" font-size="14" font-family="sans-serif" font-weight="bold" text-anchor="middle" dominant-baseline="middle">165</text>
+    </g>
+</svg>

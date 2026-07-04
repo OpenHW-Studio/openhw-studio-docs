@@ -1,0 +1,41 @@
+<svg width="240" height="360" viewBox="0 0 240 360" xmlns="http://www.w3.org/2000/svg" style="pointer-events: none;">
+    <g>
+        <!-- PCB Background -->
+        <rect x="0" y="0" width="240" height="360" fill="#a01a1e" rx="6" />
+
+        <!-- Mounting Holes -->
+        <circle cx="15" cy="15" r="6.75" fill="#FFFFFF" />
+        <circle cx="225" cy="15" r="6.75" fill="#FFFFFF" />
+        <circle cx="15" cy="345" r="6.75" fill="#FFFFFF" />
+        <circle cx="225" cy="345" r="6.75" fill="#FFFFFF" />
+
+        <!-- Title Text -->
+        <text x="120" y="33" fill="#FFFFFF" font-size="21" font-family="monospace" text-anchor="middle" font-weight="bold">ILI9341 Cap Touch</text>
+
+        <!-- Screen Bezel -->
+        <rect x="7.5" y="43.5" width="225" height="297" fill="#F4E3EB" />
+
+        <!-- Screen Dark Area -->
+        <rect x="12" y="48" width="216" height="288" fill="#000000" />
+
+        <!-- Flex Cable Connector -->
+        <rect x="60" y="322.5" width="120" height="18" fill="#b06423" />
+
+        <!-- "1" Text -->
+        <text x="31" y="357" fill="#FFFFFF" font-size="16" font-family="sans-serif">1</text>
+
+        <!-- Pin Headers at 15px pitch for 11 pins -->
+        <rect x="39" y="346.5" width="162" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75" opacity="0.5" />
+        <rect x="42.75" y="350.25" width="4.5" height="4.5" fill="#FFFFFF" />
+        <circle cx="60" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="75" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="90" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="105" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="120" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="135" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="150" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="165" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="180" cy="352.5" r="2.25" fill="#FFFFFF" />
+        <circle cx="195" cy="352.5" r="2.25" fill="#FFFFFF" />
+    </g>
+</svg>

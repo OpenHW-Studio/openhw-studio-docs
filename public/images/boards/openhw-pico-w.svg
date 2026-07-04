@@ -1,0 +1,119 @@
+<svg width="250" height="450" viewBox="0 0 250 450" style="font-family: sans-serif; user-select: none;" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Green PCB -->
+  <rect x="50" y="50" width="150" height="350" rx="4" fill="#0f5132" />
+
+  <!-- Micro-USB Port -->
+  <rect x="105" y="35" width="40" height="25" rx="2" fill="#d4d4d4" stroke="#a3a3a3" />
+  <path d="M 115 50 L 135 50 L 130 40 L 120 40 Z" fill="#111" />
+
+  <!-- Wi-Fi Shield (CYW43439) -->
+  <rect x="95" y="75" width="60" height="30" rx="2" fill="#d4d4d4" stroke="#a3a3a3" />
+  <text x="125" y="92" fill="#555" font-size="6" font-weight="bold" text-anchor="middle">CYW43439</text>
+
+  <!-- BOOTSEL Button -->
+  <rect x="95" y="115" width="20" height="20" fill="#f8fafc" stroke="#94a3b8" />
+  <circle cx="105" cy="125" r="6" fill="#e2e8f0" />
+  <text x="85" y="130" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 85, 130)">BOOTSEL</text>
+
+  <!-- RP2040 Chip -->
+  <rect x="95" y="180" width="40" height="40" rx="1" fill="#222" />
+  <circle cx="100" cy="185" r="2" fill="#111" />
+  <text x="115" y="200" fill="#444" font-size="6" font-weight="bold" text-anchor="middle">RP2040</text>
+  <text x="115" y="210" fill="#444" font-size="6" font-weight="bold" text-anchor="middle">RASPBERRY PI</text>
+
+  <!-- Flash Memory Chip -->
+  <rect x="150" y="125" width="15" height="15" fill="#222" />
+
+  <!-- Status LED -->
+  <circle cx="180" cy="65" r="5" fill="#38bdf8" />
+  
+  <!-- Raspberry Logo -->
+  <g transform="translate(100, 270) scale(0.6)">
+    <circle cx="25" cy="45" r="8" fill="#fff" />
+    <circle cx="10" cy="55" r="8" fill="#fff" />
+    <circle cx="40" cy="55" r="8" fill="#fff" />
+    <circle cx="10" cy="70" r="8" fill="#fff" />
+    <circle cx="40" cy="70" r="8" fill="#fff" />
+    <circle cx="25" cy="80" r="8" fill="#fff" />
+    <circle cx="25" cy="62" r="10" fill="#fff" />
+    
+    <path d="M 25 35 Q 10 20 5 30 Q 15 40 25 35" fill="#fff" />
+    <path d="M 25 35 Q 40 20 45 30 Q 35 40 25 35" fill="#fff" />
+  </g>
+
+  <!-- Labels -->
+  <text x="75" y="250" fill="#fff" font-size="12" font-weight="bold" transform="rotate(-90, 75, 250)">Raspberry Pi Pico ©2020</text>
+
+  <!-- Mounting Holes -->
+  <circle cx="70" cy="70" r="6" fill="#facc15" />
+  <circle cx="70" cy="70" r="3" fill="#0f5132" />
+  
+  <circle cx="180" cy="70" r="6" fill="#facc15" />
+  <circle cx="180" cy="70" r="3" fill="#0f5132" />
+  
+  <circle cx="70" cy="380" r="6" fill="#facc15" />
+  <circle cx="70" cy="380" r="3" fill="#0f5132" />
+  
+  <circle cx="180" cy="380" r="6" fill="#facc15" />
+  <circle cx="180" cy="380" r="3" fill="#0f5132" />
+
+  <!-- Castellations / Holes -->
+  <defs>
+    <rect id="castellation" width="8" height="6" fill="#d4d4d4" />
+    <circle id="hole" cx="4" cy="3" r="1.5" fill="#f8fafc" />
+    <g id="pad">
+      <use href="#castellation" />
+      <use href="#hole" />
+    </g>
+  </defs>
+
+  <!-- Left Pads (Pins 1 to 20) -->
+  <g transform="translate(46, 60)">
+    <!-- 20 pads, spaced by 16px -->
+    <!-- I will generate the pads and numbers -->
+    <use href="#pad" x="0" y="0" />    <text x="15" y="5" fill="#fff" font-size="6" font-weight="bold">1</text>
+    <use href="#pad" x="0" y="16" />   <text x="15" y="21" fill="#fff" font-size="6" font-weight="bold">2</text>
+    <use href="#pad" x="0" y="32" />
+    <use href="#pad" x="0" y="48" />
+    <use href="#pad" x="0" y="64" />
+    <use href="#pad" x="0" y="80" />
+    <use href="#pad" x="0" y="96" />
+    <use href="#pad" x="0" y="112" />
+    <use href="#pad" x="0" y="128" />
+    <use href="#pad" x="0" y="144" />
+    <use href="#pad" x="0" y="160" />
+    <use href="#pad" x="0" y="176" />
+    <use href="#pad" x="0" y="192" />
+    <use href="#pad" x="0" y="208" />
+    <use href="#pad" x="0" y="224" />
+    <use href="#pad" x="0" y="240" />
+    <use href="#pad" x="0" y="256" />
+    <use href="#pad" x="0" y="272" />
+    <use href="#pad" x="0" y="288" />
+    <use href="#pad" x="0" y="304" />
+  </g>
+
+  <!-- Right Pads (Pins 40 to 21) -->
+  <g transform="translate(196, 60)">
+    <use href="#pad" x="0" y="0" />    <text x="-5" y="5" fill="#fff" font-size="6" font-weight="bold" text-anchor="end">40</text>
+    <use href="#pad" x="0" y="16" />   <text x="-5" y="21" fill="#fff" font-size="6" font-weight="bold" text-anchor="end">39</text>
+    <use href="#pad" x="0" y="32" />
+    <use href="#pad" x="0" y="48" />
+    <use href="#pad" x="0" y="64" />
+    <use href="#pad" x="0" y="80" />
+    <use href="#pad" x="0" y="96" />
+    <use href="#pad" x="0" y="112" />
+    <use href="#pad" x="0" y="128" />
+    <use href="#pad" x="0" y="144" />
+    <use href="#pad" x="0" y="160" />
+    <use href="#pad" x="0" y="176" />
+    <use href="#pad" x="0" y="192" />
+    <use href="#pad" x="0" y="208" />
+    <use href="#pad" x="0" y="224" />
+    <use href="#pad" x="0" y="240" />
+    <use href="#pad" x="0" y="256" />
+    <use href="#pad" x="0" y="272" />
+    <use href="#pad" x="0" y="288" />
+    <use href="#pad" x="0" y="304" />
+  </g>
+</svg>

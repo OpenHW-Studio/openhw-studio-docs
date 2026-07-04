@@ -18,7 +18,7 @@ slug: /components/openhw-pca9865
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="40" height="40" fill="var(--vp-c-bg-soft)" /><text x="30" y="35" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">COMP</text></svg>
+    <img src="/images/components/openhw-pca9865.svg" alt="PCA9685 Module" style="width:160px; height:80px; max-width: 100%; max-height: 200px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Module</span>
   </div>
   <div class="component-info">
@@ -33,24 +33,43 @@ slug: /components/openhw-pca9865
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply.</td></tr>
 <tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
+<tr><td><span class="pin-name">OE</span></td><td><span class="pin-type input">input</span></td><td>Output Enable. Active low. Connect to GND to enable outputs.</td></tr>
+<tr><td><span class="pin-name">SCL</span></td><td><span class="pin-type input">input</span></td><td>I2C Clock line.</td></tr>
+<tr><td><span class="pin-name">SDA</span></td><td><span class="pin-type input">input</span></td><td>I2C Data line.</td></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Logic Power Supply (usually 5V).</td></tr>
+<tr><td><span class="pin-name">V+</span></td><td><span class="pin-type power">power</span></td><td>Motor/Servo Power Supply (often 5V to 6V).</td></tr>
 </table>
 
-## Configurable Attributes
-<table class="attrs-table">
-<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
-<tr><td><strong>color</strong></td><td><code>string</code></td><td><code>"red"</code></td><td>Color configuration.</td></tr>
-</table>
+## Wiring Diagram
 
-## Example Code
+<p align="center">
+  <img src="/images/components/openhw-pca9865_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
+
+## Example Arduino Code
 
 ```cpp
+#include <Wire.h>
+#include <Adafruit_PWMServoDriver.h>
+
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+
 void setup() {
-  // Put your setup code here
+  Serial.begin(9600);
+  pwm.begin();
+  pwm.setPWMFreq(50); // Typical for servos
 }
 
 void loop() {
-  // Put your main code here
+  // Drive channel 0 to minimum pulse
+  pwm.setPWM(0, 0, 150);
+  delay(1000);
+  
+  // Drive channel 0 to maximum pulse
+  pwm.setPWM(0, 0, 600);
+  delay(1000);
 }
 ```

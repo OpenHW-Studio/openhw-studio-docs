@@ -18,12 +18,17 @@ slug: /components/logic-or-gate
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 30,30 Q 50,60 30,90 Q 70,90 90,60 Q 70,30 30,30 Z" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <line x1="10" y1="45" x2="38" y2="45" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="75" x2="38" y2="75" stroke="#94a3b8" stroke-width="3" />
-      <line x1="90" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <text x="50" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="16" font-weight="bold">&ge;1</text>
+    <svg width="75" height="60" viewBox="0 0 75 60" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="15" x2="22" y2="15" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+      <line x1="0" y1="45" x2="22" y2="45" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
+      <defs>
+          <linearGradient id="orGateFill" x1="20" y1="10" x2="55" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15" />
+              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.05" />
+          </linearGradient>
+      </defs>
+      <path d="M 20 10 Q 25 30 20 50 Q 45 50 60 30 Q 45 10 20 10 Z" fill="url(#orGateFill)" stroke="#a855f7" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+      <line x1="60" y1="30" x2="75" y2="30" stroke="#1e1e1e" stroke-width="2" stroke-linecap="round" />
     </svg>
     <span style="font-size:11px;color:var(--vp-c-text-2);">OR Gate</span>
   </div>
@@ -63,9 +68,14 @@ The OR Gate evaluates multiple digital signals and returns true (HIGH) if any si
 The OR Gate models Boolean addition (A + B = Y).
 
 ## Wiring Diagram
-1. Connect a digital signal source (e.g. switch) to **IN1**.
-2. Connect a second digital signal source to **IN2**.
-3. Connect **OUT** to the next logic stage or an indicator LED.
+
+Example of a logic OR gate wired to an Arduino Uno and an LED (with a resistor).
+
+<p align="center">
+  <img src="/images/components/logic-or-gate_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

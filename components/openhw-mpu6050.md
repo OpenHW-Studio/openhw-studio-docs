@@ -18,25 +18,7 @@ slug: /components/openhw-mpu6050
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="80" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="50" height="70" rx="3" fill="#1e3a8a" stroke="#172554" stroke-width="2" />
-      <rect x="15" y="25" width="30" height="30" rx="2" fill="#0f172a" />
-      <circle cx="20" cy="30" r="2" fill="#334155" />
-      <circle cx="10" cy="10" r="2" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <circle cx="50" cy="10" r="2" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <circle cx="10" cy="70" r="2" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <circle cx="50" cy="70" r="2" fill="var(--vp-c-text-2)" stroke="#64748b" stroke-width="1" />
-      <text x="30" y="42" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle">MPU</text>
-      <text x="30" y="50" fill="var(--vp-c-text-1)" font-family="monospace" font-size="6" text-anchor="middle">6050</text>
-      <rect x="10" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="16" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="22" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="28" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="34" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="40" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="46" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="52" y="75" width="4" height="5" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-mpu6050.svg" alt="MPU6050 IMU Sensor" style="width:135px; height:105px; max-width: 135px; max-height: 105px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">MPU-6050</span>
   </div>
   <div class="component-info">
@@ -82,6 +64,12 @@ IMU stands for Inertial Measurement Unit. The MPU6050 measures acceleration in t
 2. Connect **GND** to Arduino **GND**.
 3. Connect **SDA** to Arduino **A4**.
 4. Connect **SCL** to Arduino **A5**.
+
+<p align="center">
+  <img src="/images/components/openhw-mpu6050_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `Adafruit_MPU6050` library via the Library Manager before running this sketch.

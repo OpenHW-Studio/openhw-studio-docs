@@ -1,0 +1,36 @@
+<svg width="240" height="360" viewBox="0 0 240 360" xmlns="http://www.w3.org/2000/svg" style="pointer-events: none;">
+    <g>
+        <!-- PCB Background -->
+        <rect x="0" y="0" width="240" height="360" fill="#a01a1e" rx="6" />
+
+        <!-- Mounting Holes -->
+        <circle cx="15" cy="15" r="6.75" fill="#FFFFFF" />
+        <circle cx="225" cy="15" r="6.75" fill="#FFFFFF" />
+        <circle cx="15" cy="345" r="6.75" fill="#FFFFFF" />
+        <circle cx="225" cy="345" r="6.75" fill="#FFFFFF" />
+
+        <!-- Title Text -->
+        <text x="120" y="33" fill="#FFFFFF" font-size="21" font-family="monospace" text-anchor="middle" font-weight="bold">ILI9341</text>
+
+        <!-- Screen Bezel -->
+        <rect x="8" y="42" width="224" height="290" fill="#F4E3EB" />
+
+        <!-- Screen Dark Area -->
+        <rect x="12" y="46" width="216" height="282" fill="#000000" />
+
+        <!-- Flex Cable Connector -->
+        <rect x="60" y="323" width="120" height="18" fill="#b06423" />
+
+        <!-- Pin Headers at 15px pitch -->
+        <rect x="54" y="348" width="132" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75" opacity="0.7" />
+        <circle cx="60" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="75" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="90" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="105" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="120" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="135" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="150" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="165" cy="352" r="2.25" fill="#FFFFFF" />
+        <circle cx="180" cy="352" r="2.25" fill="#FFFFFF" />
+    </g>
+</svg>

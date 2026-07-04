@@ -18,19 +18,7 @@ slug: /components/openhw-ks2e-m-dc5
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="30" width="70" height="60" rx="4" fill="#fbbf24" stroke="#b45309" stroke-width="2" />
-      <text x="60" y="55" fill="#78350f" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">RELAY</text>
-      <text x="60" y="75" fill="#78350f" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">DPDT 5V</text>
-      <circle cx="35" cy="40" r="3" fill="#b45309" />
-      <circle cx="85" cy="40" r="3" fill="#b45309" />
-      <circle cx="35" cy="80" r="3" fill="#b45309" />
-      <circle cx="85" cy="80" r="3" fill="#b45309" />
-      <circle cx="50" cy="80" r="3" fill="#b45309" />
-      <circle cx="70" cy="80" r="3" fill="#b45309" />
-      <circle cx="50" cy="40" r="3" fill="#b45309" />
-      <circle cx="70" cy="40" r="3" fill="#b45309" />
-    </svg>
+    <img src="/images/components/openhw-ks2e-m-dc5.svg" alt="DPDT Relay" style="width:165px; height:75px; max-width: 165px; max-height: 100px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">DPDT Relay</span>
   </div>
   <div class="component-info">
@@ -74,11 +62,11 @@ When a sufficient voltage difference (usually 5V) is applied across the `COIL1` 
 > [!WARNING]
 > **Do not power relay coils directly from Arduino digital pins.** Relays draw more current than an Arduino pin can supply and cause flyback voltage spikes. Always use a transistor (like a 2N2222) and a flyback diode.
 
-1. Connect **COIL1** to Arduino 5V.
-2. Connect **COIL2** to the Collector of an NPN Transistor.
-3. Connect the Emitter of the Transistor to Ground.
-4. Connect the Base of the Transistor to an Arduino Digital Pin (via a 1k resistor).
-5. Add a Diode in reverse across COIL1 and COIL2.
+<p align="center">
+  <img src="/images/components/openhw-ks2e-m-dc5_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code simply turns the relay on and off every second (assuming you wired a transistor to pin 8).

@@ -1,0 +1,96 @@
+<svg width="120" height="45" viewBox="0 0 120 45" style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <linearGradient id="icBodyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#353535" />
+        <stop offset="10%" stop-color="#2c2c2c" />
+        <stop offset="50%" stop-color="#242424" />
+        <stop offset="90%" stop-color="#1e1e1e" />
+        <stop offset="100%" stop-color="#111" />
+    </linearGradient>
+    <linearGradient id="icPinGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#9a9a9a" />
+        <stop offset="30%" stop-color="#e0e0e0" />
+        <stop offset="30%" stop-color="#e0e0e0" />
+        <stop offset="70%" stop-color="#b3b3b3" />
+        <stop offset="100%" stop-color="#8a8a8a" />
+    </linearGradient>
+</defs>
+<g key="p14"><path d="M 12.5 5 L 12.5 0 L 17.5 0 L 17.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p13"><path d="M 27.5 5 L 27.5 0 L 32.5 0 L 32.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p12"><path d="M 42.5 5 L 42.5 0 L 47.5 0 L 47.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p11"><path d="M 57.5 5 L 57.5 0 L 62.5 0 L 62.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p10"><path d="M 72.5 5 L 72.5 0 L 77.5 0 L 77.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p9"><path d="M 87.5 5 L 87.5 0 L 92.5 0 L 92.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p8"><path d="M 102.5 5 L 102.5 0 L 107.5 0 L 107.5 5 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p1"><path d="M 12.5 40 L 12.5 45 L 17.5 45 L 17.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p2"><path d="M 27.5 40 L 27.5 45 L 32.5 45 L 32.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p3"><path d="M 42.5 40 L 42.5 45 L 47.5 45 L 47.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p4"><path d="M 57.5 40 L 57.5 45 L 62.5 45 L 62.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p5"><path d="M 72.5 40 L 72.5 45 L 77.5 45 L 77.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p6"><path d="M 87.5 40 L 87.5 45 L 92.5 45 L 92.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<g key="p7"><path d="M 102.5 40 L 102.5 45 L 107.5 45 L 107.5 40 Z" fill="url(#icPinGrad)" stroke="#555" stroke-width="0.5" /></g>
+<rect x="5" y="5" width="110" height="35" rx="2" ry="2" fill="url(#icBodyGrad)" stroke="#111" stroke-width="1" />
+<rect x="6" y="6" width="108" height="33" rx="1" ry="1" fill="none" stroke="#4d4d4d" stroke-width="0.8" />
+<line x1="6" y1="39" x2="114" y2="39" stroke="#1a1a1a" stroke-width="1" />
+<circle cx="12" cy="33" r="3" fill="#1c1c1c" stroke="#111" stroke-width="1" />
+<path d="M 10 35 A 3 3 0 0 0 14 34" fill="none" stroke="#333" stroke-width="0.8" />
+<path d="M 5 17.5 A 5 5 0 0 1 5 27.5" fill="#1c1c1c" stroke="#111" stroke-width="1" />
+<path d="M 5 17.5 A 5 5 0 0 1 7 25.5" fill="none" stroke="#4d4d4d" stroke-width="0.8" />
+<g key="label-t-14">
+        <text x="15" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">14</text>
+        <text x="15" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">VCC</text>
+    </g>
+<g key="label-t-13">
+        <text x="30" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">13</text>
+        <text x="30" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">4A</text>
+    </g>
+<g key="label-t-12">
+        <text x="45" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">12</text>
+        <text x="45" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">4B</text>
+    </g>
+<g key="label-t-11">
+        <text x="60" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">11</text>
+        <text x="60" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">4Y</text>
+    </g>
+<g key="label-t-10">
+        <text x="75" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">10</text>
+        <text x="75" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">3A</text>
+    </g>
+<g key="label-t-9">
+        <text x="90" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">9</text>
+        <text x="90" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">3B</text>
+    </g>
+<g key="label-t-8">
+        <text x="105" y="11" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">8</text>
+        <text x="105" y="16" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">3Y</text>
+    </g>
+<g key="label-b-1">
+        <text x="15" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">1A</text>
+        <text x="15" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">1</text>
+    </g>
+<g key="label-b-2">
+        <text x="30" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">1B</text>
+        <text x="30" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">2</text>
+    </g>
+<g key="label-b-3">
+        <text x="45" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">1Y</text>
+        <text x="45" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">3</text>
+    </g>
+<g key="label-b-4">
+        <text x="60" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">2A</text>
+        <text x="60" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">4</text>
+    </g>
+<g key="label-b-5">
+        <text x="75" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">2B</text>
+        <text x="75" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">5</text>
+    </g>
+<g key="label-b-6">
+        <text x="90" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">2Y</text>
+        <text x="90" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">6</text>
+    </g>
+<g key="label-b-7">
+        <text x="105" y="33" fill="#aaa" font-size="4" font-family="sans-serif" text-anchor="middle">GND</text>
+        <text x="105" y="38" fill="#e0e0e0" font-size="4.5" font-weight="bold" font-family="sans-serif" text-anchor="middle">7</text>
+    </g>
+<text x="60" y="25.5" fill="#c8c8c8" font-size="12" font-weight="800" font-family="'Arial Black', 'Impact', sans-serif" text-anchor="middle" letter-spacing="1">74LS08</text>
+</svg>

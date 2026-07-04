@@ -18,15 +18,7 @@ slug: /components/openhw-power-supply
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="60" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="70" height="50" rx="4" fill="var(--vp-c-text-2)" stroke="#94a3b8" stroke-width="2" />
-      <rect x="15" y="15" width="50" height="20" rx="2" fill="#0f172a" />
-      <text x="40" y="29" fill="#22c55e" font-family="monospace" font-size="12" text-anchor="middle">5.00V</text>
-      <circle cx="25" cy="45" r="4" fill="#ef4444" />
-      <text x="25" y="55" fill="#ef4444" font-family="monospace" font-size="8" text-anchor="middle">+</text>
-      <circle cx="55" cy="45" r="4" fill="var(--vp-c-bg-soft)" />
-      <text x="55" y="55" fill="var(--vp-c-bg-soft)" font-family="monospace" font-size="8" text-anchor="middle">-</text>
-    </svg>
+    <img src="/images/components/openhw-power-supply.svg" alt="Power Supply" style="width:60px; height:60px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Bench Power Supply</span>
   </div>
   <div class="component-info">
@@ -64,8 +56,14 @@ A dedicated power supply is necessary when simulating components that draw more 
 </table>
 
 ## Wiring Diagram
-1. Connect **GND** to the Arduino **GND** and your circuit's ground rail.
-2. Connect **5V** to your external component's VCC/VIN pin.
+
+Example of connecting the Power Supply to share a common ground with an Arduino Uno while independently powering an external circuit.
+
+<p align="center">
+  <img src="/images/components/openhw-power-supply_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 A power supply does not require code to function, as it is a passive power source. Your code must simply account for the fact that external components are powered independently.

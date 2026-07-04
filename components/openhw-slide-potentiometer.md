@@ -1,6 +1,6 @@
 ---
-title: "Linear (Slide) Potentiometer"
-description: "A linear slide potentiometer that outputs a variable analog voltage based on slider position."
+title: "Linear Slide Potentiometer"
+description: "A linear adjustable resistor module with a sliding fader."
 slug: /components/openhw-slide-potentiometer
 ---
 
@@ -8,77 +8,78 @@ slug: /components/openhw-slide-potentiometer
   <a href="/docs/">Home</a> &gt; 
   <a href="/docs/components/">Components</a> &gt; 
   <a href="/docs/components/catalog?category=Sensors">Sensors</a> &gt; 
-  <span>Linear Potentiometer</span>
+  <span>Linear Slide Potentiometer</span>
 </div>
 
-# Linear Potentiometer
-<p class="subtitle">A linear slider that functions as a variable voltage divider, outputting an analog signal based on the slider's physical position.</p>
+# Linear Slide Potentiometer
+<p class="subtitle">An adjustable resistor module that outputs a variable analog voltage based on linear position.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="10" width="90" height="20" rx="4" fill="var(--vp-c-bg-soft)" />
-      <rect x="15" y="18" width="70" height="4" rx="2" fill="#0f172a" />
-      <rect x="50" y="5" width="10" height="30" rx="2" fill="var(--vp-c-text-2)" />
-      <line x1="55" y1="10" x2="55" y2="30" stroke="#94a3b8" stroke-width="2" />
-    </svg>
+    <img src="/images/components/openhw-slide-potentiometer.svg" alt="Linear Slide Potentiometer" style="width:150px; height:70px; max-width: 150px; max-height: 70px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Slide Potentiometer</span>
   </div>
   <div class="component-info">
-    <p>A linear slide potentiometer outputs a variable analog voltage as the slider moves along a linear track from one end (GND) to the other (VCC). It is commonly used for volume faders, position sensing, and Human-Machine Interface (HMI) controls.</p>
+    <p>A slide potentiometer (often called a fader or slider) works exactly like a rotary potentiometer, but features a straight linear track instead of a circular one. Moving the knob left or right along the track adjusts the resistance linearly, changing the output voltage on the signal pin.</p>
     <div>
       <span class="tag">Sensors</span>
-      <span class="tag">Analog Input</span>
-      <span class="tag">Variable Resistor</span>
+      <span class="tag">Analog</span>
+      <span class="tag">Input</span>
     </div>
   </div>
 </div>
 
 ## Overview
-The slide potentiometer acts exactly like a rotary potentiometer, just in a linear physical format. By connecting the two outer pins to VCC and GND, the middle wiper pin outputs a voltage proportional to the slider's position.
+Because this slider provides analog output, it's perfect for projects requiring precise, continuous linear control like audio mixing desks, robotic arm positioning, or adjusting the brightness of an LED strip. The outer pins connect to Power and Ground, while the middle pin acts as the wiper.
 
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>5V Power Supply.</td></tr>
-<tr><td><span class="pin-name">SIG</span></td><td><span class="pin-type analog">analog</span></td><td>Analog output signal (Wiper). Connect to an Arduino analog pin.</td></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power input. Connect to Arduino 5V.</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground. Connect to Arduino GND.</td></tr>
+<tr><td><span class="pin-name">SIG</span></td><td><span class="pin-type analog">analog</span></td><td>Signal output. Connect to an analog input (e.g., A0).</td></tr>
 </table>
-*(Note: VCC and GND are interchangeable, swapping them simply reverses the output direction).*
 
 ## Configurable Attributes
 <table class="attrs-table">
 <tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
-<tr><td><strong>value</strong></td><td><code>number</code></td><td><code>50</code></td><td>Slider position as a percentage (0 = GND end, 100 = VCC end).</td></tr>
+<tr><td><strong>value</strong></td><td><code>number</code></td><td><code>50</code></td><td>The simulated knob position percentage (0-100).</td></tr>
 </table>
 
 ## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **SIG** to **A0**.
+1. Connect the **VCC** pin on the slider to Arduino **5V**.
+2. Connect the **GND** pin to Arduino **GND**.
+3. Connect the **SIG** (Wiper) pin to Arduino **A0**.
+
+<p align="center">
+  <img src="/images/components/openhw-slide-potentiometer_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
-This code initializes the analog pin, reads the raw 10-bit value, and converts it into a percentage for easier reading.
+This sketch reads the analog value from the slide potentiometer and maps it to a 0-100% scale for easy reading.
 
 ```cpp
 const int slidePin = A0;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Slide Potentiometer Ready");
 }
 
 void loop() {
-  // Read the raw analog value (0 - 1023)
-  int rawValue = analogRead(slidePin);
+  // Read the analog value (0-1023)
+  int slideValue = analogRead(slidePin);
   
-  // Convert to a percentage (0 - 100%)
-  float percentage = (rawValue / 1023.0) * 100.0;
+  // Calculate percentage
+  int percentage = map(slideValue, 0, 1023, 0, 100);
   
-  Serial.print("Slider Position: ");
-  Serial.print(percentage, 1);
+  Serial.print("Raw Slider Value: ");
+  Serial.print(slideValue);
+  Serial.print(" | Position: ");
+  Serial.print(percentage);
   Serial.println("%");
   
   delay(100);
@@ -86,15 +87,16 @@ void loop() {
 ```
 
 ## Simulation Notes
-- During simulation, drag the slider handle left/right on the canvas (while running) or use the right-click context menu to set the position numerically.
+- In the simulator, click and drag the dark grey fader knob left and right to adjust the value. 
+- Moving the knob changes the simulated resistance instantly, updating the voltage on the `SIG` pin in real-time.
 
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
   <div>
-    <a href="/docs/components/openhw-simulation-monitor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Simulation Monitor</a>
+    <a href="/docs/components/openhw-sd-card" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: MicroSD Card Module</a>
   </div>
   <div>
-    <a href="/docs/components/openhw-slide-switch" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Slide Switch &rarr;</a>
+    <a href="/docs/components/openhw-servo-motor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Servo Motor &rarr;</a>
   </div>
 </div>

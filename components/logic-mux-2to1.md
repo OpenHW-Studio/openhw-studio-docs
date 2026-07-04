@@ -18,17 +18,7 @@ slug: /components/logic-mux-2to1
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="30,20 30,100 80,80 80,40" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3"></polygon>
-      <line x1="10" y1="40" x2="30" y2="40" stroke="#94a3b8" stroke-width="3"></line>
-      <text x="40" y="45" fill="var(--vp-c-text-2)" font-family="monospace" font-size="12">D0</text>
-      <line x1="10" y1="80" x2="30" y2="80" stroke="#94a3b8" stroke-width="3"></line>
-      <text x="40" y="85" fill="var(--vp-c-text-2)" font-family="monospace" font-size="12">D1</text>
-      <line x1="80" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3"></line>
-      <text x="65" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="12">Y</text>
-      <line x1="55" y1="100" x2="55" y2="110" stroke="#f6ad55" stroke-width="3"></line>
-      <text x="50" y="90" fill="#f6ad55" font-family="monospace" font-size="12">S</text>
-    </svg>
+    <img src="/images/components/logic-mux-2to1.svg" alt="2-to-1 Multiplexer" style="width:90px; height:75px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">2-to-1 MUX</span>
   </div>
   <div class="component-info">
@@ -70,10 +60,12 @@ Multiplexers are vital for data routing, memory addressing, and time-division mu
 - **S = 1:** The output Y mirrors whatever signal is present on **D1**. (D0 is ignored).
 
 ## Wiring Diagram
-1. Connect two distinct digital signals (e.g., two different clock frequencies or data streams) to **D0** and **D1**.
-2. Connect a control signal (like a switch or a microcontroller pin) to **S**.
-3. Connect the output **Y** to your destination logic.
-4. Toggle **S** to instantly switch which signal reaches the destination.
+
+<p align="center">
+  <img src="/images/components/logic-mux-2to1_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 A 2-to-1 Multiplexer can be easily simulated using an `if-else` statement or the ternary operator in C++.

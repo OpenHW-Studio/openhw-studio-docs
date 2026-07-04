@@ -66,10 +66,14 @@ A load cell is essentially a metal bar with strain gauges glued to it. When weig
 The HX711 does not use I2C or SPI; it uses a custom two-wire protocol. The Arduino pulses the `SCK` pin to read the 24 bits of data out of the `DT` pin one by one. The number of clock pulses also dictates the gain (amplification) used for the next reading.
 
 ## Wiring Diagram
-1. Connect **VCC** to 5V.
-2. Connect **GND** to Ground.
-3. Connect **DT** to D3.
-4. Connect **SCK** to D2.
+
+Example of connecting the HX711 Load Cell to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-hx711_5_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *Install the **HX711 by bodge** library via the Library Manager before running.*

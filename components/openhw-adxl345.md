@@ -18,24 +18,7 @@ slug: /components/openhw-adxl345
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="20" width="70" height="80" rx="4" fill="#0f172a" stroke="var(--vp-c-border)" stroke-width="2" />
-      <rect x="40" y="45" width="40" height="30" rx="2" fill="var(--vp-c-bg-soft)" stroke="#475569" stroke-width="1" />
-      <circle cx="60" cy="60" r="4" fill="#64748b" />
-      <circle cx="33" cy="28" r="3" fill="#fbbf24" />
-      <circle cx="33" cy="40" r="3" fill="#fbbf24" />
-      <circle cx="33" cy="52" r="3" fill="#fbbf24" />
-      <circle cx="33" cy="64" r="3" fill="#fbbf24" />
-      <circle cx="33" cy="76" r="3" fill="#fbbf24" />
-      <circle cx="33" cy="88" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="28" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="40" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="52" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="64" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="76" r="3" fill="#fbbf24" />
-      <circle cx="87" cy="88" r="3" fill="#fbbf24" />
-      <text x="60" y="105" fill="var(--vp-c-text-2)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">ADXL345</text>
-    </svg>
+    <img src="/images/components/openhw-adxl345.svg" alt="ADXL345" style="width:94.5px; height:135px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">ADXL345 Module</span>
   </div>
   <div class="component-info">
@@ -82,6 +65,12 @@ Inside the silicon chip is a microscopic MEMS (Micro-Electro-Mechanical System) 
 4. Connect **SDA** to the Arduino's SDA pin (A4 on Uno).
 5. Tie **CS** to VCC to select I2C mode.
 6. Connect **SDO** to Ground to set the I2C address to `0x53`. (Connecting to VCC sets it to `0x1D`).
+
+<p align="center">
+  <img src="/images/components/openhw-adxl345_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 We highly recommend using the Adafruit Unified Sensor Library to handle the complex math required to convert raw data into standard SI units.

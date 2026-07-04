@@ -18,21 +18,7 @@ slug: /components/openhw-attiny85
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="35" y="30" width="50" height="60" rx="4" fill="#111827" stroke="#000000" stroke-width="2" />
-      <rect x="45" y="30" width="30" height="15" fill="#e2e8f0" />
-      <rect x="42.5" y="55" width="35" height="25" rx="2" fill="var(--vp-c-bg-soft)" />
-      <circle cx="47.5" cy="60" r="2" fill="#64748b" />
-      <circle cx="40" cy="45" r="2" fill="#eab308" />
-      <circle cx="40" cy="55" r="2" fill="#eab308" />
-      <circle cx="40" cy="65" r="2" fill="#eab308" />
-      <circle cx="40" cy="75" r="2" fill="#eab308" />
-      <circle cx="80" cy="45" r="2" fill="#eab308" />
-      <circle cx="80" cy="55" r="2" fill="#eab308" />
-      <circle cx="80" cy="65" r="2" fill="#eab308" />
-      <circle cx="80" cy="75" r="2" fill="#eab308" />
-      <text x="60" y="85" fill="#ffffff" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">ATtiny85</text>
-    </svg>
+    <img src="/images/components/openhw-attiny85.svg" alt="ATtiny85 Board" style="width:120px; height:110px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">ATtiny85 Module</span>
   </div>
   <div class="component-info">
@@ -69,9 +55,12 @@ Sometimes you just need to blink an LED, read a button, or control a single serv
 The ATtiny85 contains an 8-bit AVR RISC-based microcontroller. It operates identically to larger Arduino boards but with fewer hardware peripherals (no hardware UART, limited timers). It can emulate UART (SoftwareSerial) and I2C via its Universal Serial Interface (USI).
 
 ## Wiring Diagram
-1. Connect power to the **5V** and **GND** pins.
-2. Note that `P3` and `P4` are used for USB communication on Digispark boards. If you use them in your circuit, it might interfere with USB programming in the real world.
-3. Use `P0`, `P1`, and `P2` as your primary digital/analog I/O pins.
+
+<p align="center">
+  <img src="/images/components/openhw-attiny85_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

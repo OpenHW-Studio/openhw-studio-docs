@@ -18,13 +18,7 @@ slug: /components/logic-and-gate
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 30,30 L 60,30 A 30 30 0 0 1 90 60 A 30 30 0 0 1 60 90 L 30,90 Z" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <line x1="10" y1="45" x2="30" y2="45" stroke="#94a3b8" stroke-width="3" />
-      <line x1="10" y1="75" x2="30" y2="75" stroke="#94a3b8" stroke-width="3" />
-      <line x1="90" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <text x="55" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="16" font-weight="bold">&amp;</text>
-    </svg>
+    <img src="/images/components/logic-and-gate.svg" alt="AND Gate" style="width:100px; height:80px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">AND Gate</span>
   </div>
   <div class="component-info">
@@ -63,9 +57,12 @@ The AND Gate is one of the most basic building blocks of digital logic circuits.
 The AND Gate physically models the mathematical operation of multiplication in Boolean algebra (A * B = Y). 
 
 ## Wiring Diagram
-1. Connect the output of a switch or digital pin to **IN1**.
-2. Connect the output of a second switch or digital pin to **IN2**.
-3. Connect **OUT** to an LED (with a resistor) or an Arduino input pin to read the evaluated logic state.
+
+<p align="center">
+  <img src="/images/components/logic-and-gate_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 To test the AND gate using an Arduino, you can generate logic states on two output pins and read the result on an input pin.

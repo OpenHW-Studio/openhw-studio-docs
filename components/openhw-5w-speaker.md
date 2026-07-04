@@ -18,14 +18,8 @@ slug: /components/openhw-5w-speaker
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="50" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="4" />
-      <circle cx="60" cy="60" r="40" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
-      <circle cx="60" cy="60" r="15" fill="#334155" stroke="#475569" stroke-width="2" />
-      <rect x="35" y="105" width="20" height="10" fill="#ef4444" />
-      <rect x="65" y="105" width="20" height="10" fill="#000000" />
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">5W Speaker</span>
+    <img src="/images/components/openhw-5w-speaker.svg" alt="5W Speaker" style="width:75px; height:90px;" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);margin-top: 10px;">5W Speaker</span>
   </div>
   <div class="component-info">
     <p>This component simulates a standard 5-watt electromagnetic speaker. It is typically driven by an audio amplifier (like the MAX98357 I2S DAC) rather than directly from a microcontroller pin to produce rich audio or tones.</p>
@@ -54,9 +48,16 @@ Speakers are the primary method of generating audio feedback, music, or speech i
 A speaker consists of a permanent magnet and an electromagnet (voice coil) attached to a flexible cone. When alternating current (your audio signal) passes through the voice coil, it creates a fluctuating magnetic field. This field pushes and pulls against the permanent magnet, vibrating the cone and creating sound waves.
 
 ## Wiring Diagram
+
 1. Connect the **IN+** pin of the speaker to the positive output terminal of your audio amplifier (e.g., MAX98357).
 2. Connect the **IN-** pin of the speaker to the negative output terminal of your audio amplifier.
 3. Do not connect the speaker directly to a microcontroller digital pin; it may draw too much current and damage the pin.
+
+<p align="center">
+  <img src="/images/components/openhw-5w-speaker_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 In the simulator, the speaker is typically driven by the MAX98357 I2S DAC, which receives I2S digital audio from an ESP32.

@@ -18,20 +18,7 @@ slug: /components/openhw-bmp180-breakout
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="35" y="25" width="50" height="70" rx="4" fill="#6d28d9" stroke="#4c1d95" stroke-width="2" />
-      <circle cx="60" cy="55" r="10" fill="#a78bfa" />
-      <circle cx="60" cy="55" r="8" fill="#4c1d95" />
-      <circle cx="45" cy="35" r="2" fill="#c4b5fd" />
-      <circle cx="75" cy="35" r="2" fill="#c4b5fd" />
-      <rect x="42" y="85" width="36" height="10" fill="#eab308" />
-      <line x1="42" y1="85" x2="42" y2="95" stroke="#ca8a04" stroke-width="1" />
-      <line x1="51" y1="85" x2="51" y2="95" stroke="#ca8a04" stroke-width="1" />
-      <line x1="60" y1="85" x2="60" y2="95" stroke="#ca8a04" stroke-width="1" />
-      <line x1="69" y1="85" x2="69" y2="95" stroke="#ca8a04" stroke-width="1" />
-      <line x1="78" y1="85" x2="78" y2="95" stroke="#ca8a04" stroke-width="1" />
-      <text x="60" y="78" fill="#ffffff" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">BMP180</text>
-    </svg>
+    <img src="/images/components/openhw-bmp180-breakout.svg" alt="BMP180 Breakout" style="width:72px; height:50px; max-width: 120px; max-height: 120px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">BMP180 Breakout</span>
   </div>
   <div class="component-info">
@@ -71,6 +58,12 @@ The BMP180 communicates over the I2C bus using fixed address `0x77`. If another 
 2. Connect **GND** to Ground.
 3. Connect **SCL** to the Arduino's SCL pin (A5).
 4. Connect **SDA** to the Arduino's SDA pin (A4).
+
+<p align="center">
+  <img src="/images/components/openhw-bmp180-breakout_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

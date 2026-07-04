@@ -18,19 +18,7 @@ slug: /components/openhw-ePaperDisplay
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="10" width="80" height="100" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="4" />
-      <rect x="25" y="15" width="70" height="70" fill="#f1f5f9" />
-      <text x="60" y="45" fill="var(--vp-c-bg-soft)" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Hello</text>
-      <text x="60" y="65" fill="var(--vp-c-bg-soft)" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">World!</text>
-      <rect x="25" y="90" width="70" height="15" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="97.5" r="2" fill="#eab308" />
-      <circle cx="45" cy="97.5" r="2" fill="#eab308" />
-      <circle cx="55" cy="97.5" r="2" fill="#eab308" />
-      <circle cx="65" cy="97.5" r="2" fill="#eab308" />
-      <circle cx="75" cy="97.5" r="2" fill="#eab308" />
-      <circle cx="85" cy="97.5" r="2" fill="#eab308" />
-    </svg>
+    <img src="/images/components/openhw-epaper-29.svg" alt="2.9 inch e-Paper Display" style="width:120px; height:80px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">SPI e-Paper</span>
   </div>
   <div class="component-info">
@@ -66,13 +54,14 @@ Because of its unique physical properties, an e-Paper display does not emit ligh
 When an update command is sent over SPI, the display controller drives specific voltages across a grid of tiny microcapsules. Black particles (negatively charged) and white particles (positively charged) move up or down depending on the field. Because the particles are physically suspended in a viscous fluid, they stay exactly where they are left when power is cut.
 
 ## Wiring Diagram
-1. Connect **VCC** to 3.3V and **GND** to Ground.
-2. Connect **DIN** to D11 (MOSI).
-3. Connect **CLK** to D13 (SCK).
-4. Connect **CS** to D10.
-5. Connect **DC** to D9.
-6. Connect **RST** to D8.
-7. Connect **BUSY** to D7.
+
+Connect the e-Paper display to the Arduino via the SPI interface.
+
+<p align="center">
+  <img src="/images/components/openhw-epaper-29_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *Install the **GxEPD2** library before running this example.*

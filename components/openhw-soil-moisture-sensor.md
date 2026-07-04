@@ -1,6 +1,6 @@
 ---
 title: "Soil Moisture Sensor"
-description: "An analog sensor that measures the volumetric water content in soil."
+description: "A capacitive sensor for measuring the moisture level in soil."
 slug: /components/openhw-soil-moisture-sensor
 ---
 
@@ -11,93 +11,99 @@ slug: /components/openhw-soil-moisture-sensor
   <span>Soil Moisture Sensor</span>
 </div>
 
-# Soil Moisture Sensor
-<p class="subtitle">A resistive or capacitive sensor that outputs an analog voltage corresponding to the moisture level of the soil it is inserted into.</p>
+# Capacitive Soil Moisture Sensor
+<p class="subtitle">An analog sensor that measures the dielectric constant of the surrounding soil to determine its moisture content.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 20 20 L 40 20 L 40 70 L 30 90 L 20 70 Z" fill="var(--vp-c-bg-soft)" />
-      <path d="M 23 25 L 23 68 L 29 80" fill="none" stroke="#fcd34d" stroke-width="2" />
-      <path d="M 37 25 L 37 68 L 31 80" fill="none" stroke="#fcd34d" stroke-width="2" />
-      <rect x="25" y="10" width="10" height="10" fill="#0f172a" />
-      <rect x="20" y="5" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="28" y="5" width="4" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="36" y="5" width="4" height="5" fill="var(--vp-c-text-2)" />
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">Moisture Probe</span>
+    <img src="/images/components/openhw-soil-moisture-sensor.svg" alt="Soil Moisture Sensor" style="width:220px; height:70px; max-width: 220px; max-height: 70px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">Capacitive Sensor</span>
   </div>
   <div class="component-info">
-    <p>Soil moisture sensors are widely used in automated plant watering systems and smart agriculture. They work by measuring the electrical resistance or capacitance of the soil. Wet soil is more conductive than dry soil, resulting in a changing analog voltage output.</p>
+    <p>Unlike resistive sensors that are prone to corrosion, a capacitive soil moisture sensor uses capacitance changes to measure water content. It has no exposed metal on the probe itself, making it highly durable for long-term plant monitoring and automated irrigation systems.</p>
     <div>
       <span class="tag">Sensors</span>
-      <span class="tag">Analog Input</span>
-      <span class="tag">Environment</span>
+      <span class="tag">Analog</span>
+      <span class="tag">Environmental</span>
     </div>
   </div>
 </div>
 
 ## Overview
-While there are digital threshold versions available, the simulated model provides a direct analog read. The output voltage changes based on how much moisture is detected. 
-*(Note: Real resistive sensors are prone to corrosion over time, so capacitive sensors are often preferred in permanent installations).*
+The sensor outputs an analog voltage on its `AOUT` pin. As the moisture level in the soil increases, the capacitance of the sensor increases, which typically results in a *lower* voltage output. Conversely, dry soil results in a *higher* voltage output.
 
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
-<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply (typically 3.3V or 5V).</td></tr>
-<tr><td><span class="pin-name">SIG</span></td><td><span class="pin-type analog">analog</span></td><td>Analog Output Signal. Connect to an Arduino analog pin.</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground connection. Connect to Arduino GND.</td></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power input. Supports 3.3V to 5V.</td></tr>
+<tr><td><span class="pin-name">AOUT</span></td><td><span class="pin-type analog">analog</span></td><td>Analog output voltage. Connect to an analog pin (e.g., A0).</td></tr>
 </table>
 
 ## Configurable Attributes
-*This component has no configurable attributes.*
+<table class="attrs-table">
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr><td><strong>moisture</strong></td><td><code>number</code></td><td><code>50</code></td><td>The simulated soil moisture percentage (0 = completely dry, 100 = completely submerged).</td></tr>
+</table>
 
 ## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **SIG** to **A0**.
+1. Connect **VCC** to Arduino **5V**.
+2. Connect **GND** to Arduino **GND**.
+3. Connect **AOUT** to Arduino **A0**.
+
+<p align="center">
+  <img src="/images/components/openhw-soil-moisture-sensor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
-This standard sketch reads the analog value and prints it to the Serial Monitor. Note that depending on the specific physical module, a higher analog reading might mean *drier* soil, while a lower reading means *wetter* soil (or vice versa).
+This sketch reads the analog value and maps it to a human-readable 0-100% moisture scale. Note that the raw values for "dry" and "wet" might need calibration based on your specific sensor module in real life.
 
 ```cpp
 const int sensorPin = A0;
 
+// Calibration values (you may need to tweak these for your physical sensor)
+const int dryValue = 850;  // Value in completely dry air/soil
+const int wetValue = 400;  // Value when fully submerged in water
+
 void setup() {
   Serial.begin(9600);
-  Serial.println("Soil Moisture Sensor Ready.");
 }
 
 void loop() {
-  // Read the analog value (0 - 1023)
-  int moistureValue = analogRead(sensorPin);
+  int rawValue = analogRead(sensorPin);
   
-  Serial.print("Moisture Level: ");
-  Serial.println(moistureValue);
+  // Constrain the value just in case it drifts outside our calibration limits
+  int clampedValue = constrain(rawValue, wetValue, dryValue);
   
-  // Basic threshold example
-  if(moistureValue < 300) {
-    Serial.println("-> Status: Very Dry (Water needed!)");
-  } else if (moistureValue > 700) {
-    Serial.println("-> Status: Very Wet");
-  }
+  // Map the raw value to a percentage (inverted, because lower value = wetter)
+  int moisturePercent = map(clampedValue, dryValue, wetValue, 0, 100);
+  
+  Serial.print("Raw: ");
+  Serial.print(rawValue);
+  Serial.print("  |  Moisture: ");
+  Serial.print(moisturePercent);
+  Serial.println("%");
   
   delay(1000);
 }
 ```
 
 ## Simulation Notes
-- In the simulator, you can interact with the sensor by clicking on it and dragging the slider to simulate different soil moisture levels (dry to wet).
+- In the simulator, a visual blue overlay on the probe head indicates the current moisture level setting.
+- You can right-click the component and use the slider in the context menu to adjust the simulated moisture level from 0% (Dry) to 100% (Submerged).
+- As the moisture increases, the output voltage on the `AOUT` pin decreases.
 
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
   <div>
-    <a href="/docs/components/openhw-slide-switch" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Slide Switch</a>
+    <a href="/docs/components/openhw-slide-potentiometer" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Linear Slide Potentiometer</a>
   </div>
   <div>
-    <a href="/docs/components/openhw-sph0645" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: SPH0645 I2S Microphone &rarr;</a>
+    <a href="/docs/components/openhw-sound-sensor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Sound Sensor &rarr;</a>
   </div>
 </div>

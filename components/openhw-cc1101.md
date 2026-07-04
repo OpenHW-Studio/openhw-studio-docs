@@ -18,20 +18,7 @@ slug: /components/openhw-cc1101
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="25" width="70" height="70" rx="4" fill="#065f46" stroke="#047857" stroke-width="2" />
-      <rect x="45" y="45" width="30" height="30" rx="2" fill="var(--vp-c-bg-soft)" />
-      <path d="M 60 45 L 60 10" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
-      <path d="M 50 15 Q 60 5 70 15" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" />
-      <path d="M 45 25 Q 60 10 75 25" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" opacity="0.6" />
-      <circle cx="35" cy="85" r="2" fill="#eab308" />
-      <circle cx="45" cy="85" r="2" fill="#eab308" />
-      <circle cx="55" cy="85" r="2" fill="#eab308" />
-      <circle cx="65" cy="85" r="2" fill="#eab308" />
-      <circle cx="75" cy="85" r="2" fill="#eab308" />
-      <circle cx="85" cy="85" r="2" fill="#eab308" />
-      <text x="60" y="75" fill="#ffffff" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">CC1101</text>
-    </svg>
+    <img src="/images/components/openhw-cc1101.svg" alt="CC1101" style="width:150px; height:75px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">RF Module</span>
   </div>
   <div class="component-info">
@@ -70,12 +57,14 @@ Because the CC1101 uses sub-1 GHz frequencies (unlike Wi-Fi or Bluetooth which u
 The module requires you to configure its registers via SPI before it can transmit or receive. You must specify the exact frequency, modulation scheme (e.g., ASK, FSK, OOK), and baud rate. Once configured, you can strobe the `TX` or `RX` commands to send or listen for data arrays over the air.
 
 ## Wiring Diagram
-1. Connect **VCC** to 3.3V and **GND** to GND. *(Note: Using a 5V Arduino? Ensure your logic lines are level-shifted or verified to be 5V-tolerant, though many users risk direct connection for short-term prototyping).*
-2. Connect **MOSI** to D11.
-3. Connect **MISO** to D12.
-4. Connect **SCK** to D13.
-5. Connect **CSN** to D10.
-6. Connect **GDO0** to D2 (useful for receiving data asynchronously via interrupts).
+
+Example of wiring the CC1101 module to a microcontroller via SPI.
+
+<p align="center">
+  <img src="/images/components/openhw-cc1101_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *This example uses the common ELECHOUSE CC1101 library.*

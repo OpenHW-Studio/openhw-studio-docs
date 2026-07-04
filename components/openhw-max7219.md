@@ -18,73 +18,7 @@ slug: /components/openhw-max7219
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="90" height="90" fill="var(--vp-c-bg-soft)" rx="2" />
-      <circle cx="15" cy="15" r="3" fill="#ef4444" />
-      <circle cx="25" cy="15" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="35" cy="15" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="45" cy="15" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="55" cy="15" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="65" cy="15" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="75" cy="15" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="85" cy="15" r="3" fill="#ef4444" />
-      <circle cx="15" cy="25" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="25" cy="25" r="3" fill="#ef4444" />
-      <circle cx="35" cy="25" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="45" cy="25" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="55" cy="25" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="65" cy="25" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="75" cy="25" r="3" fill="#ef4444" />
-      <circle cx="85" cy="25" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="15" cy="35" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="25" cy="35" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="35" cy="35" r="3" fill="#ef4444" />
-      <circle cx="45" cy="35" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="55" cy="35" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="65" cy="35" r="3" fill="#ef4444" />
-      <circle cx="75" cy="35" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="85" cy="35" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="15" cy="45" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="25" cy="45" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="35" cy="45" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="45" cy="45" r="3" fill="#ef4444" />
-      <circle cx="55" cy="45" r="3" fill="#ef4444" />
-      <circle cx="65" cy="45" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="75" cy="45" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="85" cy="45" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="15" cy="55" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="25" cy="55" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="35" cy="55" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="45" cy="55" r="3" fill="#ef4444" />
-      <circle cx="55" cy="55" r="3" fill="#ef4444" />
-      <circle cx="65" cy="55" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="75" cy="55" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="85" cy="55" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="15" cy="65" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="25" cy="65" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="35" cy="65" r="3" fill="#ef4444" />
-      <circle cx="45" cy="65" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="55" cy="65" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="65" cy="65" r="3" fill="#ef4444" />
-      <circle cx="75" cy="65" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="85" cy="65" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="15" cy="75" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="25" cy="75" r="3" fill="#ef4444" />
-      <circle cx="35" cy="75" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="45" cy="75" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="55" cy="75" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="65" cy="75" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="75" cy="75" r="3" fill="#ef4444" />
-      <circle cx="85" cy="75" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="15" cy="85" r="3" fill="#ef4444" />
-      <circle cx="25" cy="85" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="35" cy="85" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="45" cy="85" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="55" cy="85" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="65" cy="85" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="75" cy="85" r="3" fill="#ef4444" opacity="0.3" />
-      <circle cx="85" cy="85" r="3" fill="#ef4444" />
-    </svg>
+    <img src="/images/components/openhw-max7219-matrix.svg" alt="MAX7219 Dot Matrix" style="width:180px; height:120px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">MAX7219</span>
   </div>
   <div class="component-info">
@@ -122,11 +56,12 @@ Driving 64 LEDs individually would require 64 pins, or at least 16 pins with com
 </table>
 
 ## Wiring Diagram
-1. Connect **VCC** to 5V.
-2. Connect **GND** to GND.
-3. Connect **DIN** to Arduino D11.
-4. Connect **CS** to Arduino D10.
-5. Connect **CLK** to Arduino D13.
+
+<p align="center">
+  <img src="/images/components/openhw-max7219-matrix_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This example uses the popular `LedControl` library to draw an 'X' pattern on the matrix. Install it via the Library Manager.

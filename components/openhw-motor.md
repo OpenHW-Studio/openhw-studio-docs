@@ -18,18 +18,7 @@ slug: /components/openhw-motor
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="120" viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="40" width="30" height="60" rx="4" fill="var(--vp-c-text-2)" stroke="#94a3b8" stroke-width="2" />
-      <rect x="20" y="35" width="40" height="10" rx="2" fill="var(--vp-c-text-2)" />
-      <rect x="36" y="25" width="8" height="10" fill="#64748b" />
-      <rect x="30" y="100" width="8" height="10" fill="#ef4444" />
-      <rect x="42" y="100" width="8" height="10" fill="var(--vp-c-bg-soft)" />
-      <path d="M 40 40 L 40 90" stroke="#94a3b8" stroke-width="1" />
-      <path d="M 30 40 L 30 90" stroke="#94a3b8" stroke-width="1" />
-      <path d="M 50 40 L 50 90" stroke="#94a3b8" stroke-width="1" />
-      <path d="M 34 110 Q 34 115 20 115" fill="none" stroke="#ef4444" stroke-width="2" />
-      <path d="M 46 110 Q 46 120 60 120" fill="none" stroke="#1e293b" stroke-width="2" />
-    </svg>
+    <img src="/images/components/openhw-motor.svg" alt="DC Motor" style="width:200px; height:100px; max-width: 200px; max-height: 100px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">DC Motor</span>
   </div>
   <div class="component-info">
@@ -56,10 +45,14 @@ The DC Motor requires an external power source and a motor driver to be controll
 *This component has no standard configurable attributes.*
 
 ## Wiring Diagram
+
 Typical wiring for a DC Motor using an L298N motor driver module with an Arduino Uno. Note that the OpenHW Simulator handles basic autowiring for this module.
-1. Connect Motor Terminal 1 to **OUT1** of an L298N.
-2. Connect Motor Terminal 2 to **OUT2** of an L298N.
-3. Wire the L298N driver to the Arduino as specified in the Motor Driver component documentation.
+
+<p align="center">
+  <img src="/images/components/openhw-motor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 > [!TIP]
 > **Real Hardware Tip:** Always add a flyback diode (e.g., 1N4007) across motor terminals to protect against inductive voltage spikes when building physical circuits.

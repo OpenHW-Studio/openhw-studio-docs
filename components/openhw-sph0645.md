@@ -1,133 +1,116 @@
 ---
-title: "SPH0645 I2S Microphone"
-description: "A MEMS digital microphone that outputs high-quality audio data over the I2S bus."
+title: "I2S MEMS Microphone (SPH0645)"
+description: "A high-quality digital audio microphone module using the I2S protocol."
 slug: /components/openhw-sph0645
 ---
 
 <div class="custom-breadcrumb">
   <a href="/docs/">Home</a> &gt; 
   <a href="/docs/components/">Components</a> &gt; 
-  <a href="/docs/components/catalog?category=Sensors">Sensors</a> &gt; 
-  <span>SPH0645 Microphone</span>
+  <a href="/docs/components/catalog?category=Audio">Audio</a> &gt; 
+  <span>I2S MEMS Microphone</span>
 </div>
 
-# SPH0645 I2S Microphone
-<p class="subtitle">A tiny, low-power MEMS microphone that converts sound waves directly into a digital I2S audio stream.</p>
+# I2S MEMS Microphone (SPH0645)
+<p class="subtitle">A digital microphone that outputs pristine audio directly over the I2S bus, bypassing analog noise.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="80" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="40" height="50" rx="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="30" cy="35" r="8" fill="#0f172a" />
-      <circle cx="30" cy="35" r="3" fill="#334155" />
-      <text x="30" y="55" fill="var(--vp-c-text-2)" font-family="monospace" font-size="7" text-anchor="middle">SPH0645</text>
-      <rect x="13" y="60" width="3" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="19" y="60" width="3" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="25" y="60" width="3" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="32" y="60" width="3" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="38" y="60" width="3" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="44" y="60" width="3" height="15" fill="var(--vp-c-text-2)" />
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">I2S Mic</span>
+    <img src="/images/components/openhw-sph0645.svg" alt="I2S MEMS Microphone" style="width:100px; height:120px; max-width: 100px; max-height: 120px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">SPH0645</span>
   </div>
   <div class="component-info">
-    <p>Unlike standard analog microphones, the SPH0645 outputs a digital I2S signal. This means you don't need a separate ADC on your microcontroller, resulting in much cleaner, noise-free audio recordings. It is ideal for voice recognition, audio recording, and sound reactivity projects.</p>
+    <p>The SPH0645 is a tiny MEMS microphone that includes a built-in analog-to-digital converter (ADC) and an I2S interface. Instead of outputting a messy analog voltage that your microcontroller has to sample, it outputs a clean, digital stream of 24-bit audio data. It's perfect for microcontrollers with hardware I2S support, like the ESP32, Teensy, or Arduino Mega.</p>
     <div>
-      <span class="tag">Sensors</span>
       <span class="tag">Audio</span>
       <span class="tag">I2S</span>
+      <span class="tag">Input</span>
     </div>
   </div>
 </div>
 
 ## Overview
-The I2S (Inter-IC Sound) bus is a standard for transmitting digital audio between devices. It requires three main lines: Data, Bit Clock (BCLK), and Left/Right Clock (LRCLK or WS). The SPH0645 operates typically at 3.3V logic levels.
+Because this microphone uses I2S (Inter-IC Sound), it requires three dedicated data pins: Word Select (LRCL / WS), Bit Clock (BCLK), and Data Out (DOUT). The `SEL` pin determines whether the microphone outputs its data on the Left or Right channel of the stereo I2S stream (usually pulled to Ground for Left).
 
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">3V</span></td><td><span class="pin-type power">power</span></td><td>Power Supply (1.62V to 3.6V).</td></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
-<tr><td><span class="pin-name">BCLK</span></td><td><span class="pin-type digital">digital</span></td><td>Bit Clock (Serial Clock).</td></tr>
-<tr><td><span class="pin-name">DOUT</span></td><td><span class="pin-type digital">digital</span></td><td>Serial Data Output.</td></tr>
-<tr><td><span class="pin-name">LRCL</span></td><td><span class="pin-type digital">digital</span></td><td>Left/Right Clock (Word Select).</td></tr>
-<tr><td><span class="pin-name">SEL</span></td><td><span class="pin-type digital">digital</span></td><td>Channel Select (Left or Right channel).</td></tr>
+<tr><td><span class="pin-name">3V</span></td><td><span class="pin-type power">power</span></td><td>Power input. Connect to 3.3V.</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground. Connect to GND.</td></tr>
+<tr><td><span class="pin-name">BCLK</span></td><td><span class="pin-type digital">digital</span></td><td>I2S Bit Clock. Connect to the microcontroller's I2S clock pin.</td></tr>
+<tr><td><span class="pin-name">DOUT</span></td><td><span class="pin-type digital">digital</span></td><td>I2S Data Out. Connect to the microcontroller's I2S data input pin.</td></tr>
+<tr><td><span class="pin-name">LRCL</span></td><td><span class="pin-type digital">digital</span></td><td>I2S Word Select (Left/Right Clock). Connect to the I2S WS pin.</td></tr>
+<tr><td><span class="pin-name">SEL</span></td><td><span class="pin-type digital">digital</span></td><td>Channel Select. Pull to GND for Left channel, or VCC for Right.</td></tr>
 </table>
 
 ## Configurable Attributes
-*This component has no configurable attributes.*
+<table class="attrs-table">
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr><td><strong>audioFile</strong></td><td><code>string</code></td><td><code>""</code></td><td>A URL to a `.wav` or `.mp3` file to use as the simulated audio source for the microphone.</td></tr>
+</table>
 
-## Wiring Diagram (ESP32 Example)
-I2S requires a microcontroller with hardware I2S support (like an ESP32 or advanced ARM chips). Standard Arduino Unos do not have hardware I2S.
-1. Connect **3V** to ESP32 **3V3**.
+## Wiring Diagram (Arduino Mega)
+The Arduino Uno does not have hardware I2S, so for this example we are using the Arduino Mega (or typically an ESP32).
+
+1. Connect **3V** to **3.3V**.
 2. Connect **GND** to **GND**.
-3. Connect **BCLK** to ESP32 **GPIO 14**.
-4. Connect **LRCL** to ESP32 **GPIO 15**.
-5. Connect **DOUT** to ESP32 **GPIO 32**.
-6. Connect **SEL** to **GND** (to select Left channel).
+3. Connect **SEL** to **GND** (configuring the mic as the Left channel).
+4. Connect **LRCL** to the I2S WS pin.
+5. Connect **DOUT** to the I2S Data IN pin.
+6. Connect **BCLK** to the I2S Clock pin.
 
-## Example ESP32 Code
-This basic snippet initializes the ESP32's I2S peripheral to read from the microphone.
+<p align="center">
+  <img src="/images/components/openhw-sph0645_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
+
+## Example Arduino Code
+Reading from I2S requires an I2S library (such as the standard `I2S.h` for ESP32/SAMD architectures). Here is a standard configuration block.
 
 ```cpp
-#include <driver/i2s.h>
-
-const i2s_port_t I2S_PORT = I2S_NUM_0;
+#include <I2S.h>
 
 void setup() {
   Serial.begin(115200);
+  while (!Serial) { ; }
 
-  i2s_config_t i2s_config = {
-    .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),
-    .sample_rate = 16000,
-    .bits_per_sample = I2S_BITS_PER_SAMPLE_32BIT,
-    .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
-    .communication_format = i2s_comm_format_t(I2S_COMM_FORMAT_I2S | I2S_COMM_FORMAT_I2S_MSB),
-    .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
-    .dma_buf_count = 8,
-    .dma_buf_len = 64,
-    .use_apll = false,
-    .tx_desc_auto_clear = false,
-    .fixed_mclk = 0
-  };
-
-  i2s_pin_config_t pin_config = {
-    .bck_io_num = 14,   // BCLK
-    .ws_io_num = 15,    // LRCL
-    .data_out_num = -1, // Not used
-    .data_in_num = 32   // DOUT
-  };
-
-  i2s_driver_install(I2S_PORT, &i2s_config, 0, NULL);
-  i2s_set_pin(I2S_PORT, &pin_config);
-  
-  Serial.println("I2S Microphone Ready");
+  // Start I2S receiver
+  // I2S.begin(mode, sampleRate, bitsPerSample)
+  if (!I2S.begin(I2S_PHILIPS_MODE, 16000, 32)) {
+    Serial.println("Failed to initialize I2S!");
+    while (1); // halt
+  }
 }
 
 void loop() {
-  int32_t sample = 0;
-  size_t bytesRead = 0;
-  
-  i2s_read(I2S_PORT, &sample, sizeof(sample), &bytesRead, portMAX_DELAY);
-  
-  if (bytesRead > 0) {
-    // Process audio sample here...
+  // Read a 32-bit sample from the I2S bus
+  int sample = 0;
+  if (I2S.available()) {
+    I2S.read(&sample, sizeof(sample));
+    
+    // Convert 24-bit data to 16-bit by shifting
+    sample >>= 14; 
+    
+    // Print for the Serial Plotter
+    Serial.println(sample);
   }
 }
 ```
 
 ## Simulation Notes
-- In the simulator, providing real audio to the I2S microphone may depend on browser microphone permissions. By default, it will generate a simulated sine wave test tone.
+- The SPH0645 generates a simulated sine wave audio signal over the virtual I2S bus by default.
+- You can override the default sine wave by specifying an `audioFile` attribute, which points to a remote audio file to "play" into the microphone.
 
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
   <div>
-    <a href="/docs/components/openhw-soil-moisture-sensor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Soil Moisture Sensor</a>
+    <a href="/docs/components/openhw-sound-sensor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Sound Sensor</a>
   </div>
   <div>
-    <a href="/docs/components/openhw-ssd1306-oled" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: SSD1306 OLED Display &rarr;</a>
+    <a href="/docs/components/openhw-stepper-motor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Stepper Motor &rarr;</a>
   </div>
 </div>

@@ -18,15 +18,7 @@ slug: /components/openhw-resistor
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="40" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 5 20 L 25 20" stroke="#94a3b8" stroke-width="2" />
-      <path d="M 55 20 L 75 20" stroke="#94a3b8" stroke-width="2" />
-      <rect x="25" y="10" width="30" height="20" rx="3" fill="#fcd34d" />
-      <rect x="28" y="10" width="3" height="20" fill="#ef4444" />
-      <rect x="34" y="10" width="3" height="20" fill="#ef4444" />
-      <rect x="40" y="10" width="3" height="20" fill="#78350f" />
-      <rect x="48" y="10" width="3" height="20" fill="#ca8a04" />
-    </svg>
+    <img src="/images/components/openhw-resistor.svg" alt="Resistor" style="width:60px; height:15px; margin: 20px 0; transform: scale(2);" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Resistor (220Ω)</span>
   </div>
   <div class="component-info">
@@ -68,10 +60,14 @@ To calculate the ideal resistor for an LED, use Ohm's Law:
 </table>
 
 ## Wiring Diagram
-A resistor is usually placed in series with the component it is protecting.
-1. Connect Arduino **D2** to Resistor **Terminal 1**.
-2. Connect Resistor **Terminal 2** to the Anode (long leg) of an **LED**.
-3. Connect the Cathode (short leg) of the **LED** to **GND**.
+
+Example of connecting a Resistor in series to limit current for an LED.
+
+<p align="center">
+  <img src="/images/components/openhw-resistor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Because a resistor is a passive physical component, it requires no specific code. It works entirely within the hardware domain.

@@ -18,23 +18,7 @@ slug: /components/openhw-stm32-bluepill
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="120" viewBox="0 0 80 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="60" height="100" rx="3" fill="#1e3a8a" />
-      <rect x="30" y="45" width="20" height="20" rx="1" fill="#0f172a" />
-      <circle cx="20" cy="20" r="3" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="100" width="10" height="15" fill="var(--vp-c-text-2)" />
-      <text x="40" y="80" fill="#bfdbfe" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">STM32</text>
-      <!-- Header Pins Left -->
-      <circle cx="15" cy="40" r="1.5" fill="#fcd34d" />
-      <circle cx="15" cy="45" r="1.5" fill="#fcd34d" />
-      <circle cx="15" cy="50" r="1.5" fill="#fcd34d" />
-      <circle cx="15" cy="55" r="1.5" fill="#fcd34d" />
-      <!-- Header Pins Right -->
-      <circle cx="65" cy="40" r="1.5" fill="#fcd34d" />
-      <circle cx="65" cy="45" r="1.5" fill="#fcd34d" />
-      <circle cx="65" cy="50" r="1.5" fill="#fcd34d" />
-      <circle cx="65" cy="55" r="1.5" fill="#fcd34d" />
-    </svg>
+    <img src="/images/components/openhw-stm32-bluepill.svg" alt="STM32 Blue Pill" style="width:92px; height:330px; max-width: 100%; max-height: 250px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">STM32 Board</span>
   </div>
   <div class="component-info">
@@ -66,6 +50,14 @@ The Blue Pill can be programmed using the official STM32Cube ecosystem, or via t
 
 ## Configurable Attributes
 *This component has no configurable attributes.*
+
+## Wiring Diagram
+
+<p align="center">
+  <img src="/images/components/openhw-stm32-bluepill_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code (STM32duino)
 This standard blink sketch toggles the built-in LED on pin PC13. Note that on the Blue Pill, the LED is usually wired actively low (turns on when pin is LOW).

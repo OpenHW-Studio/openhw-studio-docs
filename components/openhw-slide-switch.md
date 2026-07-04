@@ -18,15 +18,7 @@ slug: /components/openhw-slide-switch
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="10" width="50" height="20" fill="#334155" stroke="#1e293b" stroke-width="2" />
-      <rect x="15" y="15" width="30" height="10" fill="#0f172a" />
-      <rect x="15" y="13" width="10" height="14" rx="2" fill="var(--vp-c-text-2)" />
-      <line x1="20" y1="13" x2="20" y2="27" stroke="#cbd5e1" stroke-width="1" />
-      <rect x="15" y="30" width="3" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="28" y="30" width="3" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="41" y="30" width="3" height="10" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-slide-switch.svg" alt="Slide Switch" style="width:45px; height:32px; transform: scale(1.5);" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Slide Switch</span>
   </div>
   <div class="component-info">
@@ -57,13 +49,15 @@ Unlike a momentary pushbutton which only stays connected while you press it, a s
 <tr><td><strong>bounce</strong></td><td><code>number</code></td><td><code>0</code></td><td>Simulated mechanical contact bounce time in milliseconds.</td></tr>
 </table>
 
-## Wiring Diagram (Arduino Uno)
-To use a slide switch as a digital input:
-1. Connect **Pin 1** (Left) to Arduino **5V**.
-2. Connect **Pin 3** (Right) to Arduino **GND**.
-3. Connect **Pin 2** (Middle) to Arduino **D3**.
+## Wiring Diagram
 
-*(Note: In this configuration, sliding left sends HIGH, and sliding right sends LOW. You can swap 5V and GND to reverse the logic.)*
+Example of connecting the Slide Switch to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-slide-switch_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code reads the state of the slide switch and turns the built-in LED (Pin 13) on or off accordingly.

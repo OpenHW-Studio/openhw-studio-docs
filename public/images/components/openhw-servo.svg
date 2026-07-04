@@ -1,0 +1,51 @@
+<svg width="250" height="150" viewBox="0 0 250 150" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <defs>
+    <!-- Gradients for realistic look -->
+    <linearGradient id="bodyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#555" />
+      <stop offset="100%" stop-color="#333" />
+    </linearGradient>
+    <linearGradient id="hornGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF" />
+      <stop offset="100%" stop-color="#DDD" />
+    </linearGradient>
+  </defs>
+
+  <!-- Wires -->
+  <path d="M 50 85 C 70 85, 80 85, 100 85" fill="none" stroke="#8B4513" stroke-width="3" /> <!-- Brown -->
+  <path d="M 50 75 C 70 75, 80 75, 100 75" fill="none" stroke="#FF0000" stroke-width="3" /> <!-- Red -->
+  <path d="M 50 65 C 70 65, 80 65, 100 65" fill="none" stroke="#FF8C00" stroke-width="3" /> <!-- Orange -->
+
+  <!-- Connector -->
+  <rect x="25" y="55" width="25" height="40" fill="#222" rx="2" />
+  <rect x="30" y="62" width="5" height="5" fill="#Silver" />
+  <rect x="30" y="72" width="5" height="5" fill="#Silver" />
+  <rect x="30" y="82" width="5" height="5" fill="#Silver" />
+
+  <!-- Main Servo Body (Mounting Tabs) -->
+  <rect x="100" y="50" width="10" height="50" fill="url(#bodyGradient)" />
+  <rect x="210" y="50" width="10" height="50" fill="url(#bodyGradient)" />
+  <!-- Mounting Holes -->
+  <circle cx="105" cy="75" r="4" fill="#E2E8F0" />
+  <circle cx="215" cy="75" r="4" fill="#E2E8F0" />
+
+  <!-- Main Servo Box -->
+  <rect x="110" y="40" width="100" height="70" rx="4" fill="url(#bodyGradient)" stroke="#222" stroke-width="1" />
+  
+  <!-- Gear casing bump -->
+  <circle cx="145" cy="75" r="30" fill="url(#bodyGradient)" />
+  <circle cx="170" cy="75" r="22" fill="#444" />
+  
+  <!-- Servo Horn (Single arm) -->
+  <g transform="rotate(-15, 145, 75)">
+    <path d="M 135 75 L 140 15 A 5 5 0 0 1 150 15 L 155 75 Z" fill="url(#hornGradient)" />
+    <circle cx="145" cy="75" r="12" fill="url(#hornGradient)" />
+    <!-- Horn holes -->
+    <circle cx="145" cy="25" r="2" fill="#333" />
+    <circle cx="145" cy="35" r="2" fill="#333" />
+    <circle cx="145" cy="45" r="2" fill="#333" />
+    <!-- Center Screw -->
+    <circle cx="145" cy="75" r="5" fill="#999" />
+    <path d="M 142 72 L 148 78 M 142 78 L 148 72" stroke="#444" stroke-width="1" />
+  </g>
+</svg>

@@ -18,35 +18,7 @@ slug: /components/openhw-lcd2004
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="150" height="90" viewBox="0 0 150 90" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="140" height="80" fill="#15803d" />
-      <rect x="15" y="15" width="120" height="60" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2" />
-      <text x="75" y="30" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">OpenHW Studio 20x4</text>
-      <text x="75" y="45" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">Line 2 text...</text>
-      <text x="75" y="60" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">Line 3 text...</text>
-      <text x="75" y="75" fill="var(--vp-c-text-1)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">Line 4 text...</text>
-      <circle cx="10" cy="10" r="2" fill="#0f172a" />
-      <circle cx="140" cy="10" r="2" fill="#0f172a" />
-      <circle cx="10" cy="80" r="2" fill="#0f172a" />
-      <circle cx="140" cy="80" r="2" fill="#0f172a" />
-      <rect x="15" y="5" width="120" height="4" fill="#fbbf24" />
-      <rect x="22" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="28" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="34" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="40" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="46" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="52" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="58" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="64" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="70" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="76" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="82" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="88" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="94" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="100" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="106" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="112" y="5" width="4" height="4" fill="#0f172a" />
-    </svg>
+    <img src="/images/components/openhw-lcd2004.svg" alt="LCD 20x4 Parallel" style="width:375px; height:195px; max-width: 100%; max-height: 200px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">20x4 LCD</span>
   </div>
   <div class="component-info">
@@ -84,15 +56,12 @@ Because this module doesn't use an I2C backpack, you must wire 6 digital lines (
 </table>
 
 ## Wiring Diagram (4-bit Mode)
-1. Connect **VSS**, **RW**, and **K** to Ground.
-2. Connect **VDD** and **A** to 5V.
-3. Connect **V0** to Ground (for max contrast).
-4. Connect **RS** to Arduino D12.
-5. Connect **E** to Arduino D11.
-6. Connect **D4** to Arduino D5.
-7. Connect **D5** to Arduino D4.
-8. Connect **D6** to Arduino D3.
-9. Connect **D7** to Arduino D2.
+
+<p align="center">
+  <img src="/images/components/openhw-lcd2004_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This uses the standard Arduino `LiquidCrystal` library built into the IDE. Notice the `lcd.begin(20, 4)` initialization.

@@ -80,15 +80,14 @@ The ribbon cable has 8 pins, typically mapped left-to-right (when looking at the
 *This component has no standard configurable attributes.*
 
 ## Wiring Diagram
-Connect the 8 pins in order to 8 consecutive digital pins on the Arduino. For example:
-1. Connect **R1** to D9
-2. Connect **R2** to D8
-3. Connect **R3** to D7
-4. Connect **R4** to D6
-5. Connect **C1** to D5
-6. Connect **C2** to D4
-7. Connect **C3** to D3
-8. Connect **C4** to D2
+
+Example of connecting the Membrane Keypad (4x4) to an Arduino Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-membrane-keypad_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 The `Keypad` library handles the complex matrix scanning automatically. Install it via the Library Manager.

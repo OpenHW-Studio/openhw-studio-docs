@@ -1,109 +1,107 @@
 ---
 title: "Arduino Mega 2560"
-description: "A powerful microcontroller board based on the ATmega2560 with 54 digital I/O pins."
+description: "The ultimate microcontroller board based on the ATmega2560, offering extensive I/O for large projects."
 slug: /components/openhw-arduino-mega
 ---
 
 <div class="custom-breadcrumb">
   <a href="/docs/">Home</a> &gt; 
   <a href="/docs/components/">Components</a> &gt; 
-  <a href="/docs/components/catalog?category=Logic%20Components">Logic Components</a> &gt; 
+  <a href="/docs/components/catalog?category=Boards">Boards</a> &gt; 
   <span>Arduino Mega 2560</span>
 </div>
 
 # Arduino Mega 2560
-<p class="subtitle">The big brother to the Arduino Uno, featuring vastly more I/O pins, memory, and hardware serial ports.</p>
+<p class="subtitle">Designed for your most ambitious projects. With 54 digital I/O pins, 16 analog inputs, and 4 UARTs, the Mega gives you all the room you need.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="20" width="100" height="80" rx="4" fill="#005c5f" stroke="#003b3d" stroke-width="2" />
-      <rect x="10" y="20" width="20" height="80" rx="4" fill="#004a4c" />
-      <rect x="40" y="45" width="25" height="25" rx="2" fill="var(--vp-c-bg-soft)" />
-      <circle cx="52.5" cy="57.5" r="5" fill="#475569" />
-      <rect x="15" y="15" width="20" height="10" fill="#e2e8f0" />
-      <circle cx="95" cy="30" r="3" fill="#eab308" />
-      <circle cx="95" cy="40" r="3" fill="#eab308" />
-      <circle cx="95" cy="50" r="3" fill="#eab308" />
-      <circle cx="95" cy="60" r="3" fill="#eab308" />
-      <circle cx="95" cy="70" r="3" fill="#eab308" />
-      <circle cx="95" cy="80" r="3" fill="#eab308" />
-      <circle cx="95" cy="90" r="3" fill="#eab308" />
-      <line x1="20" y1="20" x2="100" y2="20" stroke="#000000" stroke-width="4" stroke-dasharray="2, 4" />
-      <line x1="20" y1="100" x2="100" y2="100" stroke="#000000" stroke-width="4" stroke-dasharray="2, 4" />
-      <text x="55" y="95" fill="#ffffff" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">MEGA</text>
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">Arduino Mega</span>
+    <img src="/images/boards/openhw-arduino-mega.svg" alt="Arduino Mega 2560" style="width:450px; height:250px; max-width: 450px; max-height: 250px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">MEGA 2560 R3</span>
   </div>
   <div class="component-info">
-    <p>The Arduino Mega 2560 is designed for complex projects. It boasts 54 digital input/output pins (15 can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button.</p>
+    <p>The Arduino Mega 2560 is a powerhouse microcontroller board based on the ATmega2560. It offers significantly more memory and I/O pins than the Uno, making it the go-to choice for complex projects like 3D printers, robotics, and extensive automation systems. It maintains compatibility with most shields designed for the Uno.</p>
     <div>
-      <span class="tag">Logic Components</span>
+      <span class="tag">Boards</span>
       <span class="tag">Microcontroller</span>
-      <span class="tag">ATmega2560</span>
+      <span class="tag">AVR</span>
     </div>
   </div>
 </div>
 
 ## Overview
-When your project runs out of pins or memory on a standard Arduino Uno, the Mega is the primary upgrade path. The code translates seamlessly, but you gain access to 256 KB of flash memory (compared to the Uno's 32 KB) and dozens of extra control pins.
+The Mega operates at 5V and features 54 digital input/output pins (15 of which can be used as PWM outputs), 16 analog inputs, 4 UARTs (hardware serial ports), a 16 MHz crystal oscillator, a USB connection, a power jack, an ICSP header, and a reset button.
 
-## Pin Reference (Simplified)
+## Pin Reference
 <table class="pin-table">
-<tr><th>Pin Range</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">0-13, 14-53</span></td><td><span class="pin-type digital">digital</span></td><td>54 Digital I/O pins. Pins 2-13 and 44-46 support PWM.</td></tr>
-<tr><td><span class="pin-name">A0 - A15</span></td><td><span class="pin-type analog">analog</span></td><td>16 Analog Input pins. (Can also be used as digital I/O).</td></tr>
-<tr><td><span class="pin-name">RX0-3, TX0-3</span></td><td><span class="pin-type digital">digital</span></td><td>4 Hardware Serial Ports (UART).</td></tr>
-<tr><td><span class="pin-name">SDA (20), SCL (21)</span></td><td><span class="pin-type digital">digital</span></td><td>I2C Communication pins.</td></tr>
-<tr><td><span class="pin-name">50-53</span></td><td><span class="pin-type digital">digital</span></td><td>SPI Communication pins (MISO, MOSI, SCK, SS).</td></tr>
-<tr><td><span class="pin-name">5V, 3.3V, GND</span></td><td><span class="pin-type power">power</span></td><td>Power and Ground connections.</td></tr>
-<tr><td><span class="pin-name">VIN</span></td><td><span class="pin-type power">power</span></td><td>Input voltage to the board when using an external power source.</td></tr>
+<tr><th>Pin</th><th>Type</th><th>Description</th></tr>
+<tr><td><span class="pin-name">D0-D53</span></td><td><span class="pin-type digital">digital</span></td><td>54 Digital I/O pins. Pins 2-13 and 44-46 support PWM output.</td></tr>
+<tr><td><span class="pin-name">A0-A15</span></td><td><span class="pin-type analog">analog</span></td><td>16 Analog input pins. These can also act as digital I/O.</td></tr>
+<tr><td><span class="pin-name">Serial 0-3</span></td><td><span class="pin-type digital">digital</span></td><td>4 Hardware UARTs. Serial: 0 (RX) and 1 (TX); Serial 1: 19 (RX) and 18 (TX); Serial 2: 17 (RX) and 16 (TX); Serial 3: 15 (RX) and 14 (TX).</td></tr>
+<tr><td><span class="pin-name">+5V</span></td><td><span class="pin-type power">power</span></td><td>Regulated 5V output (or input if not powered via USB/VIN).</td></tr>
+<tr><td><span class="pin-name">3.3V</span></td><td><span class="pin-type power">power</span></td><td>Regulated 3.3V output (provided by the on-board regulator).</td></tr>
+<tr><td><span class="pin-name">Vin</span></td><td><span class="pin-type power">power</span></td><td>Input voltage (7V - 12V) when using an external power source.</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground pins.</td></tr>
 </table>
-*(Note: Refer to the simulator for the exact pin coordinates.)*
 
 ## Configurable Attributes
-*This component acts as the main execution unit in the simulator and has no standard configurable attributes.*
+*(Currently, microcontroller boards in the simulator do not have configurable graphical attributes. You upload code to them directly via the editor.)*
 
-## Working Principle
-The Mega is built around the ATmega2560 microcontroller. It executes uploaded C++ code iteratively in a loop, reading the states of sensors connected to its inputs, processing logic, and controlling components connected to its outputs.
+## Wiring Diagram (Multiple LEDs Example)
+This setup demonstrates controlling an LED on an arbitrary digital pin, capitalizing on the Mega's vast I/O capabilities.
+1. Connect a 220-ohm resistor to pin **D12**.
+2. Connect the other end of the resistor to the **Anode** of an LED.
+3. Connect the **Cathode** of the LED to **GND**.
 
-## Wiring Diagram
-1. Connect sensors to **A0-A15** (for analog sensors) or **D2-D53** (for digital sensors).
-2. Connect actuators (motors, LEDs) to **D2-D53**.
-3. Use the **5V** and **GND** pins to power small peripheral modules.
-4. *Do not exceed 40mA per I/O pin, or 200mA total across all pins.*
+<p align="center">
+  <img src="/images/boards/openhw-arduino-mega_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
+Because the Mega features multiple hardware serial ports, you can easily communicate with sensors (like GPS or Bluetooth modules) on `Serial1` while simultaneously sending debug information to the computer over `Serial`.
+
 ```cpp
-// Blinking the built-in LED (Pin 13)
 void setup() {
-  pinMode(13, OUTPUT);
+  // Initialize communication with the computer
   Serial.begin(9600);
-  Serial.println("Mega 2560 Initialized!");
+  
+  // Initialize communication with a peripheral on pins 18/19
+  Serial1.begin(115200);
+  
+  Serial.println("Mega 2560 Multi-Serial Test Started");
 }
 
 void loop() {
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, LOW);
-  delay(1000);
+  // Read from the peripheral and print to the computer
+  if (Serial1.available()) {
+    char inByte = Serial1.read();
+    Serial.write(inByte);
+  }
+  
+  // Read from the computer and print to the peripheral
+  if (Serial.available()) {
+    char outByte = Serial.read();
+    Serial1.write(outByte);
+  }
 }
 ```
 
 ## Simulation Notes
-- In the simulator, the Mega executes standard Arduino code natively via the WebAssembly AVR toolchain.
-- The Mega is fully compatible with almost all Uno code, provided the libraries don't rely on specific hardware timers unique to the ATmega328P.
-- The simulator provides full access to all 4 UARTs via `Serial`, `Serial1`, `Serial2`, and `Serial3`.
+- In OpenHW Studio, select "Arduino Mega 2560" in the board dropdown menu of the editor to access its extended pin definitions.
+- The built-in LED (marked `L` on the board) is linked to pin 13.
+- The extended double-row header on the right side corresponds to pins D22 through D53, plus additional power and ground lines.
 
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
   <div>
-    <a href="/docs/components/openhw-analog-joystick" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Analog Joystick</a>
+    <a href="/docs/components/openhw-arduino-uno" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Arduino Uno</a>
   </div>
   <div>
-    <a href="/docs/components/openhw-arduino-nano" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Arduino Nano &rarr;</a>
+    <a href="/docs/components/openhw-stepper-motor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Stepper Motor &rarr;</a>
   </div>
 </div>

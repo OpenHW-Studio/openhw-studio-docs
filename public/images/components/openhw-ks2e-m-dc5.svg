@@ -1,0 +1,27 @@
+<svg width="165" height="75" viewBox="0 0 165 75" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <!-- Base body -->
+  <rect x="5" y="5" width="155" height="65" rx="4" fill="#eab344" stroke="#d49a36" stroke-width="2" />
+  
+  <!-- Polarity / Pin 1 indicator -->
+  <rect x="156" y="32" width="4" height="10" fill="#cc8e25" />
+  
+  <!-- Text Label -->
+  <text x="82.5" y="44" font-family="sans-serif" font-size="20" fill="#333" text-anchor="middle">KS2E-M-DC5</text>
+  
+  <!-- Top Pins -->
+  <!-- We have 4 pins on top and 4 on bottom, but they are spaced according to DPDT footprint -->
+  <!-- Actually the footprint in the image has pins at: 1, 4, 6, 8 (if 8 is total width) -->
+  <g fill="#fff" stroke="#d49a36" stroke-width="2">
+    <!-- Top row -->
+    <rect x="15" y="8" width="8" height="8" rx="2" />
+    <rect x="50" y="8" width="8" height="8" rx="2" />
+    <rect x="85" y="8" width="8" height="8" rx="2" />
+    <rect x="142" y="8" width="8" height="8" rx="2" />
+    
+    <!-- Bottom row -->
+    <rect x="15" y="59" width="8" height="8" rx="2" />
+    <rect x="50" y="59" width="8" height="8" rx="2" />
+    <rect x="85" y="59" width="8" height="8" rx="2" />
+    <rect x="142" y="59" width="8" height="8" rx="2" />
+  </g>
+</svg>

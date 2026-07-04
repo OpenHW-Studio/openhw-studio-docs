@@ -18,22 +18,7 @@ slug: /components/openhw-ldr-module
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="120" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="20" width="50" height="70" rx="3" fill="#1e40af" stroke="#1e3a8a" stroke-width="2" />
-      <circle cx="50" cy="35" r="10" fill="var(--vp-c-text-2)" stroke="#94a3b8" stroke-width="2" />
-      <path d="M 43 35 C 47 30 53 40 57 35" fill="none" stroke="#dc2626" stroke-width="1.5" />
-      <rect x="35" y="55" width="10" height="15" rx="1" fill="#0f172a" />
-      <circle cx="65" cy="55" r="2" fill="#eab308" />
-      <circle cx="65" cy="65" r="2" fill="#ef4444" />
-      <rect x="35" y="90" width="5" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="45" y="90" width="5" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="55" y="90" width="5" height="10" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="90" width="5" height="10" fill="var(--vp-c-text-2)" />
-      <text x="37.5" y="85" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle" transform="rotate(-90, 37.5, 85)">AO</text>
-      <text x="47.5" y="85" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle" transform="rotate(-90, 47.5, 85)">DO</text>
-      <text x="57.5" y="85" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle" transform="rotate(-90, 57.5, 85)">GND</text>
-      <text x="67.5" y="85" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle" transform="rotate(-90, 67.5, 85)">VCC</text>
-    </svg>
+    <img src="/images/components/openhw-ldr-module.svg" alt="LDR Sensor Module" style="width:180px; height:75px; max-width: 180px; max-height: 75px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">LDR Module</span>
   </div>
   <div class="component-info">
@@ -70,6 +55,12 @@ Unlike a bare photoresistor, this 4-pin module provides dual outputs. The Analog
 2. Connect **GND** to GND.
 3. Connect **AO** to Arduino A0.
 4. Connect **DO** to Arduino D4.
+
+<p align="center">
+  <img src="/images/components/openhw-ldr-module_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code reads both the analog light level and the digital threshold trigger simultaneously.

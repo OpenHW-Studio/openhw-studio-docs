@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+  <!-- Pins -->
+  <rect x="47.5" y="80" width="5" height="25" fill="#111" />
+  <rect x="67.5" y="80" width="5" height="25" fill="#ef4444" />
+  
+  <rect x="48.5" y="100" width="3" height="5" fill="#e5e5e5" />
+  <rect x="68.5" y="100" width="3" height="5" fill="#e5e5e5" />
+
+  <text x="50" y="115" fill="black" font-size="10" text-anchor="middle">GND</text>
+  <text x="70" y="115" fill="black" font-size="10" text-anchor="middle">SIG</text>
+
+  <!-- Main Body -->
+  <circle cx="60" cy="50" r="35" fill="#111" stroke="#000" stroke-width="1" />
+  <circle cx="60" cy="50" r="28" fill="none" stroke="#222" stroke-width="2" />
+  <circle cx="60" cy="50" r="20" fill="none" stroke="#222" stroke-width="2" />
+  <circle cx="60" cy="50" r="12" fill="none" stroke="#222" stroke-width="2" />
+  
+  <!-- Silver Center -->
+  <circle cx="60" cy="50" r="6" fill="#d4d4d8" stroke="#a1a1aa" stroke-width="1" />
+</svg>

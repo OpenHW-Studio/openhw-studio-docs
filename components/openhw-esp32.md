@@ -1,122 +1,136 @@
 ---
-title: "ESP32 Development Board"
-description: "A powerful dual-core microcontroller with built-in Wi-Fi and Bluetooth."
+title: "ESP32"
+description: "A powerful microcontroller board with built-in Wi-Fi and Bluetooth capabilities."
 slug: /components/openhw-esp32
 ---
 
 <div class="custom-breadcrumb">
   <a href="/docs/">Home</a> &gt; 
   <a href="/docs/components/">Components</a> &gt; 
-  <a href="/docs/components/catalog?category=Logic%20Components">Logic Components</a> &gt; 
-  <span>ESP32 Development Board</span>
+  <a href="/docs/components/catalog?category=Boards">Boards</a> &gt; 
+  <span>ESP32</span>
 </div>
 
-# ESP32 Development Board
-<p class="subtitle">A low-cost, low-power system on a chip microcontroller with integrated Wi-Fi and dual-mode Bluetooth.</p>
+# ESP32
+<p class="subtitle">A feature-rich, dual-core MCU equipped with Wi-Fi and dual-mode Bluetooth, ideal for IoT applications.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="10" width="70" height="100" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
-      <rect x="35" y="25" width="50" height="40" rx="2" fill="var(--vp-c-bg-soft)" />
-      <rect x="50" y="5" width="20" height="10" rx="1" fill="var(--vp-c-text-2)" />
-      <rect x="20" y="25" width="5" height="70" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="25" width="5" height="70" fill="var(--vp-c-text-2)" />
-      <rect x="35" y="80" width="10" height="6" rx="1" fill="var(--vp-c-text-2)" />
-      <rect x="75" y="80" width="10" height="6" rx="1" fill="var(--vp-c-text-2)" />
-      <text x="60" y="45" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">ESP-WROOM-32</text>
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">ESP32 NodeMCU</span>
+    <img src="/images/boards/openhw-esp32.svg" alt="ESP32" style="width:250px; height:400px; max-width: 250px; max-height: 400px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">ESP32 Dev Module</span>
   </div>
   <div class="component-info">
-    <p>The ESP32 supersedes the popular ESP8266 by offering significantly more processing power, more I/O pins, and built-in Bluetooth. It operates at 3.3V logic and is highly popular for IoT and connected device projects.</p>
+    <p>The ESP32 is a low-cost, low-power system on a chip (SoC) microcontroller with integrated Wi-Fi and dual-mode Bluetooth. Developed by Espressif Systems, it boasts a dual-core Tensilica Xtensa LX6 microprocessor and is highly favored by makers and engineers for building robust Internet of Things (IoT) devices.</p>
     <div>
-      <span class="tag">Logic Components</span>
-      <span class="tag">Wi-Fi / BT</span>
-      <span class="tag">Dual Core</span>
+      <span class="tag">Boards</span>
+      <span class="tag">Microcontroller</span>
+      <span class="tag">IoT</span>
+      <span class="tag">Wi-Fi</span>
     </div>
   </div>
 </div>
 
 ## Overview
-Built around a dual-core Tensilica Xtensa LX6 microprocessor running at 160 or 240 MHz, the ESP32 is a powerhouse. It features capacitive touch, ADCs, DACs, I2C, SPI, UART, I2S, and PWM on almost any pin through its internal GPIO matrix.
+Unlike standard 8-bit AVR Arduinos, the ESP32 is a 32-bit microcontroller that operates at **3.3V**. It offers an incredible array of peripherals, including capacitive touch, ADCs, DACs, I2C, SPI, UART, and I2S interfaces. Its internal Wi-Fi stack allows you to connect to the internet, host web servers, or fetch APIs directly from the microcontroller.
+
+<br>
+
+> [!CAUTION]
+> **3.3V Logic Level:** The ESP32 is not 5V-tolerant. Applying 5V to any of its GPIO pins can instantly damage the chip. Always use logic level converters when interfacing with 5V components.
 
 ## Pin Reference
+The ESP32 has many pins with overlapping capabilities. Most pins can be assigned to different hardware functions via software.
+
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">3V3</span></td><td><span class="pin-type power">power</span></td><td>3.3V Power Output.</td></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Common ground connection.</td></tr>
-<tr><td><span class="pin-name">VIN / 5V</span></td><td><span class="pin-type power">power</span></td><td>5V Power Input (connected to USB power).</td></tr>
-<tr><td><span class="pin-name">GPIO 0-33</span></td><td><span class="pin-type digital">digital</span></td><td>Standard General Purpose I/O pins. Support PWM, I2C, SPI, etc.</td></tr>
-<tr><td><span class="pin-name">GPIO 34-39</span></td><td><span class="pin-type input">input</span></td><td>Input-only pins. No internal pull-ups/pull-downs.</td></tr>
-<tr><td><span class="pin-name">EN</span></td><td><span class="pin-type control">control</span></td><td>Reset pin. Pull LOW to reset the board.</td></tr>
+<tr><td><span class="pin-name">3V3</span></td><td><span class="pin-type power">power</span></td><td>Regulated 3.3V output.</td></tr>
+<tr><td><span class="pin-name">VIN</span></td><td><span class="pin-type power">power</span></td><td>Input voltage (typically 5V via USB or external supply).</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground pins.</td></tr>
+<tr><td><span class="pin-name">EN</span></td><td><span class="pin-type digital">digital</span></td><td>Enable pin (Reset). Pulling this low resets the ESP32.</td></tr>
+<tr><td><span class="pin-name">D0-D35</span></td><td><span class="pin-type digital">digital</span></td><td>General Purpose I/O pins (GPIO). Most support PWM.</td></tr>
+<tr><td><span class="pin-name">VP / VN</span></td><td><span class="pin-type analog">analog</span></td><td>Analog inputs (ADC1). Often labeled GPIO36 (VP) and GPIO39 (VN). Note: Input only.</td></tr>
+<tr><td><span class="pin-name">TX0 / RX0</span></td><td><span class="pin-type digital">digital</span></td><td>Hardware Serial 0 (used for USB programming/debugging).</td></tr>
+<tr><td><span class="pin-name">TX2 / RX2</span></td><td><span class="pin-type digital">digital</span></td><td>Hardware Serial 2.</td></tr>
 </table>
 
-> [!WARNING]
-> **Input-Only Pins:** Pins **34, 35, 36 (VP), and 39 (VN)** are input-only pins. They do not have internal pull-up or pull-down resistors, and they cannot be used as outputs.
-> **Logic Level:** The ESP32 operates at 3.3V. Applying 5V directly to most GPIO pins may damage real hardware.
+*(Note: Pins D34, D35, VP(36), and VN(39) are **input only** and cannot be used as outputs or have internal pull-ups.)*
 
 ## Configurable Attributes
-*This component has no standard configurable attributes.*
+*(Currently, microcontroller boards in the simulator do not have configurable graphical attributes. You upload code to them directly via the editor.)*
 
-## Working Principle
-You program the ESP32 via its micro-USB port, which is connected to a USB-to-Serial converter chip. Code is executed directly on the dual-core processor. The built-in radio allows connection to 2.4GHz Wi-Fi networks and Bluetooth devices.
+## Wiring Diagram (Blink Example)
+A standard setup to blink an external LED using the ESP32.
+1. Connect a 220-ohm resistor to pin **D13**.
+2. Connect the other end of the resistor to the **Anode** of an LED.
+3. Connect the **Cathode** of the LED to **GND**.
 
-## Wiring Diagram
-A simple example of connecting an LED:
-1. Connect **GND** on the ESP32 to the ground rail.
-2. Connect **GPIO 2** to a 220Ω resistor.
-3. Connect the other end of the resistor to the **Anode (+)** of an LED.
-4. Connect the **Cathode (-)** of the LED to **GND**.
+<p align="center">
+  <img src="/images/boards/openhw-esp32_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
 
-## Example Arduino Code
-This example blinks an LED on GPIO 2 (the built-in blue LED on most boards) and connects to a virtual Wi-Fi network.
+<TryInSimulator />
+
+## Example Code (Wi-Fi Scan)
+This example demonstrates one of the ESP32's primary features: scanning for nearby Wi-Fi networks.
 
 ```cpp
-#include <WiFi.h>
-
-const int ledPin = 2; // Built-in LED on most ESP32 boards
+#include "WiFi.h"
 
 void setup() {
   Serial.begin(115200);
-  pinMode(ledPin, OUTPUT);
-  
-  Serial.println("Connecting to WiFi...");
-  // Standard simulator WiFi network
-  WiFi.begin("Wokwi-GUEST", "", 6); 
 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(100);
-    Serial.print(".");
-  }
-  
-  Serial.println("\nWiFi Connected!");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
+  // Set WiFi to station mode and disconnect from an AP if it was previously connected
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();
+  delay(100);
+
+  Serial.println("Setup done");
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);
-  delay(1000);
-  digitalWrite(ledPin, LOW);
-  delay(1000);
+  Serial.println("scan start");
+
+  // WiFi.scanNetworks will return the number of networks found
+  int n = WiFi.scanNetworks();
+  Serial.println("scan done");
+  
+  if (n == 0) {
+      Serial.println("no networks found");
+  } else {
+    Serial.print(n);
+    Serial.println(" networks found");
+    for (int i = 0; i < n; ++i) {
+      // Print SSID and RSSI for each network found
+      Serial.print(i + 1);
+      Serial.print(": ");
+      Serial.print(WiFi.SSID(i));
+      Serial.print(" (");
+      Serial.print(WiFi.RSSI(i));
+      Serial.println(")");
+      delay(10);
+    }
+  }
+  Serial.println("");
+
+  // Wait a bit before scanning again
+  delay(5000);
 }
 ```
 
 ## Simulation Notes
-- **Wi-Fi Simulation:** When you include the `WiFi.h` library and connect to the `"Wokwi-GUEST"` network, OpenHW Studio bridges the simulator to your real internet connection via a specialized gateway. Your virtual ESP32 can fetch live weather data, publish to cloud IoT platforms, and communicate with external APIs just like real hardware!
-- The OpenHW Studio ESP32 core supports the standard `analogWrite()` function for convenience, even though older physical ESP32 Arduino cores used the `ledc` API.
-- Ensure your `Serial.begin(115200);` matches the simulator's Serial Monitor settings (which defaults to 115200 for ESP32 boards).
+- In OpenHW Studio, ensure you select an "ESP32" board definition in the editor to use ESP32-specific libraries like `WiFi.h`.
+- The simulator provides a virtual Wi-Fi environment, allowing code like `WiFi.scanNetworks()` to function and return simulated access points.
+- Pay attention to the baud rate! The ESP32 standard debug baud rate is typically `115200`, whereas standard Arduinos often default to `9600`.
 
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
   <div>
-    <a href="/docs/components/openhw-esp32-cam" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: ESP32-CAM</a>
+    <a href="/docs/components/openhw-arduino-mega" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Arduino Mega 2560</a>
   </div>
   <div>
-    <a href="/docs/components/openhw-esp32-s2" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: ESP32-S2 &rarr;</a>
+    <a href="/docs/components/openhw-stepper-motor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Stepper Motor &rarr;</a>
   </div>
 </div>

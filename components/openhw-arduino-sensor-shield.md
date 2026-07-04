@@ -18,33 +18,7 @@ slug: /components/openhw-arduino-sensor-shield
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="15" width="90" height="90" rx="4" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2" />
-      <rect x="25" y="30" width="70" height="15" fill="var(--vp-c-bg-soft)" />
-      <rect x="25" y="55" width="70" height="15" fill="var(--vp-c-bg-soft)" />
-      <rect x="25" y="80" width="70" height="15" fill="var(--vp-c-bg-soft)" />
-      <circle cx="30" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="40" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="50" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="60" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="70" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="80" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="90" cy="37.5" r="3" fill="#eab308" />
-      <circle cx="30" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="40" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="50" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="60" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="70" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="80" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="90" cy="62.5" r="3" fill="#ef4444" />
-      <circle cx="30" cy="87.5" r="3" fill="#22c55e" />
-      <circle cx="40" cy="87.5" r="3" fill="#22c55e" />
-      <circle cx="50" cy="87.5" r="3" fill="#22c55e" />
-      <circle cx="60" cy="87.5" r="3" fill="#22c55e" />
-      <circle cx="70" cy="87.5" r="3" fill="#22c55e" />
-      <circle cx="80" cy="87.5" r="3" fill="#22c55e" />
-      <circle cx="90" cy="87.5" r="3" fill="#22c55e" />
-    </svg>
+    <img src="/images/components/openhw-sensor-shield.svg" alt="Arduino Sensor Shield" style="width:230px; height:210px; max-width: 100%; max-height: 200px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Sensor Shield</span>
   </div>
   <div class="component-info">
@@ -80,6 +54,8 @@ This shield contains no logic chips, microcontrollers, or active components. It 
 1. The Sensor Shield is meant to be stacked directly on top of an Arduino Uno.
 2. Standard 3-pin modules (like a servo motor) come with a female cable that has Signal, VCC, and GND.
 3. Plug the female cable directly into the vertical columns on the Sensor Shield. Pay attention to polarity: `G` is ground (black/brown wire), `V` is voltage (red wire), and `S` is signal (yellow/white wire).
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Because the Sensor Shield is just a breakout board, you write code exactly as if you were interacting with a bare Arduino Uno.

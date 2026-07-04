@@ -18,22 +18,7 @@ slug: /components/openhw-breadboard-mini
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="30" width="70" height="60" rx="4" fill="var(--vp-c-text-1)" stroke="#cbd5e1" stroke-width="2" />
-      <rect x="30" y="55" width="60" height="10" fill="#e2e8f0" />
-      <circle cx="35" cy="45" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="45" cy="45" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="55" cy="45" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="65" cy="45" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="75" cy="45" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="85" cy="45" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="35" cy="75" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="45" cy="75" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="55" cy="75" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="65" cy="75" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="75" cy="75" r="1.5" fill="var(--vp-c-text-2)" />
-      <circle cx="85" cy="75" r="1.5" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-breadboard-mini.svg" alt="Breadboard (Mini)" style="width:270px; height:200px; max-width: 100%; max-height: 250px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">170 Tie-Points</span>
   </div>
   <div class="component-info">
@@ -58,6 +43,14 @@ A breadboard does not have active pins, but rather "tie-points" grouped into con
 <tr><td><span class="pin-name">Terminal Strips F-J</span></td><td><span class="pin-type passive">passive</span></td><td>The bottom half of the grid. Note that hole 1F is NOT connected to hole 1E. The ravine in the center isolates the top half from the bottom half.</td></tr>
 <tr><td><span class="pin-name">Power Rails</span></td><td><span class="pin-type passive">passive</span></td><td>None. You must dedicate one or more vertical columns if you need a common power or ground bus.</td></tr>
 </table>
+
+## Wiring Diagram
+
+<p align="center">
+  <img src="/images/components/openhw-breadboard-mini_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Configurable Attributes
 <table class="attrs-table">

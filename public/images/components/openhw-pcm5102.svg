@@ -1,0 +1,77 @@
+<svg width="90" height="60" viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg" style="font-family: sans-serif;">
+  <!-- Board Background -->
+  <rect x="0" y="0" width="90" height="60" rx="4" fill="#4B0082" stroke="#2B0042" stroke-width="2" />
+  
+  <!-- Chip -->
+  <rect x="30" y="15" width="30" height="30" rx="2" fill="#222" />
+  <text x="45" y="30" fill="#fff" font-size="6" text-anchor="middle" font-family="monospace">PCM5102</text>
+  
+  <!-- Activity LED -->
+  <circle cx="75" cy="30" r="4" fill="rgba(0, 255, 0, 0)" stroke="#004400" />
+  
+  <!-- Pins - Top edge -->
+  <g>
+    <!-- 7.5 -->
+    <rect x="5.5" y="0" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="7.5" cy="7.5" r="1.5" fill="#2C3E50" />
+    <text x="7.5" y="14" fill="#fff" font-size="4" text-anchor="middle">VCC</text>
+    
+    <!-- 22.5 -->
+    <rect x="20.5" y="0" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="22.5" cy="7.5" r="1.5" fill="#2C3E50" />
+    <text x="22.5" y="14" fill="#fff" font-size="4" text-anchor="middle">GND</text>
+    
+    <!-- 37.5 -->
+    <rect x="35.5" y="0" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="37.5" cy="7.5" r="1.5" fill="#2C3E50" />
+    <text x="37.5" y="14" fill="#fff" font-size="4" text-anchor="middle">FLT</text>
+    
+    <!-- 52.5 -->
+    <rect x="50.5" y="0" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="52.5" cy="7.5" r="1.5" fill="#2C3E50" />
+    <text x="52.5" y="14" fill="#fff" font-size="4" text-anchor="middle">DMP</text>
+    
+    <!-- 67.5 -->
+    <rect x="65.5" y="0" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="67.5" cy="7.5" r="1.5" fill="#2C3E50" />
+    <text x="67.5" y="14" fill="#fff" font-size="4" text-anchor="middle">XMT</text>
+    
+    <!-- 82.5 -->
+    <rect x="80.5" y="0" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="82.5" cy="7.5" r="1.5" fill="#2C3E50" />
+    <text x="82.5" y="14" fill="#fff" font-size="4" text-anchor="middle">FMT</text>
+  </g>
+
+  <!-- Pins - Bottom edge -->
+  <g>
+    <!-- 7.5 -->
+    <rect x="5.5" y="52.5" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="7.5" cy="52.5" r="1.5" fill="#2C3E50" />
+    <text x="7.5" y="48" fill="#fff" font-size="4" text-anchor="middle">SCK</text>
+    
+    <!-- 22.5 -->
+    <rect x="20.5" y="52.5" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="22.5" cy="52.5" r="1.5" fill="#2C3E50" />
+    <text x="22.5" y="48" fill="#fff" font-size="4" text-anchor="middle">BCK</text>
+    
+    <!-- 37.5 -->
+    <rect x="35.5" y="52.5" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="37.5" cy="52.5" r="1.5" fill="#2C3E50" />
+    <text x="37.5" y="48" fill="#fff" font-size="4" text-anchor="middle">DIN</text>
+    
+    <!-- 52.5 -->
+    <rect x="50.5" y="52.5" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="52.5" cy="52.5" r="1.5" fill="#2C3E50" />
+    <text x="52.5" y="48" fill="#fff" font-size="4" text-anchor="middle">LCK</text>
+    
+    <!-- 67.5 -->
+    <rect x="65.5" y="52.5" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="67.5" cy="52.5" r="1.5" fill="#2C3E50" />
+    <text x="67.5" y="48" fill="#fff" font-size="4" text-anchor="middle">OUTL</text>
+    
+    <!-- 82.5 -->
+    <rect x="80.5" y="52.5" width="4" height="7.5" fill="#E6C200" />
+    <circle cx="82.5" cy="52.5" r="1.5" fill="#2C3E50" />
+    <text x="82.5" y="48" fill="#fff" font-size="4" text-anchor="middle">OUTR</text>
+  </g>
+</svg>

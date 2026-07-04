@@ -1,0 +1,54 @@
+<svg viewBox="0 0 172.5 114" width="172.5" height="114" style="font-family: sans-serif" xmlns="http://www.w3.org/2000/svg">
+    <!-- PCB Base -->
+    <rect x="0" y="0" width="172.5" height="114" fill="#305e8c" />
+    
+    <!-- Mounting Holes -->
+    <circle cx="8" cy="8" r="4" fill="#1e1e1e" stroke="#c0c0c0" stroke-width="1.5" />
+    <circle cx="164.5" cy="8" r="4" fill="#1e1e1e" stroke="#c0c0c0" stroke-width="1.5" />
+    <circle cx="8" cy="106" r="4" fill="#1e1e1e" stroke="#c0c0c0" stroke-width="1.5" />
+    <circle cx="164.5" cy="106" r="4" fill="#1e1e1e" stroke="#c0c0c0" stroke-width="1.5" />
+
+    <!-- Text -->
+    <text x="86.25" y="45" text-anchor="middle" font-size="12" fill="#d1e3f2">HC-SR04</text>
+
+    <!-- Transducers (Silver Cylinders with Grid) -->
+    <g transform="translate(42, 52)">
+        <!-- Left Transducer -->
+        <circle cx="-10" cy="0" r="38" fill="#c0c0c0" />
+        <circle cx="-10" cy="0" r="34" fill="#1e1e1e" />
+        <circle cx="-10" cy="0" r="28" fill="#333" />
+        <g stroke="#222" stroke-width="1" opacity="0.3">
+            <path d="M -30 -15 L 10 25 M -30 -5 L 10 35 M -30 5 L 10 45" />
+            <path d="M 10 -15 L -30 25 M 10 -5 L -30 35 M 10 5 L -30 45" />
+        </g>
+    </g>
+
+    <g transform="translate(142, 52)">
+        <!-- Right Transducer -->
+        <circle cx="-10" cy="0" r="38" fill="#c0c0c0" />
+        <circle cx="-10" cy="0" r="34" fill="#1e1e1e" />
+        <circle cx="-10" cy="0" r="28" fill="#333" />
+        <g stroke="#222" stroke-width="1" opacity="0.3">
+            <path d="M -30 -15 L 10 25 M -30 -5 L 10 35 M -30 5 L 10 45" />
+            <path d="M 10 -15 L -30 25 M 10 -5 L -30 35 M 10 5 L -30 45" />
+        </g>
+    </g>
+
+    <!-- Crystal Oscillator -->
+    <rect x="74" y="10" width="24" height="12" rx="6" fill="#888" stroke="#666" stroke-width="1" />
+
+    <!-- Bottom Pins Area -->
+    <rect x="66" y="94" width="40.5" height="20" rx="3" fill="#111" />
+    
+    <!-- Pins (Silver) -->
+    <rect x="70.5" y="104" width="3" height="20" fill="#bbb" />
+    <rect x="79.5" y="104" width="3" height="20" fill="#bbb" />
+    <rect x="88.5" y="104" width="3" height="20" fill="#bbb" />
+    <rect x="97.5" y="104" width="3" height="20" fill="#bbb" />
+
+    <!-- Pin Labels (VCC, TRIG, ECHO, GND) rotated -->
+    <text x="-90" y="73" transform="rotate(-90)" font-size="8" fill="#d1e3f2" font-family="monospace">VCC</text>
+    <text x="-90" y="82" transform="rotate(-90)" font-size="8" fill="#d1e3f2" font-family="monospace">TRIG</text>
+    <text x="-90" y="91" transform="rotate(-90)" font-size="8" fill="#d1e3f2" font-family="monospace">ECHO</text>
+    <text x="-90" y="100" transform="rotate(-90)" font-size="8" fill="#d1e3f2" font-family="monospace">GND</text>
+</svg>

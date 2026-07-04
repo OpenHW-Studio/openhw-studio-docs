@@ -1,6 +1,6 @@
 ---
 title: "Rotary Potentiometer"
-description: "A rotary potentiometer (variable resistor) that outputs an analog voltage proportional to rotation angle."
+description: "An adjustable resistor module with a rotary dial."
 slug: /components/openhw-potentiometer
 ---
 
@@ -12,101 +12,92 @@ slug: /components/openhw-potentiometer
 </div>
 
 # Rotary Potentiometer
-<p class="subtitle">A classic knob that acts as an adjustable voltage divider, outputting an analog voltage between 0V and VCC.</p>
+<p class="subtitle">A classic adjustable resistor module that outputs a variable analog voltage.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="25" width="40" height="35" rx="4" fill="#334155" />
-      <circle cx="30" cy="40" r="14" fill="#0f172a" />
-      <path d="M 30 40 L 30 28" stroke="#f8fafc" stroke-width="2" />
-      <rect x="15" y="60" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="28" y="60" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="41" y="60" width="4" height="15" fill="var(--vp-c-text-2)" />
-      <text x="17" y="85" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" text-anchor="middle">1</text>
-      <text x="30" y="85" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" text-anchor="middle">S</text>
-      <text x="43" y="85" fill="var(--vp-c-text-2)" font-family="monospace" font-size="8" text-anchor="middle">2</text>
-    </svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">Rotary Pot</span>
+    <img src="/images/components/openhw-potentiometer.svg" alt="Potentiometer" style="width:120px; height:120px; max-width: 120px; max-height: 120px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">Rotary Potentiometer</span>
   </div>
   <div class="component-info">
-    <p>A rotary potentiometer (pot) is a variable resistor. By connecting the two outer pins to VCC and GND, the middle pin outputs a voltage proportional to the knob's physical rotation. Read it using Arduino's `analogRead()` function to get a digital value from 0 to 1023.</p>
+    <p>A potentiometer is a three-terminal resistor with a sliding or rotating contact that forms an adjustable voltage divider. This module is pre-mounted on a breakout board with clearly labeled pins, making it incredibly easy to wire up to an Arduino for analog input reading, such as for volume control or adjusting motor speed.</p>
     <div>
       <span class="tag">Sensors</span>
-      <span class="tag">Analog Input</span>
-      <span class="tag">Variable Resistor</span>
+      <span class="tag">Analog</span>
+      <span class="tag">Input</span>
     </div>
   </div>
 </div>
 
 ## Overview
-Inside the potentiometer is a resistive track. As you turn the knob, a "wiper" moves along this track, changing the resistance between the middle pin and the two outer pins. It functions effectively as an adjustable voltage divider.
+Inside the potentiometer is a resistive track. The middle pin connects to a wiper that slides along this track when you turn the knob. By connecting the outer pins to Power and Ground, the wiper outputs a voltage proportional to its position, which can be read using `analogRead()`.
 
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">1</span></td><td><span class="pin-type power">power</span></td><td>Terminal 1. Connect to Arduino GND (or 5V).</td></tr>
-<tr><td><span class="pin-name">SIG</span></td><td><span class="pin-type analog">analog</span></td><td>Wiper output. Connect to an Arduino analog pin (e.g., A0).</td></tr>
-<tr><td><span class="pin-name">2</span></td><td><span class="pin-type power">power</span></td><td>Terminal 2. Connect to Arduino 5V (or GND).</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground. Connect to Arduino GND.</td></tr>
+<tr><td><span class="pin-name">SIG</span></td><td><span class="pin-type analog">analog</span></td><td>Signal output. Connect to an analog input (e.g., A0).</td></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power input. Connect to Arduino 5V.</td></tr>
 </table>
-*(Note: Swapping pins 1 and 2 simply reverses the direction of the knob).*
 
 ## Configurable Attributes
 <table class="attrs-table">
 <tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
-<tr><td><strong>value</strong></td><td><code>number</code></td><td><code>50</code></td><td>Initial knob position as a percentage (0 = GND end, 100 = VCC end).</td></tr>
+<tr><td><strong>value</strong></td><td><code>number</code></td><td><code>50</code></td><td>The simulated knob position percentage (0-100).</td></tr>
 </table>
 
-## Wiring Diagram
-1. Connect **Pin 1** to Arduino **GND**.
-2. Connect **Pin 2** to Arduino **5V**.
+## Wiring Diagram (Arduino Uno)
+1. Connect **VCC** to Arduino **5V**.
+2. Connect **GND** to Arduino **GND**.
 3. Connect **SIG** to Arduino **A0**.
 
+<p align="center">
+  <img src="/images/components/openhw-potentiometer_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
+
 ## Example Arduino Code
-This standard code block initializes the analog pin, reads the raw 10-bit value, and maps it to a percentage and voltage.
+This simple sketch reads the analog value from the potentiometer and prints it to the Serial Monitor.
 
 ```cpp
 const int potPin = A0;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Potentiometer Ready");
 }
 
 void loop() {
-  // Read the raw analog value (0 - 1023)
-  int rawValue = analogRead(potPin);
+  // Read the analog value (0-1023)
+  int potValue = analogRead(potPin);
   
-  // Calculate voltage (assuming 5V reference)
-  float voltage = rawValue * (5.0 / 1023.0);
+  // Calculate percentage
+  int percentage = map(potValue, 0, 1023, 0, 100);
   
-  // Map to a percentage
-  int percent = map(rawValue, 0, 1023, 0, 100);
-  
-  Serial.print("Raw: "); 
-  Serial.print(rawValue);
-  Serial.print("\tVoltage: "); 
-  Serial.print(voltage, 2);
-  Serial.print("V\tPosition: "); 
-  Serial.print(percent);
+  Serial.print("Raw Value: ");
+  Serial.print(potValue);
+  Serial.print(" | Percentage: ");
+  Serial.print(percentage);
   Serial.println("%");
   
-  delay(200);
+  delay(100);
 }
 ```
 
 ## Simulation Notes
-- During simulation in OpenHW Studio, click and drag the knob on the canvas to rotate it, or right-click the potentiometer and use the context menu slider to precisely set the knob position in real time.
+- In the simulator, click and drag the gray knob in a circular motion to adjust the value. 
+- A glowing yellow halo will appear when the knob is active.
+- Turning the knob changes the simulated resistance instantly, updating the voltage on the `SIG` pin.
 
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
   <div>
-    <a href="/docs/components/openhw-pir-sensor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: PIR Motion Sensor</a>
+    <a href="/docs/components/openhw-pir-motion-sensor" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: PIR Motion Sensor</a>
   </div>
   <div>
-    <a href="/docs/components/openhw-power-supply" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Power Supply &rarr;</a>
+    <a href="/docs/components/openhw-relay-module" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Relay Module &rarr;</a>
   </div>
 </div>

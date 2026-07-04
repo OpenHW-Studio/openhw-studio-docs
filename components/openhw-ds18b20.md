@@ -18,14 +18,7 @@ slug: /components/openhw-ds18b20
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 30 50 Q 60 20 90 50 L 90 70 L 30 70 Z" fill="var(--vp-c-bg-soft)" />
-      <rect x="30" y="70" width="60" height="15" fill="var(--vp-c-bg-soft)" />
-      <rect x="40" y="85" width="4" height="25" fill="var(--vp-c-text-2)" />
-      <rect x="58" y="85" width="4" height="25" fill="var(--vp-c-text-2)" />
-      <rect x="76" y="85" width="4" height="25" fill="var(--vp-c-text-2)" />
-      <text x="60" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">DS18B20</text>
-    </svg>
+    <img src="/images/components/openhw-ds18b20.svg" alt="DS18B20 Sensor" style="width:60px; height:90px;" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">TO-92 Package</span>
   </div>
   <div class="component-info">
@@ -67,6 +60,12 @@ The Arduino pulls the DQ line LOW for at least 480µs to reset all devices on th
 2. Connect **GND** to Ground.
 3. Connect **DQ** to a digital pin (e.g., D2).
 4. Place a **4.7kΩ Resistor** connecting **DQ** and **VCC**.
+
+<p align="center">
+  <img src="/images/components/openhw-ds18b20_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *Install the **OneWire** and **DallasTemperature** libraries via the Library Manager before running.*

@@ -18,13 +18,7 @@ slug: /components/openhw-ili9341-touch
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="150" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="10" width="90" height="130" rx="4" fill="#ef4444" />
-      <rect x="25" y="20" width="70" height="95" fill="var(--vp-c-bg-soft)" stroke="#0f172a" stroke-width="2" />
-      <rect x="35" y="45" width="50" height="45" rx="2" fill="#3b82f6" />
-      <path d="M 45 60 L 55 70 L 75 50" stroke="#f8fafc" stroke-width="4" fill="none" />
-      <text x="60" y="135" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">2.8" TFT SPI</text>
-    </svg>
+    <img src="/images/components/openhw-ili9341-touch.svg" alt="ILI9341 Touch Screen LCD" style="width:240px; height:360px; max-width: 100%; max-height: 250px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">ILI9341 Touch</span>
   </div>
   <div class="component-info">
@@ -66,13 +60,12 @@ The ILI9341 is extremely fast and well-supported by libraries like `Adafruit_GFX
 The display expects a continuous stream of RGB pixel data over the SPI bus. The touch controller works by measuring resistance changes when two transparent, conductive layers are pressed together. 
 
 ## Wiring Diagram (Arduino Uno)
-Because this is an SPI device, it's highly recommended to use the hardware SPI pins for maximum speed.
-- **SCK/T_CLK** -> D13
-- **MISO/T_DO** -> D12
-- **MOSI/T_DIN** -> D11
-- **TFT_CS** -> D10
-- **TFT_DC** -> D9
-- **TOUCH_CS** -> D8
+
+<p align="center">
+  <img src="/images/components/openhw-ili9341-touch_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code requires the `Adafruit_ILI9341` and `URTouch` (or `Adafruit_FT6206` / `XPT2046`) libraries. This snippet demonstrates basic touch drawing.

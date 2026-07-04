@@ -1,0 +1,81 @@
+<svg width="250" height="400" viewBox="0 0 250 400" style="font-family: sans-serif; user-select: none;" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Black PCB -->
+  <rect x="50" y="30" width="150" height="340" rx="8" fill="#1e1e1e" />
+  
+  <!-- Antenna Area -->
+  <path d="M 50 30 L 200 30 L 200 80 L 50 80 Z" fill="#171717" />
+  <path d="M 80 40 L 80 50 L 110 50 L 110 40 L 140 40 L 140 50 L 170 50 L 170 40" fill="none" stroke="#6b7280" stroke-width="4" />
+
+  <!-- ESP32 Module Shield -->
+  <rect x="75" y="85" width="100" height="120" rx="2" fill="#737373" />
+  <rect x="75" y="85" width="100" height="120" rx="2" fill="none" stroke="#a3a3a3" stroke-width="1" />
+  <text x="125" y="155" fill="#e5e5e5" font-size="22" font-weight="bold" text-anchor="middle">ESP32</text>
+  
+  <!-- USB Micro-B Port -->
+  <rect x="105" y="360" width="40" height="20" rx="2" fill="#d4d4d4" stroke="#a3a3a3" />
+  <path d="M 115 375 L 135 375 L 130 365 L 120 365 Z" fill="#111" />
+
+  <!-- Buttons -->
+  <rect x="65" y="330" width="16" height="16" fill="#111" />
+  <circle cx="73" cy="338" r="4" fill="#fbbf24" />
+  
+  <rect x="169" y="330" width="16" height="16" fill="#111" />
+  <circle cx="177" cy="338" r="4" fill="#fbbf24" />
+
+  <!-- USB to Serial Chip -->
+  <rect x="140" y="270" width="20" height="20" transform="rotate(45, 150, 280)" fill="#111" />
+  
+  <!-- Voltage Regulator -->
+  <rect x="80" y="280" width="15" height="20" fill="#222" />
+  <rect x="75" y="283" width="5" height="3" fill="#9ca3af" />
+  <rect x="75" y="289" width="5" height="3" fill="#9ca3af" />
+  <rect x="75" y="295" width="5" height="3" fill="#9ca3af" />
+
+  <!-- Headers -->
+  <defs>
+    <rect id="pin" width="10" height="10" fill="#111" />
+    <circle id="hole" cx="5" cy="5" r="3" fill="#f8fafc" />
+    <g id="header-pin">
+      <use href="#pin" />
+      <use href="#hole" />
+    </g>
+  </defs>
+
+  <!-- Left Header (15 pins) -->
+  <g transform="translate(50, 60)">
+    <use href="#hole" x="0" y="0" />   <text x="20" y="7" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 7)" text-anchor="start">EN</text>
+    <use href="#hole" x="0" y="16" />  <text x="20" y="23" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 23)" text-anchor="start">VP</text>
+    <use href="#hole" x="0" y="32" />  <text x="20" y="39" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 39)" text-anchor="start">VN</text>
+    <use href="#hole" x="0" y="48" />  <text x="20" y="55" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 55)" text-anchor="start">D34</text>
+    <use href="#hole" x="0" y="64" />  <text x="20" y="71" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 71)" text-anchor="start">D35</text>
+    <use href="#hole" x="0" y="80" />  <text x="20" y="87" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 87)" text-anchor="start">D32</text>
+    <use href="#hole" x="0" y="96" />  <text x="20" y="103" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 103)" text-anchor="start">D33</text>
+    <use href="#hole" x="0" y="112" /> <text x="20" y="119" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 119)" text-anchor="start">D25</text>
+    <use href="#hole" x="0" y="128" /> <text x="20" y="135" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 135)" text-anchor="start">D26</text>
+    <use href="#hole" x="0" y="144" /> <text x="20" y="151" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 151)" text-anchor="start">D27</text>
+    <use href="#hole" x="0" y="160" /> <text x="20" y="167" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 167)" text-anchor="start">D14</text>
+    <use href="#hole" x="0" y="176" /> <text x="20" y="183" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 183)" text-anchor="start">D12</text>
+    <use href="#hole" x="0" y="192" /> <text x="20" y="199" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 199)" text-anchor="start">D13</text>
+    <use href="#hole" x="0" y="208" /> <text x="20" y="215" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 215)" text-anchor="start">GND</text>
+    <use href="#hole" x="0" y="224" /> <text x="20" y="231" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, 20, 231)" text-anchor="start">VIN</text>
+  </g>
+
+  <!-- Right Header (15 pins) -->
+  <g transform="translate(190, 60)">
+    <use href="#hole" x="0" y="0" />   <text x="-15" y="7" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 7)" text-anchor="start">D23</text>
+    <use href="#hole" x="0" y="16" />  <text x="-15" y="23" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 23)" text-anchor="start">D22</text>
+    <use href="#hole" x="0" y="32" />  <text x="-15" y="39" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 39)" text-anchor="start">TX0</text>
+    <use href="#hole" x="0" y="48" />  <text x="-15" y="55" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 55)" text-anchor="start">RX0</text>
+    <use href="#hole" x="0" y="64" />  <text x="-15" y="71" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 71)" text-anchor="start">D21</text>
+    <use href="#hole" x="0" y="80" />  <text x="-15" y="87" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 87)" text-anchor="start">D19</text>
+    <use href="#hole" x="0" y="96" />  <text x="-15" y="103" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 103)" text-anchor="start">D18</text>
+    <use href="#hole" x="0" y="112" /> <text x="-15" y="119" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 119)" text-anchor="start">D5</text>
+    <use href="#hole" x="0" y="128" /> <text x="-15" y="135" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 135)" text-anchor="start">TX2</text>
+    <use href="#hole" x="0" y="144" /> <text x="-15" y="151" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 151)" text-anchor="start">RX2</text>
+    <use href="#hole" x="0" y="160" /> <text x="-15" y="167" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 167)" text-anchor="start">D4</text>
+    <use href="#hole" x="0" y="176" /> <text x="-15" y="183" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 183)" text-anchor="start">D2</text>
+    <use href="#hole" x="0" y="192" /> <text x="-15" y="199" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 199)" text-anchor="start">D15</text>
+    <use href="#hole" x="0" y="208" /> <text x="-15" y="215" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 215)" text-anchor="start">GND</text>
+    <use href="#hole" x="0" y="224" /> <text x="-15" y="231" fill="#fff" font-size="8" font-weight="bold" transform="rotate(-90, -15, 231)" text-anchor="start">3V3</text>
+  </g>
+</svg>

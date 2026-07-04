@@ -18,24 +18,7 @@ slug: /components/openhw-motor-driver
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="90" height="90" rx="4" fill="var(--vp-c-bg-soft)" />
-      <rect x="30" y="30" width="40" height="40" fill="#0f172a" />
-      <rect x="15" y="10" width="70" height="15" fill="#e2e8f0" />
-      <rect x="15" y="80" width="70" height="10" fill="#3b82f6" />
-      <rect x="10" y="35" width="15" height="30" fill="#3b82f6" />
-      <rect x="75" y="35" width="15" height="30" fill="#3b82f6" />
-      <circle cx="15" cy="15" r="3" fill="var(--vp-c-text-2)" />
-      <circle cx="85" cy="15" r="3" fill="var(--vp-c-text-2)" />
-      <circle cx="15" cy="85" r="3" fill="var(--vp-c-text-2)" />
-      <circle cx="85" cy="85" r="3" fill="var(--vp-c-text-2)" />
-      <rect x="25" y="10" width="5" height="15" fill="#475569" />
-      <rect x="35" y="10" width="5" height="15" fill="#475569" />
-      <rect x="45" y="10" width="5" height="15" fill="#475569" />
-      <rect x="55" y="10" width="5" height="15" fill="#475569" />
-      <rect x="65" y="10" width="5" height="15" fill="#475569" />
-      <text x="50" y="55" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" text-anchor="middle">L298N</text>
-    </svg>
+    <img src="/images/components/openhw-motor-driver.svg" alt="L298N Motor Driver" style="width:100px; height:100px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">L298N Module</span>
   </div>
   <div class="component-info">
@@ -73,12 +56,14 @@ Because microcontrollers cannot provide enough current to drive motors directly,
 *This component has no standard configurable attributes.*
 
 ## Wiring Diagram (Single Motor)
-1. Connect **12V** to the positive terminal of a battery pack (e.g., 9V).
-2. Connect **GND** to the battery negative AND the Arduino GND.
-3. Connect **ENA** to Arduino **D9** (PWM).
-4. Connect **IN1** to Arduino **D8**.
-5. Connect **IN2** to Arduino **D7**.
-6. Connect a DC Motor to **OUT1** and **OUT2**.
+
+This diagram shows how to wire a single DC motor to the L298N.
+
+<p align="center">
+  <img src="/images/components/openhw-motor-driver_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code accelerates a DC Motor on channel A forward, stops it, and runs it in reverse.

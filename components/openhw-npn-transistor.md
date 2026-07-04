@@ -1,6 +1,6 @@
 ---
-title: "NPN Transistor"
-description: "NPN Transistor Component."
+title: "NPN Transistor (2N2222)"
+description: "A standard NPN bipolar junction transistor for switching and amplification."
 slug: /components/openhw-npn-transistor
 ---
 
@@ -11,21 +11,22 @@ slug: /components/openhw-npn-transistor
   <span>NPN Transistor</span>
 </div>
 
-# NPN Transistor
-<p class="subtitle">A standard npn transistor used for electronic prototyping.</p>
+# NPN Transistor (2N2222)
+<p class="subtitle">A widely used NPN bipolar junction transistor used for amplifying or switching electronic signals and electrical power.</p>
 
 ## Component Preview
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="40" height="40" fill="var(--vp-c-bg-soft)" /><text x="30" y="35" fill="#ef4444" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">COMP</text></svg>
-    <span style="font-size:11px;color:var(--vp-c-text-2);">Module</span>
+    <img src="/images/components/openhw-npn-transistor.svg" alt="NPN Transistor" style="width:60px; height:90px; margin: 20px 0;" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">TO-92 Package</span>
   </div>
   <div class="component-info">
-    <p>This is the NPN Transistor component available in the OpenHW Studio Simulator.</p>
+    <p>The 2N2222 is a common NPN bipolar junction transistor (BJT) used for general purpose low-power amplifying or switching applications. It acts as an electrically controlled switch: a small current at the Base controls a larger current flowing from Collector to Emitter.</p>
     <div>
       <span class="tag">Power Components</span>
-      <span class="tag">Component</span>
+      <span class="tag">Semiconductor</span>
+      <span class="tag">Active</span>
     </div>
   </div>
 </div>
@@ -33,24 +34,41 @@ slug: /components/openhw-npn-transistor
 ## Pin Reference
 <table class="pin-table">
 <tr><th>Pin</th><th>Type</th><th>Description</th></tr>
-<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply.</td></tr>
-<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground.</td></tr>
+<tr><td><span class="pin-name">E (Emitter)</span></td><td><span class="pin-type passive">passive</span></td><td>Current flows out of the Emitter to Ground.</td></tr>
+<tr><td><span class="pin-name">B (Base)</span></td><td><span class="pin-type input">input</span></td><td>Control pin. A small current here turns the transistor ON.</td></tr>
+<tr><td><span class="pin-name">C (Collector)</span></td><td><span class="pin-type passive">passive</span></td><td>Current enters the Collector from the load/VCC.</td></tr>
 </table>
 
 ## Configurable Attributes
-<table class="attrs-table">
-<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
-<tr><td><strong>color</strong></td><td><code>string</code></td><td><code>"red"</code></td><td>Color configuration.</td></tr>
-</table>
+*This component has no configurable attributes.*
 
-## Example Code
+## Wiring Diagram
+
+Example of connecting the NPN Transistor as a switch. A digital pin drives the Base (through a current-limiting resistor, not shown in basic diagram but required in practice) to switch a load on the Collector.
+
+<p align="center">
+  <img src="/images/components/openhw-npn-transistor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
+
+## Example Arduino Code
+The transistor acts as a switch. Driving the base pin `HIGH` allows current to flow through the Collector to Emitter.
 
 ```cpp
+const int basePin = 3; // Connect to the Base (B) of the NPN transistor
+
 void setup() {
-  // Put your setup code here
+  pinMode(basePin, OUTPUT);
 }
 
 void loop() {
-  // Put your main code here
+  // Turn the transistor ON (allowing current from C to E)
+  digitalWrite(basePin, HIGH);
+  delay(1000);
+  
+  // Turn the transistor OFF (blocking current)
+  digitalWrite(basePin, LOW);
+  delay(1000);
 }
 ```
