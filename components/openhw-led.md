@@ -18,14 +18,7 @@ slug: /components/openhw-led
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="120" viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 15 45 Q 15 15 30 15 Q 45 15 45 45 L 45 55 L 15 55 Z" fill="#ef4444" opacity="0.8" />
-      <rect x="13" y="55" width="34" height="5" rx="2" fill="#dc2626" />
-      <rect x="22" y="60" width="2" height="40" fill="var(--vp-c-text-2)" />
-      <rect x="36" y="60" width="2" height="50" fill="var(--vp-c-text-2)" />
-      <path d="M 28 55 L 28 35 L 23 35 L 28 35 Z" fill="var(--vp-c-text-2)" stroke="#cbd5e1" stroke-width="1" />
-      <path d="M 32 55 L 32 40 Z" fill="none" stroke="#cbd5e1" stroke-width="2" />
-    </svg>
+    <img src="/images/components/openhw-led.svg" alt="LED" style="width:65px; height:72px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">5mm LED</span>
   </div>
   <div class="component-info">
@@ -61,9 +54,12 @@ Unlike incandescent bulbs, LEDs have very little internal resistance once they t
 > **Simulator Tip:** Use `analogWrite(pin, value)` on a PWM-capable pin (e.g., pins 3, 5, 6, 9, 10, 11 on the Arduino Uno) to control the brightness of the LED smoothly between 0 and 255.
 
 ## Wiring Diagram
-1. Connect the **Cathode (K)** directly to Arduino GND.
-2. Connect one end of a **220Ω Resistor** to the **Anode (A)**.
-3. Connect the other end of the resistor to **Arduino D13**.
+
+<p align="center">
+  <img src="/images/components/openhw-led_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This classic "Blink" example demonstrates how to turn an LED on and off by setting a digital pin `HIGH` and `LOW`.

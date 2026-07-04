@@ -1,0 +1,65 @@
+<svg width="220" height="135" viewBox="0 0 220 135" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+    <!-- PCB -->
+    <rect width="220" height="135" fill="#2A4B7C" rx="5" />
+    
+    <!-- Mounting holes -->
+    <circle cx="10" cy="10" r="4" fill="#FFFFFF" />
+    <circle cx="10" cy="125" r="4" fill="#FFFFFF" />
+    <circle cx="210" cy="10" r="4" fill="#FFFFFF" />
+    <circle cx="210" cy="125" r="4" fill="#FFFFFF" />
+
+    <!-- Pin Labels & Pins -->
+    <g>
+        <circle cx="15" cy="15" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="16.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">VCC</text>
+    </g>
+    <g>
+        <circle cx="15" cy="30" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="31.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">GND</text>
+    </g>
+    <g>
+        <circle cx="15" cy="45" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="46.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">DIN</text>
+    </g>
+    <g>
+        <circle cx="15" cy="60" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="61.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">CLK</text>
+    </g>
+    <g>
+        <circle cx="15" cy="75" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="76.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">CS</text>
+    </g>
+    <g>
+        <circle cx="15" cy="90" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="91.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">DC</text>
+    </g>
+    <g>
+        <circle cx="15" cy="105" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="106.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">RST</text>
+    </g>
+    <g>
+        <circle cx="15" cy="120" r="2.5" stroke="#E5B85C" stroke-width="1" fill="#FFFFFF" />
+        <text x="21" y="121.5" fill="#FFFFFF" font-size="4" font-family="Arial, sans-serif" font-weight="bold">BUSY</text>
+    </g>
+
+    <!-- Screen bezel (centered vertically) -->
+    <rect x="40" y="27.5" width="160" height="80" fill="#E0E0E0" rx="2" />
+    <rect x="43" y="30.5" width="154" height="74" fill="#000000" />
+    
+    <!-- White Screen -->
+    <rect x="45" y="32.5" width="150" height="70" fill="#FFFFFF" />
+
+    <!-- Right side text -->
+    <text 
+        x="205" 
+        y="67.5" 
+        fill="#FFFFFF" 
+        font-size="6" 
+        font-family="Arial, sans-serif" 
+        font-weight="bold" 
+        transform="rotate(-90 205 67.5)"
+        text-anchor="middle"
+    >
+        2.9inch e-Paper Module
+    </text>
+</svg>

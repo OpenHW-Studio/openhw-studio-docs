@@ -18,17 +18,7 @@ slug: /components/openhw-battery
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="35" y="25" width="50" height="70" rx="4" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2" />
-      <rect x="50" y="15" width="20" height="10" rx="2" fill="var(--vp-c-text-2)" />
-      <rect x="35" y="40" width="50" height="40" fill="#e2e8f0" />
-      <text x="60" y="55" fill="#000000" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">3.7V</text>
-      <text x="60" y="70" fill="#000000" font-family="monospace" font-size="10" text-anchor="middle">Li-ion</text>
-      <circle cx="60" cy="32" r="3" fill="#e2e8f0" />
-      <circle cx="60" cy="88" r="3" fill="#e2e8f0" />
-      <path d="M 57 32 L 63 32 M 60 29 L 60 35" stroke="#1d4ed8" stroke-width="1.5" />
-      <path d="M 57 88 L 63 88" stroke="#1e3a8a" stroke-width="1.5" />
-    </svg>
+    <img src="/images/components/openhw-battery.svg" alt="Li-ion Battery" style="width:120px; height:120px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">18650 Cell</span>
   </div>
   <div class="component-info">
@@ -63,9 +53,12 @@ Unlike standard 1.5V alkaline AA batteries, Li-ion cells provide enough voltage 
 In the simulator, the Li-ion battery acts as an ideal voltage source that drops its voltage dynamically as the `currentChargeMah` depletes, matching a typical Li-ion discharge curve. If it drops below 3.0V, it stops providing useful power until recharged.
 
 ## Wiring Diagram
-1. Connect **VCC** to the `VIN` or power input of your microcontroller or motor driver.
-2. Connect **GND** to the ground of your circuit.
-3. *Warning: Do not connect a 3.7V Li-ion battery directly to the 5V pin of an Arduino Uno, as the Uno requires 5V to run stably. You must use a boost converter, or power the Uno via the VIN pin with two cells in series (7.4V).*
+
+<p align="center">
+  <img src="/images/components/openhw-battery_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

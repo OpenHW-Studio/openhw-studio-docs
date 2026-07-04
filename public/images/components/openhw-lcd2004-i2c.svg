@@ -1,0 +1,108 @@
+<svg width="375" height="195" viewBox="0 0 375 195" xmlns="http://www.w3.org/2000/svg" style="pointer-events: none;">
+    <!-- PCB Background -->
+    <rect x="0" y="0" width="375" height="195" fill="#006633" rx="4" />
+    
+    <!-- Screen Bezel (Black) -->
+    <rect x="25" y="25" width="325" height="145" fill="#000000" />
+    
+    <!-- Screen (Green) -->
+    <rect x="35" y="35" width="305" height="125" fill="#669900" rx="4" />
+    
+    <!-- Simulated 20x4 grid faintly visible -->
+    <rect x="40" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="55" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="70" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="85" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="100" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="115" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="130" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="145" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="160" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="175" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="190" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="205" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="220" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="235" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="250" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="265" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="280" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="295" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="310" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="325" y="40" width="13" height="25" fill="#5c8a00" />
+    <rect x="40" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="55" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="70" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="85" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="100" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="115" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="130" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="145" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="160" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="175" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="190" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="205" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="220" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="235" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="250" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="265" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="280" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="295" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="310" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="325" y="70" width="13" height="25" fill="#5c8a00" />
+    <rect x="40" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="55" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="70" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="85" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="100" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="115" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="130" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="145" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="160" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="175" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="190" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="205" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="220" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="235" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="250" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="265" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="280" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="295" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="310" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="325" y="100" width="13" height="25" fill="#5c8a00" />
+    <rect x="40" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="55" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="70" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="85" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="100" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="115" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="130" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="145" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="160" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="175" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="190" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="205" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="220" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="235" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="250" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="265" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="280" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="295" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="310" y="130" width="13" height="25" fill="#5c8a00" />
+    <rect x="325" y="130" width="13" height="25" fill="#5c8a00" />
+
+    <!-- Custom I2C Pins Overlay (Backpack) -->
+    <rect x="5" y="65" width="20" height="65" fill="#1A1A1A" rx="2" />
+    <rect x="10" y="70" width="2" height="55" fill="#E5B85C" />
+    <circle cx="15" cy="75" r="3" fill="#E5B85C" />
+    <circle cx="15" cy="75" r="1.5" fill="#000000" />
+    <text x="22" y="77.5" fill="#ffffff" font-size="6" font-family="monospace" font-weight="bold">GND</text>
+    <circle cx="15" cy="90" r="3" fill="#E5B85C" />
+    <circle cx="15" cy="90" r="1.5" fill="#000000" />
+    <text x="22" y="92.5" fill="#ffffff" font-size="6" font-family="monospace" font-weight="bold">VCC</text>
+    <circle cx="15" cy="105" r="3" fill="#E5B85C" />
+    <circle cx="15" cy="105" r="1.5" fill="#000000" />
+    <text x="22" y="107.5" fill="#ffffff" font-size="6" font-family="monospace" font-weight="bold">SDA</text>
+    <circle cx="15" cy="120" r="3" fill="#E5B85C" />
+    <circle cx="15" cy="120" r="1.5" fill="#000000" />
+    <text x="22" y="122.5" fill="#ffffff" font-size="6" font-family="monospace" font-weight="bold">SCL</text>
+</svg>

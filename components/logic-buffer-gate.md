@@ -18,12 +18,7 @@ slug: /components/logic-buffer-gate
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 30,30 L 90,60 L 30,90 Z" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <line x1="10" y1="60" x2="30" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <line x1="90" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <text x="45" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="16" font-weight="bold">1</text>
-    </svg>
+    <img src="/images/components/logic-buffer-gate.svg" alt="Buffer Gate" style="width:100px; height:80px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Buffer Gate</span>
   </div>
   <div class="component-info">
@@ -59,8 +54,12 @@ The Buffer Gate (also known as a non-inverting buffer) is a single-input, single
 The Boolean expression for a buffer is simply Y = A. Whatever logic level is applied to the input is mirrored on the output.
 
 ## Wiring Diagram
-1. Connect the output of a switch, sensor, or digital pin to **IN**.
-2. Connect **OUT** to the next stage of your logic circuit, an LED (with resistor), or an Arduino input pin.
+
+<p align="center">
+  <img src="/images/components/logic-buffer-gate_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 To test the Buffer gate using an Arduino, apply a signal to the input and read it back from the output.

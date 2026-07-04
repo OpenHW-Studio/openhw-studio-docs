@@ -8,13 +8,14 @@ h1 { font-size: 36px !important; font-weight: 800 !important; color: var(--vp-c-
 
 /* Component preview layout */
 .component-preview { 
-    display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; 
+    display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-bottom: 40px; 
     background: var(--vp-c-bg-soft); 
     border: 1px solid var(--vp-c-border); 
     border-radius: 12px; padding: 32px; 
     box-shadow: 0 4px 6px -1px var(--vp-c-divider), 0 2px 4px -1px var(--vp-c-divider);
 }
-.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 100%; }
+.component-info { flex: 1 1 250px; }
 .component-info p { color: var(--vp-c-text-2); font-size: 15px; margin-bottom: 16px; line-height: 1.7; }
 
 /* Tag styles */

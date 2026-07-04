@@ -1,0 +1,26 @@
+<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" style="pointer-events: none;">
+    <!-- Base white square -->
+    <rect x="2" y="2" width="26" height="26" fill="#ffffff" rx="2" stroke="#e5e5e5" stroke-width="1" />
+    
+    <!-- Outer circle -->
+    <circle cx="15" cy="15" r="11" fill="#e5e5e5" />
+    
+    <!-- Inner segments -->
+    <path d="M 15 5 A 10 10 0 0 0 5 15 L 14 15 L 14 6 A 10 10 0 0 1 15 5 Z" fill="#d4d4d4" />
+    <path d="M 16 5 L 16 14 L 25 14 A 10 10 0 0 0 16 5 Z" fill="#d4d4d4" />
+    <path d="M 5 16 A 10 10 0 0 0 15 25 L 15 16 L 5 16 Z" fill="#d4d4d4" />
+    <path d="M 16 16 L 25 16 A 10 10 0 0 1 16 25 L 16 16 Z" fill="#d4d4d4" />
+    
+    <!-- IC component (black square) -->
+    <rect x="18" y="11" width="5" height="4" fill="#333333" rx="1" />
+    
+    <!-- Left Pads -->
+    <rect x="0" y="5" width="2" height="4" fill="#d4d4d4" />
+    <rect x="0" y="13" width="2" height="4" fill="#d4d4d4" />
+    <rect x="0" y="21" width="2" height="4" fill="#d4d4d4" />
+    
+    <!-- Right Pads -->
+    <rect x="28" y="5" width="2" height="4" fill="#d4d4d4" />
+    <rect x="28" y="13" width="2" height="4" fill="#d4d4d4" />
+    <rect x="28" y="21" width="2" height="4" fill="#d4d4d4" />
+</svg>

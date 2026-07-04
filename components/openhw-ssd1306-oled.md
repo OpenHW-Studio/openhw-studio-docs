@@ -18,15 +18,7 @@ slug: /components/openhw-ssd1306-oled
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="10" width="70" height="60" rx="3" fill="#1a365d" stroke="#1e40af" stroke-width="2" />
-      <rect x="15" y="20" width="50" height="35" rx="1" fill="#0f172a" />
-      <text x="40" y="40" fill="#60a5fa" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">OLED</text>
-      <rect x="25" y="5" width="4" height="5" fill="#fcd34d" />
-      <rect x="35" y="5" width="4" height="5" fill="#fcd34d" />
-      <rect x="45" y="5" width="4" height="5" fill="#fcd34d" />
-      <rect x="55" y="5" width="4" height="5" fill="#fcd34d" />
-    </svg>
+    <img src="/images/components/openhw-ssd1306-oled.svg" alt="SSD1306 OLED" style="width:135px; height:120px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">0.96" OLED</span>
   </div>
   <div class="component-info">
@@ -57,11 +49,15 @@ This module has a resolution of 128x64 pixels. To draw on it, you must use a lib
 <tr><td><strong>i2cAddress</strong></td><td><code>string</code></td><td><code>"0x3C"</code></td><td>I2C address of the display (typically 0x3C or 0x3D).</td></tr>
 </table>
 
-## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **SCL** to Arduino **A5** (or dedicated SCL pin).
-4. Connect **SDA** to Arduino **A4** (or dedicated SDA pin).
+## Wiring Diagram
+
+Connect the SSD1306 to the Arduino via I2C (SDA and SCL pins). You can also use A4 and A5 on the Uno.
+
+<p align="center">
+  <img src="/images/components/openhw-ssd1306-oled_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code uses the Adafruit SSD1306 library to display text and a simple counter.

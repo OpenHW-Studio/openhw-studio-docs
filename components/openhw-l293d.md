@@ -18,28 +18,7 @@ slug: /components/openhw-l293d
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="20" width="70" height="80" rx="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="60" cy="30" r="4" fill="#0f172a" />
-      <path d="M 50 20 Q 60 30 70 20" fill="#0f172a" />
-      <text x="60" y="65" fill="var(--vp-c-text-2)" font-family="monospace" font-size="12" font-weight="bold" transform="rotate(90, 60, 60)" text-anchor="middle">L293D</text>
-      <rect x="15" y="25" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="35" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="45" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="55" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="65" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="75" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="85" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="15" y="95" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="25" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="35" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="45" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="55" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="65" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="75" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="85" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="95" y="95" width="10" height="4" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-l293d.svg" alt="L293D Motor Driver" style="width:120px; height:200px; max-width: 150px; max-height: 250px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">L293D IC</span>
   </div>
   <div class="component-info">
@@ -87,12 +66,14 @@ An H-Bridge allows voltage to be applied across a load in either direction.
 - Applying a PWM signal to `EN1,2` pulses the power rapidly, changing the motor's average speed.
 
 ## Wiring Diagram (Single Motor)
-1. Connect **VCC1** to Arduino 5V and **GNDs** to Ground.
-2. Connect **VCC2** to a 9V Battery Positive (+).
-3. Connect **EN1,2** to Arduino D9 (PWM).
-4. Connect **IN1** to Arduino D8.
-5. Connect **IN2** to Arduino D7.
-6. Connect **OUT1** and **OUT2** to the two terminals of your DC motor.
+
+This diagram shows how to wire a single DC motor to the L293D.
+
+<p align="center">
+  <img src="/images/components/openhw-l293d_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code drives a single motor forward, then backward, then stops.

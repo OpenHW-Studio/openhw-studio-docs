@@ -18,9 +18,7 @@ slug: /components/logic-ic-74xx
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="30" width="70" height="60" rx="4" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-    </svg>
+    <img src="/images/components/logic-ic-74xx.svg" alt="74xx Logic IC" style="width:120px; height:45px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">74xx IC</span>
   </div>
   <div class="component-info">
@@ -69,16 +67,21 @@ Most basic 74xx logic gates use a standard 14-pin dual in-line package (DIP).
 </table>
 
 ## Configurable Attributes
-*Select the specific IC model using the component properties panel in the simulator.*
+<table class="attrs-table">
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr><td><strong>icType</strong></td><td><code>string</code></td><td><code>"7408"</code></td><td>The specific 74xx series model to simulate (e.g., 7400, 7402, 7404, 7408, 7432, 7486).</td></tr>
+</table>
 
 ## Working Principle
 Each IC contains multiple independent logic gates. For example, a 74HC08 contains four separate AND gates. You can use any or all of them in your circuit. The chip evaluates the logic internally and drives the output pins based on the respective input pins.
 
 ## Wiring Diagram
-1. Connect **VCC (Pin 14)** to the 5V rail of your breadboard or power supply.
-2. Connect **GND (Pin 7)** to the Ground rail.
-3. Wire the inputs (e.g., 1A and 1B) to your signal sources (switches, buttons, Arduino outputs).
-4. Wire the output (e.g., 1Y) to an LED (via a current-limiting resistor) or the input of another logic stage.
+
+<p align="center">
+  <img src="/images/components/logic-ic-74xx_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 To test a 74HC08 (AND gate) IC with an Arduino:

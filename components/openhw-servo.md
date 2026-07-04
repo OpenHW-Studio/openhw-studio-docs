@@ -18,17 +18,7 @@ slug: /components/openhw-servo
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="20" width="50" height="40" rx="2" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="2" />
-      <rect x="5" y="30" width="10" height="20" fill="#334155" />
-      <rect x="65" y="30" width="10" height="20" fill="#334155" />
-      <circle cx="40" cy="40" r="15" fill="#0f172a" />
-      <circle cx="40" cy="40" r="10" fill="var(--vp-c-text-1)" />
-      <path d="M 40 40 L 40 20" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" />
-      <rect x="40" y="60" width="3" height="15" fill="#fb923c" />
-      <rect x="45" y="60" width="3" height="15" fill="#ef4444" />
-      <rect x="50" y="60" width="3" height="15" fill="#78350f" />
-    </svg>
+    <img src="/images/components/openhw-servo.svg" alt="Servo Motor" style="width:250px; height:150px; max-width: 250px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Standard Servo</span>
   </div>
   <div class="component-info">
@@ -66,9 +56,12 @@ The servo expects a pulse every 20ms (50Hz). The length of the pulse determines 
 </table>
 
 ## Wiring Diagram (Arduino Uno)
-1. Connect **GND** (Brown) to Arduino **GND**.
-2. Connect **V+** (Red) to Arduino **5V**.
-3. Connect **PWM** (Orange) to Arduino **D9**.
+
+<p align="center">
+  <img src="/images/components/openhw-servo_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 *(Note: In real hardware, servos can draw significant current, so a dedicated external 5V power supply is often required if you are using multiple servos or a heavy load).*
 

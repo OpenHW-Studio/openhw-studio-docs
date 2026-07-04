@@ -18,32 +18,7 @@ slug: /components/openhw-lcd1602
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="140" height="60" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="130" height="50" fill="#15803d" />
-      <rect x="15" y="15" width="110" height="30" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2" />
-      <text x="70" y="35" fill="var(--vp-c-text-1)" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Hello World</text>
-      <circle cx="10" cy="10" r="2" fill="#0f172a" />
-      <circle cx="130" cy="10" r="2" fill="#0f172a" />
-      <circle cx="10" cy="50" r="2" fill="#0f172a" />
-      <circle cx="130" cy="50" r="2" fill="#0f172a" />
-      <rect x="15" y="5" width="110" height="4" fill="#fbbf24" />
-      <rect x="20" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="26" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="32" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="38" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="44" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="50" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="56" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="62" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="68" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="74" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="80" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="86" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="92" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="98" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="104" y="5" width="4" height="4" fill="#0f172a" />
-      <rect x="110" y="5" width="4" height="4" fill="#0f172a" />
-    </svg>
+    <img src="/images/components/openhw-lcd1602.svg" alt="LCD 16x2 Parallel" style="width:315px; height:135px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">16x2 LCD</span>
   </div>
   <div class="component-info">
@@ -81,15 +56,12 @@ The **LCD 16x2** is one of the most common display modules for microcontrollers.
 </table>
 
 ## Wiring Diagram (4-bit Mode)
-1. Connect **VSS**, **RW**, and **K** to Ground.
-2. Connect **VDD** and **A** to 5V.
-3. Connect **V0** to Ground (for max contrast).
-4. Connect **RS** to Arduino D12.
-5. Connect **E** to Arduino D11.
-6. Connect **D4** to Arduino D5.
-7. Connect **D5** to Arduino D4.
-8. Connect **D6** to Arduino D3.
-9. Connect **D7** to Arduino D2.
+
+<p align="center">
+  <img src="/images/components/openhw-lcd1602_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This uses the standard Arduino `LiquidCrystal` library built into the IDE.

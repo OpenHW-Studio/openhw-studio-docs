@@ -18,27 +18,7 @@ slug: /components/openhw-nlsf595
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="100" viewBox="0 0 80 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="15" y="10" width="50" height="80" rx="4" fill="var(--vp-c-bg-soft)" />
-      <circle cx="22" cy="18" r="3" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="15" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="25" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="35" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="45" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="55" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="65" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="75" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="5" y="85" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="15" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="25" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="35" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="45" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="55" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="65" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="75" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <rect x="65" y="85" width="10" height="4" fill="var(--vp-c-text-2)" />
-      <text x="40" y="52" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" text-anchor="middle" transform="rotate(-90, 40, 52)">NLSF595</text>
-    </svg>
+    <img src="/images/components/openhw-nlsf595.svg" alt="NLSF595 SPI LED Driver" style="width:128px; height:64px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">DIP-16 IC</span>
   </div>
   <div class="component-info">
@@ -72,11 +52,14 @@ Shift registers allow you to expand the number of output pins on your microcontr
 *This component has no standard configurable attributes.*
 
 ## Wiring Diagram
-1. Connect **VCC** to 5V.
-2. Connect **GND** to GND.
-3. Connect **MOSI** to Arduino **D11**.
-4. Connect **CS** to Arduino **D10**.
-5. Connect **SCK** to Arduino **D13**.
+
+Connect the NLSF595 module to the Arduino via SPI pins.
+
+<p align="center">
+  <img src="/images/components/openhw-nlsf595_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code uses the built-in `shiftOut()` function to send an 8-bit value to the shift register. The latch pin must be pulled LOW before shifting data and pulled HIGH to update the outputs.

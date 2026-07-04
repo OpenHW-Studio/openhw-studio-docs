@@ -18,73 +18,7 @@ slug: /components/openhw-neopixel-matrix
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="90" height="90" fill="#0f172a" rx="4" />
-      <circle cx="15" cy="15" r="3" fill="#a855f7" />
-      <circle cx="25" cy="15" r="3" fill="#ec4899" />
-      <circle cx="35" cy="15" r="3" fill="#3b82f6" />
-      <circle cx="45" cy="15" r="3" fill="#10b981" />
-      <circle cx="55" cy="15" r="3" fill="#f59e0b" />
-      <circle cx="65" cy="15" r="3" fill="#ef4444" />
-      <circle cx="75" cy="15" r="3" fill="#8b5cf6" />
-      <circle cx="85" cy="15" r="3" fill="#6366f1" />
-      <circle cx="15" cy="25" r="3" fill="#3b82f6" />
-      <circle cx="25" cy="25" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="25" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="45" cy="25" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="55" cy="25" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="65" cy="25" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="25" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="85" cy="25" r="3" fill="#10b981" />
-      <circle cx="15" cy="35" r="3" fill="#ec4899" />
-      <circle cx="25" cy="35" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="35" r="3" fill="#f43f5e" />
-      <circle cx="45" cy="35" r="3" fill="#f43f5e" />
-      <circle cx="55" cy="35" r="3" fill="#f43f5e" />
-      <circle cx="65" cy="35" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="35" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="85" cy="35" r="3" fill="#f59e0b" />
-      <circle cx="15" cy="45" r="3" fill="#a855f7" />
-      <circle cx="25" cy="45" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="45" r="3" fill="#f43f5e" />
-      <circle cx="45" cy="45" r="3" fill="#eab308" />
-      <circle cx="55" cy="45" r="3" fill="#f43f5e" />
-      <circle cx="65" cy="45" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="45" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="85" cy="45" r="3" fill="#ef4444" />
-      <circle cx="15" cy="55" r="3" fill="#a855f7" />
-      <circle cx="25" cy="55" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="55" r="3" fill="#f43f5e" />
-      <circle cx="45" cy="55" r="3" fill="#f43f5e" />
-      <circle cx="55" cy="55" r="3" fill="#f43f5e" />
-      <circle cx="65" cy="55" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="55" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="85" cy="55" r="3" fill="#ef4444" />
-      <circle cx="15" cy="65" r="3" fill="#ec4899" />
-      <circle cx="25" cy="65" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="65" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="45" cy="65" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="55" cy="65" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="65" cy="65" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="65" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="85" cy="65" r="3" fill="#f59e0b" />
-      <circle cx="15" cy="75" r="3" fill="#3b82f6" />
-      <circle cx="25" cy="75" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="35" cy="75" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="45" cy="75" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="55" cy="75" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="65" cy="75" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="75" r="3" fill="var(--vp-c-bg-soft)" />
-      <circle cx="85" cy="75" r="3" fill="#10b981" />
-      <circle cx="15" cy="85" r="3" fill="#a855f7" />
-      <circle cx="25" cy="85" r="3" fill="#ec4899" />
-      <circle cx="35" cy="85" r="3" fill="#3b82f6" />
-      <circle cx="45" cy="85" r="3" fill="#10b981" />
-      <circle cx="55" cy="85" r="3" fill="#f59e0b" />
-      <circle cx="65" cy="85" r="3" fill="#ef4444" />
-      <circle cx="75" cy="85" r="3" fill="#8b5cf6" />
-      <circle cx="85" cy="85" r="3" fill="#6366f1" />
-    </svg>
+    <img src="/images/components/openhw-neopixel-matrix.svg" alt="NeoPixel Matrix" style="width:100px; height:100px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">RGB Matrix</span>
   </div>
   <div class="component-info">
@@ -120,9 +54,12 @@ NeoPixels (WS2812B LEDs) contain a tiny integrated circuit inside each LED packa
 </table>
 
 ## Wiring Diagram
-1. Connect **VCC** to 5V.
-2. Connect **GND** to GND.
-3. Connect **DIN** to Arduino **D6**.
+
+<p align="center">
+  <img src="/images/components/openhw-neopixel-matrix_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `FastLED` library from the Library Manager to run this code. It fills the matrix with blue, then black.

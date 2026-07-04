@@ -18,12 +18,7 @@ slug: /components/logic-clock-generator
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="25" width="70" height="70" rx="8" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <path d="M 40,65 L 40,45 L 60,45 L 60,75 L 80,75 L 80,55" fill="none" stroke="#68d391" stroke-width="3" />
-      <line x1="95" y1="60" x2="110" y2="60" stroke="#94a3b8" stroke-width="3" />
-      <circle cx="95" cy="60" r="3" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/logic-clock-generator.svg" alt="Clock Generator" style="width:100px; height:80px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Clock Generator</span>
   </div>
   <div class="component-info">
@@ -47,8 +42,8 @@ In the OpenHW Studio simulator, the Clock Generator is an essential tool for tes
 ## Configurable Attributes
 <table class="attrs-table">
 <tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
-<tr><td><strong>Frequency (Hz)</strong></td><td><code>number</code></td><td><code>1</code></td><td>The number of complete HIGH/LOW cycles per second. e.g., 1 Hz means the signal is HIGH for 0.5s and LOW for 0.5s.</td></tr>
-<tr><td><strong>Duty Cycle (%)</strong></td><td><code>number</code></td><td><code>50</code></td><td>The percentage of the cycle where the signal is HIGH. A 50% duty cycle means equal HIGH and LOW durations.</td></tr>
+<tr><td><strong>frequency</strong></td><td><code>number</code></td><td><code>10</code></td><td>The numeric frequency of the clock signal.</td></tr>
+<tr><td><strong>units</strong></td><td><code>string</code></td><td><code>"KHz"</code></td><td>The unit for the frequency (Hz, KHz, MHz).</td></tr>
 </table>
 
 ## Working Principle
@@ -64,9 +59,12 @@ CLK |   |   |   |   |   |
 The Clock Generator continuously toggles its output pin based on the simulated time. It is driven by the simulator's internal physics loop.
 
 ## Wiring Diagram
-1. Add a Clock Generator component to your schematic.
-2. Configure the desired frequency (e.g., 10 Hz for a counter test).
-3. Connect the **CLK** output to the clock input (`>`) of a Flip-Flop, Counter, or Shift Register.
+
+<p align="center">
+  <img src="/images/components/logic-clock-generator_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 While the Clock Generator is a simulation primitive, you can simulate a similar clock signal using an Arduino to drive other physical logic chips.

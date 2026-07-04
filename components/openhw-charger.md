@@ -18,19 +18,7 @@ slug: /components/openhw-charger
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="25" width="70" height="70" rx="4" fill="#004d40" stroke="#00251a" stroke-width="2" />
-      <rect x="45" y="25" width="30" height="15" fill="var(--vp-c-text-2)" />
-      <rect x="52" y="20" width="16" height="5" fill="#475569" />
-      <rect x="40" y="60" width="20" height="20" fill="var(--vp-c-bg-soft)" />
-      <circle cx="75" cy="65" r="3" fill="#ef4444" />
-      <circle cx="75" cy="75" r="3" fill="#22c55e" />
-      <circle cx="35" cy="85" r="2.5" fill="#eab308" />
-      <circle cx="85" cy="85" r="2.5" fill="#eab308" />
-      <circle cx="35" cy="35" r="2.5" fill="#eab308" />
-      <circle cx="85" cy="35" r="2.5" fill="#eab308" />
-      <text x="60" y="105" fill="#ffffff" font-family="monospace" font-size="8" font-weight="bold" text-anchor="middle">TP4056</text>
-    </svg>
+    <img src="/images/components/openhw-charger.svg" alt="Li-ion Charger" style="width:160px; height:100px; max-width: 200px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">TP4056 Module</span>
   </div>
   <div class="component-info">
@@ -52,8 +40,16 @@ Rechargeable batteries require precise charging curves to prevent overheating or
 <tr><td><span class="pin-name">IN+</span></td><td><span class="pin-type power">power</span></td><td>Power input. Connect to a 5V source (like a solar panel or wall adapter).</td></tr>
 <tr><td><span class="pin-name">IN-</span></td><td><span class="pin-type power">power</span></td><td>Ground input. Connect to the power source ground.</td></tr>
 <tr><td><span class="pin-name">BAT+</span></td><td><span class="pin-type power">power</span></td><td>Battery positive terminal. Connect to the VCC pin of a Li-ion Battery component.</td></tr>
-<tr><td><span class="pin-name">BAT-</span></td><td><span class="pin-type power">power</span></td><td>Battery negative terminal. Connect to the GND pin of a Li-ion Battery component.</td></tr>
+<tr><td><span class="pin-name">B-</span></td><td><span class="pin-type power">power</span></td><td>Connects to the negative terminal of the Li-ion battery.</td></tr>
 </table>
+
+## Wiring Diagram
+
+<p align="center">
+  <img src="/images/components/openhw-charger_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Configurable Attributes
 <table class="attrs-table">

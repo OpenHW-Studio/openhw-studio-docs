@@ -18,30 +18,7 @@ slug: /components/openhw-a4988
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="25" y="10" width="70" height="100" fill="#22c55e" stroke="#166534" stroke-width="2" />
-      <rect x="40" y="45" width="40" height="40" rx="2" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="2" />
-      <circle cx="60" cy="25" r="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1" />
-      <line x1="56" y1="25" x2="64" y2="25" stroke="#94a3b8" stroke-width="2" />
-      <line x1="60" y1="21" x2="60" y2="29" stroke="#94a3b8" stroke-width="2" />
-      <circle cx="33" cy="20" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="30" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="40" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="50" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="60" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="70" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="80" r="2" fill="#fbbf24" />
-      <circle cx="33" cy="90" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="20" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="30" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="40" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="50" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="60" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="70" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="80" r="2" fill="#fbbf24" />
-      <circle cx="87" cy="90" r="2" fill="#fbbf24" />
-      <text x="60" y="105" fill="#14532d" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">A4988</text>
-    </svg>
+    <img src="/images/components/openhw-a4988.svg" alt="A4988 Stepper Driver" style="width:120px; height:75px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">A4988 Module</span>
   </div>
   <div class="component-info">
@@ -81,11 +58,14 @@ Stepper motors require specific sequences of high-current pulses to rotate. The 
 The A4988 reads the `DIR` pin to determine which way to sequence the coils. Every time the `STEP` pin receives a rising edge (goes from `LOW` to `HIGH`), the internal translator advances the motor's coils to the next position in the sequence, rotating the motor shaft by a small, precise angle.
 
 ## Wiring Diagram
-1. Connect **VDD** and **GND_LOGIC** to your Arduino's 5V and GND.
-2. Connect **VMOT** and **GND_MOT** to a separate power supply suitable for your motor (e.g., 12V). *Never power a stepper motor directly from the Arduino.*
-3. Connect **1A, 1B** to one coil of the stepper motor, and **2A, 2B** to the other coil.
-4. Tie **RESET** and **SLEEP** together (this is a standard trick to keep the driver active).
-5. Connect **STEP** and **DIR** to two digital pins on your Arduino.
+
+Connect the A4988 to the Arduino, your stepper motor, and an external power supply.
+
+<p align="center">
+  <img src="/images/components/openhw-a4988_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

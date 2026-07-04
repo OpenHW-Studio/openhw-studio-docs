@@ -18,17 +18,7 @@ slug: /components/openhw-7segment
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <rect x="30" y="20" width="60" height="80" rx="4" fill="var(--vp-c-bg-soft)" stroke="var(--vp-c-border)" stroke-width="3" />
-      <path d="M 45,30 L 75,30 L 70,35 L 50,35 Z" fill="#ef4444" opacity="0.9" />
-      <path d="M 77,32 L 77,53 L 72,50 L 72,35 Z" fill="#ef4444" opacity="0.9" />
-      <path d="M 77,57 L 77,78 L 72,75 L 72,60 Z" fill="#ef4444" opacity="0.9" />
-      <path d="M 45,80 L 75,80 L 70,75 L 50,75 Z" fill="#ef4444" opacity="0.9" />
-      <path d="M 43,57 L 43,78 L 48,75 L 48,60 Z" fill="#ef4444" opacity="0.9" />
-      <path d="M 43,32 L 43,53 L 48,50 L 48,35 Z" fill="#ef4444" opacity="0.9" />
-      <path d="M 45,55 L 75,55 L 70,52 L 50,52 Z" fill="#ef4444" opacity="0.9" />
-      <circle cx="82" cy="80" r="3" fill="#ef4444" opacity="0.2" />
-    </svg>
+    <img src="/images/components/openhw-7segment.svg" alt="7-Segment Display" style="width:76px; height:113px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">7-Segment</span>
   </div>
   <div class="component-info">
@@ -73,9 +63,12 @@ Before LCDs and OLEDs became ubiquitous, 7-segment displays were the primary way
 - **Common Anode**: All 8 LEDs share a single VCC (`COM`). To turn a segment ON, you supply `LOW` logic to its respective pin, allowing current to sink into the microcontroller.
 
 ## Wiring Diagram
-1. Connect **COM.1** (or COM.2) to **GND** (for common cathode) or **5V** (for common anode).
-2. Connect pins **A** through **G** (and optionally **DP**) to digital pins on your Arduino. 
-3. *Note: In a physical circuit, you must use current-limiting resistors (e.g., 220Ω or 330Ω) on either the common pin or the individual segment pins to prevent burning out the LEDs.*
+
+<p align="center">
+  <img src="/images/components/openhw-7segment_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 To simplify wiring and logic, the `SevSeg` library is highly recommended.

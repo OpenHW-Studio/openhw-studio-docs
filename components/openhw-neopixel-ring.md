@@ -18,25 +18,7 @@ slug: /components/openhw-neopixel-ring
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="45" fill="none" stroke="#1e293b" stroke-width="15" />
-      <circle cx="50" cy="15" r="4" fill="#a855f7" />
-      <circle cx="63" cy="17" r="4" fill="#ec4899" />
-      <circle cx="75" cy="25" r="4" fill="#f43f5e" />
-      <circle cx="83" cy="37" r="4" fill="#ef4444" />
-      <circle cx="85" cy="50" r="4" fill="#f97316" />
-      <circle cx="83" cy="63" r="4" fill="#f59e0b" />
-      <circle cx="75" cy="75" r="4" fill="#eab308" />
-      <circle cx="63" cy="83" r="4" fill="#84cc16" />
-      <circle cx="50" cy="85" r="4" fill="#22c55e" />
-      <circle cx="37" cy="83" r="4" fill="#10b981" />
-      <circle cx="25" cy="75" r="4" fill="#14b8a6" />
-      <circle cx="17" cy="63" r="4" fill="#06b6d4" />
-      <circle cx="15" cy="50" r="4" fill="#0ea5e9" />
-      <circle cx="17" cy="37" r="4" fill="#3b82f6" />
-      <circle cx="25" cy="25" r="4" fill="#6366f1" />
-      <circle cx="37" cy="17" r="4" fill="#8b5cf6" />
-    </svg>
+    <img src="/images/components/openhw-neopixel-ring.svg" alt="NeoPixel Ring" style="width:100px; height:100px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">NeoPixel Ring</span>
   </div>
   <div class="component-info">
@@ -68,9 +50,12 @@ NeoPixel rings come in various sizes (e.g., 12, 16, 24 pixels). The OpenHW Simul
 </table>
 
 ## Wiring Diagram
-1. Connect **VCC** to 5V.
-2. Connect **GND** to GND.
-3. Connect **DIN** to Arduino **D6**.
+
+<p align="center">
+  <img src="/images/components/openhw-neopixel-ring_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `FastLED` library from the Library Manager. This code creates a chasing rainbow effect around the ring.

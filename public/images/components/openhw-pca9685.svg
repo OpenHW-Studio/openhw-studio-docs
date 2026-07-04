@@ -1,0 +1,311 @@
+<svg width="180" height="150" viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 15 0 L 165 0 A 15 15 0 0 1 180 15 L 180 135 A 15 15 0 0 1 165 150 L 15 150 A 15 15 0 0 1 0 135 L 0 100 A 4 4 0 0 0 10 96 L 10 64 A 4 4 0 0 0 0 60 L 0 15 A 15 15 0 0 1 15 0 Z" fill="#144f9c" />
+  <circle cx="10" cy="15" r="4" fill="#fcfcfc" />
+  <circle cx="170" cy="15" r="4" fill="#fcfcfc" />
+  <circle cx="10" cy="135" r="4" fill="#fcfcfc" />
+  <circle cx="170" cy="135" r="4" fill="#fcfcfc" />
+  <circle cx="10" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="10" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="10" y="28" font-size="3" fill="white" transform="rotate(-90 10 28)">SDA</text>
+  <circle cx="16" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="16" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="16" y="28" font-size="3" fill="white" transform="rotate(-90 16 28)">SCL</text>
+  <circle cx="22" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="22" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="22" y="28" font-size="3" fill="white" transform="rotate(-90 22 28)">TXD</text>
+  <circle cx="28" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="28" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="28" y="28" font-size="3" fill="white" transform="rotate(-90 28 28)">RXD</text>
+  <circle cx="34" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="34" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="34" y="28" font-size="3" fill="white" transform="rotate(-90 34 28)">#4</text>
+  <circle cx="40" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="40" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="40" y="28" font-size="3" fill="white" transform="rotate(-90 40 28)">#17</text>
+  <circle cx="46" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="46" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="46" y="28" font-size="3" fill="white" transform="rotate(-90 46 28)">#18</text>
+  <circle cx="52" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="52" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="52" y="28" font-size="3" fill="white" transform="rotate(-90 52 28)">#27</text>
+  <circle cx="58" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="58" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="58" y="28" font-size="3" fill="white" transform="rotate(-90 58 28)">#22</text>
+  <circle cx="64" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="64" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="64" y="28" font-size="3" fill="white" transform="rotate(-90 64 28)">#23</text>
+  <circle cx="70" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="70" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="70" y="28" font-size="3" fill="white" transform="rotate(-90 70 28)">#24</text>
+  <circle cx="76" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="76" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="76" y="28" font-size="3" fill="white" transform="rotate(-90 76 28)">#25</text>
+  <circle cx="82" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="82" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="82" y="28" font-size="3" fill="white" transform="rotate(-90 82 28)">MOSI</text>
+  <circle cx="88" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="88" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="88" y="28" font-size="3" fill="white" transform="rotate(-90 88 28)">MISO</text>
+  <circle cx="94" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="94" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="94" y="28" font-size="3" fill="white" transform="rotate(-90 94 28)">CLK</text>
+  <circle cx="100" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="100" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="100" y="28" font-size="3" fill="white" transform="rotate(-90 100 28)">CE0</text>
+  <circle cx="106" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="106" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="106" y="28" font-size="3" fill="white" transform="rotate(-90 106 28)">CE1</text>
+  <circle cx="112" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="112" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="112" y="28" font-size="3" fill="white" transform="rotate(-90 112 28)">#5</text>
+  <circle cx="118" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="118" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="118" y="28" font-size="3" fill="white" transform="rotate(-90 118 28)">#6</text>
+  <circle cx="124" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="124" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="124" y="28" font-size="3" fill="white" transform="rotate(-90 124 28)">#12</text>
+  <circle cx="130" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="130" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="130" y="28" font-size="3" fill="white" transform="rotate(-90 130 28)">#13</text>
+  <circle cx="136" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="136" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="136" y="28" font-size="3" fill="white" transform="rotate(-90 136 28)">#16</text>
+  <circle cx="142" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="142" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="142" y="28" font-size="3" fill="white" transform="rotate(-90 142 28)">#19</text>
+  <circle cx="148" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="148" y="28" font-size="3" fill="white" transform="rotate(-90 148 28)">#20</text>
+  <circle cx="154" cy="10" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="16" r="1.5" fill="#bdc3c7" />
+  <text x="154" y="28" font-size="3" fill="white" transform="rotate(-90 154 28)">#21</text>
+  <circle cx="148" cy="35" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="41" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="47" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="53" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="59" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="65" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="71" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="77" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="83" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="89" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="95" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="101" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="107" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="113" r="1.5" fill="#7f8c8d" />
+  <circle cx="148" cy="119" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="35" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="41" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="47" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="53" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="59" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="65" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="71" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="77" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="83" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="89" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="95" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="101" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="107" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="113" r="1.5" fill="#7f8c8d" />
+  <circle cx="154" cy="119" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="35" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="41" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="47" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="53" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="59" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="65" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="71" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="77" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="83" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="89" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="95" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="101" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="107" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="113" r="1.5" fill="#7f8c8d" />
+  <circle cx="160" cy="119" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="35" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="41" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="47" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="53" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="59" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="65" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="71" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="77" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="83" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="89" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="95" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="101" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="107" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="113" r="1.5" fill="#7f8c8d" />
+  <circle cx="166" cy="119" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="35" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="41" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="47" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="53" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="59" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="65" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="71" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="77" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="83" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="89" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="95" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="101" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="107" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="113" r="1.5" fill="#7f8c8d" />
+  <circle cx="172" cy="119" r="1.5" fill="#7f8c8d" />
+  <text x="142" y="36.5" font-size="3" fill="white" text-anchor="end">5.0V</text>
+  <text x="142" y="48.5" font-size="3" fill="white" text-anchor="end">3.3V</text>
+  <text x="142" y="60.5" font-size="3" fill="white" text-anchor="end">GND</text>
+  <rect x="25" y="44" width="6" height="6" fill="#bdc3c7" />
+  <rect x="42" y="44" width="6" height="6" fill="#bdc3c7" />
+  <rect x="25" y="70" width="6" height="6" fill="#bdc3c7" />
+  <rect x="13" y="50" width="37" height="20" fill="#1e1e1e" rx="1" />
+  <rect x="10" y="53" width="6" height="14" fill="#111111" rx="0.5" />
+  <rect x="12" y="78" width="20" height="20" fill="#2980b9" rx="1" />
+  <rect x="14" y="80" width="16" height="16" fill="#035e9c" />
+  <circle cx="21" cy="85" r="3" fill="#95a5a6" />
+  <line x1="19" y1="85" x2="23" y2="85" stroke="#7f8c8d" stroke-width="1" />
+  <line x1="21" y1="83" x2="21" y2="87" stroke="#7f8c8d" stroke-width="1" />
+  <circle cx="21" cy="93" r="3" fill="#95a5a6" />
+  <line x1="19" y1="93" x2="23" y2="93" stroke="#7f8c8d" stroke-width="1" />
+  <line x1="21" y1="91" x2="21" y2="95" stroke="#7f8c8d" stroke-width="1" />
+  <text x="35" y="86" font-size="5" fill="white">GND</text>
+  <text x="35" y="95" font-size="5" fill="white">+5</text>
+  <circle cx="85" cy="65" r="10" fill="none" stroke="white" stroke-width="0.8" />
+  <circle cx="85" cy="65" r="9" fill="#1e1e1e" />
+  <text x="85" y="66" font-size="4" fill="white" text-anchor="middle">C2</text>
+  <text x="80" y="74" font-size="4" fill="white" text-anchor="middle">+</text>
+  <text x="85" y="81" font-size="4" fill="white" text-anchor="middle">PCA9685</text>
+  <rect x="79" y="83" width="12" height="24" fill="#2c3e50" rx="1" />
+  <circle cx="81" cy="85" r="1" fill="#1e1e1e" />
+  <rect x="75" y="84.0" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="84.0" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="85.8" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="85.8" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="87.6" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="87.6" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="89.4" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="89.4" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="91.2" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="91.2" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="93.0" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="93.0" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="94.8" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="94.8" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="96.6" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="96.6" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="98.4" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="98.4" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="100.2" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="100.2" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="102.0" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="102.0" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="75" y="103.8" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="91" y="103.8" width="4" height="0.8" fill="#bdc3c7" />
+  <rect x="21" y="105" width="2" height="4" fill="#2c3e50" />
+  <rect x="21" y="110" width="3" height="4" fill="#2ecc71" style="filter: drop-shadow(0px 0px 1px #2ecc71)" />
+  <text x="21" y="116" font-size="3" fill="white" transform="rotate(-90 21 116)">POWER</text>
+  <text x="13" y="125" font-size="3" fill="white">adafruit!</text>
+  <rect x="58" y="50" width="18" height="14" fill="#34495e" />
+  <rect x="61" y="64" width="2" height="6" fill="#bdc3c7" />
+  <rect x="71" y="64" width="2" height="6" fill="#bdc3c7" />
+  <rect x="60" y="70" width="3" height="6" fill="#2c3e50" />
+  <rect x="68" y="70" width="3" height="6" fill="#2c3e50" />
+  <text x="110" y="61" font-size="3" fill="white" text-anchor="middle">I2C Address</text>
+  <rect x="98" y="63" width="5" height="8" fill="none" stroke="white" stroke-width="0.5" />
+  <rect x="99" y="64" width="3" height="3" fill="#d4af37" />
+  <rect x="104" y="63" width="5" height="8" fill="none" stroke="white" stroke-width="0.5" />
+  <rect x="105" y="64" width="3" height="3" fill="#d4af37" />
+  <rect x="110" y="63" width="5" height="8" fill="none" stroke="white" stroke-width="0.5" />
+  <rect x="111" y="64" width="3" height="3" fill="#d4af37" />
+  <rect x="116" y="63" width="5" height="8" fill="none" stroke="white" stroke-width="0.5" />
+  <rect x="117" y="64" width="3" height="3" fill="#d4af37" />
+  <rect x="122" y="63" width="5" height="8" fill="none" stroke="white" stroke-width="0.5" />
+  <rect x="123" y="64" width="3" height="3" fill="#d4af37" />
+  <rect x="128" y="63" width="5" height="8" fill="none" stroke="white" stroke-width="0.5" />
+  <rect x="129" y="64" width="3" height="3" fill="#d4af37" />
+  <text x="98.5" y="74" font-size="3" fill="white">A5</text>
+  <text x="104.5" y="74" font-size="3" fill="white">A4</text>
+  <text x="110.5" y="74" font-size="3" fill="white">A3</text>
+  <text x="116.5" y="74" font-size="3" fill="white">A2</text>
+  <text x="122.5" y="74" font-size="3" fill="white">A1</text>
+  <text x="128.5" y="74" font-size="3" fill="white">A0</text>
+  <text x="115" y="85" font-size="3" fill="white" text-anchor="middle">Open=0/Closed=1</text>
+  <text x="35" y="42" font-size="6" fill="white">5-6VDC</text>
+  <text x="45" y="105" font-size="4" fill="white">16 x 12-bit PWM</text>
+  <text x="50" y="112" font-size="6" fill="white">Servo/PWM Pi HAT!</text>
+  <circle cx="85" cy="116" r="3.5" fill="none" stroke="white" stroke-width="0.8" />
+  <text x="85" y="118" font-size="5" fill="white" text-anchor="middle" font-weight="bold">A</text>
+  <text x="85" y="130" font-size="4" fill="white" text-anchor="middle">S</text>
+  <text x="85" y="136" font-size="4" fill="white" text-anchor="middle">V+</text>
+  <text x="85" y="142" font-size="4" fill="white" text-anchor="middle">G</text>
+  <rect x="23" y="125" width="26" height="20" fill="#2c3e50" rx="2" stroke="#ecf0f1" stroke-width="0.2" />
+  <text x="26" y="123" font-size="3" fill="white" text-anchor="middle">0</text>
+  <circle cx="26" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="26" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="26" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="32" y="123" font-size="3" fill="white" text-anchor="middle">1</text>
+  <circle cx="32" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="32" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="32" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="38" y="123" font-size="3" fill="white" text-anchor="middle">2</text>
+  <circle cx="38" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="38" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="38" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="44" y="123" font-size="3" fill="white" text-anchor="middle">3</text>
+  <circle cx="44" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="44" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="44" cy="141" r="1.5" fill="#bdc3c7" />
+  <rect x="55" y="125" width="26" height="20" fill="#2c3e50" rx="2" stroke="#ecf0f1" stroke-width="0.2" />
+  <text x="58" y="123" font-size="3" fill="white" text-anchor="middle">4</text>
+  <circle cx="58" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="58" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="58" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="64" y="123" font-size="3" fill="white" text-anchor="middle">5</text>
+  <circle cx="64" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="64" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="64" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="70" y="123" font-size="3" fill="white" text-anchor="middle">6</text>
+  <circle cx="70" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="70" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="70" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="76" y="123" font-size="3" fill="white" text-anchor="middle">7</text>
+  <circle cx="76" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="76" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="76" cy="141" r="1.5" fill="#bdc3c7" />
+  <rect x="87" y="125" width="26" height="20" fill="#2c3e50" rx="2" stroke="#ecf0f1" stroke-width="0.2" />
+  <text x="90" y="123" font-size="3" fill="white" text-anchor="middle">8</text>
+  <circle cx="90" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="90" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="90" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="96" y="123" font-size="3" fill="white" text-anchor="middle">9</text>
+  <circle cx="96" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="96" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="96" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="102" y="123" font-size="3" fill="white" text-anchor="middle">10</text>
+  <circle cx="102" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="102" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="102" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="108" y="123" font-size="3" fill="white" text-anchor="middle">11</text>
+  <circle cx="108" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="108" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="108" cy="141" r="1.5" fill="#bdc3c7" />
+  <rect x="119" y="125" width="26" height="20" fill="#2c3e50" rx="2" stroke="#ecf0f1" stroke-width="0.2" />
+  <text x="122" y="123" font-size="3" fill="white" text-anchor="middle">12</text>
+  <circle cx="122" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="122" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="122" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="128" y="123" font-size="3" fill="white" text-anchor="middle">13</text>
+  <circle cx="128" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="128" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="128" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="134" y="123" font-size="3" fill="white" text-anchor="middle">14</text>
+  <circle cx="134" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="134" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="134" cy="141" r="1.5" fill="#bdc3c7" />
+  <text x="140" y="123" font-size="3" fill="white" text-anchor="middle">15</text>
+  <circle cx="140" cy="129" r="1.5" fill="#ecf0f1" />
+  <circle cx="140" cy="135" r="1.5" fill="#e74c3c" />
+  <circle cx="140" cy="141" r="1.5" fill="#bdc3c7" />
+</svg>

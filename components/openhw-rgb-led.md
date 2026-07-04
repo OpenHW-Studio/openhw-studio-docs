@@ -18,14 +18,7 @@ slug: /components/openhw-rgb-led
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="90" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 15 40 Q 30 10 45 40 L 45 50 L 15 50 Z" fill="#e2e8f0" opacity="0.8" />
-      <rect x="15" y="47" width="30" height="5" fill="var(--vp-c-text-2)" />
-      <rect x="20" y="52" width="2" height="30" fill="var(--vp-c-text-2)" />
-      <rect x="26" y="52" width="2" height="38" fill="var(--vp-c-text-2)" />
-      <rect x="32" y="52" width="2" height="30" fill="var(--vp-c-text-2)" />
-      <rect x="38" y="52" width="2" height="30" fill="var(--vp-c-text-2)" />
-    </svg>
+    <img src="/images/components/openhw-rgb-led.svg" alt="RGB LED" style="width:72px; height:50px; max-width: 120px; max-height: 120px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">RGB LED</span>
   </div>
   <div class="component-info">
@@ -60,11 +53,15 @@ RGB LEDs come in two internal wiring configurations:
 <tr><td><strong>common</strong></td><td><code>string</code></td><td><code>"cathode"</code></td><td>Configuration of the common pin: <code>"cathode"</code> or <code>"anode"</code>.</td></tr>
 </table>
 
-## Wiring Diagram (Common Cathode)
-1. Connect **COM** to Arduino **GND**.
-2. Connect **R** through a 220Ω resistor to Arduino **D9** (PWM).
-3. Connect **G** through a 220Ω resistor to Arduino **D10** (PWM).
-4. Connect **B** through a 220Ω resistor to Arduino **D11** (PWM).
+## Wiring Diagram
+
+Connect the RGB LED to the Arduino using PWM pins to control colors.
+
+<p align="center">
+  <img src="/images/components/openhw-rgb-led_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code cycles through Red, Green, and Blue by writing PWM values (0-255) to a Common Cathode RGB LED.

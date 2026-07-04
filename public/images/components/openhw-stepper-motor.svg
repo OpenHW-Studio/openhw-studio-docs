@@ -1,0 +1,48 @@
+<svg width="135" height="165" version="1.1" viewBox="0 0 135 165" xmlns="http://www.w3.org/2000/svg" style="display: block; overflow: visible;">
+    <defs>
+        <linearGradient id="frame-gradient" x1="-4.06" x2="40.6" y1="20.3" y2="20.3" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#666" offset="0" />
+            <stop stop-color="#fff" offset="1" />
+        </linearGradient>
+        <linearGradient id="shaft-gradient" x1="0" x2="0" y1="-5" y2="5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9d9d9d" offset="0" />
+            <stop stop-color="#9d9d9d" stop-opacity="0" offset="1" />
+        </linearGradient>
+        <linearGradient id="body-gradient" x1="2.03" x2="14.21" y1="20.3" y2="20.3" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#9d9d9d" offset="0" />
+            <stop stop-color="#fdfafa" offset=".29501" />
+            <stop stop-color="#2a2a2a" offset="1" />
+        </linearGradient>
+        <path id="pin" transform="translate(6.4 20.3)" fill="#9f9f9f" d="m 0 0 c .5 0 .5 0 .5 .5 v 4.55 c -.5 .5 -.5 .5 -1 0 v -4.5 c 0 -.5 0 -.5 .5 -.5" />
+    </defs>
+    <!-- Body -->
+    <g transform="translate(7.5,15)">
+        <g transform="scale(5.9055)">
+            <!-- Pins -->
+            <use href="#pin" x="0" />
+            <use href="#pin" x="2.54" />
+            <use href="#pin" x="5.08" />
+            <use href="#pin" x="7.62" />
+
+            <g stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20.3" height="20.3" rx="2" ry="2" fill="url(#frame-gradient)" stroke="#000" stroke-width=".3245" />
+                <circle cx="2.5" cy="2.5" r="1.1" fill="#666" />
+                <circle cx="2.5" cy="2.5" r="0.9" fill="#e6e6e6" />
+                <circle cx="17.8" cy="2.5" r="1.1" fill="#666" />
+                <circle cx="17.8" cy="2.5" r="0.9" fill="#e6e6e6" />
+                <circle cx="2.5" cy="17.8" r="1.1" fill="#666" />
+                <circle cx="2.5" cy="17.8" r="0.9" fill="#e6e6e6" />
+                <circle cx="17.8" cy="17.8" r="1.1" fill="#666" />
+                <circle cx="17.8" cy="17.8" r="0.9" fill="#e6e6e6" />
+            </g>
+
+            <!-- motor body -->
+            <circle cx="10.15" cy="10.15" r="8" fill="#868686" fill-opacity=".89602" opacity=".73" stroke="url(#body-gradient)" stroke-width="1.41429" />
+            <!-- Rotator -->
+            <g>
+                <path id="arrow-path" transform="rotate(0, 10.15,10.15) translate(10.15 10.15)" fill="#4a36ba" d="m 0 0 l -2 0 l 2 -7.15 l 2 7.15 z" />
+                <path id="shaft-path" transform="translate(10.15, 10.15) rotate(0) translate(0, 0)" d="m -1 -1.732 a 2 2 0 1 0 2 0 z" fill="#4d4d4d" stroke="url(#shaft-gradient)" stroke-width=".57968" />
+            </g>
+        </g>
+    </g>
+</svg>

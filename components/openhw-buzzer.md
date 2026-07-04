@@ -18,16 +18,7 @@ slug: /components/openhw-buzzer
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="50" r="30" fill="var(--vp-c-bg-soft)" stroke="#0f172a" stroke-width="2" />
-      <circle cx="60" cy="50" r="10" fill="#0f172a" />
-      <path d="M 40 20 Q 60 5 80 20" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" />
-      <path d="M 30 10 Q 60 -10 90 10" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" opacity="0.5" />
-      <rect x="45" y="80" width="5" height="20" fill="var(--vp-c-text-2)" />
-      <rect x="70" y="80" width="5" height="20" fill="var(--vp-c-text-2)" />
-      <text x="47.5" y="115" fill="#ef4444" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">+</text>
-      <text x="72.5" y="115" fill="#3b82f6" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">-</text>
-    </svg>
+    <img src="/images/components/openhw-buzzer.svg" alt="Buzzer" style="width:120px; height:120px; max-width: 150px; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Piezo Buzzer</span>
   </div>
   <div class="component-info">
@@ -73,8 +64,14 @@ Here are some common frequencies you can use with the `tone()` function:
 A piezoelectric disc physically deforms when voltage is applied across it. By rapidly applying and removing voltage (e.g., 440 times per second), the disc vibrates and creates a sound wave (440 Hz pitch, or the note A4).
 
 ## Wiring Diagram
-1. Connect the negative pin (`-`) to Arduino GND.
-2. Connect the positive pin (`+`) to a digital output pin (e.g., Pin 3).
+
+Connect the buzzer's negative pin to GND and the positive pin to a digital output pin on the Arduino (e.g., Pin 3).
+
+<p align="center">
+  <img src="/images/components/openhw-buzzer_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 ```cpp

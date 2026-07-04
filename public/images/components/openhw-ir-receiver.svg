@@ -13,7 +13,7 @@
     <!-- IR Symbol (Top Right) -->
     <path d="M 145 55 Q 155 45 165 55 M 140 45 Q 155 30 170 45 M 135 35 Q 155 15 175 35" fill="none" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round" />
 
-    <!-- --- Bottom Pins --- -->
+    <!-- Bottom Pins -->
     <g>
         <!-- Pin 1 (Left / G) -->
         <rect x="66" y="230" width="8" height="60" fill="#9ca3af" rx="2" />

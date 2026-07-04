@@ -18,12 +18,7 @@ slug: /components/openhw-wifi-ap
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <path d="M 30 10 A 25 25 0 0 1 55 35 M 5 35 A 25 25 0 0 1 30 10" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" />
-      <path d="M 30 20 A 15 15 0 0 1 45 35 M 15 35 A 15 15 0 0 1 30 20" fill="none" stroke="#93c5fd" stroke-width="4" stroke-linecap="round" />
-      <path d="M 30 30 A 5 5 0 0 1 35 35 M 25 35 A 5 5 0 0 1 30 30" fill="none" stroke="#bfdbfe" stroke-width="4" stroke-linecap="round" />
-      <circle cx="30" cy="45" r="4" fill="#3b82f6" />
-    </svg>
+    <img src="/images/components/openhw-wifi-ap.svg" alt="WiFi Access Point" style="width:80px; height:60px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Virtual AP</span>
   </div>
   <div class="component-info">
@@ -50,6 +45,8 @@ Because this is a virtual networking element, it does not have physical pins. Yo
 <tr><td><strong>channel</strong></td><td><code>number</code></td><td><code>6</code></td><td>The simulated Wi-Fi channel (1-14).</td></tr>
 <tr><td><strong>internet</strong></td><td><code>boolean</code></td><td><code>true</code></td><td>If true, the simulated AP provides routed access to the public internet.</td></tr>
 </table>
+
+<TryInSimulator />
 
 ## Example ESP32 Code
 This sketch demonstrates how to connect to the simulated access point.

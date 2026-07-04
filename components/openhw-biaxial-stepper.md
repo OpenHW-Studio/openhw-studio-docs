@@ -18,19 +18,7 @@ slug: /components/openhw-biaxial-stepper
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="50" fill="#334155" stroke="#1e293b" stroke-width="4" />
-      <circle cx="60" cy="60" r="40" fill="#475569" />
-      <circle cx="60" cy="60" r="30" fill="#64748b" />
-      <circle cx="60" cy="60" r="10" fill="var(--vp-c-text-2)" />
-      <circle cx="60" cy="60" r="5" fill="var(--vp-c-text-1)" />
-      <line x1="60" y1="60" x2="60" y2="25" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" />
-      <line x1="60" y1="60" x2="85" y2="60" stroke="#f8fafc" stroke-width="2" stroke-linecap="round" />
-      <rect x="20" y="10" width="10" height="10" rx="2" fill="#eab308" />
-      <rect x="90" y="10" width="10" height="10" rx="2" fill="#eab308" />
-      <rect x="20" y="100" width="10" height="10" rx="2" fill="#eab308" />
-      <rect x="90" y="100" width="10" height="10" rx="2" fill="#eab308" />
-    </svg>
+    <img src="/images/components/openhw-biaxial-stepper.svg" alt="Biaxial Stepper Motor" style="width:150px; height:200px; max-width: 150px; max-height: 200px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">Biaxial Stepper</span>
   </div>
   <div class="component-info">
@@ -71,10 +59,14 @@ Because this component contains two independent stepper motors, it requires two 
 Each of the two motors functions exactly like a standard bipolar stepper motor. By pulsing Coil A and Coil B in the correct sequence, the rotor turns. The mechanical housing aligns the rotors so that their output shafts are perfectly concentric.
 
 ## Wiring Diagram
-1. You will need two A4988 (or similar) Stepper Drivers.
-2. Connect `A1+`, `A1-`, `B1+`, and `B1-` to the 1A, 1B, 2A, 2B outputs of **Driver 1**.
-3. Connect `A2+`, `A2-`, `B2+`, and `B2-` to the 1A, 1B, 2A, 2B outputs of **Driver 2**.
-4. Wire the STEP and DIR pins of both drivers to your microcontroller.
+
+You will need two A4988 (or similar) Stepper Drivers to run this motor. Connect each driver to one of the motor's coils.
+
+<p align="center">
+  <img src="/images/components/openhw-biaxial-stepper_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 *This example requires the AccelStepper library and assumes you are using two A4988 drivers.*

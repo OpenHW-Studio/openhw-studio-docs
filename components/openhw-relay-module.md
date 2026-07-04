@@ -18,16 +18,7 @@ slug: /components/openhw-relay-module
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="60" height="60" rx="4" fill="#0f172a" stroke="var(--vp-c-border)" stroke-width="2" />
-      <rect x="15" y="15" width="30" height="40" fill="#3b82f6" />
-      <rect x="50" y="20" width="15" height="15" fill="var(--vp-c-bg-soft)" />
-      <rect x="50" y="45" width="15" height="15" fill="var(--vp-c-bg-soft)" />
-      <circle cx="20" cy="70" r="3" fill="var(--vp-c-text-2)" />
-      <circle cx="30" cy="70" r="3" fill="var(--vp-c-text-2)" />
-      <circle cx="40" cy="70" r="3" fill="var(--vp-c-text-2)" />
-      <text x="30" y="40" fill="var(--vp-c-text-1)" font-family="monospace" font-size="8" text-anchor="middle">RELAY</text>
-    </svg>
+    <img src="/images/components/openhw-relay-module.svg" alt="Relay Module" style="width:72px; height:50px; max-width: 120px; max-height: 120px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">5V Relay</span>
   </div>
   <div class="component-info">
@@ -65,12 +56,15 @@ By default, many relay modules are **Active LOW**, meaning the relay energizes (
 <tr><td><strong>state</strong></td><td><code>string</code></td><td><code>"off"</code></td><td>Initial simulated mechanical state (<code>"off"</code> or <code>"on"</code>).</td></tr>
 </table>
 
-## Wiring Diagram (Load Control)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **IN** to **D7**.
-4. Connect an external power source to the **COM** terminal.
-5. Connect your device (e.g. motor) to the **NO** terminal. 
+## Wiring Diagram
+
+Connect the Relay Module to the Arduino to control high-power loads safely.
+
+<p align="center">
+  <img src="/images/components/openhw-relay-module_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code assumes an Active-LOW relay module.

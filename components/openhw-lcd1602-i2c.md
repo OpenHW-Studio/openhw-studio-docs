@@ -18,19 +18,7 @@ slug: /components/openhw-lcd1602-i2c
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="110" height="50" fill="#15803d" />
-      <rect x="15" y="15" width="90" height="30" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2" />
-      <text x="60" y="35" fill="var(--vp-c-text-1)" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">Hello World</text>
-      <circle cx="10" cy="10" r="2" fill="#0f172a" />
-      <circle cx="110" cy="10" r="2" fill="#0f172a" />
-      <circle cx="10" cy="50" r="2" fill="#0f172a" />
-      <circle cx="110" cy="50" r="2" fill="#0f172a" />
-      <rect x="5" y="20" width="5" height="4" fill="#0f172a" />
-      <rect x="5" y="26" width="5" height="4" fill="#0f172a" />
-      <rect x="5" y="32" width="5" height="4" fill="#0f172a" />
-      <rect x="5" y="38" width="5" height="4" fill="#0f172a" />
-    </svg>
+    <img src="/images/components/openhw-lcd1602-i2c.svg" alt="LCD 16x2 I2C" style="width:315px; height:135px; max-width: 100%; max-height: 150px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">I2C 16x2 LCD</span>
   </div>
   <div class="component-info">
@@ -66,10 +54,12 @@ By converting parallel data to serial I2C data, the backpack module dramatically
 The PCF8574 chip on the backpack receives I2C commands from the microcontroller and expands them into parallel 8-bit outputs that drive the LCD pins. The LiquidCrystal_I2C library handles all of this translation automatically.
 
 ## Wiring Diagram
-1. Connect **GND** to Ground.
-2. Connect **VCC** to 5V.
-3. Connect **SDA** to Arduino A4 (or SDA).
-4. Connect **SCL** to Arduino A5 (or SCL).
+
+<p align="center">
+  <img src="/images/components/openhw-lcd1602-i2c_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 Install the `LiquidCrystal I2C` library via the Library Manager before running this sketch.

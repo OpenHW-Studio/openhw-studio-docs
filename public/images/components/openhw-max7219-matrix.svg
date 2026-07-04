@@ -1,0 +1,77 @@
+<svg width="180" height="120" viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="30" x2="30" y2="30" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="0" y1="45" x2="30" y2="45" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="0" y1="60" x2="30" y2="60" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="0" y1="75" x2="30" y2="75" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="0" y1="90" x2="30" y2="90" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="150" y1="30" x2="180" y2="30" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="150" y1="45" x2="180" y2="45" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="150" y1="60" x2="180" y2="60" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="150" y1="75" x2="180" y2="75" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="150" y1="90" x2="180" y2="90" stroke="#C3BA9B" stroke-width="4.5" stroke-linecap="round" />
+    <rect x="30" y="0" width="120" height="120" fill="#000000" />
+    <circle cx="37.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="7.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="22.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="37.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="52.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="67.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="82.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="97.5" r="6" fill="#444444" />
+    <circle cx="37.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="52.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="67.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="82.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="97.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="112.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="127.5" cy="112.5" r="6" fill="#444444" />
+    <circle cx="142.5" cy="112.5" r="6" fill="#444444" />
+</svg>

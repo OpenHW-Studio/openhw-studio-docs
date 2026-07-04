@@ -18,16 +18,7 @@ slug: /components/openhw-stepper-motor
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="60" height="60" rx="4" fill="#334155" />
-      <circle cx="40" cy="40" r="20" fill="var(--vp-c-bg-soft)" />
-      <circle cx="40" cy="40" r="15" fill="#475569" />
-      <circle cx="40" cy="40" r="5" fill="var(--vp-c-text-2)" />
-      <circle cx="15" cy="15" r="3" fill="#0f172a" />
-      <circle cx="65" cy="15" r="3" fill="#0f172a" />
-      <circle cx="15" cy="65" r="3" fill="#0f172a" />
-      <circle cx="65" cy="65" r="3" fill="#0f172a" />
-    </svg>
+    <img src="/images/components/openhw-stepper-motor.svg" alt="Stepper Motor" style="width:135px; height:165px; max-width: 150px; max-height: 200px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">NEMA 17 Style</span>
   </div>
   <div class="component-info">
@@ -59,13 +50,14 @@ Unlike a standard DC motor which spins continuously when power is applied, a ste
 </table>
 
 ## Wiring Diagram (With A4988 Driver)
-You cannot connect a bipolar stepper directly to an Arduino. You must use a driver.
-1. Connect Motor **A-** to Driver **1A**.
-2. Connect Motor **A+** to Driver **1B**.
-3. Connect Motor **B+** to Driver **2A**.
-4. Connect Motor **B-** to Driver **2B**.
-5. Connect Driver **STEP** pin to Arduino **D3**.
-6. Connect Driver **DIR** pin to Arduino **D4**.
+
+You cannot connect a bipolar stepper directly to an Arduino. You must use a driver module like the A4988.
+
+<p align="center">
+  <img src="/images/components/openhw-stepper-motor_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This example uses the popular `AccelStepper` library to control an A4988 driver, which in turn controls the bipolar stepper motor.

@@ -18,11 +18,7 @@ slug: /components/openhw-tm1637-7segment
 
 <div class="component-preview">
   <div class="component-svg-wrap">
-    <svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="5" width="90" height="30" fill="var(--vp-c-bg-soft)" />
-      <rect x="10" y="8" width="80" height="24" fill="#0f172a" />
-      <text x="50" y="26" fill="#ef4444" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">12:34</text>
-    </svg>
+    <img src="/images/components/openhw-tm1637-7segment.svg" alt="TM1637 4-Digit Display" style="width:200px; height:100px; max-width: 250px; max-height: 125px" />
     <span style="font-size:11px;color:var(--vp-c-text-2);">TM1637 Module</span>
   </div>
   <div class="component-info">
@@ -53,11 +49,15 @@ While the protocol looks similar to I2C (using a clock and data line), it is act
 <tr><td><strong>color</strong></td><td><code>string</code></td><td><code>"red"</code></td><td>Color of the LED segments (e.g., "red", "green", "blue").</td></tr>
 </table>
 
-## Wiring Diagram (Arduino Uno)
-1. Connect **VCC** to **5V**.
-2. Connect **GND** to **GND**.
-3. Connect **CLK** to **D2**.
-4. Connect **DIO** to **D3**.
+## Wiring Diagram
+
+Connect the TM1637 display to the Arduino using two digital pins.
+
+<p align="center">
+  <img src="/images/components/openhw-tm1637-7segment_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
 
 ## Example Arduino Code
 This code uses the popular `TM1637Display` library to show numbers and toggle the center colon.
