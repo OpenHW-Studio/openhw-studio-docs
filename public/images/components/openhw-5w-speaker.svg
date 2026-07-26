@@ -1,0 +1,22 @@
+<svg width="75" height="90" viewBox="0 0 75 90" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+    <g transform="translate(37.5, 37.5)">
+        <!-- Speaker Frame -->
+        <circle cx="0" cy="0" r="35" fill="#333" stroke="#555" stroke-width="2" />
+        <!-- Inner Cone -->
+        <circle cx="0" cy="0" r="28" fill="#222" />
+        <circle cx="0" cy="0" r="22" fill="#1a1a1a" />
+        <!-- Dust Cap -->
+        <circle cx="0" cy="0" r="9" fill="#111" />
+    </g>
+    
+    <!-- Terminal legs from body to pins -->
+    <line x1="27" y1="72" x2="30" y2="90" stroke="#cc0000" stroke-width="1.5" />
+    <line x1="48" y1="72" x2="45" y2="90" stroke="#0000cc" stroke-width="1.5" />
+    
+    <!-- Terminal pads at pin positions -->
+    <circle cx="30" cy="90" r="3" fill="#cc0000" stroke="#900" stroke-width="0.5" />
+    <circle cx="45" cy="90" r="3" fill="#0000cc" stroke="#009" stroke-width="0.5" />
+    
+    <text x="30" y="85" fill="#fff" font-size="6" text-anchor="middle">+</text>
+    <text x="45" y="85" fill="#fff" font-size="6" text-anchor="middle">−</text>
+</svg>

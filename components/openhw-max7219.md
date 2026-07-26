@@ -1,0 +1,114 @@
+---
+title: "MAX7219 Dot Matrix"
+description: "An 8x8 LED dot matrix display module driven by the MAX7219 IC."
+slug: /components/openhw-max7219
+---
+
+<div class="custom-breadcrumb">
+  <a href="/docs/">Home</a> &gt; 
+  <a href="/docs/components/">Components</a> &gt; 
+  <a href="/docs/components/catalog?category=Displays">Displays</a> &gt; 
+  <span>MAX7219 Dot Matrix</span>
+</div>
+
+# MAX7219 Dot Matrix
+<p class="subtitle">An 8x8 LED matrix display powered by the MAX7219 driver chip, easily cascaded for larger displays.</p>
+
+## Component Preview
+
+<div class="component-preview">
+  <div class="component-svg-wrap">
+    <img src="/images/components/openhw-max7219-matrix.svg" alt="MAX7219 Dot Matrix" style="width:180px; height:120px; max-width: 100%; max-height: 150px" />
+    <span style="font-size:11px;color:var(--vp-c-text-2);">MAX7219</span>
+  </div>
+  <div class="component-info">
+    <p>The MAX7219 module simplifies the process of controlling a grid of 64 individual LEDs (8x8). Using an SPI-like serial interface, you only need 3 data pins to control the entire matrix. Multiple modules can be daisy-chained together for scrolling text displays.</p>
+    <div>
+      <span class="tag">Displays</span>
+      <span class="tag">Matrix</span>
+      <span class="tag">SPI</span>
+    </div>
+  </div>
+</div>
+
+## Overview
+Driving 64 LEDs individually would require 64 pins, or at least 16 pins with complex multiplexing logic in code. The MAX7219 chip handles all the multiplexing, refreshing, and current-limiting for you.
+
+## Pin Reference
+<table class="pin-table">
+<tr><th>Pin</th><th>Type</th><th>Description</th></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type power">power</span></td><td>Power Supply. Connect to Arduino 5V.</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type power">power</span></td><td>Ground. Connect to Arduino GND.</td></tr>
+<tr><td><span class="pin-name">DIN</span></td><td><span class="pin-type input">input</span></td><td>Data In (SPI MOSI). Connect to Arduino D11 (or another digital pin).</td></tr>
+<tr><td><span class="pin-name">CS</span></td><td><span class="pin-type input">input</span></td><td>Chip Select / Load. Connect to Arduino D10 (or another digital pin).</td></tr>
+<tr><td><span class="pin-name">CLK</span></td><td><span class="pin-type input">input</span></td><td>Clock (SPI SCK). Connect to Arduino D13 (or another digital pin).</td></tr>
+<tr><td><span class="pin-name">VCC_OUT</span></td><td><span class="pin-type power">power</span></td><td>Passed-through VCC for daisy-chaining the next module.</td></tr>
+<tr><td><span class="pin-name">GND_OUT</span></td><td><span class="pin-type power">power</span></td><td>Passed-through GND for daisy-chaining.</td></tr>
+<tr><td><span class="pin-name">DOUT</span></td><td><span class="pin-type output">output</span></td><td>Data Out. Connect to `DIN` of the next matrix module.</td></tr>
+<tr><td><span class="pin-name">CS_OUT</span></td><td><span class="pin-type output">output</span></td><td>Passed-through Chip Select for the next module.</td></tr>
+<tr><td><span class="pin-name">CLK_OUT</span></td><td><span class="pin-type output">output</span></td><td>Passed-through Clock for the next module.</td></tr>
+</table>
+
+## Configurable Attributes
+<table class="attrs-table">
+<tr><th>Attribute</th><th>Type</th><th>Default</th><th>Description</th></tr>
+<tr><td><strong>color</strong></td><td><code>string</code></td><td><code>red</code></td><td>The color of the LEDs in the simulator (e.g., `red`, `green`, `blue`).</td></tr>
+</table>
+
+## Wiring Diagram
+
+<p align="center">
+  <img src="/images/components/openhw-max7219-matrix_wiring.png" alt="Wiring Diagram" style="max-width: 100%; border-radius: 8px; margin: 20px 0;" />
+</p>
+
+<TryInSimulator />
+
+## Example Arduino Code
+This example uses the popular `LedControl` library to draw an 'X' pattern on the matrix. Install it via the Library Manager.
+
+```cpp
+#include <LedControl.h>
+
+// LedControl(DataIn, CLK, CS, numDevices)
+LedControl lc = LedControl(11, 13, 10, 1);
+
+void setup() {
+  // Wake up the MAX7219 from power-saving mode
+  lc.shutdown(0, false);
+  
+  // Set brightness to a medium value (0-15)
+  lc.setIntensity(0, 8);
+  
+  // Clear the display
+  lc.clearDisplay(0);
+  
+  // Draw an 'X' shape
+  // setRow(device_index, row_index, binary_data)
+  lc.setRow(0, 0, 0b10000001);
+  lc.setRow(0, 1, 0b01000010);
+  lc.setRow(0, 2, 0b00100100);
+  lc.setRow(0, 3, 0b00011000);
+  lc.setRow(0, 4, 0b00011000);
+  lc.setRow(0, 5, 0b00100100);
+  lc.setRow(0, 6, 0b01000010);
+  lc.setRow(0, 7, 0b10000001);
+}
+
+void loop() {
+  // Display is static
+}
+```
+
+## Simulation Notes
+- You can chain multiple MAX7219 modules in the simulator by connecting `DOUT` of one to `DIN` of the next, passing along `CS`, `CLK`, `VCC`, and `GND`. Update `numDevices` in the `LedControl` constructor accordingly.
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vp-c-divider);">
+  <div>
+    <a href="/docs/components/openhw-logic-analyzer" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">&larr; Previous: Logic Analyzer</a>
+  </div>
+  <div>
+    <a href="/docs/components/openhw-membrane-keypad" style="text-decoration: none; color: var(--vp-c-brand); font-weight: 600;">Next: Membrane Keypad &rarr;</a>
+  </div>
+</div>

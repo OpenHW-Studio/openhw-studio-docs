@@ -1,0 +1,184 @@
+<svg width="60.83662361046586" height="60.83662361046586" viewBox="0 0 60.83662361046586 60.83662361046586" xmlns="http://www.w3.org/2000/svg" style="display: block; overflow: visible;">
+    <!-- Connection Tab bridging the ring to the fixed pins at the bottom -->
+    <path d="M 5.418311805232928 60.83662361046586 L 55.41831180523293 60.83662361046586 L 45.41831180523293 53.33662361046586 L 15.418311805232928 53.33662361046586 Z" fill="#111827" stroke="#1f2937" stroke-width="1" />
+
+    <!-- Thick PCB Ring -->
+    <circle cx="30.41831180523293" cy="30.41831180523293" r="22.91831180523293" fill="none" stroke="#111827" stroke-width="12" />
+    <circle cx="30.41831180523293" cy="30.41831180523293" r="28.91831180523293" fill="none" stroke="#1f2937" stroke-width="0.5" />
+    <circle cx="30.41831180523293" cy="30.41831180523293" r="16.91831180523293" fill="none" stroke="#1f2937" stroke-width="0.5" />
+
+    <!-- Concentric Copper Traces -->
+    <circle cx="30.41831180523293" cy="30.41831180523293" r="25.91831180523293" fill="none" stroke="#ca8a04" stroke-width="0.5" opacity="0.3" />
+    <circle cx="30.41831180523293" cy="30.41831180523293" r="19.91831180523293" fill="none" stroke="#ca8a04" stroke-width="0.5" opacity="0.3" />
+
+    <!-- 5050 SMD LEDs -->
+    <g transform="rotate(0, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(22.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(45, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(67.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(90, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(112.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(135, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(157.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(180, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(202.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(225, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(247.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(270, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(292.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(315, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <g transform="rotate(337.5, 30.41831180523293, 30.41831180523293) translate(30.41831180523293, 7.5)">
+        <rect x="-3" y="-3" width="6" height="6" fill="#f1f5f9" rx="0.5" />
+        <rect x="-3.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="-3.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="-2" width="1" height="1" fill="#94a3b8" />
+        <rect x="2.5" y="1" width="1" height="1" fill="#94a3b8" />
+        <circle cx="0" cy="0" r="2.2" fill="#1f2937" />
+        <circle cx="0" cy="0" r="1.8" fill="#333" />
+    </g>
+    <!-- Fixed Header Pins -->
+    <g>
+        <circle cx="7.918311805232928" cy="60.83662361046586" r="3" fill="#ca8a04" />
+        <circle cx="7.918311805232928" cy="60.83662361046586" r="2" fill="#fef08a" />
+        <circle cx="7.918311805232928" cy="60.83662361046586" r="1" fill="#111" />
+        <text x="7.918311805232928" y="55.83662361046586" font-size="3.5" font-family="monospace" fill="#fff" font-weight="bold" text-anchor="middle">VCC</text>
+    </g>
+    <g>
+        <circle cx="22.91831180523293" cy="60.83662361046586" r="3" fill="#ca8a04" />
+        <circle cx="22.91831180523293" cy="60.83662361046586" r="2" fill="#fef08a" />
+        <circle cx="22.91831180523293" cy="60.83662361046586" r="1" fill="#111" />
+        <text x="22.91831180523293" y="55.83662361046586" font-size="3.5" font-family="monospace" fill="#fff" font-weight="bold" text-anchor="middle">GND</text>
+    </g>
+    <g>
+        <circle cx="37.91831180523293" cy="60.83662361046586" r="3" fill="#ca8a04" />
+        <circle cx="37.91831180523293" cy="60.83662361046586" r="2" fill="#fef08a" />
+        <circle cx="37.91831180523293" cy="60.83662361046586" r="1" fill="#111" />
+        <text x="37.91831180523293" y="55.83662361046586" font-size="3.5" font-family="monospace" fill="#fff" font-weight="bold" text-anchor="middle">DIN</text>
+    </g>
+    <g>
+        <circle cx="52.91831180523293" cy="60.83662361046586" r="3" fill="#ca8a04" />
+        <circle cx="52.91831180523293" cy="60.83662361046586" r="2" fill="#fef08a" />
+        <circle cx="52.91831180523293" cy="60.83662361046586" r="1" fill="#111" />
+        <text x="52.91831180523293" y="55.83662361046586" font-size="3.5" font-family="monospace" fill="#fff" font-weight="bold" text-anchor="middle">DOUT</text>
+    </g>
+</svg>

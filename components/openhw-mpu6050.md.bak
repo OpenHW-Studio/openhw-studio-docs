@@ -1,0 +1,793 @@
+---
+title: "MPU6050 IMU Sensor"
+---
+
+
+<div class="custom-breadcrumb">
+  <a href="/docs/">Home</a> &gt; 
+  <a href="/docs/components/">Components</a> &gt; 
+  <a href="/docs/components/catalog?category=Sensors">Sensors</a> &gt; 
+  <span>MPU6050 IMU Sensor</span>
+</div>
+
+
+<div class="component-header">
+  <div class="component-visual" v-pre>
+    <svg width="21.6mm" height="16.2mm" clip-rule="evenodd" fill-rule="evenodd" version="1.1" viewBox="0 0 81.6 61.2" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="pin-pattern" height="2.1" width="14" patternUnits="userSpaceOnUse">
+            <path d=" m2.09 1.32c0.124 0 0.243-0.049 0.331-0.137 0.086-0.086 0.137-0.206 0.137-0.33v-0.387c0-0.124-0.050-0.242-0.137-0.33-0.087-0.087-0.207-0.137-0.331-0.137h-1.62v1.32z" fill="#f5f9f0"></path>
+          </pattern>
+        </defs>
+
+        
+        <path d="m81.6 0h-81.6v61.2h81.6zm-10 44.9c3.8 0 6.88 3.08 6.88 6.88 0 3.8-3.08 6.89-6.88 6.89-3.8 0-6.89-3.09-6.89-6.89 0-3.8 3.09-6.88 6.89-6.88zm-61.6 0c3.8 0 6.89 3.08 6.89 6.88 0 3.8-3.09 6.89-6.89 6.89-3.8 0-6.88-3.09-6.88-6.89 0-3.8 3.08-6.88 6.88-6.88zm-2.74-41.9c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8-2.8-1.26-2.8-2.8 1.26-2.81 2.8-2.81zm19.2 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm-9.58 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm19.2 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm9.58 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81zm19.2 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8-2.81-1.26-2.81-2.8 1.26-2.81 2.81-2.81zm-9.58 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81zm19.2 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81z" fill="#16619d"></path>
+
+        
+        <g fill="#fefdf4">
+          <rect x="74.5" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="67.8" y="33" width="2.01" height="4.81"></rect>
+          <rect x="71.2" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="67.8" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="74.5" y="33" width="2.01" height="4.81"></rect>
+        </g>
+        <g fill="#31322e">
+          <rect x="74.5" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="67.8" y="33" width="2.01" height="2.4"></rect>
+          <rect x="71.2" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="67.8" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="74.5" y="33" width="2.01" height="2.4"></rect>
+        </g>
+
+        
+        <g fill="#e5e5e5">
+          <rect x="12" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="17.7" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="56.5" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="51.2" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="17.7" y="35.6" width="3.83" height="9.3"></rect>
+          <rect x="23.3" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="62.2" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="51.2" y="35.8" width="3.83" height="9.3"></rect>
+          <rect x="56.9" y="35.8" width="3.83" height="9.3"></rect>
+        </g>
+        <path d="m76 42.6v-3.13h-7.59v3.13z" fill="#fefdf4"></path>
+        <rect x="23.1" y="35.6" width="3.83" height="9.3" fill="#e5e5e5"></rect>
+
+        <g fill="#26232b">
+          <rect x="17.7" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="56.5" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="51.2" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="17.7" y="37.7" width="3.83" height="5.31"></rect>
+        </g>
+        <g fill="#d8c18d">
+          <rect x="23.3" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="62.2" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="51.2" y="37.8" width="3.83" height="5.31"></rect>
+          <rect x="56.9" y="37.8" width="3.83" height="5.31"></rect>
+          <path d="m74.3 42.6v-3.13h-4.33v3.13z"></path>
+        </g>
+        <g>
+          <rect x="23.1" y="37.7" width="3.83" height="5.31" fill="#a06352"></rect>
+          <rect x="31.8" y="47.1" width="15.6" height="6.03" fill="#f3c338"></rect>
+          <rect x="67.3" y="27.9" width="9.76" height="5.28" fill="#010303"></rect>
+        </g>
+
+        
+        <rect transform="translate(47,26)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(32.3,40) rotate(180)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(46.5,40.7) rotate(90)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(32.3,26) rotate(270)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect x="31.8" y="25.4" width="15.6" height="15.6"></rect>
+
+        
+        <rect x="12" y="23.4" width="3.83" height="5.31" fill="#f5ecde"></rect>
+        <filter id="ledFilter" x="-0.8" y="-0.8" height="5.2" width="5.8">
+          <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        </filter>
+        false
+
+        
+        <g fill="none" stroke="#d0ae88" stroke-width=".648px">
+          <circle cx="64.8" cy="5.78" r="2.81"></circle>
+          <circle cx="55.2" cy="5.78" r="2.81"></circle>
+          <circle cx="45.6" cy="5.78" r="2.81"></circle>
+          <circle cx="36" cy="5.78" r="2.81"></circle>
+          <circle cx="26.4" cy="5.78" r="2.81"></circle>
+          <circle cx="16.9" cy="5.78" r="2.81"></circle>
+          <circle cx="7.28" cy="5.78" r="2.81"></circle>
+          <circle cx="74.4" cy="5.78" r="2.81"></circle>
+        </g>
+
+        
+        <text transform="rotate(90)" fill="#ffffff" font-family="sans-serif" font-size="3.6px" x="10.056">
+          <tspan x="10.056" y="-6">INT</tspan>
+          <tspan x="10.056" y="-15.5">AD0</tspan>
+          <tspan x="10.056" y="-25.157">XCL</tspan>
+          <tspan x="10.056" y="-34.5">XDA</tspan>
+          <tspan x="10.056" y="-44.38">SDA</tspan>
+          <tspan x="9.911" y="-54">SCL</tspan>
+          <tspan x="10.057" y="-63.54">GND</tspan>
+          <tspan x="10.057" y="-73">VCC</tspan>
+        </text>
+      </svg>
+  </div>
+  <div class="component-meta">
+    <h1>MPU6050 IMU Sensor</h1>
+    <p class="subtitle">OpenHW Studio Simulator Component</p>
+  </div>
+</div>
+
+<div v-pre>
+<h1>MPU6050 IMU Sensor</h1>
+<p class="subtitle">A 6-DOF (Degrees of Freedom) Inertial Measurement Unit featuring a 3-axis accelerometer and a 3-axis gyroscope. Communicates via I2C. Essential for motion tracking and balancing robots.</p>
+<div class="preview-card">
+  <div class="preview-svg-col">
+    <svg width="21.6mm" height="16.2mm" clip-rule="evenodd" fill-rule="evenodd" version="1.1" viewBox="0 0 81.6 61.2" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="pin-pattern" height="2.1" width="14" patternUnits="userSpaceOnUse">
+            <path d=" m2.09 1.32c0.124 0 0.243-0.049 0.331-0.137 0.086-0.086 0.137-0.206 0.137-0.33v-0.387c0-0.124-0.050-0.242-0.137-0.33-0.087-0.087-0.207-0.137-0.331-0.137h-1.62v1.32z" fill="#f5f9f0"></path>
+          </pattern>
+        </defs>
+
+        
+        <path d="m81.6 0h-81.6v61.2h81.6zm-10 44.9c3.8 0 6.88 3.08 6.88 6.88 0 3.8-3.08 6.89-6.88 6.89-3.8 0-6.89-3.09-6.89-6.89 0-3.8 3.09-6.88 6.89-6.88zm-61.6 0c3.8 0 6.89 3.08 6.89 6.88 0 3.8-3.09 6.89-6.89 6.89-3.8 0-6.88-3.09-6.88-6.89 0-3.8 3.08-6.88 6.88-6.88zm-2.74-41.9c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8-2.8-1.26-2.8-2.8 1.26-2.81 2.8-2.81zm19.2 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm-9.58 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm19.2 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm9.58 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81zm19.2 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8-2.81-1.26-2.81-2.8 1.26-2.81 2.81-2.81zm-9.58 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81zm19.2 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81z" fill="#16619d"></path>
+
+        
+        <g fill="#fefdf4">
+          <rect x="74.5" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="67.8" y="33" width="2.01" height="4.81"></rect>
+          <rect x="71.2" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="67.8" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="74.5" y="33" width="2.01" height="4.81"></rect>
+        </g>
+        <g fill="#31322e">
+          <rect x="74.5" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="67.8" y="33" width="2.01" height="2.4"></rect>
+          <rect x="71.2" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="67.8" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="74.5" y="33" width="2.01" height="2.4"></rect>
+        </g>
+
+        
+        <g fill="#e5e5e5">
+          <rect x="12" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="17.7" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="56.5" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="51.2" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="17.7" y="35.6" width="3.83" height="9.3"></rect>
+          <rect x="23.3" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="62.2" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="51.2" y="35.8" width="3.83" height="9.3"></rect>
+          <rect x="56.9" y="35.8" width="3.83" height="9.3"></rect>
+        </g>
+        <path d="m76 42.6v-3.13h-7.59v3.13z" fill="#fefdf4"></path>
+        <rect x="23.1" y="35.6" width="3.83" height="9.3" fill="#e5e5e5"></rect>
+
+        <g fill="#26232b">
+          <rect x="17.7" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="56.5" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="51.2" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="17.7" y="37.7" width="3.83" height="5.31"></rect>
+        </g>
+        <g fill="#d8c18d">
+          <rect x="23.3" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="62.2" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="51.2" y="37.8" width="3.83" height="5.31"></rect>
+          <rect x="56.9" y="37.8" width="3.83" height="5.31"></rect>
+          <path d="m74.3 42.6v-3.13h-4.33v3.13z"></path>
+        </g>
+        <g>
+          <rect x="23.1" y="37.7" width="3.83" height="5.31" fill="#a06352"></rect>
+          <rect x="31.8" y="47.1" width="15.6" height="6.03" fill="#f3c338"></rect>
+          <rect x="67.3" y="27.9" width="9.76" height="5.28" fill="#010303"></rect>
+        </g>
+
+        
+        <rect transform="translate(47,26)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(32.3,40) rotate(180)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(46.5,40.7) rotate(90)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(32.3,26) rotate(270)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect x="31.8" y="25.4" width="15.6" height="15.6"></rect>
+
+        
+        <rect x="12" y="23.4" width="3.83" height="5.31" fill="#f5ecde"></rect>
+        <filter id="ledFilter" x="-0.8" y="-0.8" height="5.2" width="5.8">
+          <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        </filter>
+        false
+
+        
+        <g fill="none" stroke="#d0ae88" stroke-width=".648px">
+          <circle cx="64.8" cy="5.78" r="2.81"></circle>
+          <circle cx="55.2" cy="5.78" r="2.81"></circle>
+          <circle cx="45.6" cy="5.78" r="2.81"></circle>
+          <circle cx="36" cy="5.78" r="2.81"></circle>
+          <circle cx="26.4" cy="5.78" r="2.81"></circle>
+          <circle cx="16.9" cy="5.78" r="2.81"></circle>
+          <circle cx="7.28" cy="5.78" r="2.81"></circle>
+          <circle cx="74.4" cy="5.78" r="2.81"></circle>
+        </g>
+
+        
+        <text transform="rotate(90)" fill="#ffffff" font-family="sans-serif" font-size="3.6px" x="10.056">
+          <tspan x="10.056" y="-6">INT</tspan>
+          <tspan x="10.056" y="-15.5">AD0</tspan>
+          <tspan x="10.056" y="-25.157">XCL</tspan>
+          <tspan x="10.056" y="-34.5">XDA</tspan>
+          <tspan x="10.056" y="-44.38">SDA</tspan>
+          <tspan x="9.911" y="-54">SCL</tspan>
+          <tspan x="10.057" y="-63.54">GND</tspan>
+          <tspan x="10.057" y="-73">VCC</tspan>
+        </text>
+      </svg>
+    <span class="preview-svg-label">6-DOF IMU</span>
+  </div>
+  <div class="preview-text">
+    <p>The MPU6050 tracks linear acceleration and angular velocity. The on-board Digital Motion Processor (DMP) can fuse this data to provide precise roll, pitch, and yaw angles.</p>
+    <p>In OpenHW Studio, the sensor features a <strong>Live Data HUD</strong>. Right-click the component on the canvas during simulation to manipulate gravity, rotation speed, and temperature in real-time.</p>
+    <div class="tags"><span class="tag">I2C Interface</span><span class="tag">Accelerometer</span><span class="tag">Gyroscope</span><span class="tag">Temperature</span></div>
+  </div>
+</div>
+<h2>Pin Reference</h2>
+<table>
+  <tbody><tr><th>Pin</th><th>Type</th><th>Description</th></tr>
+  <tr><td>VCC</td><td>Input</td><td>Power supply. Typically works on 3.3V or 5V (board has LDO regulator).</td></tr>
+<tr><td>GND</td><td>Input</td><td>Ground. Connect to Arduino GND.</td></tr>
+<tr><td>SCL</td><td>Input</td><td>I2C Clock. Connect to Arduino A5.</td></tr>
+<tr><td>SDA</td><td>Bidirectional</td><td>I2C Data. Connect to Arduino A4.</td></tr>
+<tr><td>XDA / XCL</td><td>Bidirectional</td><td>Auxiliary I2C lines to connect external magnetometers (optional).</td></tr>
+<tr><td>ADO</td><td>Input</td><td>I2C Address Select. LOW = 0x68 (Default). HIGH = 0x69.</td></tr>
+<tr><td>INT</td><td>Output</td><td>Interrupt pin. Used when DMP data is ready (optional).</td></tr>
+</tbody></table>
+<div class="try-section">
+  <h3>► Try it in the Simulator</h3>
+  <p class="try-desc">MPU6050 connected to the I2C bus. Right-click the IMU to open the control panel and change its spatial orientation.</p>
+  <div class="circuit-box">
+    <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="wire-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow></feDropShadow>
+    </filter>
+  </defs>
+
+  
+  <g transform="translate(50, 100) scale(4)">
+    
+        <defs>
+          <g id="led-body" fill="#eee">
+            <rect x="0" y="0" height="1.2" width="2.6" fill="#c6c6c6"></rect>
+            <rect x="0.6" y="-0.1" width="1.35" height="1.4" stroke="#aaa" stroke-width="0.05"></rect>
+          </g>
+        </defs>
+
+        <filter id="ledFilter" x="-0.8" y="-0.8" height="2.2" width="2.8">
+          <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+        </filter>
+
+        
+  <pattern id="pins-female" width="2.54" height="2.54" patternUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="2.54" height="2.54" fill="#333"></rect>
+    <rect x="1.079" y="0.896" width="0.762" height="0.762" style="fill: #191919"></rect>
+    <path transform="translate(1.079, 1.658) rotate(180 0 0)" d="m 0 0 v 0.762 l 0.433,0.433 c 0.046,-0.046 0.074,-0.109 0.074,-0.179 v -1.27 c 0,-0.070 -0.028,-0.133 -0.074,-0.179 z" style="opacity: 0.25"></path>
+    <path transform="translate(1.841, 1.658) rotate(90 0 0)" d="m 0 0 v 0.762 l 0.433,0.433 c 0.046,-0.046 0.074,-0.109 0.074,-0.179 v -1.27 c 0,-0.070 -0.028,-0.133 -0.074,-0.179 z" style="opacity: 0.3; fill: #fff"></path>
+    <path transform="translate(1.841, 0.896)" d="m 0 0 v 0.762 l 0.433,0.433 c 0.046,-0.046 0.074,-0.109 0.074,-0.179 v -1.27 c 0,-0.070 -0.028,-0.133 -0.074,-0.179 z" style="opacity: 0.15; fill: #fff"></path>
+    <path transform="translate(1.079, 0.896) rotate(270 0 0)" d="m 0 0 v 0.762 l 0.433,0.433 c 0.046,-0.046 0.074,-0.109 0.074,-0.179 v -1.27 c 0,-0.070 -0.028,-0.133 -0.074,-0.179 z" style="opacity: 0.35"></path>
+  </pattern>
+
+
+        <pattern id="pin-male" width="2.54" height="4.80" patternUnits="userSpaceOnUse">
+          <rect ry="0.3" rx="0.3" width="2.12" height="4.80" fill="#565656"></rect>
+          <ellipse cx="1" cy="1.13" rx="0.5" ry="0.5" fill="#aaa"></ellipse>
+          <ellipse cx="1" cy="3.67" rx="0.5" ry="0.5" fill="#aaa"></ellipse>
+        </pattern>
+
+        <pattern id="mcu-leads" width="2.54" height="0.508" patternUnits="userSpaceOnUse">
+          <path d="M 0.254,0 C 0.114,0 0,0.114 0,0.254 v 0 c 0,0.139 0,0.253 0,0.253 h 1.523 c 0,0 0,-0.114 0,-0.253 v 0 C 1.523,0.114 1.409,0 1.269,0 Z" fill="#ddd"></path>
+        </pattern>
+
+        
+        <path d="m0.999 0a1 1 0 0 0-0.999 0.999v51.34a1 1 0 0 0 0.999 0.999h64.04a1 1 0 0 0 0.999-0.999v-1.54l2.539-2.539v-32.766l-2.539-2.539v-11.43l-1.524-1.523zm14.078 0.835h0.325l0.212 0.041h0l0.105 0.021 0.300 0.124 0.270 0.180 0.229 0.229 0.180 0.270 0.017 0.042 0.097 0.234 0.01 0.023 0.050 0.252 0.013 0.066v0.325l-0.063 0.318-0.040 0.097-0.083 0.202-0 0.001-0.180 0.270-0.229 0.229-0.270 0.180-0.300 0.124-0.106 0.020-0.212 0.042h-0.325l-0.212-0.042-0.106-0.020-0.300-0.124-0.270-0.180-0.229-0.229-0.180-0.270-0 -0.001-0.083-0.202-0.040-0.097-0.063-0.318v-0.325l0.013-0.066 0.050-0.252 0.01-0.023 0.097-0.234 0.017-0.042 0.180-0.270 0.229-0.229 0.270-0.180 0.300-0.124 0.105-0.021zm50.799 15.239h0.325l0.212 0.042 0.105 0.021 0.300 0.124 0.270 0.180 0.229 0.229 0.180 0.270 0.014 0.035 0.110 0.264 0.01 0.051 0.053 0.267v0.325l-0.03 0.152-0.033 0.166-0.037 0.089-0.079 0.191-0 0.020-0.180 0.270-0.229 0.229-0.270 0.180-0.071 0.029-0.228 0.094-0.106 0.021-0.212 0.042h-0.325l-0.212-0.042-0.106-0.021-0.228-0.094-0.071-0.029-0.270-0.180-0.229-0.229-0.180-0.270-0 -0.020-0.079-0.191-0.036-0.089-0.033-0.166-0.030-0.152v-0.325l0.053-0.267 0.010-0.051 0.109-0.264 0.014-0.035 0.180-0.270 0.229-0.229 0.270-0.180 0.300-0.124 0.105-0.021zm0 27.94h0.325l0.180 0.036 0.138 0.027 0.212 0.087 0.058 0.024 0.029 0.012 0.270 0.180 0.229 0.229 0.180 0.270 0.124 0.300 0.063 0.319v0.325l-0.063 0.318-0.124 0.300-0.180 0.270-0.229 0.229-0.270 0.180-0.300 0.124-0.106 0.021-0.212 0.042h-0.325l-0.212-0.042-0.105-0.021-0.300-0.124-0.270-0.180-0.229-0.229-0.180-0.270-0.124-0.300-0.063-0.318v-0.325l0.063-0.319 0.124-0.300 0.180-0.270 0.229-0.229 0.270-0.180 0.029-0.012 0.058-0.024 0.212-0.087 0.137-0.027zm-52.07 5.080h0.325l0.212 0.041 0.106 0.021 0.300 0.124 0.270 0.180 0.229 0.229 0.121 0.182 0.058 0.087h0l0.114 0.275 0.01 0.023 0.063 0.318v0.325l-0.035 0.179-0.027 0.139-0.01 0.023-0.114 0.275h-0l-0.180 0.270-0.229 0.229-0.270 0.180-0.300 0.124-0.106 0.020-0.212 0.042h-0.325l-0.212-0.042-0.105-0.020-0.300-0.124-0.270-0.180-0.229-0.229-0.180-0.270-0.114-0.275-0.01-0.023-0.027-0.139-0.036-0.179v-0.325l0.063-0.318 0.01-0.023 0.114-0.275 0.058-0.087 0.121-0.182 0.229-0.229 0.270-0.180 0.300-0.124 0.105-0.021z" fill="#2b6b99"></path>
+
+        
+        <rect x="3.816" y="1.4125" width="6.2151" height="6.0268" fill="#9b9b9b"></rect>
+        <g fill="#e6e6e6">
+          <rect x="2.1368" y="1.954" width="1.695" height=".84994"></rect>
+          <rect x="2.121" y="3.8362" width="1.695" height=".84994"></rect>
+          <rect x="2.0974" y="5.8608" width="1.695" height=".84994"></rect>
+          <rect x="10.031" y="6.0256" width="1.695" height=".84994"></rect>
+          <rect x="10.008" y="1.9528" width="1.695" height=".84994"></rect>
+        </g>
+        <circle id="reset-button" cx="6.9619" cy="4.5279" r="1.5405" fill="#960000" stroke="#777" stroke-width="0.15" tabindex="0"></circle>
+
+        
+        <g style="fill:#b3b2b2;stroke:#b3b2b2;stroke-width:0.010">
+          <ellipse cx="3.84" cy="9.56" rx="1.12" ry="1.03"></ellipse>
+          <ellipse cx="3.84" cy="21.04" rx="1.12" ry="1.03"></ellipse>
+          <g fill="#000">
+            <rect width="11" height="11.93" x="-0.05" y="9.72" rx="0.2" ry="0.2" opacity="0.24"></rect>
+          </g>
+          <rect x="-4" y="9.37" height="11.85" width="14.46"></rect>
+          <rect x="-4" y="9.61" height="11.37" width="14.05" fill="#706f6f"></rect>
+          <rect x="-4" y="9.71" height="11.17" width="13.95" fill="#9d9d9c"></rect>
+        </g>
+
+        
+        <g stroke-width=".254" fill="black">
+          <path d="m-2.58 48.53v2.289c0 0.279 0.228 0.508 0.508 0.508h1.722c0.279 0 0.508-0.228 0.508-0.508v-2.289z" fill="#252728" opacity=".3"></path>
+          <path d="m11.334 42.946c0-0.558-0.509-1.016-1.132-1.016h-10.043v9.652h10.043c0.622 0 1.132-0.457 1.132-1.016z" opacity=".3"></path>
+          <path d="m-2.072 40.914c-0.279 0-0.507 0.204-0.507 0.454v8.435c0 0.279 0.228 0.507 0.507 0.507h1.722c0.279 0 0.507-0.228 0.507-0.507v-8.435c0-0.249-0.228-0.454-0.507-0.454z"></path>
+          <path d="m-2.58 48.784v1.019c0 0.279 0.228 0.508 0.508 0.508h1.722c0.279 0 0.508-0.228 0.508-0.508v-1.019z" opacity=".3"></path>
+          <path d="m11.334 43.327c0.139 0 0.254 0.114 0.254 0.254v4.064c0 0.139-0.114 0.254-0.254 0.254"></path>
+          <path d="m11.334 42.438c0-0.558-0.457-1.016-1.016-1.016h-10.16v8.382h10.16c0.558 0 1.016-0.457 1.016-1.016z"></path>
+          <path d="m10.064 49.804h-9.906v-8.382h1.880c-1.107 0-1.363 1.825-1.363 3.826 0 1.765 1.147 3.496 3.014 3.496h6.374z" opacity=".3"></path>
+          <rect x="10.064" y="41.422" width=".254" height="8.382" fill="#ffffff" opacity=".2"></rect>
+          <path d="m10.318 48.744v1.059c0.558 0 1.016-0.457 1.016-1.016v-0.364c0 0.313-1.016 0.320-1.016 0.320z" opacity=".3"></path>
+        </g>
+
+        
+        <g transform="translate(17.497 1.27)">
+          <rect height="2.54" fill="url(#pins-female)" width="25.779999999999998"></rect>
+        </g>
+        <g transform="translate(44.421 1.27)">
+          <rect height="2.54" fill="url(#pins-female)" width="20.7"></rect>
+        </g>
+        <g transform="translate(26.641 49.53)">
+          <rect height="2.54" fill="url(#pins-female)" width="20.7"></rect>
+        </g>
+        <g transform="translate(49.501 49.53)">
+          <rect height="2.54" fill="url(#pins-female)" width="15.620000000000001"></rect>
+        </g>
+
+        
+        <g>
+          <path d="m64.932 41.627h-36.72c-0.209 0-0.379-0.170-0.379-0.379v-8.545c0-0.209 0.170-0.379 0.379-0.379h36.72c0.209 0 0.379 0.170 0.379 0.379v8.545c0 0.209-0.169 0.379-0.379 0.379z" fill="#292c2d"></path>
+          <path d="m65.019 40.397c0 0.279-0.228 0.508-0.508 0.508h-35.879c-0.279 0-0.507 0.025-0.507-0.254v-6.338c0-0.279 0.228-0.508 0.507-0.508h35.879c0.279 0 0.508 0.228 0.508 0.508z" opacity=".3"></path>
+          <path d="m65.019 40.016c0 0.279-0.228 0.508-0.508 0.508h-35.879c-0.279 0-0.507 0.448-0.507-0.508v-6.084c0-0.279 0.228-0.508 0.507-0.508h35.879c0.279 0 0.508 0.228 0.508 0.508z" fill="#3c4042"></path>
+          <rect transform="translate(29.205, 32.778)" fill="url(#mcu-leads)" height="0.508" width="35.56"></rect>
+          <rect transform="translate(29.205, 41.159) scale(1 -1)" fill="url(#mcu-leads)" height="0.508" width="35.56"></rect>
+          <g fill="#252728">
+            <circle cx="33.269" cy="36.847" r="1"></circle>
+            <circle cx="59.939" cy="36.847" r="1"></circle>
+            <path d="M65 38.05a1.13 1.13 0 010-2.26v2.27z"></path>
+          </g>
+        </g>
+
+        
+        <g transform="translate(14.1 4.4)">
+          <rect width="7" height="4.80" fill="url(#pin-male)"></rect>
+        </g>
+
+        <g transform="translate(63 27.2) rotate(270 0 0)">
+          <rect width="7" height="4.80" fill="url(#pin-male)"></rect>
+        </g>
+
+        
+        <g transform="translate(57.3, 16.21)">
+          <use xlink:href="#led-body"></use>
+          false
+        </g>
+
+        <text fill="#fff">
+          <tspan x="60.88" y="17.5">ON</tspan>
+        </text>
+
+        <g transform="translate(26.87,11.69)">
+          <use xlink:href="#led-body"></use>
+          false
+        </g>
+
+        <g transform="translate(26.9, 16.2)">
+          <use xlink:href="#led-body"></use>
+          false
+        </g>
+
+        <g transform="translate(26.9, 18.5)">
+          <use xlink:href="#led-body"></use>
+          false
+        </g>
+
+        <text fill="#fff" style="text-anchor: end">
+          <tspan x="26.5" y="13">L</tspan>
+          <tspan x="26.5" y="17.5">TX</tspan>
+          <tspan x="26.5" y="19.8">RX</tspan>
+          <tspan x="26.5" y="20">&nbsp;</tspan>
+        </text>
+
+        
+        <rect x="28.27" y="10.34" width="36.5" height="0.16" fill="#fff"></rect>
+        <text fill="#fff" style="font-weight: 900">
+          <tspan x="40.84" y="9.48">DIGITAL (PWM ~)</tspan>
+        </text>
+        <text transform="translate(22.6 4) rotate(270 0 0)" fill="#fff" style="font-size: 2px; text-anchor: end; font-family: monospace">
+          <tspan x="0" dy="2.54">AREF</tspan>
+          <tspan x="0" dy="2.54">GND</tspan>
+          <tspan x="0" dy="2.54">13</tspan>
+          <tspan x="0" dy="2.54">12</tspan>
+          <tspan x="0" dy="2.54">~11</tspan>
+          <tspan x="0" dy="2.54">~10</tspan>
+          <tspan x="0" dy="2.54">~9</tspan>
+          <tspan x="0" dy="2.54">8</tspan>
+          <tspan x="0" dy="4.08">7</tspan>
+          <tspan x="0" dy="2.54">~6</tspan>
+          <tspan x="0" dy="2.54">~5</tspan>
+          <tspan x="0" dy="2.54">4</tspan>
+          <tspan x="0" dy="2.54">~3</tspan>
+          <tspan x="0" dy="2.54">2</tspan>
+          <tspan x="0" dy="2.54">TX→1</tspan>
+          <tspan x="0" dy="2.54">RX←0</tspan>
+          <tspan x="0" dy="2.54">&nbsp;</tspan>
+        </text>
+
+        <rect x="33.90" y="42.76" width="12.84" height="0.16" fill="#fff"></rect>
+        <rect x="49.48" y="42.76" width="14.37" height="0.16" fill="#fff"></rect>
+        <text fill="#fff" style="font-weight: 900">
+          <tspan x="41" y="44.96">POWER</tspan>
+          <tspan x="53.5" y="44.96">ANALOG IN</tspan>
+        </text>
+        <text transform="translate(29.19 49) rotate(270 0 0)" fill="#fff" style="font-weight: 700">
+          <tspan x="0" dy="2.54">IOREF</tspan>
+          <tspan x="0" dy="2.54">RESET</tspan>
+          <tspan x="0" dy="2.54">3.3V</tspan>
+          <tspan x="0" dy="2.54">5V</tspan>
+          <tspan x="0" dy="2.54">GND</tspan>
+          <tspan x="0" dy="2.54">GND</tspan>
+          <tspan x="0" dy="2.54">Vin</tspan>
+          <tspan x="0" dy="4.54">A0</tspan>
+          <tspan x="0" dy="2.54">A1</tspan>
+          <tspan x="0" dy="2.54">A2</tspan>
+          <tspan x="0" dy="2.54">A3</tspan>
+          <tspan x="0" dy="2.54">A4</tspan>
+          <tspan x="0" dy="2.54">A5</tspan>
+          <tspan x="0" dy="2.54">&nbsp;</tspan>
+        </text>
+
+        
+        <path style="fill:none;stroke:#fff;stroke-width:1.03" d="m 34.21393,12.01079 c -1.66494,-0.13263 -3.06393,1.83547 -2.37559,3.36182 0.66469,1.65332 3.16984,2.10396 4.36378,0.77797 1.15382,-1.13053 1.59956,-2.86476 3.00399,-3.75901 1.43669,-0.9801 3.75169,-0.0547 4.02384,1.68886 0.27358,1.66961 -1.52477,3.29596 -3.15725,2.80101 -1.20337,-0.27199 -2.06928,-1.29866 -2.56193,-2.37788 -0.6046,-1.0328 -1.39499,-2.13327 -2.62797,-2.42367 -0.2191,-0.0497 -0.44434,-0.0693 -0.66887,-0.0691 z"></path>
+        <path style="fill:none;stroke:#fff;stroke-width:0.56" d="m 39.67829,14.37519 h 1.75141 m -0.89321,-0.8757 v 1.7514 m -7.30334,-0.8757 h 2.10166"></path>
+        <text x="31" y="20.2" style="font-size:2.8px;font-weight:bold;line-height:1.25;fill:#fff">
+          ARDUINO
+        </text>
+
+        <rect style="fill:none;stroke:#fff;stroke-width:0.1;stroke-dasharray:0.1, 0.1" width="11" height="5.45" x="45.19" y="11.83" rx="1" ry="1"></rect>
+
+        <text x="46.5" y="16" style="font-size:5px; line-height:1.25" fill="#fff">UNO</text>
+      
+  </g>
+
+  
+  <g transform="translate(420, 100) scale(4)">
+    
+        <defs>
+          <pattern id="pin-pattern" height="2.1" width="14" patternUnits="userSpaceOnUse">
+            <path d=" m2.09 1.32c0.124 0 0.243-0.049 0.331-0.137 0.086-0.086 0.137-0.206 0.137-0.33v-0.387c0-0.124-0.050-0.242-0.137-0.33-0.087-0.087-0.207-0.137-0.331-0.137h-1.62v1.32z" fill="#f5f9f0"></path>
+          </pattern>
+        </defs>
+
+        
+        <path d="m81.6 0h-81.6v61.2h81.6zm-10 44.9c3.8 0 6.88 3.08 6.88 6.88 0 3.8-3.08 6.89-6.88 6.89-3.8 0-6.89-3.09-6.89-6.89 0-3.8 3.09-6.88 6.89-6.88zm-61.6 0c3.8 0 6.89 3.08 6.89 6.88 0 3.8-3.09 6.89-6.89 6.89-3.8 0-6.88-3.09-6.88-6.89 0-3.8 3.08-6.88 6.88-6.88zm-2.74-41.9c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8-2.8-1.26-2.8-2.8 1.26-2.81 2.8-2.81zm19.2 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm-9.58 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm19.2 0c1.55 0 2.81 1.26 2.81 2.81s-1.26 2.8-2.81 2.8c-1.55 0-2.8-1.26-2.8-2.8s1.26-2.81 2.8-2.81zm9.58 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81zm19.2 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8-2.81-1.26-2.81-2.8 1.26-2.81 2.81-2.81zm-9.58 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81zm19.2 0c1.55 0 2.8 1.26 2.8 2.81s-1.26 2.8-2.8 2.8c-1.55 0-2.81-1.26-2.81-2.8s1.26-2.81 2.81-2.81z" fill="#16619d"></path>
+
+        
+        <g fill="#fefdf4">
+          <rect x="74.5" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="67.8" y="33" width="2.01" height="4.81"></rect>
+          <rect x="71.2" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="67.8" y="23.1" width="2.01" height="4.81"></rect>
+          <rect x="74.5" y="33" width="2.01" height="4.81"></rect>
+        </g>
+        <g fill="#31322e">
+          <rect x="74.5" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="67.8" y="33" width="2.01" height="2.4"></rect>
+          <rect x="71.2" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="67.8" y="25.5" width="2.01" height="2.4"></rect>
+          <rect x="74.5" y="33" width="2.01" height="2.4"></rect>
+        </g>
+
+        
+        <g fill="#e5e5e5">
+          <rect x="12" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="17.7" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="56.5" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="51.2" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="17.7" y="35.6" width="3.83" height="9.3"></rect>
+          <rect x="23.3" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="62.2" y="21.3" width="3.83" height="9.3"></rect>
+          <rect x="51.2" y="35.8" width="3.83" height="9.3"></rect>
+          <rect x="56.9" y="35.8" width="3.83" height="9.3"></rect>
+        </g>
+        <path d="m76 42.6v-3.13h-7.59v3.13z" fill="#fefdf4"></path>
+        <rect x="23.1" y="35.6" width="3.83" height="9.3" fill="#e5e5e5"></rect>
+
+        <g fill="#26232b">
+          <rect x="17.7" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="56.5" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="51.2" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="17.7" y="37.7" width="3.83" height="5.31"></rect>
+        </g>
+        <g fill="#d8c18d">
+          <rect x="23.3" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="62.2" y="23.4" width="3.83" height="5.31"></rect>
+          <rect x="51.2" y="37.8" width="3.83" height="5.31"></rect>
+          <rect x="56.9" y="37.8" width="3.83" height="5.31"></rect>
+          <path d="m74.3 42.6v-3.13h-4.33v3.13z"></path>
+        </g>
+        <g>
+          <rect x="23.1" y="37.7" width="3.83" height="5.31" fill="#a06352"></rect>
+          <rect x="31.8" y="47.1" width="15.6" height="6.03" fill="#f3c338"></rect>
+          <rect x="67.3" y="27.9" width="9.76" height="5.28" fill="#010303"></rect>
+        </g>
+
+        
+        <rect transform="translate(47,26)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(32.3,40) rotate(180)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(46.5,40.7) rotate(90)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect transform="translate(32.3,26) rotate(270)" width="5" height="14.5" fill="url(#pin-pattern)"></rect>
+        <rect x="31.8" y="25.4" width="15.6" height="15.6"></rect>
+
+        
+        <rect x="12" y="23.4" width="3.83" height="5.31" fill="#f5ecde"></rect>
+        <filter id="ledFilter" x="-0.8" y="-0.8" height="5.2" width="5.8">
+          <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        </filter>
+        false
+
+        
+        <g fill="none" stroke="#d0ae88" stroke-width=".648px">
+          <circle cx="64.8" cy="5.78" r="2.81"></circle>
+          <circle cx="55.2" cy="5.78" r="2.81"></circle>
+          <circle cx="45.6" cy="5.78" r="2.81"></circle>
+          <circle cx="36" cy="5.78" r="2.81"></circle>
+          <circle cx="26.4" cy="5.78" r="2.81"></circle>
+          <circle cx="16.9" cy="5.78" r="2.81"></circle>
+          <circle cx="7.28" cy="5.78" r="2.81"></circle>
+          <circle cx="74.4" cy="5.78" r="2.81"></circle>
+        </g>
+
+        
+        <text transform="rotate(90)" fill="#ffffff" font-family="sans-serif" font-size="3.6px" x="10.056">
+          <tspan x="10.056" y="-6">INT</tspan>
+          <tspan x="10.056" y="-15.5">AD0</tspan>
+          <tspan x="10.056" y="-25.157">XCL</tspan>
+          <tspan x="10.056" y="-34.5">XDA</tspan>
+          <tspan x="10.056" y="-44.38">SDA</tspan>
+          <tspan x="9.911" y="-54">SCL</tspan>
+          <tspan x="10.057" y="-63.54">GND</tspan>
+          <tspan x="10.057" y="-73">VCC</tspan>
+        </text>
+      
+  </g>
+
+  
+  
+
+  <g stroke-width="4" fill="none" filter="url(#wire-shadow)">
+    
+    <path></path>
+    
+    
+    <path></path>
+    
+    
+    <path></path>
+
+    
+    <path></path>
+  </g>
+</svg>
+  </div>
+  <button class="try-btn" onclick="openSimulator()">► &nbsp;Try in Simulator</button>
+</div>
+<h2>Example Code</h2>
+<p class="section-desc">Install the <strong>Adafruit_MPU6050</strong> library before running.</p>
+<div class="code-block">
+  <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre><span class="kw">#include</span> <span class="str">&lt;Adafruit_MPU6050.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;Adafruit_Sensor.h&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;Wire.h&gt;</span>
+Adafruit_MPU6050 mpu;
+<span class="kw">void</span> <span class="fn">setup</span>() {
+  Serial.<span class="fn">begin</span>(<span class="num">115200</span>);
+  <span class="kw">if</span> (!mpu.<span class="fn">begin</span>()) {
+    Serial.<span class="fn">println</span>(<span class="str">"Failed to find MPU6050"</span>);
+    <span class="kw">while</span> (<span class="num">1</span>);
+  }
+}
+<span class="kw">void</span> <span class="fn">loop</span>() {
+  sensors_event_t a, g, temp;
+  mpu.<span class="fn">getEvent</span>(&amp;a, &amp;g, &amp;temp);
+  Serial.<span class="fn">print</span>(<span class="str">"Acc X: "</span>); Serial.<span class="fn">print</span>(a.acceleration.x);
+  Serial.<span class="fn">print</span>(<span class="str">", Y: "</span>); Serial.<span class="fn">print</span>(a.acceleration.y);
+  Serial.<span class="fn">print</span>(<span class="str">", Z: "</span>); Serial.<span class="fn">println</span>(a.acceleration.z);
+  <span class="fn">delay</span>(<span class="num">500</span>);
+}</pre>
+</div>
+<div class="note">💡 Use the context menu during simulation to adjust XYZ forces in real time.</div>
+<script>
+function copyCode(btn) {
+  navigator.clipboard.writeText(btn.nextElementSibling.innerText).then(() => {
+    btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 2000);
+  });
+}
+function openSimulator() {
+  const code = ["#include <Adafruit_MPU6050.h>","#include <Adafruit_Sensor.h>","#include <Wire.h>","Adafruit_MPU6050 mpu;","void setup() { Serial.begin(115200); if (!mpu.begin()) while (1); }","void loop() { sensors_event_t a, g, temp; mpu.getEvent(&a, &g, &temp); Serial.print(\"X: \"); Serial.println(a.acceleration.x); delay(500); }"].join("\n"); 
+  const diagram = { 
+    version:1, 
+    board:"arduino_uno", 
+    components:[
+      {id:"uno_1",type:"openhw-arduino-uno",x:80,y:150,attrs:{}},
+      {id:"mpu_1",type:"openhw-mpu6050",x:420,y:130,attrs:{}}
+    ], 
+    connections:[
+      ["uno_1:5V","mpu_1:VCC","red",[]],
+      ["uno_1:GND.2","mpu_1:GND","black",[]],
+      ["uno_1:A4","mpu_1:SDA","yellow",[]],
+      ["uno_1:A5","mpu_1:SCL","blue",[]]
+    ], 
+    code 
+  }; 
+  window.open("http://localhost:5173/simulator?circuit="+encodeURIComponent(JSON.stringify(diagram)),"_blank");
+}
+</script>
+
+</div>
+
+<h2>Pin Reference</h2>
+<table class="pin-table">
+<tr><th>Pin</th><th>Type</th><th>Description</th></tr>
+<tr><td><span class="pin-name">INT</span></td><td><span class="pin-type output">output</span></td><td>Interrupt output</td></tr>
+<tr><td><span class="pin-name">AD0</span></td><td><span class="pin-type input">input</span></td><td>I2C Slave Address LSB</td></tr>
+<tr><td><span class="pin-name">XCL</span></td><td><span class="pin-type output">output</span></td><td>Auxiliary I2C Clock</td></tr>
+<tr><td><span class="pin-name">XDA</span></td><td><span class="pin-type bidirectional">bidirectional</span></td><td>Auxiliary I2C Data</td></tr>
+<tr><td><span class="pin-name">SDA</span></td><td><span class="pin-type bidirectional">bidirectional</span></td><td>I2C Data</td></tr>
+<tr><td><span class="pin-name">SCL</span></td><td><span class="pin-type input">input</span></td><td>I2C Clock</td></tr>
+<tr><td><span class="pin-name">GND</span></td><td><span class="pin-type input">input</span></td><td>Ground</td></tr>
+<tr><td><span class="pin-name">VCC</span></td><td><span class="pin-type input">input</span></td><td>Power (3.3V or 5V)</td></tr>
+</table>
+
+
+<h2>Attributes</h2>
+<table class="attrs-table">
+<tr><th>Attribute</th><th>Default</th><th>Description</th></tr>
+<tr><td><code>accelX</code></td><td><code>0</code></td><td>Configuration attribute for accelX</td></tr>
+<tr><td><code>accelY</code></td><td><code>0</code></td><td>Configuration attribute for accelY</td></tr>
+<tr><td><code>accelZ</code></td><td><code>1</code></td><td>Configuration attribute for accelZ</td></tr>
+<tr><td><code>gyroX</code></td><td><code>0</code></td><td>Configuration attribute for gyroX</td></tr>
+<tr><td><code>gyroY</code></td><td><code>0</code></td><td>Configuration attribute for gyroY</td></tr>
+<tr><td><code>gyroZ</code></td><td><code>0</code></td><td>Configuration attribute for gyroZ</td></tr>
+<tr><td><code>temperature</code></td><td><code>25</code></td><td>Configuration attribute for temperature</td></tr>
+</table>
+
+
+<h2>Example Code</h2>
+
+```cpp
+#include <Adafruit MPU6050.h>
+#include <Adafruit Unified Sensor.h>
+
+#include <Wire.h>
+#include <Adafruit_MPU6050.h>
+#include <Adafruit_Sensor.h>
+Adafruit_MPU6050 mpu_1;
+
+void setup() {
+  if (!mpu_1.begin()) {
+    Serial.println("Failed to find MPU6050 chip");
+    while (1);
+  }
+}
+
+void loop() {
+  sensors_event_t a_1, g_1, temp_1;
+  mpu_1.getEvent(&a_1, &g_1, &temp_1);
+  Serial.print("Accel X: "); Serial.println(a_1.acceleration.x);
+  delay(500);
+}
+```
+
+
+<style scoped>
+.custom-breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}
+.custom-breadcrumb a {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+}
+.custom-breadcrumb a:hover {
+  text-decoration: underline;
+}
+.custom-breadcrumb span { color: var(--vp-c-text-1); font-weight: 600; }
+
+.component-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.component-visual {
+  width: 150px;
+  height: 150px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.component-meta {
+  flex: 1;
+}
+
+.pin-table, .attrs-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.pin-table th, .attrs-table th {
+  text-align: left;
+}
+
+.pin-name {
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.pin-type {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.pin-type.digital { background: #3b82f622; color: #3b82f6; }
+.pin-type.analog { background: #10b98122; color: #10b981; }
+.pin-type.power { background: #ef444422; color: #ef4444; }
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: var(--vp-c-brand-dimm);
+  color: var(--vp-c-brand);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+  .subtitle { font-size: 16px; color: #718096; margin-bottom: 36px; border-bottom: 1px solid #2d3748; padding-bottom: 24px; }
+  .component-preview { display: flex; gap: 40px; align-items: flex-start; margin-bottom: 40px; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 32px; }
+  .component-svg-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; background: #111318; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; }
+  .component-info p { color: #a0aec0; font-size: 15px; margin-bottom: 16px; }
+  
+  .pin-table, .attrs-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  .pin-table th, .attrs-table th { background: #1a1f2e; color: #63b3ed; padding: 10px 14px; text-align: left; border: 1px solid #2d3748; }
+  .pin-table td, .attrs-table td { padding: 10px 14px; border: 1px solid #2d3748; color: #a0aec0; }
+  .pin-table tr:nth-child(even) td, .attrs-table tr:nth-child(even) td { background: #141824; }
+  .pin-name { font-family: monospace; color: #68d391; font-weight: 600; }
+  .pin-type { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+  .pin-type.input  { background: #1a365d; color: #63b3ed; }
+  .pin-type.output { background: #1c3d27; color: #68d391; }
+  .pin-type.power { background: #4a1a1a; color: #fc8181; }
+  .pin-type.analog { background: #4a3a1a; color: #f6ad55; }
+  .pin-type.digital { background: #1a365d; color: #63b3ed; }
+  .pin-type.pwm { background: #4a2a4a; color: #f687b3; }
+  
+  .code-block { background: #141824; border: 1px solid #2d3748; border-radius: 8px; padding: 20px 24px; font-family: 'Courier New', monospace; font-size: 13px; color: #e2e8f0; overflow-x: auto; margin-bottom: 20px; position: relative; }
+  .copy-btn { position: absolute; top: 10px; right: 10px; background: #2d3748; border: none; color: #a0aec0; padding: 4px 10px; border-radius: 4px; font-size: 11px; cursor: pointer; }
+  .copy-btn:hover { background: #4a5568; color: #fff; }
+  
+  .try-btn { display: inline-flex; align-items: center; gap: 8px; background: #2b6cb0; color: #fff; border: none; padding: 12px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; margin-top: 16px; }
+  .try-btn:hover { background: #3182ce; }
+  .try-btn svg { width: 18px; height: 18px; }
+  
+  .note { background: #1a2a1a; border-left: 4px solid #68d391; padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 20px; font-size: 14px; color: #9ae6b4; }
+  .warn { background: #2a1a00; border-left: 4px solid #f6ad55; padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 20px; font-size: 14px; color: #fbd38d; }
+  
+  .circuit-preview { background: #0d1117; border: 1px solid #2d3748; border-radius: 8px; padding: 20px; margin-top: 16px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
+</style>

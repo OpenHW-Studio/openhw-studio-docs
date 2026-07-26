@@ -1,0 +1,67 @@
+<svg width="220" height="70" viewBox="0 0 220 70" style="font-family: sans-serif; user-select: none;" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sensor PCB Base (Black) -->
+  <path d="M 25 15 L 55 15 L 75 25 L 210 25 C 215 25 215 45 210 45 L 75 45 L 55 55 L 25 55 Z" fill="#171717" />
+  
+  <!-- "MAX" Line -->
+  <path d="M 85 25 L 85 45" stroke="#737373" stroke-width="1.5" stroke-dasharray="2,2" />
+  <g fill="#a3a3a3" font-size="8" font-weight="bold" transform="rotate(-90, 80, 35)" text-anchor="middle">
+    <text x="80" y="35">MAX</text>
+  </g>
+
+  <!-- Probe Traces -->
+  <!-- Left Side traces (dark blue/gray) -->
+  <path d="M 90 27 L 160 27" stroke="#334155" stroke-width="2" />
+  <path d="M 90 31 L 160 31" stroke="#334155" stroke-width="2" />
+  <path d="M 90 35 L 160 35" stroke="#334155" stroke-width="2" />
+  <path d="M 90 39 L 160 39" stroke="#334155" stroke-width="2" />
+  <path d="M 90 43 L 160 43" stroke="#334155" stroke-width="2" />
+
+  <!-- Submerged Part (Blue transparent overlay to represent soil/moisture detection zone) -->
+  <path d="M 160 25 L 210 25 C 215 25 215 45 210 45 L 160 45 Z" fill="#0ea5e9" opacity="0.3" />
+  <path d="M 160 25 L 160 45" stroke="#38bdf8" stroke-width="1" opacity="0.6" />
+
+  <path d="M 160 27 L 200 27 C 205 27 205 43 200 43 L 160 43" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M 160 31 L 195 31 C 198 31 198 39 195 39 L 160 39" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M 160 35 L 190 35" stroke="#3b82f6" stroke-width="2" opacity="0.6" />
+
+  <!-- Electronics -->
+  <rect x="40" y="27" width="8" height="8" rx="1" fill="#262626" />
+  <!-- Chip pins -->
+  <rect x="38" y="28" width="2" height="1" fill="#a3a3a3" />
+  <rect x="38" y="30" width="2" height="1" fill="#a3a3a3" />
+  <rect x="38" y="33" width="2" height="1" fill="#a3a3a3" />
+  <rect x="48" y="28" width="2" height="1" fill="#a3a3a3" />
+  <rect x="48" y="30" width="2" height="1" fill="#a3a3a3" />
+  <rect x="48" y="33" width="2" height="1" fill="#a3a3a3" />
+
+  <!-- Tiny resistors -->
+  <rect x="35" y="22" width="3" height="1.5" fill="#a3a3a3" />
+  <rect x="42" y="20" width="3" height="1.5" fill="#a3a3a3" />
+  <rect x="48" y="22" width="3" height="1.5" fill="#a3a3a3" />
+
+  <!-- Labels -->
+  <g fill="#d4d4d4" font-size="6" font-weight="bold" text-anchor="middle">
+    <text x="45" y="22">Capacitive</text>
+    <text x="45" y="28">Soil Moisture</text>
+    <text x="45" y="45" font-size="5">v1.2</text>
+  </g>
+
+  <!-- Output Pins -->
+  <rect x="15" y="20" width="10" height="30" fill="#262626" />
+  
+  <text x="26" y="27" fill="#fff" font-size="7" font-weight="bold">GND</text>
+  <rect x="5" y="24" width="15" height="2" fill="#d4af37" />
+  <rect x="8" y="22" width="6" height="6" fill="#111" />
+  <circle cx="11" cy="25" r="1.5" fill="#eab308" />
+  
+  <text x="26" y="37" fill="#fff" font-size="7" font-weight="bold">VCC</text>
+  <rect x="5" y="34" width="15" height="2" fill="#d4af37" />
+  <rect x="8" y="32" width="6" height="6" fill="#111" />
+  <circle cx="11" cy="35" r="1.5" fill="#eab308" />
+  
+  <text x="26" y="47" fill="#fff" font-size="7" font-weight="bold">AOUT</text>
+  <rect x="5" y="44" width="15" height="2" fill="#d4af37" />
+  <rect x="8" y="42" width="6" height="6" fill="#111" />
+  <circle cx="11" cy="45" r="1.5" fill="#eab308" />
+
+</svg>

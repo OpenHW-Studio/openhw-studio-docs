@@ -8,6 +8,11 @@
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0"
+    "mermaid": "^11.16.0",
+    "vitepress": "^1.0.0",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
   }
 }
