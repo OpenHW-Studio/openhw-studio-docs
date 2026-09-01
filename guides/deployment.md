@@ -23,9 +23,11 @@ Before touching the server, we must configure GitHub to communicate securely wit
 2. Click **New repository secret** and add the following two secrets:
    * **Name:** `DOCKER_USERNAME` | **Secret:** Your Docker Hub username
    * **Name:** `DOCKER_PASSWORD` | **Secret:** Your Docker Hub password
-3. **Only in Frontend Repo:** Add one more secret:
+3. **Only in Frontend Repo:** Add secrets:
    * **Name:** `VITE_ADMIN_EMAILS` | **Secret:** `9661346164h@gmail.com,anotheradmin@gmail.com`
      *(You can add multiple emails by separating them with commas)*
+   * *(Optional)* **Name:** `VITE_EXAMPLES_BASE_URL` | **Secret:** `/api/examples`
+     *(Leave empty or set to `/api/examples` — do not set to `/examples`)*
 
 ### 3. Generate a GitHub Token (For your Backend `.env`)
 1. Click your profile picture (top right) > **Settings** > **Developer settings** > **Personal access tokens** > **Tokens (classic)**.
