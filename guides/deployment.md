@@ -120,6 +120,14 @@ You are now inside `/opt/openhw/backend`. Let's create the environment file.
    GITHUB_OWNER=OpenHW-Studio
    GITHUB_REPO_FRONTEND=OpenHW-studio-frontend
    GITHUB_REPO_BACKEND=openhw-studio-backend
+
+   # EMAIL / SMTP (OTP Verification)
+   SMTP_HOST=smtp.gmail.com
+   SMTP_PORT=587
+   SMTP_EMAIL=openhwservice@gmail.com
+   SMTP_PASSWORD=your_16_char_google_app_password
+   FROM_NAME=OpenHW Studio
+   FROM_EMAIL=openhwservice@gmail.com
    ```
 3. Save and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
 
