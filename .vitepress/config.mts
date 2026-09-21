@@ -47,6 +47,7 @@ export default withMermaid(defineConfig({
           { text: 'STM32 Architecture', link: '/architecture/stm32' },
           { text: 'Universal Grid Migration', link: '/architecture/universal_1x_grid_migration' },
           { text: 'Implementation Plan', link: '/architecture/implementation_plan' },
+          { text: 'TS vs WASM Components', link: '/architecture/ts-vs-wasm-components' },
           { text: 'ESP and STM32 Overview', link: '/esp and stm32' },
           { text: 'Display Worker', link: '/display worker' },
         ]
