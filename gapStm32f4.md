@@ -18,6 +18,17 @@ must import via `index.mjs` which injects SVD + WASM).
 
 ## Package gaps (needs package author or workaround)
 
+- [ ] **UART TX INVISIBLE (2026-10-02 probe): Arduino `Serial.println` on Disco
+      F407VG produces a working `.bin` (GPIO PD12 toggles, verified) but
+      `mcu._emu.drainUart()` returns `""` after 1.5M instructions for `Serial`,
+      `Serial1` (=`Serial`, alias), and `Serial2`. `usart1.onData`/`uartOutput`
+      never fire either. Hypothesis: STM32duino `Serial` on Disco maps to USB
+      CDC or a USART base the model doesn't capture (model default
+      `uart_addr = 0x40011000` = USART1; Disco Serial may use a different
+      USART or USB). NEED: which USART base (or USB path) does Disco Serial
+      use, and which `uart_addr` / model knob captures its TX? Workaround
+      until answered: F4 runner is GPIO-verified only; serial monitor for F4
+      stays empty.
 - [ ] Import path: `site/stm32f4.js` cannot be imported directly (throws on
       `bindings`). Package entry `index.mjs` works. Runner dynamic-imports the
       package entry — confirm this stays the supported path (browser/WW build?).
