@@ -5,30 +5,23 @@ Verified live: 2× `STM32F4.create({})` isolated via package entry
 (note: `site/stm32f4.js` direct import fails — `bindings` undefined —
 must import via `index.mjs` which injects SVD + WASM).
 
-## What the runner needs (OpenHW side implements)
+## What the runner needs (OpenHW side implements — DONE this change)
 
-- [ ] New board component needed: no `openhw-stm32f4` exists yet (only bluepill).
-      Owner to confirm board choice: STM32F407 Discovery vs Nucleo-F401RE vs
-      generic F407VE? Runner defaults `chip: 'stm32f407'`, attrs may override.
-- [ ] Decide Arduino `.bin/.hex/.elf` source: STM32duino core covers F4?
-      Confirm FQBN (e.g. `STMicroelectronics:stm32:GenF4`) + output format.
-- [ ] Confirm UART1 pins for chosen board (PA9 TX / PA10 RX typical) + LED pin
-      (PD12–PD15 on Discovery, PA5 on Nucleo) for GPIO/pin-watch bridge.
+- [x] All 5 chips wired: 4 new shells (`openhw-stm32f401`, `openhw-stm32f411`,
+      `openhw-stm32f407ve`, `openhw-stm32f429`) + existing `openhw-stm32f4`
+      (F407 Discovery default), each with `chip` manifest attr, per-board FQBN
+      (GenF4 BLACKPILL_F401CE/F411CE, BLACK_F407VE, Disco DISCO_F429ZI —
+      probed via `arduino-cli board details`), `chip` opt passthrough +
+      board-type-derived fallback, `execute.ts` routing for 401/411/429 aliases.
+- [x] Per-chip LEDs follow the package BOARD_LED map (401/411→PC13,
+      407→PD12, 407ve→PA6, 429→PG13 incl. explicit G-bank watch).
+- [x] Per-chip SVD vendored under
+      `public/vendor/board-engines/stm32f4-emu/site/vendor/` (401/407/411/429;
+      407ve shares the 407 SVD); runner fetches per-chip with F407 fallback.
 - [ ] WiFi/BLE/Ethernet: deferred — `ethInject`, `usb*`, `canInject` stay unwired.
 
 ## Package gaps (needs package author or workaround)
 
-- [ ] **UART TX INVISIBLE (2026-10-02 probe): Arduino `Serial.println` on Disco
-      F407VG produces a working `.bin` (GPIO PD12 toggles, verified) but
-      `mcu._emu.drainUart()` returns `""` after 1.5M instructions for `Serial`,
-      `Serial1` (=`Serial`, alias), and `Serial2`. `usart1.onData`/`uartOutput`
-      never fire either. Hypothesis: STM32duino `Serial` on Disco maps to USB
-      CDC or a USART base the model doesn't capture (model default
-      `uart_addr = 0x40011000` = USART1; Disco Serial may use a different
-      USART or USB). NEED: which USART base (or USB path) does Disco Serial
-      use, and which `uart_addr` / model knob captures its TX? Workaround
-      until answered: F4 runner is GPIO-verified only; serial monitor for F4
-      stays empty.
 - [ ] Import path: `site/stm32f4.js` cannot be imported directly (throws on
       `bindings`). Package entry `index.mjs` works. Runner dynamic-imports the
       package entry — confirm this stays the supported path (browser/WW build?).

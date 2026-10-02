@@ -13,7 +13,18 @@ Verified live: init/step/load_uf2/load_elf/write_uart/read_uart/set_gpio/get_gpi
       in frontend `public/firmware/` or fetch from backend `/compile/pico/micropython-uf2`?
 - [ ] Confirm ADC pin mapping GP26/27/28 + PWM slice mapping for runner GPIO bridge.
 - [ ] Confirm 2nd UART (uart1) pins used by default Arduino Serial1 config.
-- [ ] WiFi/BLE/Ethernet: deferred — `_wifi_enable/_bt_hci_enable/_w5500_*` stay unwired.
+- [x] WiFi (CYW43): `_picoemu_wifi_enable(0)` stub-mode wired this change for
+      Pico W / Pico 2 W (`openhw-pico-w`, `openhw-pico-2-w`, FQBN rpipicow/
+      rpipico2w) + `wirelessMode` attr. Fake DHCP/DNS in-emulator; live
+      gateway socket (`--gateway` path) stays deferred.
+- [x] Ethernet (W5500): `_picoemu_board_eth(1, live=0, spi)` wired this change
+      for `openhw-pico-eth` / `openhw-pico-2-eth` (FQBN wiznet_5500_evb_pico[_2],
+      CSn17/RSTn20/INTn21, `boardSpi` attr 0/1). Live proxy socket
+      (`--board-live`/`--net-w5500`) stays deferred.
+- [ ] BLE: `_bt_hci_enable` stays deferred (no HCI peer plumbing).
+- [ ] W6300 (pico-w6300): package board exists but arduino-pico has NO W6300
+      board entry (only W5500 `wiznet_5500_evb_pico[_2]`) — no compile target,
+      so no `openhw-pico-w6300` shell. Needs core support or custom FQBN.
 
 ## Package gaps (needs package author or workaround)
 
