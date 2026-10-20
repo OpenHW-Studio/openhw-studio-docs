@@ -125,8 +125,9 @@ TWAI-TX wedge.
 
 ## Wiring checklist (runner implements, no gaps)
 
-`new SimulatorWorker()` + `_onUART` → `init('ESP32', {flashSizeMB, mmuPages:64,
-strapValue:0x13, budget, wifi:{ssid,room,gatewayUrl}}, flash)` → `run()` +
+`new SimulatorWorker()` + `_onUART` → `init('ESP32', {board, flashSizeMB:4,
+mmuPages:64, strapValue:0x13, budget, [cpuFrequency],
+wifi:{ssid,bssid,channel,room,gatewayUrl}}, flash, rom)` → `run()` +
 timer `pollUart()` → `sendUart(str)`/`setPinInput(pin, level)` →
 `pressResetButton()` reset, `terminate()` stop, `readMemory/readMmio` debug,
 `step(n)` optional budget mode.
