@@ -27,7 +27,7 @@ holds a **gVisor virtual network** per room:
 | Room | `?sessionId=<room>` (the query string, not a header) |
 | Virtual net | `192.168.4.0/24` |
 | Gateway address | `192.168.4.1` (also the DNS resolver) |
-| DHCP | served by the gateway (gVisor) — the pool starts at `.2` and is **presence-based**, never count-based |
+| DHCP | served by the gateway (gVisor) — the allocator is a **MAC-keyed global counter** starting at `.2` (wraps at `.250` -> `.2`), shared by every room and every board on the box |
 | DNS | the gateway resolver at `192.168.4.1:53` (answers through the host resolver) + `8.8.8.8` reachable only via the host's internet path |
 | NAT | the gateway's NAT map (e.g. guest `10.150.211.85` → host `127.0.0.1:8092`) |
 
@@ -126,9 +126,11 @@ and polls `getWifiStats()` (throttled, gated on first UART flow) for
   what makes an AP-hosted server reachable from a joining STA.
   **Trade-off:** in such a room the gateway's own `.1` services — including
   the resolver it advertises — are **unreachable** from that room.
-* **The DHCP pool is global and drifts.** Lease numbers advance across rooms
-  and boards; never hardcode a lease number in a cell (use a static address
-  or assert only the `192.168.4.` prefix).
+* **The DHCP pool is a global counter and drifts.** The allocator is
+  MAC-keyed but the counter is **global** — it advances across rooms and
+  across every board on the box, and wraps at `.250`. Never hardcode a lease
+  number in a cell (use a static address, or assert only the `192.168.4.`
+  prefix).
 
 ## 5. Where the proofs live (frontend e2e cells)
 
