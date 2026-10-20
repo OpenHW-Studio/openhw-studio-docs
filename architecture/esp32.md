@@ -2,6 +2,23 @@
 
 This document explains the internal workings of the ESP32 emulation pipeline in the OpenHW Studio.
 
+> **Read this first (2026-10-20).** The pipeline described below is the
+> **legacy QEMU-era plan** (`qemu-system-xtensa` + injected
+> `SimulatorBridge` shim headers). The shipped ESP32 path is different: the
+> board runs on the **`esp32-emu` WASM engine** inside the frontend board
+> worker (`src/worker/runners/esp32-runner.ts`), with no QEMU subprocess and
+> no shim headers. This file is kept for the historical design; the current
+> per-engine contract lives in the frontend repo at
+> `vendor/emulator-hook-specs/esp32-emu.md`, and the current networking
+> design in [`./network-bringup.md`](./network-bringup.md).
+>
+> **Networking correction:** the "mocked WiFi interface that proxies network
+> requests to the host Node.js environment" described in §4 below is **not**
+> how networking works any more. There is no host-side HTTP proxy and no
+> in-emulator IP stack: the ESP32 engine dials the **unified gateway**
+> (`openhw-unified-gateway`) itself at boot and speaks raw Ethernet in the
+> virtual net `192.168.4.0/24`. See [`./network-bringup.md`](./network-bringup.md).
+
 ## Overview
 
 The ESP32 emulation relies on QEMU (`qemu-system-xtensa`) running in a Python subprocess, wrapped by Node.js controllers. It features a custom `SimulatorBridge` to intercept hardware calls and forward them to the frontend via WebSockets.
@@ -53,8 +70,17 @@ The ESP32 emulation framework currently intercepts and supports several hardware
    - Intercepts SPI transfers and emits frames like `>SPI:hex_data<`.
 
 4. **WiFi / Networking (`SimulatorWiFi.h`, `SimulatorWiFiClient.h`)**
-   - Provides a mocked WiFi interface that proxies network requests from the emulated ESP32 to the host Node.js environment.
-   - Translates emulated HTTP requests to actual requests performed by the backend server.
+   - *Legacy plan only — not the shipped path.* The plan was a mocked WiFi
+     interface that proxied network requests from the emulated ESP32 to the
+     host Node.js environment, translating emulated HTTP requests into
+     requests performed by the backend server.
+   - **Shipped path (2026-10-20):** the engine opens a WebSocket to the
+     unified gateway at boot and speaks raw Ethernet inside the virtual net.
+     The runner only passes `config.wifi {ssid, bssid, channel, room,
+     gatewayUrl}` and reads `getWifiStats()` back. Proof cells:
+     `tests/e2e/esp32-wifi-gateway.spec.js` (STA join + gateway DHCP:
+     `STATUS=3`, `IP=192.168.4.2`) and
+     `tests/e2e/esp32-cam-wifi-gateway.spec.js` (ESP32-CAM preset).
 
 5. **UART / Serial**
    - The standard `Serial.print()` is used as the underlying transport layer for the simulation protocol via UART0.

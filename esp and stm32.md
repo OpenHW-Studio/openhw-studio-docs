@@ -1,5 +1,14 @@
 # STM32 + Renode — Implementation Plan
 
+> **Historical plan (superseded).** This document describes the legacy
+> QEMU/Renode-based backend pipeline. The shipped ESP32 and STM32 paths run
+> the `esp32-emu` / `stm32f1-emu` / `stm32f4-emu` WASM engines inside the
+> frontend board worker — there is no QEMU subprocess, no Renode subprocess and
+> no `BackendProxyRunner`. Networking (which this plan never covered) is the
+> **unified gateway**; see
+> [Network bring-up (unified gateway)](/docs/architecture/network-bringup) and
+> [`./architecture/esp32.md`](./architecture/esp32.md). Kept for history.
+
 ## How the Existing ESP32 Pipeline Works (Reference)
 
 ```

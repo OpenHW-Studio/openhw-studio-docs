@@ -8,6 +8,31 @@ rc/gd32c8/gd32cb/gd32rb) + facade `usart1/2/3` + `usart{1,2,3}` confirmed in
 `pkg/stm32f1.js`; local `arduino-cli board details` confirms compile FQBNs
 (GenF1 pnums incl. MAPLEMINI_F103CB, Nucleo_64/NUCLEO_F103RB, GENERIC_F103RCTX).
 
+**Updated 2026-10-20** — the network line below is still correct (the F103 has
+no radio and no MAC, so the unified-gateway path does not apply to it). One
+new item is recorded: the **engine-sourcing inconsistency** for F1 (see
+ENGINE SOURCING below).
+
+## ENGINE SOURCING (known inconsistency, being fixed in its own lane)
+
+Engines now run from the **owner's local folders** in dev via `resolve.alias`
+in `OpenHW-studio-frontend/vite.config.js` (Pico → `rp2350/Pico-emu/web`,
+ESP32 → `esp32 emu/dist/sab`; F4 stays on the npm pair because the owner
+folder is mid-rebuild). npm-shaped import specifiers are preserved so the
+future npm flip is a root swap in two places only (`importEngine` in
+`src/worker/runners/arm-runner-base.ts` + the `resolve.alias` block).
+
+**F1 is mid-transition**: dev resolves the **npm** package, while the deploy
+mirror serves the owner's 19:31 engine bytes (`d1e69c28`) — i.e. dev and
+deploy run *different* F1 engines today. The inconsistency is being fixed in
+its own lane (F1 folder-first alias, matching the Pico/ESP32 pattern). Until
+that lands, **an F1 cell that passes in dev is not automatically proven on the
+deployed mirror** — say which bytes a cell ran against.
+
+**The engine repos are READ-ONLY for us** — the owner/another agent is
+actively making the engines faster. Engine changes are delivered as patch
+files for the owner to merge, never applied in place.
+
 ## What the runner needs (OpenHW side implements — DONE this change)
 
 - [x] All 8 chips wired: 7 new shells (`openhw-stm32f103cb`,
@@ -24,7 +49,11 @@ rc/gd32c8/gd32cb/gd32rb) + facade `usart1/2/3` + `usart{1,2,3}` confirmed in
       still applies the GD32 IDCODE via the chip opt. Needs owner decision
       if a real GD32 core/board package should replace the alias.
 - [ ] Confirm ADC pin mapping (PA0..PA7 → ADC1 ch0..7) for analog bridge.
-- [ ] WiFi/BLE/Ethernet: N/A on F103 (no radio) — nothing deferred.
+- [x] WiFi/BLE/Ethernet: **N/A on F103** (no radio, no MAC) — nothing
+      deferred. The F1 does not ride the unified-gateway path (that path is
+      raw Ethernet over a WebSocket; the F103 has neither an Ethernet MAC nor
+      a radio). See `architecture/network-bringup.md` for the path that does
+      apply.
 
 ## Package gaps (needs package author or workaround)
 

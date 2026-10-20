@@ -45,6 +45,7 @@ export default withMermaid(defineConfig({
           { text: 'Block Coding', link: '/architecture/block-coding' },
           { text: 'ESP32 Architecture', link: '/architecture/esp32' },
           { text: 'STM32 Architecture', link: '/architecture/stm32' },
+          { text: 'Network Bring-up (unified gateway)', link: '/architecture/network-bringup' },
           { text: 'Universal Grid Migration', link: '/architecture/universal_1x_grid_migration' },
           { text: 'Implementation Plan', link: '/architecture/implementation_plan' },
           { text: 'TS vs WASM Components', link: '/architecture/ts-vs-wasm-components' },

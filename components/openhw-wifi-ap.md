@@ -4,6 +4,14 @@ description: "A simulated virtual WiFi access point allowing network connections
 slug: /components/openhw-wifi-ap
 ---
 
+> **Removed from the simulator (2026-10-20).** The `wifi-ap` component and the
+> whole in-emulator WiFi/IP stack were deleted when networking moved to the
+> **unified gateway** (`openhw-unified-gateway`). A guest board now joins a
+> gateway room and takes its DHCP lease there — there is no drop-in AP
+> component to place on the canvas any more. The page is kept because
+> curriculum content still refers to it. See
+> [Network bring-up (unified gateway)](/docs/architecture/network-bringup).
+
 <div class="custom-breadcrumb">
   <a href="/docs/">Home</a> &gt; 
   <a href="/docs/components/">Components</a> &gt; 
